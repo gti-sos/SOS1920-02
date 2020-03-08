@@ -1,0 +1,23 @@
+{
+  "name": "sos1920-02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+	   "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gti-sos/SOS1920-02.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gti-sos/SOS1920-02/issues"
+  },
+  "homepage": "https://github.com/gti-sos/SOS1920-02#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
