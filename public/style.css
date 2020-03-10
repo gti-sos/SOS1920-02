@@ -1,20 +1,27 @@
-h1 {
-	text-align: center;
+head {
+	margin-left: none;
 }
 body {
-  padding-left: 11em;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: black;
-  background-color: #C4F0FF
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: black;
+	background-color: #C4F0FF
+}
+h1 {
+	font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+	text-align: center;
+	margin-top: 50px;
 }
 li {
 	padding-bottom: 1em;
 }
 .logo {
-	float: right;
-	position: top;
-	width: 250px;
-	padding-top: none;
-	margin-top: none;
-	margin-right: 50px;
+	position: absolute;
+	top: 25px;
+	right: 50px;
+	width: 200px;
+}
+.cuerpo {
+	padding-top: 3em;
+	margin-left: 15em;
+
 }
