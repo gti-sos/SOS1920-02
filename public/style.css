@@ -1,0 +1,12 @@
+h1 {
+	text-align: center;
+}
+body {
+  padding-left: 11em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: black;
+  background-color: #C4F0FF
+}
+li {
+	padding-bottom: 1em;
+}
