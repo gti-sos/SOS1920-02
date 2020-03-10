@@ -10,3 +10,11 @@ body {
 li {
 	padding-bottom: 1em;
 }
+.logo {
+	float: right;
+	position: top;
+	width: 250px;
+	padding-top: none;
+	margin-top: none;
+	margin-right: 50px;
+}
