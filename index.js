@@ -267,13 +267,13 @@ var trafficAccidents = [{
 
 //GET ACCIDENTS
 
-app.get(BASE_API_URL+"/accidents", (req,res) =>{
+app.get(BASE_API_URL+"/traffic-accidents", (req,res) =>{
 	res.send(JSON.stringify(trafficAccidents,null,2));
 });
 
 //POST ACCIDENTS
 
-app.post(BASE_API_URL+"/accidents",(req,res) =>{
+app.post(BASE_API_URL+"/traffic-accidents",(req,res) =>{
 	
 	var newAccident = req.body;
 	
@@ -291,7 +291,7 @@ app.post(BASE_API_URL+"/accidents",(req,res) =>{
 
 //GET ACCIDENT/XXX
 
-app.get(BASE_API_URL+"/accidents/:province", (req,res) => {
+app.get(BASE_API_URL+"/traffic-accidents/:province", (req,res) => {
 	var province = req.params.province;
 	var filteredAccidents = trafficAccidents.filter((c) => {
 		return (c.province == province);
@@ -309,7 +309,7 @@ app.get(BASE_API_URL+"/accidents/:province", (req,res) => {
 
 //DELETE ACCIDENT/XXX
 
-app.delete(BASE_API_URL+"/accidents/:province", (req,res) => {
+app.delete(BASE_API_URL+"/traffic-accidents/:province", (req,res) => {
 	var province = req.params.province;
 	var filteredAccidents = trafficAccidents.filter((c) => {
 		return (c.province != province);
