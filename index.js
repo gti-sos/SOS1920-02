@@ -91,6 +91,47 @@ app.get(BASE_API_URL+"/rural-tourism-stats/:province", (req,res)=>{
 	}
 });
 
+// POST /rural-tourism-stats
+
+app.post(BASE_API_URL+"/rural-tourism-stats",(req,res) =>{
+	
+	var newTourism = req.body;
+	
+	if((newTourism == "") || (newTourism.province == null)){
+		res.sendStatus(400,"BAD REQUEST");
+	} else {
+		tourism.push(newTourism); 	
+		res.sendStatus(201,"CREATED");
+	}
+});
+
+//PUT /rural-tourism-stats/XXX
+
+// DELETE /rural-tourism-stats
+
+
+// DELETE /rural-tourism-stats/XXX
+
+app.delete(BASE_API_URL+"/rural-tourism-stats/:province", (req,res)=>{
+	
+	var province = req.params.province;
+	
+	var filteredTourism = tourism.filter((t) => {
+		return (t.province != province);
+	});
+	
+	
+	if(filteredTourism.length < tourism.length){
+		tourism = filteredTourism;
+		res.sendStatus(200);
+	}else{
+		res.sendStatus(404,"TOURISM STAT NOT FOUND");
+	}
+	
+	
+});
+
+
 
 /*--------------------------------------------------------------*/
 /*----------------------------API ANA---------------------------*/
