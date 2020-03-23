@@ -137,7 +137,15 @@ app.delete(BASE_API_URL+"/rural-tourism-stats/:province", (req,res)=>{
 	
 });
 
+//POST incorrecto
+app.post(API_PATH + "/rural-tourism-stats/:province", (req, res) => {
+    res.sendStatus(405);
+});
 
+//PUT incorrecto
+app.put(API_PATH + "/rural-tourism-stats/", (req, res) => {
+    res.sendStatus(405);
+});
 
 /*--------------------------------------------------------------*/
 /*----------------------------API ANA---------------------------*/
