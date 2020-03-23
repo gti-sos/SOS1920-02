@@ -91,6 +91,7 @@ app.get(BASE_API_URL+"/rural-tourism-stats/:province", (req,res)=>{
 	}
 });
 
+
 /*--------------------------------------------------------------*/
 /*----------------------------API ANA---------------------------*/
 /*--------------------------------------------------------------*/
@@ -170,10 +171,7 @@ app.get(BASE_API_URL+"//evolution-of-cycling-routes/:province", (req,res)=>{
 });
 
 
-
-
-
-
+// CODIGO COMUN
 app.listen(port, () => {
 	console.log("server ready");
 });
