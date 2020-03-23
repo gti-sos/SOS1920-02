@@ -299,9 +299,18 @@ app.post(BASE_API_URL+"/traffic-accidents",(req,res) =>{
 	}
 });
 
+//PUT ACCIDENTS
+
+app.put(BASE_API_URL+"/traffic-accidents",(req,res) => {
+	res.sendStatus(405);
+});
+
 //DELETE ACCIDENTS
 
-
+app.delete(BASE_API_URL + "/traffic-accidents", (req,res)=>{
+	trafficAccidents = [];
+	res.sendStatus(200);
+});
 
 //GET ACCIDENT/XXX
 
@@ -317,9 +326,17 @@ app.get(BASE_API_URL+"/traffic-accidents/:province", (req,res) => {
 	}
 });
 
+//POST ACCIDENT/XXX
+
+app.post(BASE_API_URL+"/traffic-accidents/:province",(req,res) => {
+	res.sendStatus(405);
+});
+
 //PUT ACCIDENT/XXX
 
-
+//app.put(BASE_API_URL+"/traffic-accidents/:province", (req,res) => {
+	
+//)});
 
 //DELETE ACCIDENT/XXX
 
