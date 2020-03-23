@@ -155,7 +155,7 @@ app.get(BASE_API_URL + "/evolution-of-cycling-routes", (req,res)=>{
 	
 // GET /evolution-of-cycling-routes/XXX
 	
-app.get(BASE_API_URL+"//evolution-of-cycling-routes/:province", (req,res)=>{
+app.get(BASE_API_URL+"/evolution-of-cycling-routes/:province", (req,res)=>{
 	
 	var province = req.params.province;
 	
