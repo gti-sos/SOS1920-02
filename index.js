@@ -109,6 +109,12 @@ app.post(BASE_API_URL+"/rural-tourism-stats",(req,res) =>{
 
 // DELETE /rural-tourism-stats
 
+app.delete("/rural-tourism-stats", (req,res)=>{
+	
+	tourism = [];
+	
+	res.sendStatus(200);
+});
 
 // DELETE /rural-tourism-stats/XXX
 
