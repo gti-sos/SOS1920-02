@@ -92,6 +92,19 @@ app.get(BASE_API_URL+"/rural-tourism-stats/:province", (req,res)=>{
 });
 
 
+// POST /rural-tourism-stats
+
+app.post(BASE_API_URL+"/rural-tourism-stats",(req,res) =>{
+	
+	var newTourism = req.body;
+	
+	if((newTourism == "") || (newTourism.province == null)){
+		res.sendStatus(400,"BAD REQUEST");
+	} else {
+		tourism.push(newTourism); 	
+		res.sendStatus(201,"CREATED");
+	}
+})
 
 
 
