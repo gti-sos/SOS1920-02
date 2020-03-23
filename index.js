@@ -170,6 +170,117 @@ app.get(BASE_API_URL+"//evolution-of-cycling-routes/:province", (req,res)=>{
 	}
 });
 
+/*--------------------------------------------------------------*/
+/*-----------------------API Jose Francisco---------------------*/
+/*--------------------------------------------------------------*/
+
+var trafficAccidents = [{
+	"province": "almeria",
+	"year": 2015,
+	"traffic-accident-victim": 733,
+	"dead": 26,
+	"injured": 1169
+},{
+	"province": "cadiz",
+	"year": 2015,
+	"traffic-accident-victim": 3080,
+	"dead": 32,
+	"injured": 4673
+},{
+	"province": "cordoba",
+	"year": 2015,
+	"traffic-accident-victim": 1491,
+	"dead": 26,
+	"injured": 2043
+},{
+	"province": "granada",
+	"year": 2015,
+	"traffic-accident-victim": 1251,
+	"dead": 43,
+	"injured": 1831
+},{
+	"province": "huelva",
+	"year": 2015,
+	"traffic-accident-victim": 721,
+	"dead": 23,
+	"injured": 1134
+},{
+	"province": "jaen",
+	"year": 2015,
+	"traffic-accident-victim": 10023,
+	"dead": 23,
+	"injured": 1541
+},{
+	"province": "malaga",
+	"year": 2015,
+	"traffic-accident-victim": 2514,
+	"dead": 46,
+	"injured": 3543
+},{
+	"province": "sevilla",
+	"year": 2015,
+	"traffic-accident-victim": 5371,
+	"dead": 43,
+	"injured": 7963
+},];
+
+//GET ACCIDENTS
+
+app.get(BASE_API_URL+"/accidents", (req,res) =>{
+	res.send(JSON.stringify(trafficAccidents,null,2));
+});
+
+//POST ACCIDENTS
+
+app.post(BASE_API_URL+"/accidents",(req,res) =>{
+	
+	var newAccident = req.body;
+	
+	if((newAccident == "") || (newAccident.province == null)) {
+		res.sendStatus(400,"BAD REQUEST");
+	} else {
+		trafficAccidents.push(newAccident);
+		res.sendStatus(201,"CREATED");
+	}
+});
+
+//DELETE ACCIDENTS
+
+
+
+//GET ACCIDENT/XXX
+
+app.get(BASE_API_URL+"/accidents/:province", (req,res) => {
+	var province = req.params.province;
+	var filteredAccidents = trafficAccidents.filter((c) => {
+		return (c.province == province);
+	});
+	if(filteredAccidents.length >= 1) {
+		res.send(filteredAccidents[0]);
+	}else {
+		res.sendStatus(404, "PROVINCE NOT FOUND");
+	}
+});
+
+//PUT ACCIDENT/XXX
+
+
+
+//DELETE ACCIDENT/XXX
+
+app.delete(BASE_API_URL+"/accidents/:province", (req,res) => {
+	var province = req.params.province;
+	var filteredAccidents = trafficAccidents.filter((c) => {
+		return (c.province != province);
+	});
+	if(filteredAccidents.length < trafficAccidents.length) {
+		trafficAccidents = filteredAccidents;
+		res.sendStatus(200);
+	}else {
+		res.sendStatus(404, "PROVINCE NOT FOUND");
+	}
+});
+
 
 // CODIGO COMUN
 app.listen(port, () => {
