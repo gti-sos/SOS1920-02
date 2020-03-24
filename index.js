@@ -65,6 +65,19 @@ var tourism = [{
 	"average-stay": 2.5
 },];
 
+var copyTourism = tourism;
+
+//LOADINITIALDATA
+app.get(BASE_API_URL + "/rural-tourism-stats/loadInitialData", (req, res) => {
+
+	if(tourism == copyTourism){
+		res.sendStatus(409);
+	}else{
+		tourism = copyTourism
+		res.sendStatus(201);
+	}
+});
+
 //GET /rural-tourism-stats
 
 app.get(BASE_API_URL + "/rural-tourism-stats", (req,res)=>{
@@ -106,6 +119,43 @@ app.post(BASE_API_URL+"/rural-tourism-stats",(req,res) =>{
 });
 
 //PUT /rural-tourism-stats/XXX
+
+app.put(BASE_API_URL+"/rural-tourism-stats/:province", (req, res) =>{
+	
+	var province = req.params.province;
+    var updateTourism = req.body;
+	
+	filteredTourism = tourism.filter((t) => {
+		return (t.province != province);
+	});
+	
+	if(filteredTourism.length == 0){
+		res.sendStatus(404);
+	}
+	
+	if(province != updateTourism.province){
+		console.log("La provincia no puede ser modificada")
+		res.sendStatus(409);
+		return;
+	}
+	
+	if(!updateTourism.province || !updateTourism.year ||!updateTourism.traveller || !updateTourism.overnightstay
+	   || !updateTourism.averagestay ||updateTourism.province != province || Object.keys(updateTourism).length != 5 ){
+                console.log("PUT recurso encontrado. Se intenta actualizar con campos no validos 400");
+                res.sendStatus(400);
+		return;
+	}
+	
+	tourism = tourism.map((t) => {
+		if(t.province == updateTourism.province){
+			return updateTourism;
+		}else{
+			return t;
+		}
+		
+	});
+	res.sendStatus(200);
+});
 
 // DELETE /rural-tourism-stats
 
