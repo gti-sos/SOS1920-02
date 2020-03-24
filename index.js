@@ -19,50 +19,50 @@ var tourism = [{
 	"province": "almeria",
 	"year": 2015,
 	"traveller": 11260,
-	"overnight-stay":37406,
-	"average-stay": 3.3
+	"overnightstay":37406,
+	"averagestay": 3.3
 },{
 	"province": "cadiz",
 	"year": 2015,
 	"traveller": 28859,
-	"overnight-stay":77652,
-	"average-stay": 2.7
+	"overnightstay":77652,
+	"averagestay": 2.7
 },{
 	"province": "cordoba",
 	"year": 2015,
 	"traveller": 22365,
-	"overnight-stay":76373,
-	"average-stay": 3.4
+	"overnightstay":76373,
+	"averagestay": 3.4
 },{
 	"province": "granada",
 	"year": 2015,
 	"traveller": 23873,
-	"overnight-stay":67636,
-	"average-stay": 2.8
+	"overnightstay":67636,
+	"averagestay": 2.8
 },{
 	"province": "huelva",
 	"year": 2015,
 	"traveller": 40651,
-	"overnight-stay":90601,
-	"average-stay": 2.2
+	"overnightstay":90601,
+	"averagestay": 2.2
 },{
 	"province": "jaen",
 	"year": 2015,
 	"traveller": 23513,
-	"overnight-stay":63311,
-	"average-stay": 2
+	"overnightstay":63311,
+	"averagestay": 2
 },{
 	"province": "malaga",
 	"year": 2015,
 	"traveller": 56208,
-	"overnight-stay":301760,
-	"average-stay": 5.4
+	"overnightstay":301760,
+	"averagestay": 5.4
 },{
 	"province": "sevilla",
 	"year": 2015,
 	"traveller": 22454,
-	"overnight-stay":55880,
-	"average-stay": 2.5
+	"overnightstay":55880,
+	"averagestay": 2.5
 },];
 
 var copyTourism = tourism;
@@ -140,7 +140,12 @@ app.put(BASE_API_URL+"/rural-tourism-stats/:province", (req, res) =>{
 	}
 	
 	if(!updateTourism.province || !updateTourism.year ||!updateTourism.traveller || !updateTourism.overnightstay
-	   || !updateTourism.averagestay ||updateTourism.province != province || Object.keys(updateTourism).length != 5 ){
+	   || !updateTourism.averagestay){
+				console.log(updateTourism.province);
+				console.log(updateTourism.year);
+				console.log(updateTourism.traveller);
+				console.log(updateTourism.overnightstay);
+				console.log(updateTourism.averagestay);
                 console.log("PUT recurso encontrado. Se intenta actualizar con campos no validos 400");
                 res.sendStatus(400);
 		return;
