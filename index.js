@@ -70,12 +70,13 @@ var copyTourism = tourism;
 //LOADINITIALDATA
 app.get(BASE_API_URL + "/rural-tourism-stats/loadInitialData", (req, res) => {
 
-	if(tourism == copyTourism){
-		res.sendStatus(409);
+	if(tourism = []){
+		tourism = copyTourism;
 	}else{
-		tourism = copyTourism
-		res.sendStatus(201);
+		tourism = []
+		tourism = copyTourism;
 	}
+	res.sendStatus(201);
 });
 
 //GET /rural-tourism-stats
@@ -420,10 +421,10 @@ var trafficAccidentsCopy = trafficAccidents;
 app.get(BASE_API_URL + "/traffic-accidents/loadInitialData", (req, res) => {
 
 	if(trafficAccidents == trafficAccidentsCopy){
-		res.sendStatus(409);
+		res.sendStatus(409, "CONFLICT");
 	}else{
 		trafficAccidents = trafficAccidentsCopy;
-		res.sendStatus(201);
+		res.sendStatus(201, "CREATED");
 	}
 });
 
