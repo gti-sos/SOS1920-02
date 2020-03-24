@@ -273,22 +273,21 @@ app.delete(BASE_API_URL+"/evolution-of-cycling-routes/:province", (req,res)=>{
 	
 });
 
-// PUT /evolution-of-cycling-routes/
+// PUT /evolution-of-cycling-routes/XXX
 	
-	app.put(BASE_API_URL+"/evolution-of-cycling-routes/:province/:year", (req,res) =>{
+	app.put(BASE_API_URL+"/evolution-of-cycling-routes/:province/", (req,res) =>{
 	
 	var params = req.params;
-	var year = params.year;
 	var province = params.province;	
 	var body = req.body;
 	
 	var notFound = routes.filter((r) => {
-		return (r.province == province && r.year == year);}) == 0;
+		return (r.province == province);}) == 0;
 	
 	var updatedRoutes = routes.map((r) => {
 		var newRoute = r;
 
-		if (r.year == year && r.province == province) {
+		if (r.province == province) {
 			for (var p in body) {
 				newRoute[p] = body[p];
 			}
@@ -303,13 +302,11 @@ app.delete(BASE_API_URL+"/evolution-of-cycling-routes/:province", (req,res)=>{
 	}	
 });
 
-
-// PUT /evolution-of-cycling-routes/XXX
+// PUT /evolution-of-cycling-routes
 
 app.put(BASE_API_URL+"/evolution-of-cycling-routes/",(req,res) =>{	
 	res.sendStatus(405, "METHOD NOT ALLOWED");
 });
-
 
 /*--------------------------------------------------------------*/
 /*-----------------------API Jose Francisco---------------------*/
