@@ -412,6 +412,21 @@ var trafficAccidents = [{
 	"injured": 7963
 },];
 
+//LOADINITIALDATA
+
+var trafficAccidentsCopy = trafficAccidents;
+
+app.get(BASE_API_URL + "/traffic-accidents/loadInitialData", (req, res) => {
+
+	if(trafficAccidents == trafficAccidentsCopy){
+		res.sendStatus(409);
+	}else{
+		trafficAccidents = trafficAccidentsCopy;
+		res.sendStatus(201);
+	}
+});
+
+
 //GET ACCIDENTS
 
 app.get(BASE_API_URL+"/traffic-accidents", (req,res) =>{
@@ -467,9 +482,30 @@ app.post(BASE_API_URL+"/traffic-accidents/:province",(req,res) => {
 
 //PUT ACCIDENT/XXX
 
-//app.put(BASE_API_URL+"/traffic-accidents/:province", (req,res) => {
+app.put(BASE_API_URL+"/traffic-accidents/:province", (req,res) => {
+	var province = req.params.province;	
+	var body = req.body;
 	
-//)});
+	var notFound = trafficAccidents.filter((c) => {
+		return (c.province == province);}) == 0;
+	
+	var updatedTrafficAccidents = trafficAccidents.map((c) => {
+		var newTrafficAccidents = c;
+
+		if (c.province == province) {
+			for (var i in body) {
+				newTrafficAccidents[i] = body[i];
+			}
+		}
+		return (newTrafficAccidents)		
+	});	
+	if (notFound) {
+		res.sendStatus(404, "PROVINCE NOT FOUND");
+	} else {
+		trafficAccidents = updatedTrafficAccidents;
+		res.sendStatus(200, "OK");
+	}
+});
 
 //DELETE ACCIDENT/XXX
 
