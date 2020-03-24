@@ -241,7 +241,7 @@ app.post(BASE_API_URL+"/evolution-of-cycling-routes/",(req,res) =>{
 
 // POST /evolution-of-cycling-routes/XXX
 
-app.post(BASE_API_URL+"/evolution-of-cycling-routes/",(req,res) =>{	
+app.post(BASE_API_URL+"/evolution-of-cycling-routes/province",(req,res) =>{	
 	res.sendStatus(405, "METHOD NOT ALLOWED");
 });
 
