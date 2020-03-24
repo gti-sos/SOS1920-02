@@ -225,6 +225,92 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes/:province", (req,res)=>{
 	}
 });
 
+// POST /evolution-of-cycling-routes/
+
+app.post(BASE_API_URL+"/evolution-of-cycling-routes/",(req,res) =>{
+	
+	var newRoute = req.body;
+	
+	if((newRoute == "") || (newRoute.province == null)){
+		res.sendStatus(400,"BAD REQUEST");
+	} else {
+		routes.push(newRoute); 	
+		res.sendStatus(201,"CREATED");
+	}
+});
+
+// POST /evolution-of-cycling-routes/XXX
+
+app.post(BASE_API_URL+"/evolution-of-cycling-routes/",(req,res) =>{	
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+});
+
+// DELETE /evolution-of-cycling-routes/
+
+app.delete(BASE_API_URL+"/evolution-of-cycling-routes/", (req,res) =>{
+	routes = [];
+	res.sendStatus(200);
+});
+
+// DELETE /evolution-of-cycling-routes/XXX
+
+app.delete(BASE_API_URL+"/evolution-of-cycling-routes/:province", (req,res)=>{
+	
+	var province = req.params.province;
+	
+	var filteredRoutes = routes.filter((c) => {
+		return (c.province != province);
+	});
+	
+	
+	if(filteredRoutes.length < routes.length){
+		routes = filteredRoutes;
+		res.sendStatus(200);
+	}else{
+		res.sendStatus(404,"CONTACT NOT FOUND");
+	}
+	
+	
+});
+
+// PUT /evolution-of-cycling-routes/
+	
+	app.put(BASE_API_URL+"/evolution-of-cycling-routes/:province/:year", (req,res) =>{
+	
+	var params = req.params;
+	var year = params.year;
+	var province = params.province;	
+	var body = req.body;
+	
+	var notFound = routes.filter((r) => {
+		return (r.province == province && r.year == year);}) == 0;
+	
+	var updatedRoutes = routes.map((r) => {
+		var newRoute = r;
+
+		if (r.year == year && r.province == province) {
+			for (var p in body) {
+				newRoute[p] = body[p];
+			}
+		}
+		return (newRoute)		
+	});	
+	if (notFound) {
+		res.sendStatus(404, "NOT FOUND");
+	} else {
+		routes = updatedRoutes;
+		res.sendStatus(200, "OK");
+	}	
+});
+
+
+// PUT /evolution-of-cycling-routes/XXX
+
+app.put(BASE_API_URL+"/evolution-of-cycling-routes/",(req,res) =>{	
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+});
+
+
 /*--------------------------------------------------------------*/
 /*-----------------------API Jose Francisco---------------------*/
 /*--------------------------------------------------------------*/
