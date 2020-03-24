@@ -131,6 +131,7 @@ app.put(BASE_API_URL+"/rural-tourism-stats/:province", (req, res) =>{
 	
 	if(filteredTourism.length == 0){
 		res.sendStatus(404);
+		return;
 	}
 	
 	if(province != updateTourism.province){
@@ -141,11 +142,6 @@ app.put(BASE_API_URL+"/rural-tourism-stats/:province", (req, res) =>{
 	
 	if(!updateTourism.province || !updateTourism.year ||!updateTourism.traveller || !updateTourism.overnightstay
 	   || !updateTourism.averagestay){
-				console.log(updateTourism.province);
-				console.log(updateTourism.year);
-				console.log(updateTourism.traveller);
-				console.log(updateTourism.overnightstay);
-				console.log(updateTourism.averagestay);
                 console.log("PUT recurso encontrado. Se intenta actualizar con campos no validos 400");
                 res.sendStatus(400);
 		return;
