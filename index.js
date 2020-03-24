@@ -419,10 +419,10 @@ var trafficAccidentsCopy = trafficAccidents;
 app.get(BASE_API_URL + "/traffic-accidents/loadInitialData", (req, res) => {
 
 	if(trafficAccidents == trafficAccidentsCopy){
-		res.sendStatus(409);
+		res.sendStatus(409, "CONFLICT");
 	}else{
 		trafficAccidents = trafficAccidentsCopy;
-		res.sendStatus(201);
+		res.sendStatus(201, "CREATED");
 	}
 });
 
