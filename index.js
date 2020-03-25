@@ -70,13 +70,16 @@ var copyTourism = tourism;
 //LOADINITIALDATA
 app.get(BASE_API_URL + "/rural-tourism-stats/loadInitialData", (req, res) => {
 
-	if(tourism = []){
-		tourism = copyTourism;
-	}else{
-		tourism = []
-		tourism = copyTourism;
-	}
-	res.sendStatus(201);
+	tourism =  [{"province": "almeria","year": 2015,"traveller": 11260,"overnightstay":37406,"averagestay": 3.3},
+				{"province": "cadiz","year": 2015,"traveller": 28859,"overnightstay":77652,"averagestay": 2.7},
+				{"province": "cordoba","year": 2015,"traveller": 22365,"overnightstay":76373,"averagestay": 3.4},
+				{"province": "granada","year": 2015,"traveller": 23873,"overnightstay":67636,"averagestay": 2.8},
+				{"province": "huelva","year": 2015,"traveller": 40651,"overnightstay":90601,"averagestay": 2.2},
+				{"province": "jaen","year": 2015,"traveller": 23513,"overnightstay":63311,"averagestay": 2},
+				{"province": "malaga","year": 2015,"traveller": 56208,"overnightstay":301760,"averagestay": 5.4},
+				{"province": "sevilla","year": 2015,"traveller": 22454,"overnightstay":55880,"averagestay": 2.5},];
+	
+	res.sendStatus(200);
 });
 
 //GET /rural-tourism-stats
