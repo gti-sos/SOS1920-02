@@ -393,16 +393,17 @@ var trafficAccidents = [{
 
 //LOADINITIALDATA
 
-var trafficAccidentsCopy = trafficAccidents;
-
 app.get(BASE_API_URL + "/traffic-accidents/loadInitialData", (req, res) => {
-
-	if(trafficAccidents == trafficAccidentsCopy){
-		res.sendStatus(409, "CONFLICT");
-	}else{
-		trafficAccidents = trafficAccidentsCopy;
-		res.sendStatus(201, "CREATED");
-	}
+	trafficAccidents = [
+		{"province": "almeria", "year": 2015, "traffic-accident-victim": 733, "dead": 26, "injured": 1169},
+		{"province": "cadiz", "year": 2015, "traffic-accident-victim": 3080, "dead": 32, "injured": 4673},
+		{"province": "cordoba", "year": 2015, "traffic-accident-victim": 1491, "dead": 26, "injured": 2043},
+		{"province": "granada", "year": 2015, "traffic-accident-victim": 1251, "dead": 43, "injured": 1831},
+		{"province": "huelva", "year": 2015, "traffic-accident-victim": 721, "dead": 23, "injured": 1134},
+		{"province": "jaen", "year": 2015, "traffic-accident-victim": 10023, "dead": 23, "injured": 1541},
+		{"province": "malaga", "year": 2015, "traffic-accident-victim": 2514, "dead": 46, "injured": 3543},
+		{"province": "sevilla", "year": 2015, "traffic-accident-victim": 5371, "dead": 43, "injured": 7963}];
+	res.sendStatus(200);
 });
 
 
