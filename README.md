@@ -11,9 +11,3 @@
     - [https://sos1920-02.herokuapp.com/api/v1/evolution-of-cycling-routes](https://documenter.getpostman.com/view/10637431/SzYT6hgy) (developed by [Ana Fraire Gonzalez](https://github.com/anafraire))
     - [https://sos1920-02.herokuapp.com/api/v1/my-awesome-resource-2/docs](https://sos1920-02.herokuapp.com/api/v1/my-awesome-resource-2/docs) (developed by [Jose Francisco Morales Ruiz](https://github.com/josmorrui2))
     - [https://sos1920-02.herokuapp.com/api/v1/rural-tourism-stats](https://documenter.getpostman.com/view/6870023/SzYT6ND2) (developed by [Marta Verdugo Martinez](https://github.com/martaverdugo6))
-	-  **POSTMANs**:
- -  **POSTMANs**:
- 
-     - [https://documenter.getpostman.com/view/10637431/SzYT6hgy](https://documenter.getpostman.com/view/10637431/SzYT6hgy) (developed by [Ana Fraire Gonzalez](https://github.com/anafraire))
- 
-    - [https://documenter.getpostman.com/view/6870023/SzYT6ND2](https://documenter.getpostman.com/view/6870023/SzYT6ND2) (developed by [Marta Verdugo Martinez](https://github.com/martaverdugo6))
