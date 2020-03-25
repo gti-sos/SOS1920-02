@@ -13,4 +13,7 @@
     - [https://sos1920-02.herokuapp.com/api/v1/my-awesome-resource-1/docs](https://sos1920-02.herokuapp.com/api/v1/my-awesome-resource-1/docs) (developed by [Marta Verdugo Martinez](https://github.com/martaverdugo6))
 	-  **POSTMANs**:
  -  **POSTMANs**:
+ 
+     - [https://documenter.getpostman.com/view/10637431/SzYT6hgy?version=latest](https://documenter.getpostman.com/view/10637431/SzYT6hgy?version=latest) (developed by [Ana Fraire Gonzalez](https://github.com/anafraire))
+ 
     - [https://documenter.getpostman.com/view/6870023/SzYT6ND2](https://documenter.getpostman.com/view/6870023/SzYT6ND2) (developed by [Marta Verdugo Martinez](https://github.com/martaverdugo6))
