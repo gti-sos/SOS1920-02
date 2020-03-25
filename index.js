@@ -127,22 +127,16 @@ app.put(BASE_API_URL+"/rural-tourism-stats/:province", (req, res) =>{
     var updateTourism = req.body;
 	
 	filteredTourism = tourism.filter((t) => {
-		return (t.province != province);
+		return (t.province == province);
 	});
-	
+	//console.log("Data sent: " + JSON.stringify(filteredTourism,null,2));
 	if(filteredTourism.length == 0){
 		res.sendStatus(404);
 		return;
 	}
 	
-	if(province != updateTourism.province){
-		console.log("La provincia no puede ser modificada")
-		res.sendStatus(409);
-		return;
-	}
-	
 	if(!updateTourism.province || !updateTourism.year ||!updateTourism.traveller || !updateTourism.overnightstay
-	   || !updateTourism.averagestay){
+	   || !updateTourism.averagestay || updateTourism.province != provinceo){
                 console.log("PUT recurso encontrado. Se intenta actualizar con campos no validos 400");
                 res.sendStatus(400);
 		return;
