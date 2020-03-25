@@ -250,12 +250,28 @@ var routes = [{
 		rest: 3.7			
 	},];
 
+var copyRoutes = JSON.parse(JSON.stringify(routes));
+
+//LOAD INITIAL DATA
+
+app.get(BASE_API_URL + "/evolution-of-cycling-routes/loadInitialData", (req, res) => {
+
+	if(copyRoutes == routes){
+		res.sendStatus(409);
+	}else{
+		copyRoutes = routes;
+		res.sendStatus(201);
+	}
+});
+
+
 // GET /evolution-of-cycling-routes
 
 app.get(BASE_API_URL + "/evolution-of-cycling-routes", (req,res)=>{
-	res.send(JSON.stringify(routes,null,2));
+	res.send(JSON.stringify(copyRoutes,null,2));
 	
 });
+
 	
 // GET /evolution-of-cycling-routes/XXX
 	
@@ -263,7 +279,7 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes/:province", (req,res)=>{
 	
 	var province = req.params.province;
 	
-	var filteredRoutes = routes.filter((t) => {
+	var filteredRoutes = copyRoutes.filter((t) => {
 		return (t.province == province);
 	});	
 	
@@ -274,6 +290,7 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes/:province", (req,res)=>{
 	}
 });
 
+
 // POST /evolution-of-cycling-routes/
 
 app.post(BASE_API_URL+"/evolution-of-cycling-routes/",(req,res) =>{
@@ -283,10 +300,11 @@ app.post(BASE_API_URL+"/evolution-of-cycling-routes/",(req,res) =>{
 	if((newRoute == "") || (newRoute.province == null)){
 		res.sendStatus(400,"BAD REQUEST");
 	} else {
-		routes.push(newRoute); 	
+		copyRoutes.push(newRoute); 	
 		res.sendStatus(201,"CREATED");
 	}
 });
+
 
 // POST /evolution-of-cycling-routes/XXX
 
@@ -294,12 +312,14 @@ app.post(BASE_API_URL+"/evolution-of-cycling-routes/:province",(req,res) =>{
 	res.sendStatus(405, "METHOD NOT ALLOWED");
 });
 
+
 // DELETE /evolution-of-cycling-routes/
 
 app.delete(BASE_API_URL+"/evolution-of-cycling-routes/", (req,res) =>{
-	routes = [];
+	copyRoutes = [];
 	res.sendStatus(200);
 });
+
 
 // DELETE /evolution-of-cycling-routes/XXX
 
@@ -307,20 +327,17 @@ app.delete(BASE_API_URL+"/evolution-of-cycling-routes/:province", (req,res)=>{
 	
 	var province = req.params.province;
 	
-	var filteredRoutes = routes.filter((c) => {
+	var filteredRoutes = copyRoutes.filter((c) => {
 		return (c.province != province);
-	});
-	
-	
-	if(filteredRoutes.length < routes.length){
-		routes = filteredRoutes;
+	});	
+	if(filteredRoutes.length < copyRoutes.length){
+		copyRoutes = filteredRoutes;
 		res.sendStatus(200);
 	}else{
 		res.sendStatus(404,"CONTACT NOT FOUND");
-	}
-	
-	
+	}	
 });
+
 
 // PUT /evolution-of-cycling-routes/XXX
 	
@@ -330,10 +347,10 @@ app.delete(BASE_API_URL+"/evolution-of-cycling-routes/:province", (req,res)=>{
 	var province = params.province;	
 	var body = req.body;
 	
-	var notFound = routes.filter((r) => {
+	var notFound = copyRoutes.filter((r) => {
 		return (r.province == province);}) == 0;
 	
-	var updatedRoutes = routes.map((r) => {
+	var updatedRoutes = copyRoutes.map((r) => {
 		var newRoute = r;
 
 		if (r.province == province) {
@@ -346,16 +363,18 @@ app.delete(BASE_API_URL+"/evolution-of-cycling-routes/:province", (req,res)=>{
 	if (notFound) {
 		res.sendStatus(404, "NOT FOUND");
 	} else {
-		routes = updatedRoutes;
+		copyRoutes = updatedRoutes;
 		res.sendStatus(200, "OK");
 	}	
 });
+
 
 // PUT /evolution-of-cycling-routes
 
 app.put(BASE_API_URL+"/evolution-of-cycling-routes/",(req,res) =>{	
 	res.sendStatus(405, "METHOD NOT ALLOWED");
 });
+
 
 /*--------------------------------------------------------------*/
 /*-----------------------API Jose Francisco---------------------*/
