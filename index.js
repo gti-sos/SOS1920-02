@@ -136,7 +136,7 @@ app.put(BASE_API_URL+"/rural-tourism-stats/:province", (req, res) =>{
 	}
 	
 	if(!updateTourism.province || !updateTourism.year ||!updateTourism.traveller || !updateTourism.overnightstay
-	   || !updateTourism.averagestay || updateTourism.province != provinceo){
+	   || !updateTourism.averagestay || updateTourism.province != province){
                 console.log("PUT recurso encontrado. Se intenta actualizar con campos no validos 400");
                 res.sendStatus(400);
 		return;
