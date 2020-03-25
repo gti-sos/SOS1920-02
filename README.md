@@ -14,6 +14,6 @@
 	-  **POSTMANs**:
  -  **POSTMANs**:
  
-     - [https://documenter.getpostman.com/view/10637431/SzYT6hgy?version=latest](https://documenter.getpostman.com/view/10637431/SzYT6hgy) (developed by [Ana Fraire Gonzalez](https://github.com/anafraire))
+     - [https://documenter.getpostman.com/view/10637431/SzYT6hgy](https://documenter.getpostman.com/view/10637431/SzYT6hgy) (developed by [Ana Fraire Gonzalez](https://github.com/anafraire))
  
     - [https://documenter.getpostman.com/view/6870023/SzYT6ND2](https://documenter.getpostman.com/view/6870023/SzYT6ND2) (developed by [Marta Verdugo Martinez](https://github.com/martaverdugo6))
