@@ -211,16 +211,25 @@ var routes = [
 {province: "sevilla", year: 2015, metropolitan: 146.2, urban: 165.7, rest: 3.7}];
 
 var copyRoutes = JSON.parse(JSON.stringify(routes));
-var copyRoutes2 = JSON.parse(JSON.stringify(routes));
 
 //LOAD INITIAL DATA
 
 app.get(BASE_API_URL + "/evolution-of-cycling-routes/loadInitialData", (req, res) => {
+	
+var routes = [
+{province: "almeria", year: 2015, metropolitan: 77.6, urban: 53.2, rest: 24.3},
+{province: "cadiz",	year: 2015,	metropolitan: 195.6, urban: 9.6, rest: 2.8},
+{province: "cordoba", year: 2015, metropolitan: 10.9, urban: 59.5, rest: 6.1},
+{province: "granada", year: 2015, metropolitan: 47.7, urban: 24.8,rest: 13.6},
+{province: "huelva", year: 2015, metropolitan: 116, urban: 15.7,rest: 2.1},
+{province: "jaen", year: 2015, metropolitan: 10, urban: 7.8, rest: 23.5	},
+{province: "malaga", year: 2015, metropolitan: 47.7, urban: 45.3, rest: 22.8},
+{province: "sevilla", year: 2015, metropolitan: 146.2, urban: 165.7, rest: 3.7}];
 
-	if(copyRoutes2 == routes){
+	if(copyRoutes == routes){
 		res.sendStatus(409);
 	}else{
-		copyRoutes2 = routes;
+		copyRoutes = routes;
 		res.sendStatus(201);
 	}
 });
