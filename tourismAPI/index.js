@@ -55,16 +55,39 @@ module.exports = function(app){
 
 		var province = req.params.province;
 
-		var filteredTourism = tourism.filter((t) => {
-			return (t.province == province);
-		});
+		db.find({"province" :province},(error, tourism)=>{
+			if(tourism.length==0){
+				console.log("ERROR 404. Recurso no encontrado");
+				res.sendStatus(404);
+			}else{
+				res.send(tourism.map((t)=>{
+					delete t._id;
+					return(t);
+				}));
+				console.log("Data sent: " + JSON.stringify(tourism,null,2));
+			}
+		})
+	});
+	
+	//GET /rural-tourism-stats/XXX/YYY
 
+	app.get(BASE_API_URL+"/rural-tourism-stats/:province/:year", (req,res)=>{
 
-		if(filteredTourism.length >= 1){
-			res.send(filteredTourism[0]);
-		}else{
-			res.sendStatus(404,"CONTACT NOT FOUND");
-		}
+		var province = req.params.province;
+		var year = parseInt(req.params.year);
+
+		db.find({"province" :province, "year":year},(error, tourism)=>{
+			if(tourism.length==0){
+				console.log("ERROR 404. Recurso no encontrado");
+				res.sendStatus(404);
+			}else{
+				res.send(tourism.map((t)=>{
+					delete t._id;
+					return(t);
+				}));
+				console.log("Data sent: " + JSON.stringify(tourism,null,2));
+			}
+		})
 	});
 
 	// POST /rural-tourism-stats
@@ -119,7 +142,7 @@ module.exports = function(app){
 
 	app.delete(BASE_API_URL + "/rural-tourism-stats", (req,res)=>{
 
-		tourism = [];
+		db.remove({});
 
 		res.sendStatus(200);
 	});
@@ -130,19 +153,35 @@ module.exports = function(app){
 
 		var province = req.params.province;
 
-		var filteredTourism = tourism.filter((t) => {
-			return (t.province != province);
-		});
+		db.find({"province":province},(error, tourism)=>{
+			if(tourism.length==0){
+				console.log("ERROR 404. Recurso no encontrado");
+				res.sendStatus(404);
+			}else{
+				console.log("DELETE de un recurso concreto");
+                res.sendStatus(200);
+                db.remove({ "province":province });
+			}
+		})
+	});
+	
+	// DELETE /rural-tourism-stats/XXX/YYY
 
+	app.delete(BASE_API_URL+"/rural-tourism-stats/:province/:year", (req,res)=>{
 
-		if(filteredTourism.length < tourism.length){
-			tourism = filteredTourism;
-			res.sendStatus(200);
-		}else{
-			res.sendStatus(404,"TOURISM STAT NOT FOUND");
-		}
+		var province = req.params.province;
+		var year = parseInt(req.params.year);
 
-
+		db.find({"province":province, "year":year},(error, tourism)=>{
+			if(tourism.length==0){
+				console.log("ERROR 404. Recurso no encontrado");
+				res.sendStatus(404);
+			}else{
+				console.log("DELETE de un recurso concreto");
+                res.sendStatus(200);
+                db.remove({ "province":province, "year":year });
+			}
+		})
 	});
 
 	//POST incorrecto

@@ -1,8 +1,9 @@
-{"province":"almeria","year":2015,"traveller":11260,"overnightstay":37406,"averagestay":3.3,"_id":"a6S1KZH2pT5t3qCn"}
-{"province":"cadiz","year":2015,"traveller":28859,"overnightstay":77652,"averagestay":2.7,"_id":"uquCzF3hfgdYgnQv"}
 {"province":"cordoba","year":2015,"traveller":22365,"overnightstay":76373,"averagestay":3.4,"_id":"NxaBUIiU7o1tb1PF"}
-{"province":"granada","year":2015,"traveller":23873,"overnightstay":67636,"averagestay":2.8,"_id":"CSkbzUtC6F6xp2ea"}
-{"province":"huelva","year":2015,"traveller":40651,"overnightstay":90601,"averagestay":2.2,"_id":"n5Q0ZXGRWtcO4pSi"}
+{"province":"almeria","year":2015,"traveller":11260,"overnightstay":37406,"averagestay":3.3,"_id":"a6S1KZH2pT5t3qCn"}
 {"province":"jaen","year":2015,"traveller":23513,"overnightstay":63311,"averagestay":2,"_id":"dDRmT1Zb4jEmpoSk"}
+{"province":"huelva","year":2015,"traveller":40651,"overnightstay":90601,"averagestay":2.2,"_id":"n5Q0ZXGRWtcO4pSi"}
 {"province":"malaga","year":2015,"traveller":56208,"overnightstay":301760,"averagestay":5.4,"_id":"nSxeaSTrusmheSDY"}
 {"province":"sevilla","year":2015,"traveller":22454,"overnightstay":55880,"averagestay":2.5,"_id":"nweJgb65lhyXmE3I"}
+{"province":"cadiz","year":2015,"traveller":28859,"overnightstay":77652,"averagestay":2.7,"_id":"uquCzF3hfgdYgnQv"}
+{"$$deleted":true,"_id":"NxaBUIiU7o1tb1PF"}
+{"$$deleted":true,"_id":"a6S1KZH2pT5t3qCn"}
