@@ -29,7 +29,7 @@ module.exports = function(app){
 		console.log("New GET ..../loadInitialData");
 		db.insert(initialTourism);
 		res.sendStatus(200);
-		console.log("Initial Contact loaded"+JSON.stringify(contacts,null,2));
+		console.log("Initial Contact loaded"+JSON.stringify(initialTourism,null,2));
 		
 	});
 
@@ -44,7 +44,8 @@ module.exports = function(app){
 			});
 
 			res.send(JSON.stringify(tourism,null,2));
-			console.log("Data sent: " + JSON.stringify(tourism,null,2));
+			//console.log("Data sent: " + JSON.stringify(tourism,null,2));
+			console.log("Recursos mostrados");
 		});
 	});
 
@@ -64,7 +65,8 @@ module.exports = function(app){
 					delete t._id;
 					return(t);
 				}));
-				console.log("Data sent: " + JSON.stringify(tourism,null,2));
+				//console.log("Data sent: " + JSON.stringify(tourism,null,2));
+				console.log("Recurso mostrado");
 			}
 		})
 	});
@@ -85,7 +87,8 @@ module.exports = function(app){
 					delete t._id;
 					return(t);
 				}));
-				console.log("Data sent: " + JSON.stringify(tourism,null,2));
+				//console.log("Data sent: " + JSON.stringify(tourism,null,2));
+				console.log("Recurso mostrado");
 			}
 		})
 	});
@@ -95,13 +98,24 @@ module.exports = function(app){
 	app.post(BASE_API_URL+"/rural-tourism-stats",(req,res) =>{
 
 		var newTourism = req.body;
+		var province = req.body.province;
+		var year = parseInt(req.body.year);
 
-		if((newTourism == "") || (newTourism.province == null)){
-			res.sendStatus(400,"BAD REQUEST");
-		} else {
-			tourism.push(newTourism); 	
-			res.sendStatus(201,"CREATED");
-		}
+		db.find({"province": province, "year": year},(error, tourism)=>{
+			if(tourism.length != 0){	//Si tourism es distinto de 0 es que ya existe algun recurso con esa provincia y año
+				console.log("409. El objeto ya existe");
+				res.sendStatus(409);
+			}else if(!newTourism.province || !newTourism.year || !newTourism.traveller || !newTourism.overnightstay 
+					  || !newTourism.averagestay || Object.keys(newTourism).length != 5){
+				
+				console.log("El número de campos no es 5");
+				res.sendStatus(400);
+			}else{
+				console.log("Los datos que se desean insertar son correctos");
+				db.insert(newTourism);
+				res.sendStatus(201);
+			}
+		});
 	});
 
 	//PUT /rural-tourism-stats/XXX
@@ -109,33 +123,26 @@ module.exports = function(app){
 	app.put(BASE_API_URL+"/rural-tourism-stats/:province", (req, res) =>{
 
 		var province = req.params.province;
+		var year = parseInt(req.params.year);
 		var updateTourism = req.body;
-
-		filteredTourism = tourism.filter((t) => {
-			return (t.province == province);
-		});
-		//console.log("Data sent: " + JSON.stringify(filteredTourism,null,2));
-		if(filteredTourism.length == 0){
-			res.sendStatus(404);
-			return;
-		}
-
-		if(!updateTourism.province || !updateTourism.year ||!updateTourism.traveller || !updateTourism.overnightstay
-		   || !updateTourism.averagestay || updateTourism.province != province){
+		
+		db.find({"province":province, "year": year},(error,tourism)=>{
+			console.log(tourism);
+			if(tourism.length == 0){
+				console.log("Error 404, recurso no encontrado.");
+				res.sendStatus(404);
+			}else if(!updateTourism.province || !updateTourism.year ||!updateTourism.traveller || !updateTourism.overnightstay
+		  			 || !updateTourism.averagestay || updateTourism.province != province || updateTourism.year != year
+					 || Object.keys(updateTourism).length != 5){
+				
 					console.log("PUT recurso encontrado. Se intenta actualizar con campos no validos 400");
 					res.sendStatus(400);
-			return;
-		}
-
-		tourism = tourism.map((t) => {
-			if(t.province == updateTourism.province){
-				return updateTourism;
 			}else{
-				return t;
+				db.update({"province":province,"year":year},{$set: updateTourism});
+				console.log("PUT realizado con exito.")
+				res.sendStatus(200);
 			}
-
 		});
-		res.sendStatus(200);
 	});
 
 	// DELETE /rural-tourism-stats
