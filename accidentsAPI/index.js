@@ -48,4 +48,93 @@ module.exports = function(app){
 			console.log("Data sent:"+JSON.stringify(trafficAccidents,null,2));
 		})
 	});
+	
+	//POST ACCIDENTS
+
+	app.post(BASE_API_URL+"/traffic-accidents",(req,res) =>{
+
+		var newAccident = req.body;
+
+		if((newAccident == "") || (newAccident.province == null)) {
+			res.sendStatus(400,"BAD REQUEST");
+		} else {
+			trafficAccidents.push(newAccident);
+			res.sendStatus(201,"CREATED");
+		}
+	});
+
+	//PUT ACCIDENTS
+
+	app.put(BASE_API_URL+"/traffic-accidents",(req,res) => {
+		res.sendStatus(405);
+	});
+
+	//DELETE ACCIDENTS
+
+	app.delete(BASE_API_URL + "/traffic-accidents", (req,res)=>{
+		trafficAccidents = [];
+		res.sendStatus(200);
+	});
+
+	//GET ACCIDENT/XXX
+
+	app.get(BASE_API_URL+"/traffic-accidents/:province", (req,res) => {
+		var province = req.params.province;
+		var filteredAccidents = trafficAccidents.filter((c) => {
+			return (c.province == province);
+		});
+		if(filteredAccidents.length >= 1) {
+			res.send(filteredAccidents[0]);
+		}else {
+			res.sendStatus(404, "PROVINCE NOT FOUND");
+		}
+	});
+
+	//POST ACCIDENT/XXX
+
+	app.post(BASE_API_URL+"/traffic-accidents/:province",(req,res) => {
+		res.sendStatus(405);
+	});
+
+	//PUT ACCIDENT/XXX
+
+	app.put(BASE_API_URL+"/traffic-accidents/:province", (req,res) => {
+		var province = req.params.province;	
+		var body = req.body;
+
+		var notFound = trafficAccidents.filter((c) => {
+			return (c.province == province);}) == 0;
+
+		var updatedTrafficAccidents = trafficAccidents.map((c) => {
+			var newTrafficAccidents = c;
+
+			if (c.province == province) {
+				for (var i in body) {
+					newTrafficAccidents[i] = body[i];
+				}
+			}
+			return (newTrafficAccidents)		
+		});	
+		if (notFound) {
+			res.sendStatus(404, "PROVINCE NOT FOUND");
+		} else {
+			trafficAccidents = updatedTrafficAccidents;
+			res.sendStatus(200, "OK");
+		}
+	});
+
+	//DELETE ACCIDENT/XXX
+
+	app.delete(BASE_API_URL+"/traffic-accidents/:province", (req,res) => {
+		var province = req.params.province;
+		var filteredAccidents = trafficAccidents.filter((c) => {
+			return (c.province != province);
+		});
+		if(filteredAccidents.length < trafficAccidents.length) {
+			trafficAccidents = filteredAccidents;
+			res.sendStatus(200);
+		}else {
+			res.sendStatus(404, "PROVINCE NOT FOUND");
+		}
+	});
 };
