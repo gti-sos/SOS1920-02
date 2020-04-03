@@ -120,7 +120,7 @@ module.exports = function(app){
 
 	//PUT /rural-tourism-stats/XXX
 
-	app.put(BASE_API_URL+"/rural-tourism-stats/:province", (req, res) =>{
+	app.put(BASE_API_URL+"/rural-tourism-stats/:province/:year", (req, res) =>{
 
 		var province = req.params.province;
 		var year = parseInt(req.params.year);
