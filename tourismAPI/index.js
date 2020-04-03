@@ -196,6 +196,10 @@ module.exports = function(app){
 	app.post(BASE_API_URL + "/rural-tourism-stats/:province", (req, res) => {
 		res.sendStatus(405);
 	});
+	//POST incorrecto
+	app.post(BASE_API_URL + "/rural-tourism-stats/:province/:year", (req, res) => {
+		res.sendStatus(405);
+	});
 
 	//PUT incorrecto
 	app.put(BASE_API_URL + "/rural-tourism-stats/", (req, res) => {
