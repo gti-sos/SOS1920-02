@@ -36,7 +36,22 @@ module.exports = function(app){
 	//GET /rural-tourism-stats
 
 	app.get(BASE_API_URL + "/rural-tourism-stats", (req,res)=>{
-		console.log("New GET ..../rural-tourism-stats");
+		
+		var query = {};
+        let offset = 0;
+        let limit = Number.MAX_SAFE_INTEGER;
+		
+		//PAGINACIÓN
+        if (req.query.offset) {
+            offset = parseInt(req.query.offset);
+            delete req.query.offset;
+        }
+        if (req.query.limit) {
+            limit = parseInt(req.query.limit);
+            delete req.query.limit;
+        }
+		
+		
 		db.find({}, (error, tourism) =>{
 
 			tourism.forEach((t)=>{
