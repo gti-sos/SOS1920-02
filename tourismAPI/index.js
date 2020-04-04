@@ -52,7 +52,7 @@ module.exports = function(app){
         }
 		
 		
-		db.find({}, (error, tourism) =>{
+		db.find({}).sort({province:1,year:-1}).skip(offset).limit(limit).exec((error, tourism) =>{
 
 			tourism.forEach((t)=>{
 				delete t._id
