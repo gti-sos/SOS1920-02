@@ -101,7 +101,7 @@ module.exports = function(app){
 				res.send(tourism.map((t)=>{
 					delete t._id;
 					return(t);
-				}));
+				})[0]);
 				//console.log("Data sent: " + JSON.stringify(tourism,null,2));
 				console.log("Recurso mostrado");
 			}
