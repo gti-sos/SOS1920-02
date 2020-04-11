@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const tourismAPI =require(path.join(__dirname,"tourismAPI"));
+const routesAPI = require(path.join(__dirname,"routesAPI"));
 const accidentsAPI = require(path.join(__dirname,"accidentsAPI"));
 
 const port = process.env.PORT || 80;
