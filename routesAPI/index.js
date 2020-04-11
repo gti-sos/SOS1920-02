@@ -29,8 +29,8 @@ module.exports = function(app){
 // GET LOAD INITIAL DATA /evolution-of-cycling-routes/loadInitialData
 
 app.get(BASE_API_URL+"/evolution-of-cycling-routes/loadInitialData", (req,res) =>{
-	db.remove({}, {multi:true});
-	console.log("New GET .../loadInitialData");
+	/*db.remove({}, {multi:true});
+	console.log("New GET .../loadInitialData");*/
 	db.insert(initialRoutes);
 	res.sendStatus(200);
 	console.log("Load Initial Data started:"+JSON.stringify(initialRoutes,null,2));
@@ -39,16 +39,28 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes/loadInitialData", (req,res) =
 // GET /evolution-of-cycling-routes
 
 app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
-	db.remove({}, {multi:true});
-	console.log("New GET .../evolution-of-cycling-routes");
-	db.find({}, (error, routes) => {
-				routes.forEach( (r) => {
-					delete r._id;
+	var query = {};
+	let offset = 0;
+	let limit = Number.MAX_SAFE_INTEGER;
+		
+//PAGINACIÓN
+        if (req.query.offset) {
+            offset = parseInt(req.query.offset);
+            delete req.query.offset;
+        }
+        if (req.query.limit) {
+            limit = parseInt(req.query.limit);
+            delete req.query.limit;
+        }		
+		db.find({}).sort({province:1,year:-1}).skip(offset).limit(limit).exec((error, routes) =>{
+			routes.forEach((r)=>{
+				delete r._id
 			});
-		res.send(JSON.stringify(routes, null, 2));
-		console.log("Data sent:"+JSON.stringify(routes, null, 2));		
+
+			res.send(JSON.stringify(routes,null,2));
+			console.log("Recursos mostrados");
+		});
 	});
-});
 
 // GET /evolution-of-cycling-routes/XXX/YYY
 
@@ -67,7 +79,7 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 // PUT /evolution-of-cycling-routes/ --> ERROR 405
 	
 	app.put(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
-		console.log("New PUT .../evolution-of-cycling-routes");
+		console.log("PUT .../evolution-of-cycling-routes");
 		res.sendStatus(405);
 	});
 
@@ -76,6 +88,12 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 
 
 // DELETE /evolution-of-cycling-routes/
+	
+	app.delete(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
+		console.log("DELETE .../evolution-of-cycling-routes");
+		db.remove({}, {multi: true}, function (err, numRemoved) {});
+		res.sendStatus(200);
+	});
 
 
 // DELETE /evolution-of-cycling-routes/XXX/YYY
