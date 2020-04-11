@@ -29,12 +29,12 @@ module.exports = function(app){
 // GET LOAD INITIAL DATA /evolution-of-cycling-routes/loadInitialData
 
 app.get(BASE_API_URL+"/evolution-of-cycling-routes/loadInitialData", (req,res) =>{
+	db.remove({}, {multi:true});
 	console.log("New GET .../loadInitialData");
 	db.insert(initialRoutes);
 	res.sendStatus(200);
 	console.log("Load Initial Data started:"+JSON.stringify(initialRoutes,null,2));
 });
-
 
 // GET /evolution-of-cycling-routes
 
@@ -67,7 +67,7 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 // PUT /evolution-of-cycling-routes/ --> ERROR 405
 	
 	app.put(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
-		console.log("PUT .../evolution-of-cycling-routes");
+		console.log("New PUT .../evolution-of-cycling-routes");
 		res.sendStatus(405);
 	});
 
