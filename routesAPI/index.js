@@ -39,6 +39,7 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes/loadInitialData", (req,res) =
 // GET /evolution-of-cycling-routes
 
 app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
+	db.remove({}, {multi:true});
 	console.log("New GET .../evolution-of-cycling-routes");
 	db.find({}, (error, routes) => {
 				routes.forEach( (r) => {
@@ -56,9 +57,19 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 
 
 // POST /evolution-of-cycling-routes/XXX/YYY ---> ERROR 405
+	
+	app.post(BASE_API_URL+"/evolution-of-cycling-routes/:province/:year", (req,res) =>{
+		console.log("New POST .../evolution-of-cycling-routes/:province/:year");
+		res.sendStatus(405);
+	});
 
 
 // PUT /evolution-of-cycling-routes/ --> ERROR 405
+	
+	app.put(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
+		console.log("PUT .../evolution-of-cycling-routes");
+		res.sendStatus(405);
+	});
 
 
 // PUT /evolution-of-cycling-routes/XXX/YYY
