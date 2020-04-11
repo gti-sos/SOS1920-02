@@ -38,7 +38,7 @@ module.exports = function(app){
 
 		console.log("New GET .../traffic-accidents");
 
-		db.find({}, (err, trafficAccidents) => {
+		db.find({}).sort({ province: 1 }).skip(1).limit(2).exec((err, trafficAccidents) => {
 
 			trafficAccidents.forEach( (t) => {
 				delete t._id;
