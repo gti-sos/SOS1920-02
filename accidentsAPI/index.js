@@ -72,7 +72,9 @@ module.exports = function(app){
 	//DELETE ACCIDENTS
 
 	app.delete(BASE_API_URL + "/traffic-accidents", (req,res)=>{
-		trafficAccidents = [];
+		db.remove({}, {multi:true}, (err, trafficAccidents) => {
+			console.log("Data removed");
+		});
 		res.sendStatus(200);
 	});
 
@@ -80,14 +82,22 @@ module.exports = function(app){
 
 	app.get(BASE_API_URL+"/traffic-accidents/:province", (req,res) => {
 		var province = req.params.province;
-		var filteredAccidents = trafficAccidents.filter((c) => {
-			return (c.province == province);
+		var year = parseInt(req.params.year);
+		db.find({"province":province, "year":year}, (err, trafficAccidents) => {
+			
+			if(trafficAccidents.length >= 1) {
+				
+				trafficAccidents.forEach( (t) => {
+					delete t._id;
+				});
+				
+				res.send(JSON.stringify(trafficAccidents,null,2));
+				console.log("Data sent:"+JSON.stringify(trafficAccidents,null,2));
+				
+			}else {
+				res.sendStatus(404, "PROVINCE NOT FOUND");
+			}
 		});
-		if(filteredAccidents.length >= 1) {
-			res.send(filteredAccidents[0]);
-		}else {
-			res.sendStatus(404, "PROVINCE NOT FOUND");
-		}
 	});
 
 	//POST ACCIDENT/XXX
@@ -127,14 +137,18 @@ module.exports = function(app){
 
 	app.delete(BASE_API_URL+"/traffic-accidents/:province", (req,res) => {
 		var province = req.params.province;
-		var filteredAccidents = trafficAccidents.filter((c) => {
-			return (c.province != province);
+		var year = parseInt(req.params.year);
+		
+		db.find({"province":province, "year":year}, (err, trafficAccidents) => {
+			
+			if(trafficAccidents.length >= 1) {
+				db.remove({"province":province,"year":year}, {}, (err, trafficAccidents) => {
+					console.log("Data " + province + ", " + year + " removed");
+				});
+				res.sendStatus(200);	
+			}else {
+				res.sendStatus(404, "PROVINCE NOT FOUND");
+			}
 		});
-		if(filteredAccidents.length < trafficAccidents.length) {
-			trafficAccidents = filteredAccidents;
-			res.sendStatus(200);
-		}else {
-			res.sendStatus(404, "PROVINCE NOT FOUND");
-		}
 	});
 };
