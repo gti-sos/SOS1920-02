@@ -97,7 +97,21 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 
 
 // DELETE /evolution-of-cycling-routes/XXX/YYY
-
+	
+	app.delete(BASE_API_URL+"/evolution-of-cycling-routes/:province/:year", (req,res)=>{
+		var searchProvince = req.params.province;
+		var searchYear = parseInt(req.params.year);
+		db.remove({province: searchProvince, year: searchYear},  {}, function(err, numRemoved){
+		if(numRemoved == 1) {
+			res.sendStatus(200);
+			console.log("Deleted");
+		}else {
+			res.sendStatus(404);
+			console.log("Not found");
+		}
+	})
+	db.remove({}, {multi:true});		
+	});
 	
 	console.log("Cargado correctamente")
 }
