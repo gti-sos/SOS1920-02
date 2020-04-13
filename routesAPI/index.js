@@ -25,19 +25,21 @@ module.exports = function(app){
 	{province: "malaga", year: 2015, metropolitan: 47.7, urban: 45.3, rest: 22.8},
 	{province: "sevilla", year: 2015, metropolitan: 146.2, urban: 165.7, rest: 3.7}];
 
+//var initialRoutes2 = JSON.parse(JSON.stringify(initialRoutes));
 
 // GET LOAD INITIAL DATA /evolution-of-cycling-routes/loadInitialData
 
 app.get(BASE_API_URL+"/evolution-of-cycling-routes/loadInitialData", (req,res) =>{
-	/*db.remove({}, {multi:true});
-	console.log("New GET .../loadInitialData");*/
+	db.remove({}, {multi:true});
+	console.log("New GET .../loadInitialData");
 	db.insert(initialRoutes);
 	res.sendStatus(200);
 	console.log("Load Initial Data started:"+JSON.stringify(initialRoutes,null,2));
 });
 
-// GET /evolution-of-cycling-routes
 
+// GET /evolution-of-cycling-routes?limit=8&offset=0
+	
 app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 	var query = {};
 	let offset = 0;
@@ -53,6 +55,8 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
             delete req.query.limit;
         }		
 		db.find({}).sort({province:1,year:-1}).skip(offset).limit(limit).exec((error, routes) =>{
+			console.log("valor del offset: " +offset);
+			console.log("valor del limit: " +limit);
 			routes.forEach((r)=>{
 				delete r._id
 			});
@@ -61,11 +65,44 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 			console.log("Recursos mostrados");
 		});
 	});
-
+	
 // GET /evolution-of-cycling-routes/XXX/YYY
+	
+	app.get(BASE_API_URL+"/evolution-of-cycling-routes/:province/:year", (req,res)=>{
+		console.log("New GET .../evolution-of-cycling-routes/:province/:year");
+		var searchProvince = req.params.province;
+		var searchYear = parseInt(req.params.year);
+		db.find({province: searchProvince, year: searchYear}, (err, routes) =>{
+			routes.forEach((r) => {
+				delete r._id;
+			});
+
+			if(routes.length == 1){
+				res.send(JSON.stringify(routes[0],null,2));
+				console.log("Data sent:"+JSON.stringify(routes[0],null,2));
+			}else{
+				res.sendStatus(404,"NOT FOUND");
+				console.log("Not found");
+			}
+
+		});
+	});	
 
 
 // POST /evolution-of-cycling-routes/
+	
+		app.post(BASE_API_URL+"/evolution-of-cycling-routes/", (req,res) =>{
+		var newRoutes = req.body;
+		if((newRoutes.province==null) 
+		   || (newRoutes.year==null) 
+		   || (newRoutes.metropolitan==null) 
+		   || (newRoutes.urban==null) || (newRoutes.rest==null) || (newRoutes == "")){
+			res.sendStatus(400,"BAD REQUEST");
+		}else{
+			db.insert(newRoutes);
+			res.sendStatus(201,"CREATED");
+		}
+	});
 
 
 // POST /evolution-of-cycling-routes/XXX/YYY ---> ERROR 405
@@ -85,6 +122,20 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 
 
 // PUT /evolution-of-cycling-routes/XXX/YYY
+	
+	app.put(BASE_API_URL+"/evolution-of-cycling-routes/:province/:year", (req,res)=>{
+		var newRoutes = req.body;
+		var searchProvince= req.params.province;
+		var searchYear = parseInt(req.params.year);
+		if((newRoutes.province==null) || (newRoutes.year==null) || (newRoutes.metropolitan==null) || (newRoutes.urban==null) 
+		   ||	(newRoutes.rest==null) || (newRoutes == "")){
+				res.sendStatus(400,"BAD REQUEST");
+			}else{
+				db.remove({province: searchProvince, year: searchYear}, { multi: true }, function (err, numRemoved) {});
+				db.insert(newRoutes);
+				res.sendStatus(200);
+			}
+	});
 
 
 // DELETE /evolution-of-cycling-routes/
@@ -98,20 +149,22 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 
 // DELETE /evolution-of-cycling-routes/XXX/YYY
 	
-	app.delete(BASE_API_URL+"/evolution-of-cycling-routes/:province/:year", (req,res)=>{
+		app.delete(BASE_API_URL+"/evolution-of-cycling-routes/:province/:year", (req,res)=>{
 		var searchProvince = req.params.province;
 		var searchYear = parseInt(req.params.year);
 		db.remove({province: searchProvince, year: searchYear},  {}, function(err, numRemoved){
-		if(numRemoved == 1) {
-			res.sendStatus(200);
-			console.log("Deleted");
-		}else {
-			res.sendStatus(404);
-			console.log("Not found");
-		}
-	})
-	db.remove({}, {multi:true});		
+			if(numRemoved == 1) {
+				res.sendStatus(200);
+				console.log("Deleted");
+			}else {
+				res.sendStatus(404);
+				console.log("Not found");
+			}
+		})
+		db.remove({}, {multi:true});
+		
 	});
+
 	
 	console.log("Cargado correctamente")
 }
