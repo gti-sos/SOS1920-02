@@ -36,9 +36,22 @@ module.exports = function(app){
 
 	app.get(BASE_API_URL+"/traffic-accidents", (req,res) =>{
 
+		var query = {};
+        let offset = 0;
+        let limit = Number.MAX_SAFE_INTEGER;
+		
+        if (req.query.offset) {
+            offset = parseInt(req.query.offset);
+            delete req.query.offset;
+        }
+        if (req.query.limit) {
+            limit = parseInt(req.query.limit);
+            delete req.query.limit;
+        }
+		
 		console.log("New GET .../traffic-accidents");
 
-		db.find({}).sort({ province: 1 }).skip(1).limit(2).exec((err, trafficAccidents) => {
+		db.find({}).sort({province:1}).skip(offset).limit(limit).exec((err, trafficAccidents) => {
 
 			trafficAccidents.forEach( (t) => {
 				delete t._id;
@@ -80,7 +93,7 @@ module.exports = function(app){
 
 	//GET ACCIDENT/XXX
 
-	app.get(BASE_API_URL+"/traffic-accidents/:province", (req,res) => {
+	app.get(BASE_API_URL+"/traffic-accidents/:province/:year", (req,res) => {
 		var province = req.params.province;
 		var year = parseInt(req.params.year);
 		db.find({"province":province, "year":year}, (err, trafficAccidents) => {
@@ -135,7 +148,7 @@ module.exports = function(app){
 
 	//DELETE ACCIDENT/XXX
 
-	app.delete(BASE_API_URL+"/traffic-accidents/:province", (req,res) => {
+	app.delete(BASE_API_URL+"/traffic-accidents/:province/:year", (req,res) => {
 		var province = req.params.province;
 		var year = parseInt(req.params.year);
 		
