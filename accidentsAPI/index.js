@@ -71,7 +71,7 @@ module.exports = function(app){
 		if((newAccident == "") || (newAccident.province == null)) {
 			res.sendStatus(400,"BAD REQUEST");
 		} else {
-			trafficAccidents.push(newAccident);
+			db.insert(newAccident);
 			res.sendStatus(201,"CREATED");
 		}
 	});
@@ -121,29 +121,26 @@ module.exports = function(app){
 
 	//PUT ACCIDENT/XXX
 
-	app.put(BASE_API_URL+"/traffic-accidents/:province", (req,res) => {
-		var province = req.params.province;	
+	app.put(BASE_API_URL+"/traffic-accidents/:province/:year", (req,res) => {
+				
+		var province = req.params.province;
+		var year = parseInt(req.params.year);
 		var body = req.body;
-
-		var notFound = trafficAccidents.filter((c) => {
-			return (c.province == province);}) == 0;
-
-		var updatedTrafficAccidents = trafficAccidents.map((c) => {
-			var newTrafficAccidents = c;
-
-			if (c.province == province) {
-				for (var i in body) {
-					newTrafficAccidents[i] = body[i];
-				}
+		
+		db.find({"province":province, "year":year}, (err, trafficAccidents) => {
+			
+			if(trafficAccidents.length >= 1) {
+				
+				db.update({"province":province,"year":year}, {$set:body});
+				res.sendStatus(200);
+				console.log("Data uploaded");
+				
+			}else {
+				res.sendStatus(404, "PROVINCE NOT FOUND");
+				console.log("Data not found");
 			}
-			return (newTrafficAccidents)		
-		});	
-		if (notFound) {
-			res.sendStatus(404, "PROVINCE NOT FOUND");
-		} else {
-			trafficAccidents = updatedTrafficAccidents;
-			res.sendStatus(200, "OK");
-		}
+		});
+		
 	});
 
 	//DELETE ACCIDENT/XXX
