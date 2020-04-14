@@ -37,8 +37,7 @@ module.exports = function(app){
 	//GET /rural-tourism-stats
 
 	app.get(BASE_API_URL + "/rural-tourism-stats", (req,res)=>{
-		
-		var query = {};
+		var dbquery = {};
         let offset = 0;
         let limit = Number.MAX_SAFE_INTEGER;
 		
@@ -52,8 +51,87 @@ module.exports = function(app){
             delete req.query.limit;
         }
 		
+		//BUSQUEDA
+		Object.keys(req.query).forEach((i) => {
+            if (isNaN(req.query[i]) == false) {
+                dbquery[i] = parseInt(req.query[i]);
+            }
+            else {
+                dbquery[i] = req.query[i];
+            }
+        });
+		//province
+		if (Object.keys(req.query).includes('from') && Object.keys(req.query).includes('to')) {
+            delete dbquery.from;
+            delete dbquery.to;
+            dbquery['province'] = { "$lte": parseInt(req.query['to']), "$gte": parseInt(req.query['from']) };
+        }
+        else if (Object.keys(req.query).includes('from')) {
+            delete dbquery.from;
+            dbquery['province'] = { "$gte": parseInt(req.query['from']) };
+        }
+        else if (Object.keys(req.query).includes('to')) {
+            delete dbquery.to;
+            dbquery['province'] = { "$lte": parseInt(req.query['to']) };
+        }
+		//year
+		if (Object.keys(req.query).includes('from') && Object.keys(req.query).includes('to')) {
+            delete dbquery.from;
+            delete dbquery.to;
+            dbquery['year'] = { "$lte": parseInt(req.query['to']), "$gte": parseInt(req.query['from']) };
+        }
+        else if (Object.keys(req.query).includes('from')) {
+            delete dbquery.from;
+            dbquery['year'] = { "$gte": parseInt(req.query['from']) };
+        }
+        else if (Object.keys(req.query).includes('to')) {
+            delete dbquery.to;
+            dbquery['year'] = { "$lte": parseInt(req.query['to']) };
+        }
+		//traveller
+		if (Object.keys(req.query).includes('from') && Object.keys(req.query).includes('to')) {
+            delete dbquery.from;
+            delete dbquery.to;
+            dbquery['traveller'] = { "$lte": parseInt(req.query['to']), "$gte": parseInt(req.query['from']) };
+        }
+        else if (Object.keys(req.query).includes('from')) {
+            delete dbquery.from;
+            dbquery['traveller'] = { "$gte": parseInt(req.query['from']) };
+        }
+        else if (Object.keys(req.query).includes('to')) {
+            delete dbquery.to;
+            dbquery['traveller'] = { "$lte": parseInt(req.query['to']) };
+        }
+		//overnightstay
+		if (Object.keys(req.query).includes('from') && Object.keys(req.query).includes('to')) {
+            delete dbquery.from;
+            delete dbquery.to;
+            dbquery['overnightstay'] = { "$lte": parseInt(req.query['to']), "$gte": parseInt(req.query['from']) };
+        }
+        else if (Object.keys(req.query).includes('from')) {
+            delete dbquery.from;
+            dbquery['overnightstay'] = { "$gte": parseInt(req.query['from']) };
+        }
+        else if (Object.keys(req.query).includes('to')) {
+            delete dbquery.to;
+            dbquery['overnightstay'] = { "$lte": parseInt(req.query['to']) };
+        }
+		//averagestay
+		if (Object.keys(req.query).includes('from') && Object.keys(req.query).includes('to')) {
+            delete dbquery.from;
+            delete dbquery.to;
+            dbquery['averagestay'] = { "$lte": parseInt(req.query['to']), "$gte": parseInt(req.query['from']) };
+        }
+        else if (Object.keys(req.query).includes('from')) {
+            delete dbquery.from;
+            dbquery['averagestay'] = { "$gte": parseInt(req.query['from']) };
+        }
+        else if (Object.keys(req.query).includes('to')) {
+            delete dbquery.to;
+            dbquery['averagestay'] = { "$lte": parseInt(req.query['to']) };
+        }
 		
-		db.find({}).sort({province:1,year:-1}).skip(offset).limit(limit).exec((error, tourism) =>{
+		db.find(dbquery).sort({province:1,year:-1}).skip(offset).limit(limit).exec((error, tourism) =>{
 
 			tourism.forEach((t)=>{
 				delete t._id
