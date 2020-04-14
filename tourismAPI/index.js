@@ -27,6 +27,7 @@ module.exports = function(app){
 	//LOADINITIALDATA
 	app.get(BASE_API_URL + "/rural-tourism-stats/loadInitialData", (req, res) => {
 		console.log("New GET ..../loadInitialData");
+		db.remove({},{multi:true});
 		db.insert(initialTourism);
 		res.sendStatus(200);
 		console.log("Initial Contact loaded"+JSON.stringify(initialTourism,null,2));
