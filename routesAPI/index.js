@@ -41,54 +41,29 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes/loadInitialData", (req,res) =
 	// GET /evolution-of-cycling-routes?limit=8&offset=0
 
 app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
-	var query = {};
-	var limit = req.query.limit;
-	var offset = req.query.offset;
-	console.log("limit= "+ limit+", offset= "+ offset);
+	var queryBD = {};
+	let offset = 0;
+	let limit = 15;
+	console.log("limit= "+ limit+", offset= "+ offset);	
+
+	if(req.query.province) queryBD["province"]= req.query.province;
+	if(req.query.year) queryBD["year"] = parseInt(req.query.year);
+	if(req.query.metropolitan) queryBD["metropolitan"] = parseFloat(req.query.metropolitan);
+	if(req.query.urban) queryBD["urban"] = parseFloat(req.query.urban);
+	if(req.query.rest) queryBD["rest"] = parseFloat(req.query.rest);	
 	
-	var province = req.query.province;
-	var year = parseInt(req.query.year);
-	var metropolitan = parseInt(req.query.metropolitan);
-	var urban = parseInt(req.query.urban);
-	var rest = parseInt(req.query.rest);
-	
-	db.find(query).sort({province:1,year:-1}).skip(offset).limit(limit).exec((error, routes) => {
-		routes.forEach((v) => {
-			delete v._id;
+	db.find(queryBD).sort({province:1,year:-1}).skip(offset).limit(limit).exec((error, routes) => {
+		routes.forEach((r) => {
+			delete r._id;
 		});
 		
-		if(province){
-			routes = routes.filter(function(route) {
- 				return route.province == province;
-			});
-		};
-		
-		if(year){
-			routes = routes.filter(function(route) {
- 				return route.year == year;
-			});
-		};
-		
-		if(metropolitan){
-			routes = routes.filter(function(route) {
- 				return route.year == metropolitan;
-			});
-		};	
-		
-		if(urban){
-			routes = routes.filter(function(route) {
- 				return route.year == urban;
-			});
-		};
-		
-		if(rest){
-			routes = routes.filter(function(route) {
- 				return route.year == rest;
-			});
-		};
-		
+	if(routes.length > 0){
 		res.send(JSON.stringify(routes,null,2));
 		console.log("Data sent:"+JSON.stringify(routes,null,2));
+	} else {
+		console.log("ERROR DATA NOT FOUND");
+		res.sendStatus(404, "DATA NOT FOUND");
+	} 
 
 	});
 });
