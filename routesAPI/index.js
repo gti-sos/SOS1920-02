@@ -108,7 +108,6 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 // POST /evolution-of-cycling-routes
 	
 	app.post(BASE_API_URL+"/evolution-of-cycling-routes",(req,res) =>{
-
 		var newRoute = req.body;
 		var province = req.body.province;
 		var year = parseInt(req.body.year);
@@ -119,9 +118,9 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 				res.sendStatus(409);
 			}else if(!newRoute.province 
 					 || !newRoute.year 
-					 || !newRoute.traveller 
-					 || !newRoute.overnightstay 
-					 || !newRoute.averagestay 
+					 || !newRoute.metropolitan 
+					 || !newRoute.urban 
+					 || !newRoute.rest 
 					 || Object.keys(newRoute).length != 5){
 				
 				console.log("El número de campos introducidos deber ser 5");
