@@ -42,8 +42,8 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes/loadInitialData", (req,res) =
 
 app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 	var query = {};
-	let offset = 0;
-	let limit = Number.MAX_SAFE_INTEGER;
+	var limit = req.query.limit;
+	var offset = req.query.offset;
 	console.log("limit= "+ limit+", offset= "+ offset);
 	
 	var province = req.query.province;
@@ -52,7 +52,7 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 	var urban = parseInt(req.query.urban);
 	var rest = parseInt(req.query.rest);
 	
-	db.find(dbquery).sort({province:1,year:-1}).skip(offset).limit(limit).exec((error, routes) => {
+	db.find(query).sort({province:1,year:-1}).skip(offset).limit(limit).exec((error, routes) => {
 		routes.forEach((v) => {
 			delete v._id;
 		});
