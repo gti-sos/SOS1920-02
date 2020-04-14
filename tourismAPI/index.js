@@ -60,62 +60,7 @@ module.exports = function(app){
                 dbquery[i] = req.query[i];
             }
         });
-		//province
-		if (Object.keys(req.query).includes('from') && Object.keys(req.query).includes('to')) {
-            delete dbquery.from;
-            delete dbquery.to;
-            dbquery['province'] = { "$lte": parseInt(req.query['to']), "$gte": parseInt(req.query['from']) };
-        }
-        else if (Object.keys(req.query).includes('from')) {
-            delete dbquery.from;
-            dbquery['province'] = { "$gte": parseInt(req.query['from']) };
-        }
-        else if (Object.keys(req.query).includes('to')) {
-            delete dbquery.to;
-            dbquery['province'] = { "$lte": parseInt(req.query['to']) };
-        }
-		//year
-		if (Object.keys(req.query).includes('from') && Object.keys(req.query).includes('to')) {
-            delete dbquery.from;
-            delete dbquery.to;
-            dbquery['year'] = { "$lte": parseInt(req.query['to']), "$gte": parseInt(req.query['from']) };
-        }
-        else if (Object.keys(req.query).includes('from')) {
-            delete dbquery.from;
-            dbquery['year'] = { "$gte": parseInt(req.query['from']) };
-        }
-        else if (Object.keys(req.query).includes('to')) {
-            delete dbquery.to;
-            dbquery['year'] = { "$lte": parseInt(req.query['to']) };
-        }
-		//traveller
-		if (Object.keys(req.query).includes('from') && Object.keys(req.query).includes('to')) {
-            delete dbquery.from;
-            delete dbquery.to;
-            dbquery['traveller'] = { "$lte": parseInt(req.query['to']), "$gte": parseInt(req.query['from']) };
-        }
-        else if (Object.keys(req.query).includes('from')) {
-            delete dbquery.from;
-            dbquery['traveller'] = { "$gte": parseInt(req.query['from']) };
-        }
-        else if (Object.keys(req.query).includes('to')) {
-            delete dbquery.to;
-            dbquery['traveller'] = { "$lte": parseInt(req.query['to']) };
-        }
-		//overnightstay
-		if (Object.keys(req.query).includes('from') && Object.keys(req.query).includes('to')) {
-            delete dbquery.from;
-            delete dbquery.to;
-            dbquery['overnightstay'] = { "$lte": parseInt(req.query['to']), "$gte": parseInt(req.query['from']) };
-        }
-        else if (Object.keys(req.query).includes('from')) {
-            delete dbquery.from;
-            dbquery['overnightstay'] = { "$gte": parseInt(req.query['from']) };
-        }
-        else if (Object.keys(req.query).includes('to')) {
-            delete dbquery.to;
-            dbquery['overnightstay'] = { "$lte": parseInt(req.query['to']) };
-        }
+		
 		//averagestay
 		if (Object.keys(req.query).includes('from') && Object.keys(req.query).includes('to')) {
             delete dbquery.from;
