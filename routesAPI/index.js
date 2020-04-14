@@ -43,8 +43,22 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes/loadInitialData", (req,res) =
 app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 	var queryBD = {};
 	let offset = 0;
-	let limit = 15;
+    let limit = Number.MAX_SAFE_INTEGER;
+	
+// PAGINACION
+		
+	if (req.query.offset) {
+		offset = parseInt(req.query.offset);
+ 			delete req.query.offset;
+	}
+	if (req.query.limit) {
+		limit = parseInt(req.query.limit);
+			delete req.query.limit;
+	}
+
 	console.log("limit= "+ limit+", offset= "+ offset);	
+	
+// BUSQUEDA
 
 	if(req.query.province) queryBD["province"]= req.query.province;
 	if(req.query.year) queryBD["year"] = parseInt(req.query.year);
@@ -91,19 +105,33 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 	});	
 
 
-// POST /evolution-of-cycling-routes/
+// POST /evolution-of-cycling-routes
 	
-		app.post(BASE_API_URL+"/evolution-of-cycling-routes/", (req,res) =>{
-		var newRoutes = req.body;
-		if((newRoutes.province==null) 
-		   || (newRoutes.year==null) 
-		   || (newRoutes.metropolitan==null) 
-		   || (newRoutes.urban==null) || (newRoutes.rest==null) || (newRoutes == "")){
-			res.sendStatus(400,"BAD REQUEST");
-		}else{
-			db.insert(newRoutes);
-			res.sendStatus(201,"CREATED");
-		}
+	app.post(BASE_API_URL+"/evolution-of-cycling-routes",(req,res) =>{
+
+		var newRoute = req.body;
+		var province = req.body.province;
+		var year = parseInt(req.body.year);
+
+		db.find({"province": province, "year": year},(error, routes)=>{
+			if(routes.length != 0){	
+				console.log("409. El objeto ya existe");
+				res.sendStatus(409);
+			}else if(!newRoute.province 
+					 || !newRoute.year 
+					 || !newRoute.traveller 
+					 || !newRoute.overnightstay 
+					 || !newRoute.averagestay 
+					 || Object.keys(newRoute).length != 5){
+				
+				console.log("El número de campos introducidos deber ser 5");
+				res.sendStatus(400);
+			}else{
+				console.log("Los datos introducidos son correctos");
+				db.insert(newRoute);
+				res.sendStatus(201);
+			}
+		});
 	});
 
 
