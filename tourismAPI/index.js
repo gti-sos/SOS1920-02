@@ -65,27 +65,6 @@ module.exports = function(app){
 		});
 	});
 
-
-	//GET /rural-tourism-stats/XXX
-
-	app.get(BASE_API_URL+"/rural-tourism-stats/:province", (req,res)=>{
-
-		var province = req.params.province;
-
-		db.find({"province" :province},(error, tourism)=>{
-			if(tourism.length==0){
-				console.log("ERROR 404. Recurso no encontrado");
-				res.sendStatus(404);
-			}else{
-				res.send(tourism.map((t)=>{
-					delete t._id;
-					return(t);
-				}));
-				//console.log("Data sent: " + JSON.stringify(tourism,null,2));
-				console.log("Recurso mostrado");
-			}
-		})
-	});
 	
 	//GET /rural-tourism-stats/XXX/YYY
 
@@ -134,7 +113,7 @@ module.exports = function(app){
 		});
 	});
 
-	//PUT /rural-tourism-stats/XXX
+	//PUT /rural-tourism-stats/XXX/YYY
 
 	app.put(BASE_API_URL+"/rural-tourism-stats/:province/:year", (req, res) =>{
 
@@ -171,23 +150,6 @@ module.exports = function(app){
 		console.log("Todos los recursos han sido eliminados");
 	});
 
-	// DELETE /rural-tourism-stats/XXX
-
-	app.delete(BASE_API_URL+"/rural-tourism-stats/:province", (req,res)=>{
-
-		var province = req.params.province;
-
-		db.find({"province":province},(error, tourism)=>{
-			if(tourism.length==0){
-				console.log("ERROR 404. Recurso no encontrado");
-				res.sendStatus(404);
-			}else{
-				console.log("DELETE de un recurso concreto");
-                res.sendStatus(200);
-                db.remove({ "province":province });
-			}
-		})
-	});
 	
 	// DELETE /rural-tourism-stats/XXX/YYY
 
