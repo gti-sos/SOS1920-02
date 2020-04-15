@@ -52,29 +52,11 @@ module.exports = function(app){
         }
 		
 		//BUSQUEDA
-		Object.keys(req.query).forEach((i) => {
-            if (isNaN(req.query[i]) == false) {
-                dbquery[i] = parseInt(req.query[i]);
-            }
-            else {
-                dbquery[i] = req.query[i];
-            }
-        });
-		
-		//averagestay
-		if (Object.keys(req.query).includes('from') && Object.keys(req.query).includes('to')) {
-            delete dbquery.from;
-            delete dbquery.to;
-            dbquery['averagestay'] = { "$lte": parseInt(req.query['to']), "$gte": parseInt(req.query['from']) };
-        }
-        else if (Object.keys(req.query).includes('from')) {
-            delete dbquery.from;
-            dbquery['averagestay'] = { "$gte": parseInt(req.query['from']) };
-        }
-        else if (Object.keys(req.query).includes('to')) {
-            delete dbquery.to;
-            dbquery['averagestay'] = { "$lte": parseInt(req.query['to']) };
-        }
+		if(req.query.province) dbquery["province"]= req.query.province;
+		if(req.query.year) dbquery["year"] = parseInt(req.query.year);
+		if(req.query.traveller) dbquery["traveller"] = parseFloat(req.query.traveller);
+		if(req.query.overnightstay) dbquery["overnightstay"] = parseFloat(req.query.overnightstay);
+		if(req.query.averagestay) dbquery["averagestay"] = parseFloat(req.query.averagestay);	
 		
 		db.find(dbquery).sort({province:1,year:-1}).skip(offset).limit(limit).exec((error, tourism) =>{
 
