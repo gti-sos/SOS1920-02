@@ -50,10 +50,10 @@ module.exports = function(app){
         }
 		
 		if(req.query.province) dbquery["province"] = req.query.province;
-		if(req.query.year) dbquery["year"]= req.query.year;
-		if(req.query.trafficaccidentvictim) dbquery["trafficaccidentvictim"]= req.query.trafficaccidentvictim;
-		if(req.query.dead) dbquery["dead"]= req.query.dead;
-		if(req.query.injured) dbquery["injured"]= req.query.injured;
+		if(req.query.year) dbquery["year"]= parseInt(req.query.year);
+		if(req.query.trafficaccidentvictim) dbquery["trafficaccidentvictim"]= parseInt(req.query.trafficaccidentvictim);
+		if(req.query.dead) dbquery["dead"]= parseInt(req.query.dead);
+		if(req.query.injured) dbquery["injured"]= parseInt(req.query.injured);
 		
 		console.log("New GET .../traffic-accidents");
 
@@ -63,8 +63,17 @@ module.exports = function(app){
 				delete t._id;
 			});
 
-			res.send(JSON.stringify(trafficAccidents,null,2));
-			console.log("Data sent:"+JSON.stringify(trafficAccidents,null,2));
+			if(trafficAccidents.length==0){
+				res.sendStatus(409,"OBJECT ALREADY EXISTS");
+				console.log("El dato ya existe");
+			} else if(trafficAccidents.length==1) {
+				res.send(JSON.stringify(trafficAccidents[0],null,2));
+				console.log("Data sent:"+JSON.stringify(trafficAccidents[0],null,2));
+			} else {
+				res.send(JSON.stringify(trafficAccidents,null,2));
+				console.log("Data sent:"+JSON.stringify(trafficAccidents,null,2));
+			}
+			
 		})
 	});
 	
@@ -119,8 +128,8 @@ module.exports = function(app){
 					delete t._id;
 				});
 				
-				res.send(JSON.stringify(trafficAccidents,null,2));
-				console.log("Data sent:"+JSON.stringify(trafficAccidents,null,2));
+				res.send(JSON.stringify(trafficAccidents[0],null,2));
+				console.log("Data sent:"+JSON.stringify(trafficAccidents[0],null,2));
 				
 			}else {
 				res.sendStatus(404, "PROVINCE NOT FOUND");
