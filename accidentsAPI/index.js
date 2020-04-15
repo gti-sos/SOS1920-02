@@ -13,14 +13,14 @@ module.exports = function(app){
 	});
 
 	var initialTrafficAccidents = [
-		{"province": "almeria", "year": 2015, "traffic-accident-victim": 733, "dead": 26, "injured": 1169},
-		{"province": "cadiz", "year": 2015, "traffic-accident-victim": 3080, "dead": 32, "injured": 4673},
-		{"province": "cordoba", "year": 2015, "traffic-accident-victim": 1491, "dead": 26, "injured": 2043},
-		{"province": "granada", "year": 2015, "traffic-accident-victim": 1251, "dead": 43, "injured": 1831},
-		{"province": "huelva", "year": 2015, "traffic-accident-victim": 721, "dead": 23, "injured": 1134},
-		{"province": "jaen", "year": 2015, "traffic-accident-victim": 10023, "dead": 23, "injured": 1541},
-		{"province": "malaga", "year": 2015, "traffic-accident-victim": 2514, "dead": 46, "injured": 3543},
-		{"province": "sevilla", "year": 2015, "traffic-accident-victim": 5371, "dead": 43, "injured": 7963}
+		{"province": "almeria", "year": 2015, "trafficaccidentvictim": 733, "dead": 26, "injured": 1169},
+		{"province": "cadiz", "year": 2015, "trafficaccidentvictim": 3080, "dead": 32, "injured": 4673},
+		{"province": "cordoba", "year": 2015, "trafficaccidentvictim": 1491, "dead": 26, "injured": 2043},
+		{"province": "granada", "year": 2015, "trafficaccidentvictim": 1251, "dead": 43, "injured": 1831},
+		{"province": "huelva", "year": 2015, "trafficaccidentvictim": 721, "dead": 23, "injured": 1134},
+		{"province": "jaen", "year": 2015, "trafficaccidentvictim": 10023, "dead": 23, "injured": 1541},
+		{"province": "malaga", "year": 2015, "trafficaccidentvictim": 2514, "dead": 46, "injured": 3543},
+		{"province": "sevilla", "year": 2015, "trafficaccidentvictim": 5371, "dead": 43, "injured": 7963}
 	];
 
 	app.get(BASE_API_URL+"/traffic-accidents/loadInitialData", (req,res) => {
@@ -67,13 +67,22 @@ module.exports = function(app){
 	app.post(BASE_API_URL+"/traffic-accidents",(req,res) =>{
 
 		var newAccident = req.body;
+		var province = req.body.province;
+		var year = req.body.year;
 
-		if((newAccident == "") || (newAccident.province == null)) {
-			res.sendStatus(400,"BAD REQUEST");
-		} else {
-			db.insert(newAccident);
-			res.sendStatus(201,"CREATED");
-		}
+		db.find({"province":province,"year":year}, (err, trafficAccidents) => {
+			if(trafficAccidents!=0){
+				res.sendStatus(409,"OBJECT ALREADY EXISTS");
+				console.log("El dato ya existe");
+			} else if(!trafficAccidents.province || !trafficAccidents.year || !trafficAccidents.trafficaccidentvictim || !trafficAccidents.dead || 				!trafficAccidents.injured || Object.keys(newAccident).length!=5) {
+				res.sendStatus(400,"BAD REQUEST");
+				console.log("El formato no es correcto");
+			} else {
+				db.insert(newAccident);
+				res.sendStatus(201,"CREATED");
+				console.log("Objeto creado con exito");
+			}
+		})
 	});
 
 	//PUT ACCIDENTS
