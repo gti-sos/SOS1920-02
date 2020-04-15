@@ -36,7 +36,7 @@ module.exports = function(app){
 
 	app.get(BASE_API_URL+"/traffic-accidents", (req,res) =>{
 
-		var query = {};
+		var dbquery = {};
         let offset = 0;
         let limit = Number.MAX_SAFE_INTEGER;
 		
@@ -49,9 +49,15 @@ module.exports = function(app){
             delete req.query.limit;
         }
 		
+		if(req.query.province) dbquery["province"] = req.query.province;
+		if(req.query.year) dbquery["year"]= req.query.year;
+		if(req.query.trafficaccidentvictim) dbquery["trafficaccidentvictim"]= req.query.trafficaccidentvictim;
+		if(req.query.dead) dbquery["dead"]= req.query.dead;
+		if(req.query.injured) dbquery["injured"]= req.query.injured;
+		
 		console.log("New GET .../traffic-accidents");
 
-		db.find({}).sort({province:1}).skip(offset).limit(limit).exec((err, trafficAccidents) => {
+		db.find(dbquery).sort({province:1}).skip(offset).limit(limit).exec((err, trafficAccidents) => {
 
 			trafficAccidents.forEach( (t) => {
 				delete t._id;
@@ -74,13 +80,13 @@ module.exports = function(app){
 			if(trafficAccidents!=0){
 				res.sendStatus(409,"OBJECT ALREADY EXISTS");
 				console.log("El dato ya existe");
-			} else if(!trafficAccidents.province || !trafficAccidents.year || !trafficAccidents.trafficaccidentvictim || !trafficAccidents.dead || 				!trafficAccidents.injured || Object.keys(newAccident).length!=5) {
+			} else if(!newAccident.province || !newAccident.year || !newAccident.trafficaccidentvictim || !newAccident.dead || !newAccident.injured || Object.keys(newAccident).length!=5) {
 				res.sendStatus(400,"BAD REQUEST");
-				console.log("El formato no es correcto");
+				console.log("The format is incorrect");
 			} else {
 				db.insert(newAccident);
 				res.sendStatus(201,"CREATED");
-				console.log("Objeto creado con exito");
+				console.log("Objet created with exit");
 			}
 		})
 	});
@@ -127,6 +133,10 @@ module.exports = function(app){
 	app.post(BASE_API_URL+"/traffic-accidents/:province",(req,res) => {
 		res.sendStatus(405);
 	});
+	
+	app.post(BASE_API_URL+"/traffic-accidents/:province/:year",(req,res) => {
+		res.sendStatus(405);
+	});
 
 	//PUT ACCIDENT/XXX
 
@@ -138,15 +148,16 @@ module.exports = function(app){
 		
 		db.find({"province":province, "year":year}, (err, trafficAccidents) => {
 			
-			if(trafficAccidents.length >= 1) {
-				
+			if(trafficAccidents.length == 0) {
+				res.sendStatus(404, "PROVINCE NOT FOUND");
+				console.log("Data not found");
+			} else if(body.province != province || body.year != year || !body.province || !body.year || !body.trafficaccidentvictim || !body.dead || !body.injured || Object.keys(body).length != 5){
+				res.sendStatus(400, "INCORRECT FORMAT");
+				console.log("The format is incorrect");
+			} else {
 				db.update({"province":province,"year":year}, {$set:body});
 				res.sendStatus(200);
 				console.log("Data uploaded");
-				
-			}else {
-				res.sendStatus(404, "PROVINCE NOT FOUND");
-				console.log("Data not found");
 			}
 		});
 		
