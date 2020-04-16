@@ -71,7 +71,7 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 			delete r._id;
 		});
 		
-	if(routes.length > 0 & routes.length != 1){
+	if(routes.length > 0){
 		res.send(JSON.stringify(routes,null,2));
 		console.log("Data sent:"+JSON.stringify(routes,null,2));		 		
 	} else {
