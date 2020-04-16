@@ -63,15 +63,12 @@ module.exports = function(app){
 				delete t._id;
 			});
 
-			if(trafficAccidents.length==0){
-				res.sendStatus(409,"OBJECT ALREADY EXISTS");
-				console.log("El dato ya existe");
-			} else if(trafficAccidents.length==1) {
-				res.send(JSON.stringify(trafficAccidents[0],null,2));
-				console.log("Data sent:"+JSON.stringify(trafficAccidents[0],null,2));
-			} else {
+			if(trafficAccidents.length!=0){
 				res.send(JSON.stringify(trafficAccidents,null,2));
 				console.log("Data sent:"+JSON.stringify(trafficAccidents,null,2));
+			} else {
+				res.sendStatus(404,"NOT FOUND");
+				console.log("El dato no existe");
 			}
 			
 		})
@@ -109,9 +106,8 @@ module.exports = function(app){
 	//DELETE ACCIDENTS
 
 	app.delete(BASE_API_URL + "/traffic-accidents", (req,res)=>{
-		db.remove({}, {multi:true}, (err, trafficAccidents) => {
-			console.log("Data removed");
-		});
+		db.remove({}, {multi:true});
+		console.log("Data removed");
 		res.sendStatus(200);
 	});
 
