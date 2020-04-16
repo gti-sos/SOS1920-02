@@ -162,11 +162,11 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 		if((newRoutes.province==null) || (newRoutes.year==null) || (newRoutes.metropolitan==null) || (newRoutes.urban==null) 
 		   ||	(newRoutes.rest==null) || (newRoutes == "")){
 				res.sendStatus(400,"BAD REQUEST");
-			}else{
-				db.remove({province: searchProvince, year: searchYear}, { multi: true }, function (err, numRemoved) {});
-				db.insert(newRoutes);
-				res.sendStatus(200);
-			}
+		}else{
+			db.remove({province: searchProvince, year: searchYear}, { multi: true }, function (err, numRemoved) {});
+			db.insert(newRoutes);
+			res.sendStatus(200);
+		}
 	});
 
 
