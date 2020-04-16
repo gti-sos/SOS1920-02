@@ -73,10 +73,7 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 		
 	if(routes.length > 0 & routes.length != 1){
 		res.send(JSON.stringify(routes,null,2));
-		console.log("Data sent:"+JSON.stringify(routes,null,2));
-	}else if (routes.length == 1){
-		res.send(JSON.stringify(routes[0],null,2));
-		console.log("Data sent:"+JSON.stringify(routes[0],null,2));			 		
+		console.log("Data sent:"+JSON.stringify(routes,null,2));		 		
 	} else {
 		console.log("ERROR DATA NOT FOUND");
 		res.sendStatus(404, "DATA NOT FOUND");
