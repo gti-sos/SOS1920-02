@@ -132,11 +132,13 @@ module.exports = function(app){
 				console.log("Error 404, recurso no encontrado.");
 				res.sendStatus(404);
 			}else if(!updateTourism.province || !updateTourism.year ||!updateTourism.traveller || !updateTourism.overnightstay
-		  			 || !updateTourism.averagestay || updateTourism.province != province || updateTourism.year != year
-					 || Object.keys(updateTourism).length != 5){
+		  			 || !updateTourism.averagestay || Object.keys(updateTourism).length != 5){
 				
 					console.log("PUT recurso encontrado. Se intenta actualizar con campos no validos 400");
 					res.sendStatus(400);
+			}else if(updateTourism.province != province || updateTourism.year != year){
+					console.log("PUT recurso encontrado. Se intenta actualizar el identificador 409");
+					res.sendStatus(409);
 			}else{
 				db.update({"province":province,"year":year},{$set: updateTourism});
 				console.log("PUT realizado con exito.")
