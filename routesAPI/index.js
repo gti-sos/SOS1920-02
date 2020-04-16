@@ -153,17 +153,27 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes", (req,res) =>{
 // PUT /evolution-of-cycling-routes/XXX/YYY
 	
 	app.put(BASE_API_URL+"/evolution-of-cycling-routes/:province/:year", (req,res)=>{
-		var newRoutes = req.body;
-		var searchProvince= req.params.province;
-		var searchYear = parseInt(req.params.year);
-		if((newRoutes.province==null) || (newRoutes.year==null) || (newRoutes.metropolitan==null) || (newRoutes.urban==null) 
-		   ||	(newRoutes.rest==null) || (newRoutes == "")){
-				res.sendStatus(400,"BAD REQUEST");
+	var province = req.params.province;
+	var year = parseInt(req.params.year);
+	var newRoute = req.body;
+		
+	db.find({"province":province, "year": year},(error,routes)=>{
+		console.log(routes);
+		if(routes.length == 0){
+			console.log("Error 404, recurso no encontrado.");
+			res.sendStatus(404);
+		}else if(!newRoute.province || !newRoute.year ||!newRoute.metropolitan || !newRoute.urban
+			|| !newRoute.rest || newRoute.province != province || newRoute.year != year
+			|| Object.keys(newRoute).length != 5){
+				
+			console.log("PUT recurso encontrado. Se intenta actualizar con campos no validos 409");
+			res.sendStatus(409);
 		}else{
-			db.remove({province: searchProvince, year: searchYear}, { multi: true }, function (err, numRemoved) {});
-			db.insert(newRoutes);
+			db.update({"province":province,"year":year},{$set: newRoute});
+			console.log("PUT realizado con exito.")
 			res.sendStatus(200);
 		}
+		});
 	});
 
 
