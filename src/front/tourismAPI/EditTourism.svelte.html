@@ -1,0 +1,102 @@
+<script>
+    import {
+        onMount
+    } from "svelte";
+
+    import {
+        pop
+    } from "svelte-spa-router";
+
+
+    import Table from "sveltestrap/src/Table.svelte";
+    import Button from "sveltestrap/src/Button.svelte";
+
+    export let params = {};
+    let tourism = {};
+    let updatedProvince = "XXXX";
+    let updatedYear = 0;
+	let updatedTraveller = 0;
+	let updatedOvernightstay = 0;
+	let updatedAveragestay = 0;
+    let errorMsg = "";
+
+    onMount(getTourism);
+
+    async function getTourism() {
+
+        console.log("Fetching tourism...");
+        const res = await fetch("/api/v1/rural-tourism-stats/" + params.tourismProvince + "/" + params.tourismYear);
+		
+        if (res.ok) {
+            console.log("Ok:");
+            const json = await res.json();
+            tourism = json;
+            updatedProvince = params.tourismProvince;
+            updatedYear = parseInt(params.tourismYear);
+            updatedTraveller = parseInt(tourism.traveller);
+			updatedOvernightstay = parseInt(tourism.overnightstay);
+            updatedAveragestay = parseInt(tourism.averagestay);
+            console.log("Received tourism.");
+        } else {
+            errorMsg = res.status + ": " + res.statusText;
+            console.log("ERROR!" + errorMsg);
+        }
+    }
+
+
+    async function updateTourism() {
+
+        console.log("Updating tourism..." + JSON.stringify(params.tourismProvince));
+		
+        const res = await fetch("/api/v1/rural-tourism-stats/" + params.tourismProvince + "/" + params.tourismYear, {
+            method: "PUT",
+            body: JSON.stringify({
+                province: params.tourismProvince,
+                year: parseInt(params.tourismYear),
+                traveller: parseInt(updatedTraveller),
+				overnightstay: parseInt(updatedOvernightstay),
+				averagestay: parseInt(updatedAveragestay)
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function (res) {
+            getTourism();
+        });
+
+
+
+    }
+</script>
+<main>
+    <h3>Editar el dato: <strong>{params.tourismProvince} {params.tourismYear}</strong></h3>
+    {#await tourism}
+        Loading datas...
+    {:then tourism}
+        <Table bordered>
+            <thead>
+                <tr>
+                  	<th>Provincia</th>
+                	<th>Año</th>
+                	<th>Viajero</th>
+                	<th>Pernoctación</th>
+					<th>Estancia media</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{updatedProvince}</td>
+					<td>{updatedYear}</td>
+                    <td><input bind:value="{updatedTraveller}"></td>
+                    <td><input bind:value="{updatedOvernightstay}"></td>
+					<td><input bind:value="{updatedAveragestay}"></td>
+                    <td> <Button outline  color="primary" on:click={updateTourism}>Actualizar</Button></td>
+                </tr>
+        </tbody>
+        </Table>
+    {/await}
+    {#if errorMsg}
+        <p style="color: red">ERROR: {errorMsg}</p>
+    {/if}
+    <Button outline color="secondary" on:click="{pop}">Volver</Button>
+</main>

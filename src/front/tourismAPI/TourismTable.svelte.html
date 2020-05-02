@@ -1,0 +1,108 @@
+<script>
+    import {
+        onMount
+    } from "svelte";
+ 
+    import Table from "sveltestrap/src/Table.svelte";
+    import Button from "sveltestrap/src/Button.svelte";
+ 
+    let tourism = [];
+    let newTourism = {
+        province: "",
+        year: 0.0,
+        traveller: 0.0,
+		overnightstay: 0.0,
+		averagestay: 0.0
+		
+    };
+ 
+    onMount(getTourism);
+ 
+    async function getTourism() {
+ 
+        console.log("Fetching rural-tourism-stats...");
+        const res = await fetch("/api/v1/rural-tourism-stats");
+ 
+        if (res.ok) {
+            console.log("Ok:");
+            const json = await res.json();
+            tourism = json;
+            console.log("Received " + tourism.length + " rural-tourism-stats.");
+        } else {
+            console.log("ERROR!");
+        }
+    }
+ 
+    async function insertTourism() {
+ 
+        console.log("Inserting new data..." + JSON.stringify(newTourism));
+ 
+        const res = await fetch("/api/v1/rural-tourism-stats", {
+            method: "POST",
+            body: JSON.stringify(newTourism),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function (res) {
+            getTourism();
+        });
+ 
+    }
+    async function deleteTourism(province, year) {
+        const res = await fetch("/api/v1/rural-tourism-stats/" + province +"/" + year, {
+            method: "DELETE"
+        }).then(function (res) {
+            getTourism();
+        });
+    }
+	async function deleteAllTourism() {
+        const res = await fetch("/api/v1/rural-tourism-stats/", {
+            method: "DELETE"
+        }).then(function (res) {
+            getTourism();
+        });
+    }
+</script>
+ 
+<main>
+ 	<Button outline  color="danger" on:click={deleteAllTourism}>Borrar todo</Button>
+    {#await tourism}
+        Loading datas...
+    {:then tourism}
+        <Table bordered>
+            <thead>
+                <tr>
+                    <th>Provincia</th>
+                	<th>Año</th>
+                	<th>Viajero</th>
+                	<th>Pernoctación</th>
+					<th>Estancia media</th>
+                </tr>
+            </thead>
+            <tbody>
+                {#each tourism as tou}
+                    <tr>
+						<td>
+                        	<a href="#/rural-tourism-stats/{tou.province}/{tou.year}">{tou.province}</a>
+						</td>
+                        <td>{tou.year}</td>
+                        <td>{tou.traveller}</td>
+						<td>{tou.overnightstay}</td>
+                        <td>{tou.averagestay}</td>
+                        <td><Button outline color="danger" on:click="{deleteTourism(tou.province,tou.year)}">Borrar</Button></td>
+                    </tr>
+                {/each}
+				<tr>
+                    <td><input bind:value="{newTourism.province}"></td>
+                    <td><input bind:value="{newTourism.year}"></td>
+                    <td><input bind:value="{newTourism.traveller}"></td>
+                    <td><input bind:value="{newTourism.overnightstay}"></td>
+                    <td><input bind:value="{newTourism.averagestay}"></td>
+                    <td> <Button outline  color="primary" on:click={insertTourism}>Añadir</Button> </td>
+                </tr>
+            </tbody>
+        </Table>
+    {/await}
+ 
+ 
+</main>
