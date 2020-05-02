@@ -1,10 +1,12 @@
 <script>
-	import {
-		onMount
-	} from "svelte";
+	import {onMount} from "svelte";
+	import {pop} from "svelte-spa-router";
 
 	import Table from "sveltestrap/src/Table.svelte";
 	import Button from "sveltestrap/src/Button.svelte";
+	import Input from "sveltestrap/src/Input.svelte";
+	import Label from "sveltestrap/src/Label.svelte";
+	import FormGroup from "sveltestrap/src/FormGroup.svelte";
 
 	let routes = [];
 	let newRoute = {
@@ -17,12 +19,10 @@
 
 	onMount(getRoutes);
 
-// GET /routes
-
+// GET /evolution-of-cycling-routes
 	async function getRoutes() {
 		console.log("Fetching routes...");
-		const res = await fetch("/api/v1/routes");
-
+		const res = await fetch("/api/v1/evolution-of-cycling-routes/");
 		if (res.ok) {
 			console.log("Ok:");
 			const json = await res.json();
@@ -33,13 +33,13 @@
 		}
 	}
 
-// POST /route
+	
 
+
+// POST /evolution-of-cycling-routes
 	async function insertRoute() {
-	//La funcion es asincrona parapoder hacer el "await"	
 		console.log("Inserting route..." + JSON.stringify(newRoute));
-
-		const res = await fetch("/api/v1/routes", {
+		const res = await fetch("/api/v1/evolution-of-cycling-routes/", {
 			method: "POST",
 			body: JSON.stringify(newRoute),
 			headers: {
@@ -49,57 +49,75 @@
 			getRoutes();
 		});
 	}
-	// DELETE /route	
 
-	async function deleteRoute(province) {
-		const res = await fetch("/api/v1/routes/" + province, {
+//	DELETE /evolution-of-cycling-routes
+async function deleteRoutes() {
+	console.log("Deleting all routes...");
+		const res = await fetch("/api/v1/evolution-of-cycling-routes/" , {
 			method: "DELETE"
 		}).then(function (res) {
 			getRoutes();
 		});
 	}
+
+//	DELETE /evolution-of-cycling-routes/XXX/YYY
+	async function deleteRoute(province, year) {
+		console.log("Deleting one route...");
+		const res = await fetch("/api/v1/evolution-of-cycling-routes/" + province +"/" + year, {
+			method: "DELETE"
+		}).then(function (res) {
+			getRoutes();
+		});
+	}
+
+//	SEARCH /evolution-of-cycling-routes
+//	OFFSET
+	
 </script>
 
 <main>
-
+	<h2>Evolucion Carriles Bici</h2>
+	
 	{#await routes}
 		Loading routes...
 	{:then routes}
 		<Table bordered>
 			<thead>
 				<tr>
-					<th>Province</th>
-					<th>Year</th>
-					<th>Metropolitan</th>
-					<th>Urban</th>
-					<th>Rest</th>
-					<th>Actions</th>
+					<th>Provincia</th>
+					<th>Año</th>
+					<th>Metropolitano</th>
+					<th>Urbano</th>
+					<th>Resto</th>
+					<th>Acciones</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td><input bind:value="{newRoute.province}"></td>
-					<td><input bind:value="{newRoute.year}"></td>
-					<td><input bind:value="{newRoute.metropolitan}"></td>
-					<td><input bind:value="{newRoute.urban}"></td>
-					<td><input bind:value="{newRoute.rest}"></td>
-					<td> <Button outline  color="primary" on:click={insertRoute}>Insert</Button> </td>
+					<td><Input type="text" bind:value="{newRoute.province}"/></td>
+					<td><Input type="number" bind:value="{newRoute.year}"/></td>
+					<td><Input type="number" bind:value="{newRoute.metropolitan}"/></td>
+					<td><Input type="number" bind:value="{newRoute.urban}"/></td>
+					<td><Input type="number" bind:value="{newRoute.rest}"/></td>
+					<td> <Button outline  color="primary" on:click={insertRoute}>Añadir</Button> </td>
 				</tr>
 
 				{#each routes as route}
 					<tr>
-						<a href="#/route/{route.province}">{route.province}</a>
+						<a href="#/evolution-of-cycling-routes/{route.province}/{route.year}">{route.province}</a>
 						<td>{route.year}</td>
 						<td>{route.metropolitan}</td>
 						<td>{route.urban}</td>
 						<td>{route.rest}</td>
-						<td><Button outline color="danger" on:click="{deleteRoute(route.province)}"
-							>Delete</Button></td>
+						<td> <Button outline color="danger" on:click="{deleteRoute(route.province, route.year)}"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar </Button> </td>
+							
 					</tr>
 				{/each}
 			</tbody>
 		</Table>
 	{/await}
 
-
+<!--Añadir aqui la paginacion-->
+<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
+<Button outline on:click={deleteRoutes} color="danger"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar todo </Button>
 </main>
