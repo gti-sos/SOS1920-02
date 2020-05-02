@@ -3581,7 +3581,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (68:2) <Button outline  color="danger" on:click={deleteAllTourism}>
+    // (69:2) <Button outline  color="danger" on:click={deleteAllTourism}>
     function create_default_slot_3(ctx) {
     	let t;
 
@@ -3601,7 +3601,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(68:2) <Button outline  color=\\\"danger\\\" on:click={deleteAllTourism}>",
+    		source: "(69:2) <Button outline  color=\\\"danger\\\" on:click={deleteAllTourism}>",
     		ctx
     	});
 
@@ -3630,7 +3630,7 @@ var app = (function () {
     	return block;
     }
 
-    // (71:4) {:then tourism}
+    // (72:4) {:then tourism}
     function create_then_block$1(ctx) {
     	let current;
 
@@ -3678,14 +3678,14 @@ var app = (function () {
     		block,
     		id: create_then_block$1.name,
     		type: "then",
-    		source: "(71:4) {:then tourism}",
+    		source: "(72:4) {:then tourism}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (92:28) <Button outline color="danger" on:click="{deleteTourism(tou.province,tou.year)}">
+    // (93:28) <Button outline color="danger" on:click="{deleteTourism(tou.province,tou.year)}">
     function create_default_slot_2$1(ctx) {
     	let t;
 
@@ -3705,14 +3705,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(92:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteTourism(tou.province,tou.year)}\\\">",
+    		source: "(93:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteTourism(tou.province,tou.year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (83:16) {#each tourism as tou}
+    // (84:16) {#each tourism as tou}
     function create_each_block$1(ctx) {
     	let tr;
     	let td0;
@@ -3776,14 +3776,14 @@ var app = (function () {
     			td5 = element("td");
     			create_component(button.$$.fragment);
     			attr_dev(a, "href", a_href_value = "#/rural-tourism-stats/" + /*tou*/ ctx[11].province + "/" + /*tou*/ ctx[11].year);
-    			add_location(a, file$4, 85, 25, 2242);
-    			add_location(td0, file$4, 84, 6, 2212);
-    			add_location(td1, file$4, 87, 24, 2355);
-    			add_location(td2, file$4, 88, 24, 2399);
-    			add_location(td3, file$4, 89, 6, 2430);
-    			add_location(td4, file$4, 90, 24, 2483);
-    			add_location(td5, file$4, 91, 24, 2534);
-    			add_location(tr, file$4, 83, 20, 2201);
+    			add_location(a, file$4, 86, 25, 2267);
+    			add_location(td0, file$4, 85, 6, 2237);
+    			add_location(td1, file$4, 88, 24, 2380);
+    			add_location(td2, file$4, 89, 24, 2424);
+    			add_location(td3, file$4, 90, 6, 2455);
+    			add_location(td4, file$4, 91, 24, 2508);
+    			add_location(td5, file$4, 92, 24, 2559);
+    			add_location(tr, file$4, 84, 20, 2226);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -3846,14 +3846,14 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(83:16) {#each tourism as tou}",
+    		source: "(84:16) {#each tourism as tou}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (101:25) <Button outline  color="primary" on:click={insertTourism}>
+    // (102:25) <Button outline  color="primary" on:click={insertTourism}>
     function create_default_slot_1$1(ctx) {
     	let t;
 
@@ -3873,14 +3873,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(101:25) <Button outline  color=\\\"primary\\\" on:click={insertTourism}>",
+    		source: "(102:25) <Button outline  color=\\\"primary\\\" on:click={insertTourism}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (72:8) <Table bordered>
+    // (73:8) <Table bordered>
     function create_default_slot$1(ctx) {
     	let thead;
     	let tr0;
@@ -3983,26 +3983,26 @@ var app = (function () {
     			t15 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$4, 74, 20, 1928);
-    			add_location(th1, file$4, 75, 17, 1964);
-    			add_location(th2, file$4, 76, 17, 1994);
-    			add_location(th3, file$4, 77, 17, 2028);
-    			add_location(th4, file$4, 78, 5, 2055);
-    			add_location(tr0, file$4, 73, 16, 1903);
-    			add_location(thead, file$4, 72, 12, 1879);
-    			add_location(input0, file$4, 95, 24, 2723);
-    			add_location(td0, file$4, 95, 20, 2719);
-    			add_location(input1, file$4, 96, 24, 2795);
-    			add_location(td1, file$4, 96, 20, 2791);
-    			add_location(input2, file$4, 97, 24, 2863);
-    			add_location(td2, file$4, 97, 20, 2859);
-    			add_location(input3, file$4, 98, 24, 2936);
-    			add_location(td3, file$4, 98, 20, 2932);
-    			add_location(input4, file$4, 99, 24, 3013);
-    			add_location(td4, file$4, 99, 20, 3009);
-    			add_location(td5, file$4, 100, 20, 3084);
-    			add_location(tr1, file$4, 94, 4, 2694);
-    			add_location(tbody, file$4, 81, 12, 2134);
+    			add_location(th0, file$4, 75, 20, 1953);
+    			add_location(th1, file$4, 76, 17, 1989);
+    			add_location(th2, file$4, 77, 17, 2019);
+    			add_location(th3, file$4, 78, 17, 2053);
+    			add_location(th4, file$4, 79, 5, 2080);
+    			add_location(tr0, file$4, 74, 16, 1928);
+    			add_location(thead, file$4, 73, 12, 1904);
+    			add_location(input0, file$4, 96, 24, 2748);
+    			add_location(td0, file$4, 96, 20, 2744);
+    			add_location(input1, file$4, 97, 24, 2820);
+    			add_location(td1, file$4, 97, 20, 2816);
+    			add_location(input2, file$4, 98, 24, 2888);
+    			add_location(td2, file$4, 98, 20, 2884);
+    			add_location(input3, file$4, 99, 24, 2961);
+    			add_location(td3, file$4, 99, 20, 2957);
+    			add_location(input4, file$4, 100, 24, 3038);
+    			add_location(td4, file$4, 100, 20, 3034);
+    			add_location(td5, file$4, 101, 20, 3109);
+    			add_location(tr1, file$4, 95, 4, 2719);
+    			add_location(tbody, file$4, 82, 12, 2159);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -4149,14 +4149,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(72:8) <Table bordered>",
+    		source: "(73:8) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (69:20)          Loading datas...     {:then tourism}
+    // (70:20)          Loading datas...     {:then tourism}
     function create_pending_block$1(ctx) {
     	let t;
 
@@ -4179,7 +4179,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$1.name,
     		type: "pending",
-    		source: "(69:20)          Loading datas...     {:then tourism}",
+    		source: "(70:20)          Loading datas...     {:then tourism}",
     		ctx
     	});
 
@@ -4188,7 +4188,9 @@ var app = (function () {
 
     function create_fragment$5(ctx) {
     	let main;
-    	let t;
+    	let h2;
+    	let t1;
+    	let t2;
     	let promise;
     	let current;
 
@@ -4220,18 +4222,24 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			main = element("main");
+    			h2 = element("h2");
+    			h2.textContent = "Turismo rural";
+    			t1 = space();
     			create_component(button.$$.fragment);
-    			t = space();
+    			t2 = space();
     			info.block.c();
-    			add_location(main, file$4, 66, 0, 1686);
+    			add_location(h2, file$4, 67, 1, 1695);
+    			add_location(main, file$4, 66, 0, 1687);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
+    			append_dev(main, h2);
+    			append_dev(main, t1);
     			mount_component(button, main, null);
-    			append_dev(main, t);
+    			append_dev(main, t2);
     			info.block.m(main, info.anchor = null);
     			info.mount = () => main;
     			info.anchor = null;
