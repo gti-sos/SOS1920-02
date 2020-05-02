@@ -33,7 +33,8 @@
         }
     }
  
- 
+  	async function insertTourism() {
+	  
         console.log("Inserting new data..." + JSON.stringify(newTourism));
  
         const res = await fetch("/api/v1/rural-tourism-stats", {
