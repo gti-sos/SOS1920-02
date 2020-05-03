@@ -62,11 +62,22 @@
             getTourism();
         });
     }
+	async function loadInitialData() {
+        const res = await fetch("/api/v1/rural-tourism-stats/loadInitialData", {
+            method: "GET"
+        }).then(function (res) {
+            getTourism();
+        });
+    }
 </script>
  
 <main>
 	<h2>Turismo rural</h2>
- 	<Button outline  color="danger" on:click={deleteAllTourism}>Borrar todo</Button>
+ 	<div style="text-align:center;padding-bottom: 3%;">
+		<Button outline  color="primary" on:click={loadInitialData}>Inicializar</Button>
+		<Button outline  color="danger" on:click={deleteAllTourism}><i class="fa fa-trash" aria-hidden="true"></i> Eliminar todo</Button>
+	</div>
+	
     {#await tourism}
         Loading datas...
     {:then tourism}
@@ -78,6 +89,7 @@
                 	<th>Viajero</th>
                 	<th>Pernoctación</th>
 					<th>Estancia media</th>
+					<th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -90,19 +102,23 @@
                         <td>{tou.traveller}</td>
 						<td>{tou.overnightstay}</td>
                         <td>{tou.averagestay}</td>
-                        <td><Button outline color="danger" on:click="{deleteTourism(tou.province,tou.year)}">Borrar</Button></td>
+                        <td><Button outline color="danger" on:click="{deleteTourism(tou.province,tou.year)}"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</Button></td>
                     </tr>
                 {/each}
-				<tr>
-                    <td><input bind:value="{newTourism.province}"></td>
-                    <td><input bind:value="{newTourism.year}"></td>
-                    <td><input bind:value="{newTourism.traveller}"></td>
-                    <td><input bind:value="{newTourism.overnightstay}"></td>
-                    <td><input bind:value="{newTourism.averagestay}"></td>
-                    <td> <Button outline  color="primary" on:click={insertTourism}>Añadir</Button> </td>
-                </tr>
             </tbody>
         </Table>
+		<h3>Añadir nuevo dato:</h3>
+		<Table style="background-color:#EAEEF0;">
+			<tr>
+				<td><strong>Provincia:</strong> <input bind:value="{newTourism.province}"></td>
+				<td><strong>Año:</strong> <input type="number" bind:value="{newTourism.year}"></td>
+				<td><strong>Viajero:</strong> <input type="number" bind:value="{newTourism.traveller}"></td>
+				<td><strong>Pernoctación:</strong> <input type="number" bind:value="{newTourism.overnightstay}"></td>
+				<td><strong>Estancia media:</strong> <input type="number" bind:value="{newTourism.averagestay}"></td>
+				<td><strong>Acción:</strong> <Button color="primary" on:click={insertTourism}>Añadir</Button> </td>
+			</tr>
+		</Table>
+	
     {/await}
  
  

@@ -13,11 +13,11 @@
 
     export let params = {};
     let tourism = {};
-    let updatedProvince = "XXXX";
+    let updatedProvince = "";
     let updatedYear = 0;
-	let updatedTraveller = 0;
-	let updatedOvernightstay = 0;
-	let updatedAveragestay = 0;
+	let updatedTraveller = 0.0;
+	let updatedOvernightstay = 0.0;
+	let updatedAveragestay = 0.0;
     let errorMsg = "";
 
     onMount(getTourism);
@@ -33,9 +33,9 @@
             tourism = json;
             updatedProvince = params.tourismProvince;
             updatedYear = parseInt(params.tourismYear);
-            updatedTraveller = parseInt(tourism.traveller);
-			updatedOvernightstay = parseInt(tourism.overnightstay);
-            updatedAveragestay = parseInt(tourism.averagestay);
+            updatedTraveller = tourism.traveller;
+			updatedOvernightstay = tourism.overnightstay;
+            updatedAveragestay = tourism.averagestay;
             console.log("Received tourism.");
         } else {
             errorMsg = res.status + ": " + res.statusText;
@@ -53,9 +53,9 @@
             body: JSON.stringify({
                 province: params.tourismProvince,
                 year: parseInt(params.tourismYear),
-                traveller: parseInt(updatedTraveller),
-				overnightstay: parseInt(updatedOvernightstay),
-				averagestay: parseInt(updatedAveragestay)
+                traveller: updatedTraveller,
+				overnightstay: updatedOvernightstay,
+				averagestay: updatedAveragestay
             }),
             headers: {
                 "Content-Type": "application/json"
@@ -81,16 +81,17 @@
                 	<th>Viajero</th>
                 	<th>Pernoctación</th>
 					<th>Estancia media</th>
+					<th>Acción</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>{updatedProvince}</td>
 					<td>{updatedYear}</td>
-                    <td><input bind:value="{updatedTraveller}"></td>
-                    <td><input bind:value="{updatedOvernightstay}"></td>
-					<td><input bind:value="{updatedAveragestay}"></td>
-                    <td> <Button outline  color="primary" on:click={updateTourism}>Actualizar</Button></td>
+                    <td><input type="number" bind:value="{updatedTraveller}"></td>
+                    <td><input type="number" bind:value="{updatedOvernightstay}"></td>
+					<td><input type="number" bind:value="{updatedAveragestay}"></td>
+                    <td> <Button outline  color="success" on:click={updateTourism}>Actualizar</Button></td>
                 </tr>
         </tbody>
         </Table>
