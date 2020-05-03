@@ -8,8 +8,8 @@ import Home from './Home.svelte';
 // API MARTA
 	import TourismTable from './tourismAPI/TourismTable.svelte.html';
 	import EditTourism from './tourismAPI/EditTourism.svelte.html';
-	
-
+// API JOSE FRANCISCO
+	import AccidentsTrafficsTable from './accidentsAPI/AccidentsTrafficsTable.svelte';
 
 	const routes = {
 		"/": Home,
@@ -18,6 +18,8 @@ import Home from './Home.svelte';
 		
 		"/rural-tourism-stats": TourismTable,
 		"/rural-tourism-stats/:tourismProvince/:tourismYear": EditTourism,
+
+		"/traffic-accidents": AccidentsTrafficsTable,
 		
 		"*": NotFound
 	};
