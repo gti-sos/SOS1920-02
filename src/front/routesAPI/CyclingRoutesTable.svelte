@@ -187,10 +187,10 @@ function addOffset (increment) {
 
 	<Button outline color="secondary" on:click="{searchRoutes(provinceActual, yearActual)}" class="button-search" > Buscar </Button>
 
-		<Table bordered>
+		<Table bordered >
 			<thead>
 				<tr>
-					<th>Provincia</th>
+					<th >Provincia</th>
 					<th>Año</th>
 					<th>Metropolitano</th>
 					<th>Urbano</th>
@@ -213,7 +213,9 @@ function addOffset (increment) {
 					</tr>
 				{/each}
 			</tbody>
-
+		</Table>
+		<h4>Introducir nuevo dato:</h4>
+		<Table style="background-color:#EAEEF0;">
 			<tr>
 				<td><Input type="text" bind:value="{newRoute.province}"/></td>
 				<td><Input type="number" bind:value="{newRoute.year}"/></td>
