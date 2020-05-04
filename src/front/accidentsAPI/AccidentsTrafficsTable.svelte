@@ -32,7 +32,7 @@
     }
 
     async function insertTrafficAccident() {
-        console.log("Inserting Traffic Accidents...");
+        console.log("Inserting Traffic Accidents..." + JSON.stringify(newTrafficAccident));
 
         const res = await fetch("/api/v1/traffic-accidents", {
             method: "POST",
