@@ -18,7 +18,7 @@
 	let updatedTraveller = 0.0;
 	let updatedOvernightstay = 0.0;
 	let updatedAveragestay = 0.0;
-    let errorMsg = "";
+    let exitoMsg = "";
 
     onMount(getTourism);
 
@@ -36,11 +36,11 @@
             updatedTraveller = tourism.traveller;
 			updatedOvernightstay = tourism.overnightstay;
             updatedAveragestay = tourism.averagestay;
-            console.log("Received tourism.");
-        } else {
-            errorMsg = res.status + ": " + res.statusText;
-            console.log("ERROR!" + errorMsg);
-        }
+            console.log("Received tourism.");	
+		}
+		else if(res.status == 404){
+			window.alert("El dato: " + params.tourismProvince + " " + params.tourismYear + " no existe");
+		}
     }
 
 
@@ -62,6 +62,13 @@
             }
         }).then(function (res) {
             getTourism();
+			if(res.ok){	
+				exitoMsg = res.status + ": " + res.statusText;
+				console.log("OK!" + exitoMsg);
+
+			}else if(res.status == 400){
+				window.alert("Los datos que se intentan insertar no son válidos");
+			} 
         });
 
 
@@ -96,8 +103,8 @@
         </tbody>
         </Table>
     {/await}
-    {#if errorMsg}
-        <p style="color: red">ERROR: {errorMsg}</p>
+    {#if exitoMsg}
+        <p style="color: green">{exitoMsg}. Dato actualizado con éxito</p>
     {/if}
     <Button outline color="secondary" on:click="{pop}">Volver</Button>
 </main>

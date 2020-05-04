@@ -12,10 +12,10 @@
     let tourism = [];
     let newTourism = {
         province: "",
-        year: 0.0,
-        traveller: 0.0,
-		overnightstay: 0.0,
-		averagestay: 0.0
+        year: "",
+        traveller: "",
+		overnightstay: "",
+		averagestay: ""
 		
     };
 	//Variables para paginación
@@ -72,14 +72,22 @@
             }
         }).then(function (res) {
             getTourism();
-			let newTourism = {
-        		province: "",
-        		year: 0.0,
-        		traveller: 0.0,
-				overnightstay: 0.0,
-				averagestay: 0.0
-		
-    };
+			if(res.ok){
+				newTourism = {
+					province: "",
+					year: "",
+					traveller: "",
+					overnightstay: "",
+					averagestay: ""
+				};
+				exitoMsg = res.status + ": " + res.statusText;
+			}
+			else if (res.status == 400) {
+           		window.alert("ERROR: Debe completar todos los campos");
+			}
+			else if (res.status == 409) {
+				window.alert("ERROR: el dato " + newTourism.province+ " " + newTourism.year + " ya existe.");
+			}
         });
  
     }
@@ -129,6 +137,7 @@
 		}
 	}
 	
+	let exitoMsg=""
 </script>
  
 <main>
@@ -160,7 +169,7 @@
 			<Input type="text"  name="inputValor" id="inputValor" bind:value="{valor}"></Input>
 		</FormGroup>
 
-		<Button style="margin-bottom:3%;" outline color="primary" on:click="{busqueda(campo, valor)}" class="button-search" >Buscar </Button>
+		<Button style="margin-bottom:3%;" color="primary" on:click="{busqueda(campo, valor)}" class="button-search" >Buscar </Button>
 			
 	
 	
@@ -204,6 +213,9 @@
 		</Table>
 	
     {/await}
+	{#if exitoMsg}
+        <p style="color: green">{exitoMsg}. Dato insertado con éxito</p>
+    {/if}
  	<Pagination ariaLabel="Cambiar de página">
 
 
