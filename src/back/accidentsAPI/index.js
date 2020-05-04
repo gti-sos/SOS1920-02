@@ -66,14 +66,9 @@ module.exports = function(app){
 				delete t._id;
 			});
 
-			if(trafficAccidents.length!=0){
-				res.send(JSON.stringify(trafficAccidents,null,2));
-				console.log("Data sent:"+JSON.stringify(trafficAccidents,null,2));
-			} else {
-				res.sendStatus(404,"NOT FOUND");
-				console.log("El dato no existe");
-			}
-			
+			res.send(JSON.stringify(trafficAccidents,null,2));
+			console.log("Data sent:"+JSON.stringify(trafficAccidents,null,2));
+				
 		})
 	});
 	
@@ -131,6 +126,7 @@ module.exports = function(app){
 				console.log("Data sent:"+JSON.stringify(trafficAccidents[0],null,2));
 				
 			}else {
+				console.log("Recurso no encontrado");
 				res.sendStatus(404, "PROVINCE NOT FOUND");
 			}
 		});

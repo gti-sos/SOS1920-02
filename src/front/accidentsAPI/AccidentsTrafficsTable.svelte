@@ -57,7 +57,7 @@
     
     async function deleteAllAccidents() {
 	    console.log("Deleting All Traffic Accidents...");
-		const res = await fetch("/api/v1/traffic-accidents/" , {
+		const res = await fetch("/api/v1/traffic-accidents", {
 			method: "DELETE"
 		}).then(function (res) {
 			getTrafficAccidents();

@@ -43,7 +43,7 @@
     async function updateTrafficAccident() {
         console.log("Updating Traffic Accident..." + JSON.stringify(params.accidentProcince));
 
-        const res = await fetch("/api/v1/traffic-accidents"+params.accidentProcince+"/"+params.accidentYear, {
+        const res = await fetch("/api/v1/traffic-accidents/"+params.accidentProcince+"/"+params.accidentYear, {
             method: "PUT",
             body: JSON.stringify({
                 province: params.accidentProcince,

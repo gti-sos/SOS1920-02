@@ -9970,7 +9970,7 @@ var app = (function () {
     			t = text(" Borrar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$b, 110, 135, 3908);
+    			add_location(i, file$b, 110, 135, 3906);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -10057,14 +10057,14 @@ var app = (function () {
     			td5 = element("td");
     			create_component(button.$$.fragment);
     			attr_dev(a, "href", a_href_value = "#/traffic-accidents/" + /*trafficAccident*/ ctx[12].province + "/" + /*trafficAccident*/ ctx[12].year);
-    			add_location(a, file$b, 105, 28, 3408);
-    			add_location(td0, file$b, 105, 24, 3404);
-    			add_location(td1, file$b, 106, 24, 3549);
-    			add_location(td2, file$b, 107, 24, 3606);
-    			add_location(td3, file$b, 108, 24, 3680);
-    			add_location(td4, file$b, 109, 24, 3737);
-    			add_location(td5, file$b, 110, 24, 3797);
-    			add_location(tr, file$b, 104, 20, 3374);
+    			add_location(a, file$b, 105, 28, 3406);
+    			add_location(td0, file$b, 105, 24, 3402);
+    			add_location(td1, file$b, 106, 24, 3547);
+    			add_location(td2, file$b, 107, 24, 3604);
+    			add_location(td3, file$b, 108, 24, 3678);
+    			add_location(td4, file$b, 109, 24, 3735);
+    			add_location(td5, file$b, 110, 24, 3795);
+    			add_location(tr, file$b, 104, 20, 3372);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -10172,7 +10172,7 @@ var app = (function () {
     			t = text(" Borrar todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$b, 119, 85, 4370);
+    			add_location(i, file$b, 119, 85, 4368);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -10355,39 +10355,39 @@ var app = (function () {
     			t23 = space();
     			td11 = element("td");
     			create_component(button2.$$.fragment);
-    			add_location(th0, file$b, 86, 20, 2361);
-    			add_location(th1, file$b, 87, 20, 2401);
-    			add_location(th2, file$b, 88, 20, 2435);
-    			add_location(th3, file$b, 89, 20, 2499);
-    			add_location(th4, file$b, 90, 20, 2537);
-    			add_location(th5, file$b, 91, 20, 2575);
-    			add_location(tr0, file$b, 85, 16, 2335);
-    			add_location(thead, file$b, 84, 12, 2310);
+    			add_location(th0, file$b, 86, 20, 2359);
+    			add_location(th1, file$b, 87, 20, 2399);
+    			add_location(th2, file$b, 88, 20, 2433);
+    			add_location(th3, file$b, 89, 20, 2497);
+    			add_location(th4, file$b, 90, 20, 2535);
+    			add_location(th5, file$b, 91, 20, 2573);
+    			add_location(tr0, file$b, 85, 16, 2333);
+    			add_location(thead, file$b, 84, 12, 2308);
     			attr_dev(input0, "type", "text");
-    			add_location(input0, file$b, 96, 24, 2704);
-    			add_location(td0, file$b, 96, 20, 2700);
+    			add_location(input0, file$b, 96, 24, 2702);
+    			add_location(td0, file$b, 96, 20, 2698);
     			attr_dev(input1, "type", "number");
-    			add_location(input1, file$b, 97, 24, 2797);
-    			add_location(td1, file$b, 97, 20, 2793);
+    			add_location(input1, file$b, 97, 24, 2795);
+    			add_location(td1, file$b, 97, 20, 2791);
     			attr_dev(input2, "type", "number");
-    			add_location(input2, file$b, 98, 24, 2888);
-    			add_location(td2, file$b, 98, 20, 2884);
+    			add_location(input2, file$b, 98, 24, 2886);
+    			add_location(td2, file$b, 98, 20, 2882);
     			attr_dev(input3, "type", "number");
-    			add_location(input3, file$b, 99, 24, 2996);
-    			add_location(td3, file$b, 99, 20, 2992);
+    			add_location(input3, file$b, 99, 24, 2994);
+    			add_location(td3, file$b, 99, 20, 2990);
     			attr_dev(input4, "type", "number");
-    			add_location(input4, file$b, 100, 24, 3087);
-    			add_location(td4, file$b, 100, 20, 3083);
-    			add_location(td5, file$b, 101, 20, 3177);
-    			add_location(tr1, file$b, 95, 16, 2674);
-    			add_location(td6, file$b, 114, 20, 4071);
-    			add_location(td7, file$b, 115, 20, 4181);
-    			add_location(td8, file$b, 116, 20, 4212);
-    			add_location(td9, file$b, 117, 20, 4243);
-    			add_location(td10, file$b, 118, 20, 4274);
-    			add_location(td11, file$b, 119, 20, 4305);
-    			add_location(tr2, file$b, 113, 16, 4045);
-    			add_location(tbody, file$b, 94, 12, 2649);
+    			add_location(input4, file$b, 100, 24, 3085);
+    			add_location(td4, file$b, 100, 20, 3081);
+    			add_location(td5, file$b, 101, 20, 3175);
+    			add_location(tr1, file$b, 95, 16, 2672);
+    			add_location(td6, file$b, 114, 20, 4069);
+    			add_location(td7, file$b, 115, 20, 4179);
+    			add_location(td8, file$b, 116, 20, 4210);
+    			add_location(td9, file$b, 117, 20, 4241);
+    			add_location(td10, file$b, 118, 20, 4272);
+    			add_location(td11, file$b, 119, 20, 4303);
+    			add_location(tr2, file$b, 113, 16, 4043);
+    			add_location(tbody, file$b, 94, 12, 2647);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -10636,8 +10636,8 @@ var app = (function () {
     			h2.textContent = "Accidentes de Trafico";
     			t1 = space();
     			info.block.c();
-    			add_location(h2, file$b, 78, 4, 2148);
-    			add_location(main, file$b, 76, 0, 2134);
+    			add_location(h2, file$b, 78, 4, 2146);
+    			add_location(main, file$b, 76, 0, 2132);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10743,7 +10743,7 @@ var app = (function () {
     	async function deleteAllAccidents() {
     		console.log("Deleting All Traffic Accidents...");
 
-    		const res = await fetch("/api/v1/traffic-accidents/", { method: "DELETE" }).then(function (res) {
+    		const res = await fetch("/api/v1/traffic-accidents", { method: "DELETE" }).then(function (res) {
     			getTrafficAccidents();
     		});
     	}
@@ -11038,28 +11038,28 @@ var app = (function () {
     			t18 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$c, 73, 20, 2412);
-    			add_location(th1, file$c, 74, 20, 2452);
-    			add_location(th2, file$c, 75, 20, 2486);
-    			add_location(th3, file$c, 76, 20, 2550);
-    			add_location(th4, file$c, 77, 20, 2588);
-    			add_location(th5, file$c, 78, 20, 2626);
-    			add_location(tr0, file$c, 72, 16, 2386);
-    			add_location(thead, file$c, 71, 12, 2361);
-    			add_location(td0, file$c, 83, 20, 2751);
-    			add_location(td1, file$c, 84, 20, 2798);
+    			add_location(th0, file$c, 73, 20, 2413);
+    			add_location(th1, file$c, 74, 20, 2453);
+    			add_location(th2, file$c, 75, 20, 2487);
+    			add_location(th3, file$c, 76, 20, 2551);
+    			add_location(th4, file$c, 77, 20, 2589);
+    			add_location(th5, file$c, 78, 20, 2627);
+    			add_location(tr0, file$c, 72, 16, 2387);
+    			add_location(thead, file$c, 71, 12, 2362);
+    			add_location(td0, file$c, 83, 20, 2752);
+    			add_location(td1, file$c, 84, 20, 2799);
     			attr_dev(input0, "type", "number");
-    			add_location(input0, file$c, 85, 24, 2845);
-    			add_location(td2, file$c, 85, 20, 2841);
+    			add_location(input0, file$c, 85, 24, 2846);
+    			add_location(td2, file$c, 85, 20, 2842);
     			attr_dev(input1, "type", "number");
-    			add_location(input1, file$c, 86, 24, 2940);
-    			add_location(td3, file$c, 86, 20, 2936);
+    			add_location(input1, file$c, 86, 24, 2941);
+    			add_location(td3, file$c, 86, 20, 2937);
     			attr_dev(input2, "type", "number");
-    			add_location(input2, file$c, 87, 24, 3018);
-    			add_location(td4, file$c, 87, 20, 3014);
-    			add_location(td5, file$c, 88, 20, 3095);
-    			add_location(tr1, file$c, 82, 16, 2725);
-    			add_location(tbody, file$c, 81, 12, 2700);
+    			add_location(input2, file$c, 87, 24, 3019);
+    			add_location(td4, file$c, 87, 20, 3015);
+    			add_location(td5, file$c, 88, 20, 3096);
+    			add_location(tr1, file$c, 82, 16, 2726);
+    			add_location(tbody, file$c, 81, 12, 2701);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -11202,7 +11202,7 @@ var app = (function () {
     			t0 = text("ERROR: ");
     			t1 = text(/*errorMsg*/ ctx[6]);
     			set_style(p, "color", "red");
-    			add_location(p, file$c, 94, 8, 3295);
+    			add_location(p, file$c, 94, 8, 3296);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -11312,9 +11312,9 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t6 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong, file$c, 65, 25, 2163);
-    			add_location(h3, file$c, 65, 4, 2142);
-    			add_location(main, file$c, 64, 0, 2130);
+    			add_location(strong, file$c, 65, 25, 2164);
+    			add_location(h3, file$c, 65, 4, 2143);
+    			add_location(main, file$c, 64, 0, 2131);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11440,7 +11440,7 @@ var app = (function () {
     	async function updateTrafficAccident() {
     		console.log("Updating Traffic Accident..." + JSON.stringify(params.accidentProcince));
 
-    		const res = await fetch("/api/v1/traffic-accidents" + params.accidentProcince + "/" + params.accidentYear, {
+    		const res = await fetch("/api/v1/traffic-accidents/" + params.accidentProcince + "/" + params.accidentYear, {
     			method: "PUT",
     			body: JSON.stringify({
     				province: params.accidentProcince,
