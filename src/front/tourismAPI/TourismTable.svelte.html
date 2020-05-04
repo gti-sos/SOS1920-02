@@ -6,6 +6,8 @@
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
 	import { Pagination, PaginationItem, PaginationLink } from 'sveltestrap';
+	import Input from "sveltestrap/src/Input.svelte";
+	import FormGroup from "sveltestrap/src/FormGroup.svelte";
  
     let tourism = [];
     let newTourism = {
@@ -16,10 +18,15 @@
 		averagestay: 0.0
 		
     };
+	//Variables para paginación
 	let numeroRecursos = 10;
 	let offset = 0;
 	let currentPage = 1; 
 	let moreData = true; 
+	
+	//Variables para busqueda
+	let campo = "";
+	let valor = "";
  
     onMount(getTourism);
 	
@@ -65,6 +72,14 @@
             }
         }).then(function (res) {
             getTourism();
+			let newTourism = {
+        		province: "",
+        		year: 0.0,
+        		traveller: 0.0,
+				overnightstay: 0.0,
+				averagestay: 0.0
+		
+    };
         });
  
     }
@@ -89,6 +104,31 @@
             getTourism();
         });
     }
+	
+	async function busqueda(campo, valor) {
+		
+		console.log("Searching data: " + campo + " and " + valor);
+		
+		var url = "/api/v1/rural-tourism-stats";
+		
+		if (campo != "" && valor != "") {
+			url = url + "?" + campo + "=" + valor; 
+		}
+		
+		console.log(url)
+		
+		const res = await fetch(url);
+		
+		if (res.ok) {
+			console.log("Ok:");
+			const json = await res.json();
+			tourism = json;			
+			console.log("Found " + tourism.length + " rural-tourism-stats.");
+		} else {
+			console.log("ERROR!");
+		}
+	}
+	
 </script>
  
 <main>
@@ -101,6 +141,30 @@
     {#await tourism}
         Loading datas...
     {:then tourism}
+	
+	
+		<FormGroup  style="width:25%;"> 
+			<label>Selecciona el campo por el que buscar:</label>
+			<Input type="select" name="inputCampo" id="inputCampo" bind:value="{campo}">
+				<option disabled selected></option>
+				<option value="province">Provincia</option>
+				<option value="year">Año</option>
+				<option value="traveller">Viajero</option>
+				<option value="overnightstay">Pernoctación</option>
+				<option value="averagestay">Estancia media</option>
+			</Input>
+		</FormGroup>
+				
+		<FormGroup style="width:25%;">
+			<label>Valor del campo:</label>
+			<Input type="text"  name="inputValor" id="inputValor" bind:value="{valor}"></Input>
+		</FormGroup>
+
+		<Button style="margin-bottom:3%;" outline color="primary" on:click="{busqueda(campo, valor)}" class="button-search" >Buscar </Button>
+			
+	
+	
+	
         <Table bordered>
             <thead>
                 <tr>
@@ -140,7 +204,7 @@
 		</Table>
 	
     {/await}
- 	<Pagination style="float:center;" ariaLabel="Cambiar de página">
+ 	<Pagination ariaLabel="Cambiar de página">
 
 
 		<PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
