@@ -9852,7 +9852,7 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[9] = list[i];
+    	child_ctx[12] = list[i];
     	return child_ctx;
     }
 
@@ -9878,7 +9878,7 @@ var app = (function () {
     	return block;
     }
 
-    // (57:4) {:then trafficAccidents}
+    // (83:4) {:then trafficAccidents}
     function create_then_block$4(ctx) {
     	let current;
 
@@ -9901,7 +9901,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const table_changes = {};
 
-    			if (dirty & /*$$scope, trafficAccidents, newTrafficAccident*/ 4099) {
+    			if (dirty & /*$$scope, trafficAccidents, newTrafficAccident*/ 32771) {
     				table_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9925,15 +9925,15 @@ var app = (function () {
     		block,
     		id: create_then_block$4.name,
     		type: "then",
-    		source: "(57:4) {:then trafficAccidents}",
+    		source: "(83:4) {:then trafficAccidents}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (76:24) <Button outline  color="primary" on:click={insertTrafficAccident}>
-    function create_default_slot_2$4(ctx) {
+    // (102:24) <Button outline color="primary" on:click={insertTrafficAccident}>
+    function create_default_slot_4$2(ctx) {
     	let t;
 
     	const block = {
@@ -9950,17 +9950,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_2$4.name,
+    		id: create_default_slot_4$2.name,
     		type: "slot",
-    		source: "(76:24) <Button outline  color=\\\"primary\\\" on:click={insertTrafficAccident}>",
+    		source: "(102:24) <Button outline color=\\\"primary\\\" on:click={insertTrafficAccident}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (85:28) <Button outline color="danger">
-    function create_default_slot_1$4(ctx) {
+    // (111:28) <Button outline color="danger" on:click="{deleteAccident(trafficAccident.province, trafficAccident.year)}">
+    function create_default_slot_3$2(ctx) {
     	let i;
     	let t;
 
@@ -9970,7 +9970,7 @@ var app = (function () {
     			t = text(" Borrar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$b, 84, 59, 3017);
+    			add_location(i, file$b, 110, 135, 3871);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9984,53 +9984,56 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_1$4.name,
+    		id: create_default_slot_3$2.name,
     		type: "slot",
-    		source: "(85:28) <Button outline color=\\\"danger\\\">",
+    		source: "(111:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteAccident(trafficAccident.province, trafficAccident.year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (78:16) {#each trafficAccidents as trafficAccident}
+    // (104:16) {#each trafficAccidents as trafficAccident}
     function create_each_block$2(ctx) {
     	let tr;
     	let td0;
     	let a;
-    	let t0_value = /*trafficAccident*/ ctx[9].province + "";
+    	let t0_value = /*trafficAccident*/ ctx[12].province + "";
     	let t0;
     	let a_href_value;
     	let t1;
     	let td1;
-    	let t2_value = /*trafficAccident*/ ctx[9].year + "";
+    	let t2_value = /*trafficAccident*/ ctx[12].year + "";
     	let t2;
     	let t3;
     	let td2;
-    	let t4_value = /*trafficAccident*/ ctx[9].trafficaccidentvictim + "";
+    	let t4_value = /*trafficAccident*/ ctx[12].trafficaccidentvictim + "";
     	let t4;
     	let t5;
     	let td3;
-    	let t6_value = /*trafficAccident*/ ctx[9].dead + "";
+    	let t6_value = /*trafficAccident*/ ctx[12].dead + "";
     	let t6;
     	let t7;
     	let td4;
-    	let t8_value = /*trafficAccident*/ ctx[9].injured + "";
+    	let t8_value = /*trafficAccident*/ ctx[12].injured + "";
     	let t8;
     	let t9;
     	let td5;
-    	let t10;
     	let current;
 
     	const button = new Button({
     			props: {
     				outline: true,
     				color: "danger",
-    				$$slots: { default: [create_default_slot_1$4] },
+    				$$slots: { default: [create_default_slot_3$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
+
+    	button.$on("click", function () {
+    		if (is_function(/*deleteAccident*/ ctx[3](/*trafficAccident*/ ctx[12].province, /*trafficAccident*/ ctx[12].year))) /*deleteAccident*/ ctx[3](/*trafficAccident*/ ctx[12].province, /*trafficAccident*/ ctx[12].year).apply(this, arguments);
+    	});
 
     	const block = {
     		c: function create() {
@@ -10053,16 +10056,15 @@ var app = (function () {
     			t9 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			t10 = space();
-    			attr_dev(a, "href", a_href_value = "#/traffic-accidents/" + /*trafficAccident*/ ctx[9].province + "/" + /*trafficAccident*/ ctx[9].year);
-    			add_location(a, file$b, 79, 28, 2593);
-    			add_location(td0, file$b, 79, 24, 2589);
-    			add_location(td1, file$b, 80, 24, 2734);
-    			add_location(td2, file$b, 81, 24, 2791);
-    			add_location(td3, file$b, 82, 24, 2865);
-    			add_location(td4, file$b, 83, 24, 2922);
-    			add_location(td5, file$b, 84, 24, 2982);
-    			add_location(tr, file$b, 78, 20, 2559);
+    			attr_dev(a, "href", a_href_value = "#/traffic-accidents/" + /*trafficAccident*/ ctx[12].province + "/" + /*trafficAccident*/ ctx[12].year);
+    			add_location(a, file$b, 105, 28, 3371);
+    			add_location(td0, file$b, 105, 24, 3367);
+    			add_location(td1, file$b, 106, 24, 3512);
+    			add_location(td2, file$b, 107, 24, 3569);
+    			add_location(td3, file$b, 108, 24, 3643);
+    			add_location(td4, file$b, 109, 24, 3700);
+    			add_location(td5, file$b, 110, 24, 3760);
+    			add_location(tr, file$b, 104, 20, 3337);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -10084,23 +10086,23 @@ var app = (function () {
     			append_dev(tr, t9);
     			append_dev(tr, td5);
     			mount_component(button, td5, null);
-    			append_dev(tr, t10);
     			current = true;
     		},
-    		p: function update(ctx, dirty) {
-    			if ((!current || dirty & /*trafficAccidents*/ 2) && t0_value !== (t0_value = /*trafficAccident*/ ctx[9].province + "")) set_data_dev(t0, t0_value);
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if ((!current || dirty & /*trafficAccidents*/ 2) && t0_value !== (t0_value = /*trafficAccident*/ ctx[12].province + "")) set_data_dev(t0, t0_value);
 
-    			if (!current || dirty & /*trafficAccidents*/ 2 && a_href_value !== (a_href_value = "#/traffic-accidents/" + /*trafficAccident*/ ctx[9].province + "/" + /*trafficAccident*/ ctx[9].year)) {
+    			if (!current || dirty & /*trafficAccidents*/ 2 && a_href_value !== (a_href_value = "#/traffic-accidents/" + /*trafficAccident*/ ctx[12].province + "/" + /*trafficAccident*/ ctx[12].year)) {
     				attr_dev(a, "href", a_href_value);
     			}
 
-    			if ((!current || dirty & /*trafficAccidents*/ 2) && t2_value !== (t2_value = /*trafficAccident*/ ctx[9].year + "")) set_data_dev(t2, t2_value);
-    			if ((!current || dirty & /*trafficAccidents*/ 2) && t4_value !== (t4_value = /*trafficAccident*/ ctx[9].trafficaccidentvictim + "")) set_data_dev(t4, t4_value);
-    			if ((!current || dirty & /*trafficAccidents*/ 2) && t6_value !== (t6_value = /*trafficAccident*/ ctx[9].dead + "")) set_data_dev(t6, t6_value);
-    			if ((!current || dirty & /*trafficAccidents*/ 2) && t8_value !== (t8_value = /*trafficAccident*/ ctx[9].injured + "")) set_data_dev(t8, t8_value);
+    			if ((!current || dirty & /*trafficAccidents*/ 2) && t2_value !== (t2_value = /*trafficAccident*/ ctx[12].year + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*trafficAccidents*/ 2) && t4_value !== (t4_value = /*trafficAccident*/ ctx[12].trafficaccidentvictim + "")) set_data_dev(t4, t4_value);
+    			if ((!current || dirty & /*trafficAccidents*/ 2) && t6_value !== (t6_value = /*trafficAccident*/ ctx[12].dead + "")) set_data_dev(t6, t6_value);
+    			if ((!current || dirty & /*trafficAccidents*/ 2) && t8_value !== (t8_value = /*trafficAccident*/ ctx[12].injured + "")) set_data_dev(t8, t8_value);
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 4096) {
+    			if (dirty & /*$$scope*/ 32768) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -10125,14 +10127,75 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(78:16) {#each trafficAccidents as trafficAccident}",
+    		source: "(104:16) {#each trafficAccidents as trafficAccident}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (58:8) <Table>
+    // (115:24) <Button outline color="primary" on:click={loadInitialData}>
+    function create_default_slot_2$4(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Inicializar");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_2$4.name,
+    		type: "slot",
+    		source: "(115:24) <Button outline color=\\\"primary\\\" on:click={loadInitialData}>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (120:24) <Button outline color="danger" on:click={deleteAllAccidents}>
+    function create_default_slot_1$4(ctx) {
+    	let i;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			t = text(" Borrar todo");
+    			attr_dev(i, "class", "fa fa-trash");
+    			attr_dev(i, "aria-hidden", "true");
+    			add_location(i, file$b, 119, 85, 4333);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_1$4.name,
+    		type: "slot",
+    		source: "(120:24) <Button outline color=\\\"danger\\\" on:click={deleteAllAccidents}>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (84:8) <Table>
     function create_default_slot$4(ctx) {
     	let thead;
     	let tr0;
@@ -10167,20 +10230,33 @@ var app = (function () {
     	let t16;
     	let td5;
     	let t17;
+    	let t18;
+    	let tr2;
+    	let td6;
+    	let t19;
+    	let td7;
+    	let t20;
+    	let td8;
+    	let t21;
+    	let td9;
+    	let t22;
+    	let td10;
+    	let t23;
+    	let td11;
     	let current;
     	let dispose;
 
-    	const button = new Button({
+    	const button0 = new Button({
     			props: {
     				outline: true,
     				color: "primary",
-    				$$slots: { default: [create_default_slot_2$4] },
+    				$$slots: { default: [create_default_slot_4$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	button.$on("click", /*insertTrafficAccident*/ ctx[2]);
+    	button0.$on("click", /*insertTrafficAccident*/ ctx[2]);
     	let each_value = /*trafficAccidents*/ ctx[1];
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -10192,6 +10268,30 @@ var app = (function () {
     	const out = i => transition_out(each_blocks[i], 1, 1, () => {
     		each_blocks[i] = null;
     	});
+
+    	const button1 = new Button({
+    			props: {
+    				outline: true,
+    				color: "primary",
+    				$$slots: { default: [create_default_slot_2$4] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button1.$on("click", /*loadInitialData*/ ctx[5]);
+
+    	const button2 = new Button({
+    			props: {
+    				outline: true,
+    				color: "danger",
+    				$$slots: { default: [create_default_slot_1$4] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button2.$on("click", /*deleteAllAccidents*/ ctx[4]);
 
     	const block = {
     		c: function create() {
@@ -10233,39 +10333,61 @@ var app = (function () {
     			input4 = element("input");
     			t16 = space();
     			td5 = element("td");
-    			create_component(button.$$.fragment);
+    			create_component(button0.$$.fragment);
     			t17 = space();
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$b, 60, 20, 1553);
-    			add_location(th1, file$b, 61, 20, 1593);
-    			add_location(th2, file$b, 62, 20, 1627);
-    			add_location(th3, file$b, 63, 20, 1691);
-    			add_location(th4, file$b, 64, 20, 1729);
-    			add_location(th5, file$b, 65, 20, 1767);
-    			add_location(tr0, file$b, 59, 16, 1527);
-    			add_location(thead, file$b, 58, 12, 1502);
+    			t18 = space();
+    			tr2 = element("tr");
+    			td6 = element("td");
+    			create_component(button1.$$.fragment);
+    			t19 = space();
+    			td7 = element("td");
+    			t20 = space();
+    			td8 = element("td");
+    			t21 = space();
+    			td9 = element("td");
+    			t22 = space();
+    			td10 = element("td");
+    			t23 = space();
+    			td11 = element("td");
+    			create_component(button2.$$.fragment);
+    			add_location(th0, file$b, 86, 20, 2324);
+    			add_location(th1, file$b, 87, 20, 2364);
+    			add_location(th2, file$b, 88, 20, 2398);
+    			add_location(th3, file$b, 89, 20, 2462);
+    			add_location(th4, file$b, 90, 20, 2500);
+    			add_location(th5, file$b, 91, 20, 2538);
+    			add_location(tr0, file$b, 85, 16, 2298);
+    			add_location(thead, file$b, 84, 12, 2273);
     			attr_dev(input0, "type", "text");
-    			add_location(input0, file$b, 70, 24, 1896);
-    			add_location(td0, file$b, 70, 20, 1892);
-    			attr_dev(input1, "type", "text");
-    			add_location(input1, file$b, 71, 24, 1989);
-    			add_location(td1, file$b, 71, 20, 1985);
-    			attr_dev(input2, "type", "text");
-    			add_location(input2, file$b, 72, 24, 2078);
-    			add_location(td2, file$b, 72, 20, 2074);
-    			attr_dev(input3, "type", "text");
-    			add_location(input3, file$b, 73, 24, 2184);
-    			add_location(td3, file$b, 73, 20, 2180);
-    			attr_dev(input4, "type", "text");
-    			add_location(input4, file$b, 74, 24, 2273);
-    			add_location(td4, file$b, 74, 20, 2269);
-    			add_location(td5, file$b, 75, 20, 2361);
-    			add_location(tr1, file$b, 69, 16, 1866);
-    			add_location(tbody, file$b, 68, 12, 1841);
+    			add_location(input0, file$b, 96, 24, 2667);
+    			add_location(td0, file$b, 96, 20, 2663);
+    			attr_dev(input1, "type", "number");
+    			add_location(input1, file$b, 97, 24, 2760);
+    			add_location(td1, file$b, 97, 20, 2756);
+    			attr_dev(input2, "type", "number");
+    			add_location(input2, file$b, 98, 24, 2851);
+    			add_location(td2, file$b, 98, 20, 2847);
+    			attr_dev(input3, "type", "number");
+    			add_location(input3, file$b, 99, 24, 2959);
+    			add_location(td3, file$b, 99, 20, 2955);
+    			attr_dev(input4, "type", "number");
+    			add_location(input4, file$b, 100, 24, 3050);
+    			add_location(td4, file$b, 100, 20, 3046);
+    			add_location(td5, file$b, 101, 20, 3140);
+    			add_location(tr1, file$b, 95, 16, 2637);
+    			add_location(td6, file$b, 114, 20, 4034);
+    			add_location(td7, file$b, 115, 20, 4144);
+    			add_location(td8, file$b, 116, 20, 4175);
+    			add_location(td9, file$b, 117, 20, 4206);
+    			add_location(td10, file$b, 118, 20, 4237);
+    			add_location(td11, file$b, 119, 20, 4268);
+    			add_location(tr2, file$b, 113, 16, 4008);
+    			add_location(tbody, file$b, 94, 12, 2612);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -10305,22 +10427,37 @@ var app = (function () {
     			set_input_value(input4, /*newTrafficAccident*/ ctx[0].injured);
     			append_dev(tr1, t16);
     			append_dev(tr1, td5);
-    			mount_component(button, td5, null);
+    			mount_component(button0, td5, null);
     			append_dev(tbody, t17);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(tbody, null);
     			}
 
+    			append_dev(tbody, t18);
+    			append_dev(tbody, tr2);
+    			append_dev(tr2, td6);
+    			mount_component(button1, td6, null);
+    			append_dev(tr2, t19);
+    			append_dev(tr2, td7);
+    			append_dev(tr2, t20);
+    			append_dev(tr2, td8);
+    			append_dev(tr2, t21);
+    			append_dev(tr2, td9);
+    			append_dev(tr2, t22);
+    			append_dev(tr2, td10);
+    			append_dev(tr2, t23);
+    			append_dev(tr2, td11);
+    			mount_component(button2, td11, null);
     			current = true;
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[4]),
-    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[5]),
-    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[6]),
-    				listen_dev(input3, "input", /*input3_input_handler*/ ctx[7]),
-    				listen_dev(input4, "input", /*input4_input_handler*/ ctx[8])
+    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[7]),
+    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[8]),
+    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[9]),
+    				listen_dev(input3, "input", /*input3_input_handler*/ ctx[10]),
+    				listen_dev(input4, "input", /*input4_input_handler*/ ctx[11])
     			];
     		},
     		p: function update(ctx, dirty) {
@@ -10328,31 +10465,31 @@ var app = (function () {
     				set_input_value(input0, /*newTrafficAccident*/ ctx[0].province);
     			}
 
-    			if (dirty & /*newTrafficAccident*/ 1 && input1.value !== /*newTrafficAccident*/ ctx[0].year) {
+    			if (dirty & /*newTrafficAccident*/ 1 && to_number(input1.value) !== /*newTrafficAccident*/ ctx[0].year) {
     				set_input_value(input1, /*newTrafficAccident*/ ctx[0].year);
     			}
 
-    			if (dirty & /*newTrafficAccident*/ 1 && input2.value !== /*newTrafficAccident*/ ctx[0].trafficaccidentvictim) {
+    			if (dirty & /*newTrafficAccident*/ 1 && to_number(input2.value) !== /*newTrafficAccident*/ ctx[0].trafficaccidentvictim) {
     				set_input_value(input2, /*newTrafficAccident*/ ctx[0].trafficaccidentvictim);
     			}
 
-    			if (dirty & /*newTrafficAccident*/ 1 && input3.value !== /*newTrafficAccident*/ ctx[0].dead) {
+    			if (dirty & /*newTrafficAccident*/ 1 && to_number(input3.value) !== /*newTrafficAccident*/ ctx[0].dead) {
     				set_input_value(input3, /*newTrafficAccident*/ ctx[0].dead);
     			}
 
-    			if (dirty & /*newTrafficAccident*/ 1 && input4.value !== /*newTrafficAccident*/ ctx[0].injured) {
+    			if (dirty & /*newTrafficAccident*/ 1 && to_number(input4.value) !== /*newTrafficAccident*/ ctx[0].injured) {
     				set_input_value(input4, /*newTrafficAccident*/ ctx[0].injured);
     			}
 
-    			const button_changes = {};
+    			const button0_changes = {};
 
-    			if (dirty & /*$$scope*/ 4096) {
-    				button_changes.$$scope = { dirty, ctx };
+    			if (dirty & /*$$scope*/ 32768) {
+    				button0_changes.$$scope = { dirty, ctx };
     			}
 
-    			button.$set(button_changes);
+    			button0.$set(button0_changes);
 
-    			if (dirty & /*trafficAccidents*/ 2) {
+    			if (dirty & /*deleteAccident, trafficAccidents*/ 10) {
     				each_value = /*trafficAccidents*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
@@ -10367,7 +10504,7 @@ var app = (function () {
     						each_blocks[i] = create_each_block$2(child_ctx);
     						each_blocks[i].c();
     						transition_in(each_blocks[i], 1);
-    						each_blocks[i].m(tbody, null);
+    						each_blocks[i].m(tbody, t18);
     					}
     				}
 
@@ -10379,33 +10516,54 @@ var app = (function () {
 
     				check_outros();
     			}
+
+    			const button1_changes = {};
+
+    			if (dirty & /*$$scope*/ 32768) {
+    				button1_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button1.$set(button1_changes);
+    			const button2_changes = {};
+
+    			if (dirty & /*$$scope*/ 32768) {
+    				button2_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button2.$set(button2_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(button.$$.fragment, local);
+    			transition_in(button0.$$.fragment, local);
 
     			for (let i = 0; i < each_value.length; i += 1) {
     				transition_in(each_blocks[i]);
     			}
 
+    			transition_in(button1.$$.fragment, local);
+    			transition_in(button2.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(button.$$.fragment, local);
+    			transition_out(button0.$$.fragment, local);
     			each_blocks = each_blocks.filter(Boolean);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				transition_out(each_blocks[i]);
     			}
 
+    			transition_out(button1.$$.fragment, local);
+    			transition_out(button2.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(thead);
     			if (detaching) detach_dev(t11);
     			if (detaching) detach_dev(tbody);
-    			destroy_component(button);
+    			destroy_component(button0);
     			destroy_each(each_blocks, detaching);
+    			destroy_component(button1);
+    			destroy_component(button2);
     			run_all(dispose);
     		}
     	};
@@ -10414,14 +10572,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$4.name,
     		type: "slot",
-    		source: "(58:8) <Table>",
+    		source: "(84:8) <Table>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (55:29)           Loading Traffic Accidents...      {:then trafficAccidents}
+    // (81:29)           Loading Traffic Accidents...      {:then trafficAccidents}
     function create_pending_block$4(ctx) {
     	let t;
 
@@ -10444,7 +10602,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$4.name,
     		type: "pending",
-    		source: "(55:29)           Loading Traffic Accidents...      {:then trafficAccidents}",
+    		source: "(81:29)           Loading Traffic Accidents...      {:then trafficAccidents}",
     		ctx
     	});
 
@@ -10478,8 +10636,8 @@ var app = (function () {
     			h2.textContent = "Accidentes de Trafico";
     			t1 = space();
     			info.block.c();
-    			add_location(h2, file$b, 52, 4, 1340);
-    			add_location(main, file$b, 50, 0, 1326);
+    			add_location(h2, file$b, 78, 4, 2111);
+    			add_location(main, file$b, 76, 0, 2097);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10540,10 +10698,10 @@ var app = (function () {
 
     	let newTrafficAccident = {
     		province: "",
-    		year: "",
-    		trafficaccidentvictim: "",
-    		dead: "",
-    		injured: ""
+    		year: 0,
+    		trafficaccidentvictim: 0,
+    		dead: 0,
+    		injured: 0
     	};
 
     	onMount(getTrafficAccidents);
@@ -10574,6 +10732,28 @@ var app = (function () {
     		});
     	}
 
+    	async function deleteAccident(province, year) {
+    		console.log("Deleting Traffic Accidents...");
+
+    		const res = await fetch("/api/v1/traffic-accidents/" + province + "/" + year, { method: "DELETE" }).then(function (res) {
+    			getTrafficAccidents();
+    		});
+    	}
+
+    	async function deleteAllAccidents() {
+    		console.log("Deleting All Traffic Accidents...");
+
+    		const res = await fetch("/api/v1/traffic-accidents/", { method: "DELETE" }).then(function (res) {
+    			getTrafficAccidents();
+    		});
+    	}
+
+    	async function loadInitialData() {
+    		const res = await fetch("/api/v1/traffic-accidents/loadInitialData", { method: "GET" }).then(function (res) {
+    			getTrafficAccidents();
+    		});
+    	}
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -10589,22 +10769,22 @@ var app = (function () {
     	}
 
     	function input1_input_handler() {
-    		newTrafficAccident.year = this.value;
+    		newTrafficAccident.year = to_number(this.value);
     		$$invalidate(0, newTrafficAccident);
     	}
 
     	function input2_input_handler() {
-    		newTrafficAccident.trafficaccidentvictim = this.value;
+    		newTrafficAccident.trafficaccidentvictim = to_number(this.value);
     		$$invalidate(0, newTrafficAccident);
     	}
 
     	function input3_input_handler() {
-    		newTrafficAccident.dead = this.value;
+    		newTrafficAccident.dead = to_number(this.value);
     		$$invalidate(0, newTrafficAccident);
     	}
 
     	function input4_input_handler() {
-    		newTrafficAccident.injured = this.value;
+    		newTrafficAccident.injured = to_number(this.value);
     		$$invalidate(0, newTrafficAccident);
     	}
 
@@ -10615,7 +10795,10 @@ var app = (function () {
     		trafficAccidents,
     		newTrafficAccident,
     		getTrafficAccidents,
-    		insertTrafficAccident
+    		insertTrafficAccident,
+    		deleteAccident,
+    		deleteAllAccidents,
+    		loadInitialData
     	});
 
     	$$self.$inject_state = $$props => {
@@ -10631,6 +10814,9 @@ var app = (function () {
     		newTrafficAccident,
     		trafficAccidents,
     		insertTrafficAccident,
+    		deleteAccident,
+    		deleteAllAccidents,
+    		loadInitialData,
     		getTrafficAccidents,
     		input0_input_handler,
     		input1_input_handler,
@@ -10654,11 +10840,62 @@ var app = (function () {
     	}
     }
 
-    /* src\front\App.svelte generated by Svelte v3.21.0 */
-
-    const file$c = "src\\front\\App.svelte";
+    /* src\front\accidentsAPI\EditAccidentsTraffics.svelte generated by Svelte v3.21.0 */
 
     function create_fragment$d(ctx) {
+    	const block = {
+    		c: noop,
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: noop,
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: noop
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$d.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$d($$self, $$props) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<EditAccidentsTraffics> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("EditAccidentsTraffics", $$slots, []);
+    	return [];
+    }
+
+    class EditAccidentsTraffics extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$d, create_fragment$d, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "EditAccidentsTraffics",
+    			options,
+    			id: create_fragment$d.name
+    		});
+    	}
+    }
+
+    /* src\front\App.svelte generated by Svelte v3.21.0 */
+    const file$c = "src\\front\\App.svelte";
+
+    function create_fragment$e(ctx) {
     	let main;
     	let current;
 
@@ -10671,7 +10908,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			create_component(router.$$.fragment);
-    			add_location(main, file$c, 28, 0, 907);
+    			add_location(main, file$c, 30, 0, 1070);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10699,7 +10936,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$d.name,
+    		id: create_fragment$e.name,
     		type: "component",
     		source: "",
     		ctx
@@ -10708,7 +10945,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$d($$self, $$props, $$invalidate) {
+    function instance$e($$self, $$props, $$invalidate) {
     	const routes = {
     		"/": Home,
     		"/evolution-of-cycling-routes": CyclingRoutesTable,
@@ -10716,6 +10953,7 @@ var app = (function () {
     		"/rural-tourism-stats": TourismTable_svelte,
     		"/rural-tourism-stats/:tourismProvince/:tourismYear": EditTourism_svelte,
     		"/traffic-accidents": AccidentsTrafficsTable,
+    		"/traffic-accidents/:accidentProcince/:accidentYear": EditAccidentsTraffics,
     		"*": NotFound
     	};
 
@@ -10737,6 +10975,7 @@ var app = (function () {
     		TourismTable: TourismTable_svelte,
     		EditTourism: EditTourism_svelte,
     		AccidentsTrafficsTable,
+    		EditAccidentsTraffics,
     		routes
     	});
 
@@ -10746,13 +10985,13 @@ var app = (function () {
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$d, create_fragment$d, safe_not_equal, {});
+    		init(this, options, instance$e, create_fragment$e, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "App",
     			options,
-    			id: create_fragment$d.name
+    			id: create_fragment$e.name
     		});
     	}
     }

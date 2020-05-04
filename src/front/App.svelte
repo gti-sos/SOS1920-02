@@ -10,6 +10,7 @@ import Home from './Home.svelte';
 	import EditTourism from './tourismAPI/EditTourism.svelte.html';
 // API JOSE FRANCISCO
 	import AccidentsTrafficsTable from './accidentsAPI/AccidentsTrafficsTable.svelte';
+	import EditAccidentsTraffics from './accidentsAPI/EditAccidentsTraffics.svelte';
 
 	const routes = {
 		"/": Home,
@@ -20,6 +21,7 @@ import Home from './Home.svelte';
 		"/rural-tourism-stats/:tourismProvince/:tourismYear": EditTourism,
 
 		"/traffic-accidents": AccidentsTrafficsTable,
+		"/traffic-accidents/:accidentProcince/:accidentYear": EditAccidentsTraffics,
 		
 		"*": NotFound
 	};
