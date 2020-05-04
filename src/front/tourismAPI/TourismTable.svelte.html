@@ -5,6 +5,7 @@
  
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
+	import { Pagination, PaginationItem, PaginationLink } from 'sveltestrap';
  
     let tourism = [];
     let newTourism = {
@@ -15,23 +16,42 @@
 		averagestay: 0.0
 		
     };
+	let numeroRecursos = 10;
+	let offset = 0;
+	let currentPage = 1; 
+	let moreData = true; 
  
     onMount(getTourism);
- 
+	
+	
     async function getTourism() {
  
         console.log("Fetching rural-tourism-stats...");
-        const res = await fetch("/api/v1/rural-tourism-stats");
+        const res = await fetch("/api/v1/rural-tourism-stats?offset="  + numeroRecursos * offset + "&limit=" + numeroRecursos);
+		const resNext = await fetch("/api/v1/rural-tourism-stats?offset="  + numeroRecursos * (offset + 1) + "&limit=" + numeroRecursos);
  
-        if (res.ok) {
+        if (res.ok  && resNext.ok) {
             console.log("Ok:");
             const json = await res.json();
+			const jsonNext = await resNext.json();
             tourism = json;
+			
+			if (jsonNext.length == 0) {
+				moreData = false;
+			} else {
+				moreData = true;
+			}
+			
             console.log("Received " + tourism.length + " rural-tourism-stats.");
         } else {
             console.log("ERROR!");
         }
     }
+	function incrementOffset(valor) {
+		offset += valor;
+		currentPage += valor;
+		getTourism();
+	}
  
   	async function insertTourism() {
 	  
@@ -120,6 +140,34 @@
 		</Table>
 	
     {/await}
- 
+ 	<Pagination style="float:center;" ariaLabel="Cambiar de página">
+
+
+		<PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
+		  <PaginationLink previous href="#/rural-tourism-stats" on:click="{() => incrementOffset(-1)}" />
+		</PaginationItem>
+		
+		<!-- If we are not in the first page-->
+		{#if currentPage != 1}
+		<PaginationItem>
+			<PaginationLink href="#/rural-tourism-stats" on:click="{() => incrementOffset(-1)}" >{currentPage - 1}</PaginationLink>
+		</PaginationItem>
+		{/if}
+		<PaginationItem active>
+			<PaginationLink href="#/rural-tourism-stats" >{currentPage}</PaginationLink>
+		</PaginationItem>
+
+		<!-- If there are more elements-->
+		{#if moreData}
+		<PaginationItem >
+			<PaginationLink href="#/rural-tourism-stats" on:click="{() => incrementOffset(1)}">{currentPage + 1}</PaginationLink>
+		</PaginationItem>
+		{/if}
+
+		<PaginationItem class="{moreData ? '' : 'disabled'}">
+		  <PaginationLink next href="#/rural-tourism-stats" on:click="{() => incrementOffset(1)}"/>
+		</PaginationItem>
+
+	</Pagination>
  
 </main>

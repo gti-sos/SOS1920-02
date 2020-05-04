@@ -21,7 +21,15 @@ module.exports = function(app){
 					{"province": "huelva","year": 2015,"traveller": 40651,"overnightstay":90601,"averagestay": 2.2},
 					{"province": "jaen","year": 2015,"traveller": 23513,"overnightstay":63311,"averagestay": 2},
 					{"province": "malaga","year": 2015,"traveller": 56208,"overnightstay":301760,"averagestay": 5.4},
-					{"province": "sevilla","year": 2015,"traveller": 22454,"overnightstay":55880,"averagestay": 2.5},];
+					{"province": "sevilla","year": 2015,"traveller": 22454,"overnightstay":55880,"averagestay": 2.5},
+					{"province": "almeria","year": 2016,"traveller": 17532,"overnightstay":57391,"averagestay": 3.3},
+					{"province": "cadiz","year": 2016,"traveller": 25699,"overnightstay":76441,"averagestay": 3},
+					{"province": "cordoba","year": 2016,"traveller": 28889,"overnightstay":97671,"averagestay": 3.4},
+					{"province": "granada","year": 2016,"traveller": 25991,"overnightstay":71117,"averagestay": 2.7},
+					{"province": "huelva","year": 2016,"traveller": 35552,"overnightstay":81737,"averagestay": 2.3},
+					{"province": "jaen","year": 2016,"traveller": 26579,"overnightstay":69129,"averagestay": 2.6},
+					{"province": "malaga","year": 2016,"traveller": 89719,"overnightstay":431349,"averagestay": 4.8},
+					{"province": "sevilla","year": 2016,"traveller": 20080,"overnightstay":50222,"averagestay": 2.5},];
 
 
 	//LOADINITIALDATA
