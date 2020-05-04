@@ -27,7 +27,7 @@ onMount(getRoute);
             updatedMetropolitan = route.metropolitan;
             updatedUrban = route.urban;
             updatedRest = route.rest;
-			console.log("Received " + routes.length + " routes.");
+			console.log("Data loaded");
 		} else {
 			console.log("ERROR!");
 		}

@@ -8,9 +8,6 @@ module.exports = function(app){
 	const db = new dataStore({
 		filename: dbFileName, 
 		autoload: true,				//Operacion de carga
-		autoload: true,
-		autoload: true,
-		autoload: true
 	});
 	
 	const BASE_API_URL = "/api/v1";
@@ -39,10 +36,9 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes/loadInitialData", (req,res) =
 app.get(BASE_API_URL+"/evolution-of-cycling-routes/", (req,res) =>{
 	var queryBD = {};
 	let offset = 0;
-    let limit = 15;
+    let limit = Number.MAX_SAFE_INTEGER;
 	
-// PAGINACION
-		
+// PAGINACION		
 	if (req.query.offset) {
 		offset = parseInt(req.query.offset);
  			delete req.query.offset;
@@ -62,19 +58,18 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes/", (req,res) =>{
 	if(req.query.urban) queryBD["urban"] = parseFloat(req.query.urban);
 	if(req.query.rest) queryBD["rest"] = parseFloat(req.query.rest);	
 	
-	db.find(queryBD).sort({province:1,year:-1}).skip(offset).limit(limit).exec((error, routes) => {
+	db.find(queryBD).sort({province:1}).skip(offset).limit(limit).exec((error, routes) => {
 		routes.forEach((r) => {
 			delete r._id;
 		});
 		
-	if(routes.length > 0){
+	//if(routes.length > 0){
 		res.send(JSON.stringify(routes,null,2));
 		console.log("Data sent:"+JSON.stringify(routes,null,2));		 		
-	} else {
-		console.log("ERROR DATA NOT FOUND");
-		res.sendStatus(404, "DATA NOT FOUND");
-	}
-
+	/*} else {
+		console.log("ERROR GET - DATA NOT FOUND");
+		res.sendStatus(404, "GET - DATA NOT FOUND");
+	}*/
 	});
 });
 	
