@@ -97,10 +97,10 @@
             if (res.ok) {
                 successMsg = res.status + ": " + res.statusText;
                 console.log(successMsg);
-                success = "El dato se ha borrado correctamente."
-            } else if (res.status == 409) {
+                success = "El dato " + province + " " + year + " se ha borrado correctamente."
+            } else if (res.status == 404) {
                 errorMsg = res.status + ": " + res.statusText;
-                window.alert("Error! El dato no se ha podido borrar.");
+                window.alert("Error! El dato " + province + " " + year + " no se ha podido borrar.");
                 console.log(errorMsg);
             };
 		});
@@ -116,10 +116,6 @@
                 successMsg = res.status + ": " + res.statusText;
                 console.log(successMsg);
                 success = "Los datos se han borrado correctamente."
-            } else if (res.status == 409) {
-                errorMsg = res.status + ": " + res.statusText;
-                window.alert("Error! Los datos " + newTrafficAccident.province + " " + newTrafficAccident.year + " no se ha podido borrar.");
-                console.log(errorMsg);
             };
 		});
     }
@@ -133,10 +129,6 @@
                 successMsg = res.status + ": " + res.statusText;
                 console.log(successMsg);
                 success = "Los datos iniciales se han introducido correctamente."
-            } else if (res.status == 409) {
-                errorMsg = res.status + ": " + res.statusText;
-                window.alert("Error! Los datos iniciales ya existen.");
-                console.log(errorMsg);
             };
         });
     }
@@ -182,8 +174,8 @@
                                 <option disabled selected></option>
                                 <option value="province">Provincia</option>
                                 <option value="year">Año</option>
-                                <option value="trafficaccidentvictim">Victimas de accidentes de trafico</option>
-                                <option value="dead">Muertos</option>
+                                <option value="trafficaccidentvictim">Accidentes con victimas</option>
+                                <option value="dead">Fallecidos</option>
                                 <option value="injured">Heridos</option>
                             </Input>
                         </td>
@@ -203,8 +195,8 @@
                 <tr>
                     <th>Provincia</th>
                     <th>Año</th>
-                    <th>Victimas de accidentes de trafico</th>
-                    <th>Muertos</th>
+                    <th>Accidentes con victimas</th>
+                    <th>Fallecidos</th>
                     <th>Heridos</th>
                     <th>Accion</th>
                 </tr>

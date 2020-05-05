@@ -20,7 +20,15 @@ module.exports = function(app){
 		{"province": "huelva", "year": 2015, "trafficaccidentvictim": 721, "dead": 23, "injured": 1134},
 		{"province": "jaen", "year": 2015, "trafficaccidentvictim": 10023, "dead": 23, "injured": 1541},
 		{"province": "malaga", "year": 2015, "trafficaccidentvictim": 2514, "dead": 46, "injured": 3543},
-		{"province": "sevilla", "year": 2015, "trafficaccidentvictim": 5371, "dead": 43, "injured": 7963}
+		{"province": "sevilla", "year": 2015, "trafficaccidentvictim": 5371, "dead": 43, "injured": 7963},
+		{"province": "almeria", "year": 2018, "trafficaccidentvictim": 1194, "dead": 27, "injured": 1891},
+		{"province": "cadiz", "year": 2018, "trafficaccidentvictim": 2556, "dead": 36, "injured": 3682},
+		{"province": "cordoba", "year": 2018, "trafficaccidentvictim": 1077, "dead": 30, "injured": 1542},
+		{"province": "granada", "year": 2018, "trafficaccidentvictim": 1692, "dead": 30, "injured": 2389},
+		{"province": "huelva", "year": 2018, "trafficaccidentvictim": 718, "dead": 14, "injured": 1138},
+		{"province": "jaen", "year": 2018, "trafficaccidentvictim": 855, "dead": 26, "injured": 1304},
+		{"province": "malaga", "year": 2018, "trafficaccidentvictim": 4265, "dead": 38, "injured": 5797},
+		{"province": "sevilla", "year": 2018, "trafficaccidentvictim": 4454, "dead": 54, "injured": 6457}
 	];
 
 	//LoadInitialData
