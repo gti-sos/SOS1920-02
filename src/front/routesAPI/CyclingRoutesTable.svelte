@@ -89,14 +89,14 @@
 		}).then(function (res) {
 			getRoutes();
 			if(res.status == 201){
-				msgOk = "Dato introducido correctamente";
+				msgOk = "Recurso introducido correctamente";
 				msgBad = false;
-			}else if(res.status == 400){
-				msgOk = "Todos los campos deben tener valor";
-				msgBad = false;
+			}else if(res.status == 400){ //Bad Request
+				msgOk = false;
+				msgBad = "Todos los campos del recurso deben tener valor";
 			}else{	//ERROR 409 - Conflic
 				msgOk = false;
-				msgBad = "El dato introducido ya ha sido creado";
+				msgBad = "El recurso introducido ya ha sido creado";
 			}
 		});
 	}
@@ -132,14 +132,18 @@ async function deleteRoutes() {
 	}
 
 // LOAD INITIAL DATA
-	/*async function loadInitialData() {
+	async function loadInitialData() {
         const res = await fetch("/api/v1/evolution-of-cycling-routes/loadInitialData", {
             method: "GET"
         }).then(function (res) {
-			getTourism();
-			getCountriesYears();
+			getRoutes();
+			getProvincesYears();
+			if(res.status == 200){
+				msgOk = "Datos iniciales cargados correctamente ";
+				msgBad = false;
+			}
         });
-    }*/
+    }
 
 //	SEARCH /evolution-of-cycling-routes	
 	async function searchRoutes(province, year) {
@@ -201,8 +205,8 @@ async function deleteRoutes() {
 		</Input>
 	</FormGroup>
 
-	<Button outline color="secondary" on:click="{searchRoutes(provinceActual, yearActual)}" class="button-search" > Buscar </Button>
-
+	<Button style="margin-bottom:3%;" color="secondary" on:click="{searchRoutes(provinceActual, yearActual)}" class="button-search" > Buscar </Button>
+	
 		<Table bordered >
 			<thead>
 				<tr>
@@ -224,7 +228,8 @@ async function deleteRoutes() {
 						<td>{route.metropolitan}</td>
 						<td>{route.urban}</td>
 						<td>{route.rest}</td>
-						<td> <Button outline color="danger" on:click="{deleteRoute(route.province, route.year)}"> Borrar </Button> </td>
+						<td> <Button outline color="danger" on:click="{deleteRoute(route.province, route.year)}">
+							<i class="fa fa-trash" aria-hidden="true"></i> </Button> </td> <!--Borrar un recurso-->
 							
 					</tr>
 				{/each}
@@ -238,7 +243,7 @@ async function deleteRoutes() {
 				<td><Input type="number" bind:value="{newRoute.metropolitan}"/></td>
 				<td><Input type="number" bind:value="{newRoute.urban}"/></td>
 				<td><Input type="number" bind:value="{newRoute.rest}"/></td>
-				<td> <Button outline  color="primary" on:click={insertRoute}>Añadir</Button> </td>
+				<td> <Button style="margin-bottom:3%;" color="primary" on:click={insertRoute}> Añadir</Button> </td>	<!-- <i class="fas fa-plus-square"></i>-->
 			</tr>
 		</Table>
 	{/await}
@@ -277,6 +282,7 @@ async function deleteRoutes() {
 		  </PaginationItem>  
 </Pagination>
 
-<Button outline color="secondary" on:click="{pop}"> Volver </Button>
-<Button outline on:click={deleteRoutes} color="danger"> Borrar todo </Button>
+<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> </Button>
+<Button outline on:click={deleteRoutes} color="danger"> <i class="fa fa-trash" aria-hidden="true"></i> Todo </Button> <!--Borrar todos recursos-->
+<Button outline on:click={loadInitialData} color="primary"> <i class="fas fa-download"></i> Datos Iniciales </Button>
 </main>
