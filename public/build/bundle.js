@@ -1576,10 +1576,12 @@ var app = (function () {
     	let a10;
     	let t32;
     	let t33;
+    	let br;
+    	let t34;
     	let button0;
-    	let t35;
+    	let t36;
     	let button1;
-    	let t37;
+    	let t38;
     	let button2;
 
     	const block = {
@@ -1650,12 +1652,14 @@ var app = (function () {
     			a10.textContent = "Marta Verdugo Martinez";
     			t32 = text(")");
     			t33 = space();
+    			br = element("br");
+    			t34 = space();
     			button0 = element("button");
     			button0.textContent = "API Evolucion Carriles Bici";
-    			t35 = space();
+    			t36 = space();
     			button1 = element("button");
     			button1.textContent = "API Turismo Rural";
-    			t37 = space();
+    			t38 = space();
     			button2 = element("button");
     			button2.textContent = "API Accidentes De Trafico";
     			add_location(strong0, file$1, 3, 7, 48);
@@ -1699,22 +1703,23 @@ var app = (function () {
     			add_location(li10, file$1, 19, 4, 1256);
     			add_location(ul1, file$1, 14, 3, 773);
     			add_location(ul2, file$1, 2, 2, 35);
+    			add_location(br, file$1, 23, 2, 1509);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn btn-outline-success");
     			attr_dev(button0, "onclick", "window.location.href='#/evolution-of-cycling-routes'");
     			set_style(button0, "margin-left", "12.5%");
     			set_style(button0, "width", "25%");
-    			add_location(button0, file$1, 23, 2, 1509);
+    			add_location(button0, file$1, 24, 2, 1517);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "btn btn-outline-success");
     			attr_dev(button1, "onclick", "window.location.href='#/rural-tourism-stats'");
     			set_style(button1, "width", "25%");
-    			add_location(button1, file$1, 24, 2, 1707);
+    			add_location(button1, file$1, 25, 2, 1715);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-outline-success");
     			attr_dev(button2, "onclick", "window.location.href='#/traffic-accidents'");
     			set_style(button2, "width", "25%");
-    			add_location(button2, file$1, 25, 2, 1866);
+    			add_location(button2, file$1, 26, 2, 1874);
     			attr_dev(div, "class", "div-home");
     			add_location(div, file$1, 1, 1, 9);
     			add_location(main, file$1, 0, 0, 0);
@@ -1773,10 +1778,12 @@ var app = (function () {
     			append_dev(li10, a10);
     			append_dev(li10, t32);
     			append_dev(div, t33);
+    			append_dev(div, br);
+    			append_dev(div, t34);
     			append_dev(div, button0);
-    			append_dev(div, t35);
+    			append_dev(div, t36);
     			append_dev(div, button1);
-    			append_dev(div, t37);
+    			append_dev(div, t38);
     			append_dev(div, button2);
     		},
     		p: noop,
