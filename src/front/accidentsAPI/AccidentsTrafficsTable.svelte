@@ -2,9 +2,15 @@
     import {
         onMount
     } from "svelte";
+    import {
+        pop
+    } from "svelte-spa-router";
 
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
+    import Input from "sveltestrap/src/Input.svelte";
+	import FormGroup from "sveltestrap/src/FormGroup.svelte";
+    import { Pagination, PaginationItem, PaginationLink } from 'sveltestrap';
 
     let trafficAccidents = [];
     let newTrafficAccident = {
@@ -15,16 +21,39 @@
         injured: 0
     };
 
+    let numberObject = 10;
+    let offset = 0;
+	let currentPage = 1; 
+	let moreData = true; 
+
+    let buscar = "";
+	let valores = "";
+
+    let object = "";
+    let successMsg = "";
+    let success = "";
+    let errorMsg = "";
+
     onMount(getTrafficAccidents);
 
     async function getTrafficAccidents() {
-        const res = await fetch("/api/v1/traffic-accidents");
+        const res = await fetch("/api/v1/traffic-accidents?offset=" + numberObject * offset + "&limit=" + numberObject);
+        const resNext = await fetch("/api/v1/traffic-accidents?offset="  + numberObject * (offset + 1) + "&limit=" + numberObject);
+
         console.log("Fetching Traffic Accidents...");
 
-        if (res.ok) {
+        if (res.ok && resNext.ok) {
             console.log("OK: ");
             const json = await res.json();
+            const jsonNext = await resNext.json();
             trafficAccidents = json;
+
+            if (jsonNext.length == 0) {
+                moreData = false;
+            } else {
+                moreData = true;
+            }
+
             console.log("Received " + trafficAccidents.length + "traffic-accidents.")
         } else {
             console.log("ERROR!");
@@ -42,8 +71,21 @@
             }
         }).then(function (res) {
             getTrafficAccidents();
+            object = newTrafficAccident.province;
+            if (res.ok) {
+                successMsg = res.status + ": " + res.statusText;
+                console.log(successMsg);
+                success = "El dato " + newTrafficAccident.province + " " + newTrafficAccident.year + " ha sido insertado con exito.";
+            } else if (res.status == 400){
+                errorMsg = res.status + ": " + res.statusText;
+                window.alert("Error! Rellene todos los campos.");
+                console.log(errorMsg);
+            } else if (res.status == 409) {
+                errorMsg = res.status + ": " + res.statusText;
+                window.alert("Error! El objeto " + newTrafficAccident.province + " " + newTrafficAccident.year + " ya existe.");
+                console.log(errorMsg);
+            };
         });
-
     }
     
     async function deleteAccident(province, year) {
@@ -51,7 +93,16 @@
 		const res = await fetch("/api/v1/traffic-accidents/"+province+"/"+year, {
 			method: "DELETE"
 		}).then(function (res) {
-			getTrafficAccidents();
+            getTrafficAccidents();
+            if (res.ok) {
+                successMsg = res.status + ": " + res.statusText;
+                console.log(successMsg);
+                success = "El dato se ha borrado correctamente."
+            } else if (res.status == 409) {
+                errorMsg = res.status + ": " + res.statusText;
+                window.alert("Error! El dato no se ha podido borrar.");
+                console.log(errorMsg);
+            };
 		});
     }
     
@@ -60,7 +111,16 @@
 		const res = await fetch("/api/v1/traffic-accidents", {
 			method: "DELETE"
 		}).then(function (res) {
-			getTrafficAccidents();
+            getTrafficAccidents();
+            if (res.ok) {
+                successMsg = res.status + ": " + res.statusText;
+                console.log(successMsg);
+                success = "Los datos se han borrado correctamente."
+            } else if (res.status == 409) {
+                errorMsg = res.status + ": " + res.statusText;
+                window.alert("Error! Los datos " + newTrafficAccident.province + " " + newTrafficAccident.year + " no se ha podido borrar.");
+                console.log(errorMsg);
+            };
 		});
     }
     
@@ -69,19 +129,76 @@
             method: "GET"
         }).then(function (res) {
             getTrafficAccidents();
+            if (res.ok) {
+                successMsg = res.status + ": " + res.statusText;
+                console.log(successMsg);
+                success = "Los datos iniciales se han introducido correctamente."
+            } else if (res.status == 409) {
+                errorMsg = res.status + ": " + res.statusText;
+                window.alert("Error! Los datos iniciales ya existen.");
+                console.log(errorMsg);
+            };
         });
     }
+
+    async function findObject(buscar, valores) {
+
+    }
+
+    function upOffset (numPag) {
+		offset += numPag;
+		currentPage += numPag;
+		getTrafficAccidents();
+	}
 
 </script>
 
 <main>
 
     <h2>Accidentes de Trafico</h2>
+    <Button outline color="secondary" on:click="{pop}">Volver</Button>
+
+    {#if successMsg}
+        <p style="color: green">{success}</p>
+    {/if}
 
     {#await trafficAccidents}
         Loading Traffic Accidents...
     {:then trafficAccidents}
-        <Table>
+
+        <FormGroup>
+            <table>
+                <thead>
+                    <tr>
+                        <th><label>Buscar por:</label></th>
+                        <th><label>Valor:</label></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width: 25%;">
+                            <Input type="select" name="busqueda" id="busqueda" bind:value="{buscar}">
+                                <option disabled selected></option>
+                                <option value="province">Provincia</option>
+                                <option value="year">Año</option>
+                                <option value="trafficaccidentvictim">Victimas de accidentes de trafico</option>
+                                <option value="dead">Muertos</option>
+                                <option value="injured">Heridos</option>
+                            </Input>
+                        </td>
+                        <td style="width: 25%;">
+                            <Input type="text" name="valor" id="valor" bind:value="{valores}"></Input>
+                        </td>
+                        <td style="width: 25%;">
+                            <Button color="primary" on:click="{findObject(buscar, valores)}" class="button-search">Buscar</Button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </FormGroup>
+
+        <Table bordered>
             <thead>
                 <tr>
                     <th>Provincia</th>
@@ -111,16 +228,35 @@
                         <td><Button outline color="danger" on:click="{deleteAccident(trafficAccident.province, trafficAccident.year)}"><i class="fa fa-trash" aria-hidden="true"></i> Borrar</Button></td>
                     </tr>
                 {/each}
-                <tr>
-                    <td><Button outline color="primary" on:click={loadInitialData}>Inicializar</Button></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><Button outline color="danger" on:click={deleteAllAccidents}><i class="fa fa-trash" aria-hidden="true"></i> Borrar todo</Button>
-                    </td>
-                </tr>
             </tbody>
         </Table>
+        <Button outline color="primary" on:click={loadInitialData} style="float: left;;">Inicializar</Button>
+        <Button outline color="danger" on:click={deleteAllAccidents} style="float: right;"><i class="fa fa-trash" aria-hidden="true"></i> Borrar todo</Button>
     {/await}
+
+    <Pagination ariaLabel="Cambiar de página" style="padding-left: 45%;">
+
+        <PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
+            <PaginationLink previous href="#/traffic-accidents" on:click="{() => upOffset(-1)}" />
+        </PaginationItem>
+        
+        {#if currentPage != 1}
+            <PaginationItem>
+                <PaginationLink href="#/traffic-accidents" on:click="{() => upOffset(-1)}" >{currentPage - 1}</PaginationLink>
+            </PaginationItem>
+        {/if}
+        <PaginationItem active>
+            <PaginationLink href="#/traffic-accidents" >{currentPage}</PaginationLink>
+        </PaginationItem>
+        
+        {#if moreData}
+            <PaginationItem >
+                <PaginationLink href="#/traffic-accidents" on:click="{() => upOffset(1)}">{currentPage + 1}</PaginationLink>
+            </PaginationItem>
+        {/if}
+        <PaginationItem class="{moreData ? '' : 'disabled'}">
+            <PaginationLink next href="#/traffic-accidents" on:click="{() => upOffset(1)}"/>
+        </PaginationItem>  
+    </Pagination>
+
 </main>

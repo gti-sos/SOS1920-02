@@ -10,12 +10,16 @@
     import Button from "sveltestrap/src/Button.svelte";
 
     export let params = {};
+    
     let trafficAccident = {};
     let updateProvince = "";
     let updateYear = 0;
     let updateTrafficaccidentvictim = 0;
     let updateDead = 0;
     let updateInjured = 0;
+
+    let success = "";
+    let successMsg = "";
     let errorMsg = "";
 
     onMount(getTrafficAccident);
@@ -57,12 +61,29 @@
             }
         }).then(function (res) {
             getTrafficAccident();
+            if (res.ok) {
+                successMsg = res.status + ": " + res.statusText;
+                console.log(successMsg);
+                success = "El dato " + params.accidentProcince + " " + params.accidentYear + " se ha modificado correctamente."
+            }else if (res.status == 400){
+                errorMsg = res.status + ": " + res.statusText;
+                window.alert("Error! Todos los campos deben estar rellenos.");
+                console.log(errorMsg);
+            } else if (res.status == 409) {
+                errorMsg = res.status + ": " + res.statusText;
+                window.alert("Error! El dato " + params.accidentProcince + " " + params.accidentYear + " no se ha podido modificar.");
+                console.log(errorMsg);
+            };
         });
     }
 
 </script>
 
 <main>
+    {#if successMsg}
+        <p style="color: green;">{success}</p>
+    {/if}
+
     <h3>Editar datos de: <strong>{params.accidentProcince} {params.accidentYear}</strong></h3>
 
     {#await trafficAccident}
@@ -91,8 +112,5 @@
             </tbody>
         </Table>
     {/await}
-    {#if errorMsg}
-        <p style="color: red;">ERROR: {errorMsg}</p>
-    {/if}
     <Button outline color="secondary" on:click="{pop}">Volver</Button>
 </main>
