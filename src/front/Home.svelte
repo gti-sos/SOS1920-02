@@ -21,8 +21,8 @@
 					Marta Verdugo Martinez</a>)</li>
 			</ul>
 		</ul>
-		<button type="button" class="btn btn-outline-success" onclick="window.location.href='#/evolution-of-cycling-routes'"> API Evolucion Carriles Bici</button>
-		<button type="button" class="btn btn-outline-success" onclick="window.location.href='#/rural-tourism-stats'"> API Turismo Rural</button>
-		<button type="button" class="btn btn-outline-success" onclick="window.location.href='#/traffic-accidents'"> API Accidentes De Trafico </button>
+		<button type="button" class="btn btn-outline-success" onclick="window.location.href='#/evolution-of-cycling-routes'" style="margin-left: 12.5%; width: 25%;"> API Evolucion Carriles Bici</button>
+		<button type="button" class="btn btn-outline-success" onclick="window.location.href='#/rural-tourism-stats'"style="width: 25%;"> API Turismo Rural</button>
+		<button type="button" class="btn btn-outline-success" onclick="window.location.href='#/traffic-accidents'"style="width: 25%;"> API Accidentes De Trafico </button>
 	</div>
 </main>
