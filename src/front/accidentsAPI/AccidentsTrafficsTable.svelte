@@ -37,8 +37,8 @@
     onMount(getTrafficAccidents);
 
     async function getTrafficAccidents() {
-        const res = await fetch("/api/v1/traffic-accidents?offset=" + numberObject * offset + "&limit=" + numberObject);
-        const resNext = await fetch("/api/v1/traffic-accidents?offset="  + numberObject * (offset + 1) + "&limit=" + numberObject);
+        const res = await fetch("/api/v2/traffic-accidents?offset=" + numberObject * offset + "&limit=" + numberObject);
+        const resNext = await fetch("/api/v2/traffic-accidents?offset="  + numberObject * (offset + 1) + "&limit=" + numberObject);
 
         console.log("Fetching Traffic Accidents...");
 
@@ -63,7 +63,7 @@
     async function insertTrafficAccident() {
         console.log("Inserting Traffic Accidents..." + JSON.stringify(newTrafficAccident));
 
-        const res = await fetch("/api/v1/traffic-accidents", {
+        const res = await fetch("/api/v2/traffic-accidents", {
             method: "POST",
             body: JSON.stringify(newTrafficAccident),
             headers: {
@@ -90,7 +90,7 @@
     
     async function deleteAccident(province, year) {
         console.log("Deleting Traffic Accidents...");
-		const res = await fetch("/api/v1/traffic-accidents/"+province+"/"+year, {
+		const res = await fetch("/api/v2/traffic-accidents/"+province+"/"+year, {
 			method: "DELETE"
 		}).then(function (res) {
             getTrafficAccidents();
@@ -108,7 +108,7 @@
     
     async function deleteAllAccidents() {
 	    console.log("Deleting All Traffic Accidents...");
-		const res = await fetch("/api/v1/traffic-accidents", {
+		const res = await fetch("/api/v2/traffic-accidents", {
 			method: "DELETE"
 		}).then(function (res) {
             getTrafficAccidents();
@@ -121,7 +121,7 @@
     }
     
     async function loadInitialData() {
-        const res = await fetch("/api/v1/traffic-accidents/loadInitialData", {
+        const res = await fetch("/api/v2/traffic-accidents/loadInitialData", {
             method: "GET"
         }).then(function (res) {
             getTrafficAccidents();

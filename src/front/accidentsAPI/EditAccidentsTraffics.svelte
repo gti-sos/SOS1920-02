@@ -25,7 +25,7 @@
     onMount(getTrafficAccident);
 
     async function getTrafficAccident() {
-        const res = await fetch("/api/v1/traffic-accidents/"+params.accidentProcince+"/"+params.accidentYear);
+        const res = await fetch("/api/v2/traffic-accidents/"+params.accidentProcince+"/"+params.accidentYear);
         console.log("Fetching Traffic Accident...");
 
         if (res.ok) {
@@ -47,7 +47,7 @@
     async function updateTrafficAccident() {
         console.log("Updating Traffic Accident..." + JSON.stringify(params.accidentProcince));
 
-        const res = await fetch("/api/v1/traffic-accidents/"+params.accidentProcince+"/"+params.accidentYear, {
+        const res = await fetch("/api/v2/traffic-accidents/"+params.accidentProcince+"/"+params.accidentYear, {
             method: "PUT",
             body: JSON.stringify({
                 province: params.accidentProcince,
