@@ -1,15 +1,6 @@
 <main>
 	<div class="div-home">
-		<br>
-<<<<<<< HEAD
-		<button type="button" class="btn btn-primary" onclick="window.location.href='#/evolution-of-cycling-routes'" style="margin-left: 12.5%; width: 25%;"> API Evolucion Carriles Bici</button>
-		<button type="button" class="btn btn-warning" onclick="window.location.href='#/rural-tourism-stats'"style="width: 25%;"> API Turismo Rural</button>
-		<button type="button" class="btn btn-danger" onclick="window.location.href='#/traffic-accidents'"style="width: 25%;"> API Accidentes De Trafico </button>
-=======
-		<button type="button" class="btn btn-outline-success" onclick="window.location.href='#/evolution-of-cycling-routes'" style="margin-left: 12.5%; width: 25%;"> API Evolucion Carriles Bici</button>
-		<button type="button" class="btn btn-outline-success" onclick="window.location.href='#/rural-tourism-stats'"style="width: 25%;"> API Turismo Rural</button>
-		<button type="button" class="btn btn-outline-success" onclick="window.location.href='#/traffic-accidents'"style="width: 25%;"> API Accidentes De Trafico </button>
-		<br>
+
 		<div style="margin-left: 12.5%;">
 			<br>
 			<ul>
@@ -32,9 +23,16 @@
 					<li><a href="https://documenter.getpostman.com/view/6870023/SzYZ2KVA">https://sos1920-02.herokuapp.com/api/v1/rural-tourism-stats</a> (developed by <a href="https://github.com/martaverdugo6">
 						Marta Verdugo Martinez</a>)</li>
 				</ul>
+
+
+
 			</ul>
+		<br>
+		<button type="button" class="btn btn-primary" onclick="window.location.href='#/evolution-of-cycling-routes'" style="margin-left: 12.5%; width: 25%;"> API Evolucion Carriles Bici</button>
+		<button type="button" class="btn btn-warning" onclick="window.location.href='#/rural-tourism-stats'"style="width: 25%;"> API Turismo Rural</button>
+		<button type="button" class="btn btn-danger" onclick="window.location.href='#/traffic-accidents'"style="width: 25%;"> API Accidentes De Trafico </button>
+		<br>
 		</div>
 		
->>>>>>> 042879a13d70c0789d995788b1812ac1ac5f898d
 	</div>
 </main>
