@@ -26,7 +26,7 @@
 						Francisco Morales Ruiz</a>)</li>
 					<li><a href="https://documenter.getpostman.com/view/6870023/SzYZ2KVA">https://sos1920-02.herokuapp.com/api/v1/rural-tourism-stats</a> (developed by <a href="https://github.com/martaverdugo6">
 						Marta Verdugo Martinez</a>)</li>
-					<li><a href="">https://sos1920-02.herokuapp.com/api/v2/rural-tourism-stats</a> (developed by <a href="https://github.com/martaverdugo6">
+					<li><a href="https://documenter.getpostman.com/view/6870023/SzmcbKTA">https://sos1920-02.herokuapp.com/api/v2/rural-tourism-stats</a> (developed by <a href="https://github.com/martaverdugo6">
 						Marta Verdugo Martinez</a>)</li>
 				</ul>
 
