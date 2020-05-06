@@ -134,7 +134,26 @@
     }
 
     async function findObject(buscar, valores) {
+        console.log("Searching " + valores + " for " + buscar + " Traffic Accidents...");
 
+        var url = "/api/v2/traffic-accidents";
+
+        if (buscar != "" && valores != "") {
+            url = url + "?" + buscar + "=" + valores;
+        }
+
+        const res = await fetch(url);
+
+        if (res.ok) {
+            console.log("OK: ");
+            const json = await res.json();
+            trafficAccidents = json;
+
+            console.log("Found " + trafficAccidents.length + "traffic-accidents.")
+        } else {
+            window.alert("ERROR: Introduzca correctamente los valores para la busqueda.");
+            console.log("ERROR!");
+        }
     }
 
     function upOffset (numPag) {
