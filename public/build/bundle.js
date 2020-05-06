@@ -1775,7 +1775,7 @@ var app = (function () {
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn btn-primary");
     			attr_dev(button0, "onclick", "window.location.href='#/evolution-of-cycling-routes'");
-    			set_style(button0, "margin-left", "12.5%");
+    			set_style(button0, "margin-left", "6.75%");
     			set_style(button0, "width", "25%");
     			add_location(button0, file$1, 36, 2, 2196);
     			attr_dev(button1, "type", "button");

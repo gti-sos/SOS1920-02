@@ -34,7 +34,7 @@
 
 			</ul>
 		<br>
-		<button type="button" class="btn btn-primary" onclick="window.location.href='#/evolution-of-cycling-routes'" style="margin-left: 12.5%; width: 25%;"> API Evolucion Carriles Bici</button>
+		<button type="button" class="btn btn-primary" onclick="window.location.href='#/evolution-of-cycling-routes'" style="margin-left: 6.75%; width: 25%;"> API Evolucion Carriles Bici</button>
 		<button type="button" class="btn btn-warning" onclick="window.location.href='#/rural-tourism-stats'"style="width: 25%;"> API Turismo Rural</button>
 		<button type="button" class="btn btn-danger" onclick="window.location.href='#/traffic-accidents'"style="width: 25%;"> API Accidentes De Trafico </button>
 		<br>
