@@ -27,12 +27,15 @@
 	let moreData = true; 
 
     let buscar = "";
-	let valores = "";
+    let valores = "";
+    let buscar2 = "";
+	let valores2 = "";
 
     let object = "";
     let successMsg = "";
     let success = "";
     let errorMsg = "";
+    let combinada = false;
 
     onMount(getTrafficAccidents);
 
@@ -134,6 +137,10 @@
     }
 
     async function findObject(buscar, valores) {
+        offset = 0;
+		currentPage = 1; 
+        moreData = false;
+        
         console.log("Searching " + valores + " for " + buscar + " Traffic Accidents...");
 
         var url = "/api/v2/traffic-accidents";
@@ -141,6 +148,38 @@
         if (buscar != "" && valores != "") {
             url = url + "?" + buscar + "=" + valores;
         }
+
+        const res = await fetch(url);
+
+        if (res.ok) {
+            console.log("OK: ");
+            const json = await res.json();
+            trafficAccidents = json;
+
+            console.log("Found " + trafficAccidents.length + "traffic-accidents.")
+        } else {
+            window.alert("ERROR: Introduzca correctamente los valores para la busqueda.");
+            errorMsg = res.status + ": " + res.statusText;
+            console.log("ERROR!" + errorMsg);
+        }
+    }
+
+    async function findObject2(buscar, valores, buscar2, valores2) {
+        offset = 0;
+		currentPage = 1; 
+        moreData = false;
+        
+        console.log("Searching " + valores + " for " + buscar + " and " + valores2 + " for " + buscar2 + " Traffic Accidents...");
+
+        var url = "/api/v2/traffic-accidents";
+
+        if (buscar != "" && valores != "" && buscar2 != "" && valores2 != "") {
+            url = url + "?" + buscar + "=" + valores + "&" + buscar2 + "=" + valores2;
+        } else {
+            window.alert("Los campos para la busqueda deben estar rellenos.");
+            errorMsg = res.status + ": " + res.statusText;
+            console.log("ERROR!" + errorMsg);
+		}
 
         const res = await fetch(url);
 
@@ -178,35 +217,84 @@
     {:then trafficAccidents}
 
         <FormGroup>
-            <table>
-                <thead>
-                    <tr>
-                        <th><label>Buscar por:</label></th>
-                        <th><label>Valor:</label></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="width: 25%;">
-                            <Input type="select" name="busqueda" id="busqueda" bind:value="{buscar}">
-                                <option disabled selected></option>
-                                <option value="province">Provincia</option>
-                                <option value="year">Año</option>
-                                <option value="trafficaccidentvictim">Accidentes con victimas</option>
-                                <option value="dead">Fallecidos</option>
-                                <option value="injured">Heridos</option>
-                            </Input>
-                        </td>
-                        <td style="width: 25%;">
-                            <Input type="text" name="valor" id="valor" bind:value="{valores}"></Input>
-                        </td>
-                        <td style="width: 25%;">
-                            <Button color="primary" on:click="{findObject(buscar, valores)}" class="button-search">Buscar</Button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <br><input type=checkbox bind:checked={combinada}> <strong>Hacer busqueda con 2 parametros</strong><br>
+            {#if combinada}
+                <table style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th><label>Buscar por:</label></th>
+                            <th><label>Valor:</label></th>
+                            <th><label>Buscar por:</label></th>
+                            <th><label>Valor:</label></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <Input type="select" name="busqueda" id="busqueda" bind:value="{buscar}">
+                                    <option disabled selected></option>
+                                    <option value="province">Provincia</option>
+                                    <option value="year">Año</option>
+                                    <option value="trafficaccidentvictim">Accidentes con victimas</option>
+                                    <option value="dead">Fallecidos</option>
+                                    <option value="injured">Heridos</option>
+                                </Input>
+                            </td>
+                            <td>
+                                <Input type="text" name="valor" id="valor" bind:value="{valores}"></Input>
+                            </td>
+                            <td>
+                                <Input type="select" name="busqueda2" id="busqueda2" bind:value="{buscar2}">
+                                    <option disabled selected></option>
+                                    <option value="province">Provincia</option>
+                                    <option value="year">Año</option>
+                                    <option value="trafficaccidentvictim">Accidentes con victimas</option>
+                                    <option value="dead">Fallecidos</option>
+                                    <option value="injured">Heridos</option>
+                                </Input>
+                            </td>
+                            <td>
+                                <Input type="text" name="valor2" id="valor2" bind:value="{valores2}"></Input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 25%;">
+                                <Button color="primary" on:click="{findObject2(buscar, valores, buscar2, valores2)}" class="button-search">Buscar</Button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            {:else}
+                <table  style="width: 75%;">
+                    <thead>
+                        <tr>
+                            <th><label>Buscar por:</label></th>
+                            <th><label>Valor:</label></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="width: 25%;">
+                                <Input type="select" name="busqueda" id="busqueda" bind:value="{buscar}">
+                                    <option disabled selected></option>
+                                    <option value="province">Provincia</option>
+                                    <option value="year">Año</option>
+                                    <option value="trafficaccidentvictim">Accidentes con victimas</option>
+                                    <option value="dead">Fallecidos</option>
+                                    <option value="injured">Heridos</option>
+                                </Input>
+                            </td>
+                            <td style="width: 25%;">
+                                <Input type="text" name="valor" id="valor" bind:value="{valores}"></Input>
+                            </td>
+                            <td style="width: 25%;">
+                                <Button color="primary" on:click="{findObject(buscar, valores)}" class="button-search">Buscar</Button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            {/if}
         </FormGroup>
 
         <Table bordered>
