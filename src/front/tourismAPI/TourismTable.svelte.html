@@ -121,6 +121,9 @@
     }
 	
 	async function busqueda(campo1, valor1, campo2, valor2) {
+		offset = 0;
+		currentPage = 1; 
+		moreData = false;
 		exitoMsg=""
 		console.log("Searching data: " + campo1 + ": " + valor1 + ", " + campo2 + ": " + valor2);
 		
