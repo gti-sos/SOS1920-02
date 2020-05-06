@@ -282,7 +282,7 @@ async function deleteRoutes() {
 		  </PaginationItem>  
 </Pagination>
 
-<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> </Button>
+<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> </Button> <!--Atras / volver-->
 <Button outline on:click={deleteRoutes} color="danger"> <i class="fa fa-trash" aria-hidden="true"></i> Todo </Button> <!--Borrar todos recursos-->
 <Button outline on:click={loadInitialData} color="primary"> <i class="fas fa-spinner"></i> Datos Iniciales </Button>
 </main>

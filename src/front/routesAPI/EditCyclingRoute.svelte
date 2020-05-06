@@ -86,7 +86,7 @@
 						<td><Input type="number" bind:value="{updatedMetropolitan}"/></td>
 						<td><Input type="number" bind:value="{updatedUrban}"/></td>
 						<td><Input type="number" bind:value="{updatedRest}"/></td>
-						<td> <Button outline color="primary" on:click={updateRoute}>Actualizar</Button> </td>
+						<td> <Button style="margin-bottom:3%;" color="primary" on:click={insertRoute}> Actualizar </Button> </td>
 					</tr>
 				</tbody>
 			</Table>
@@ -98,5 +98,5 @@
 	{#if msgOk}
 	<p style="color: green">EXITO: {msgOk}</p>
 	{/if}
-		<Button outline color="secondary" on:click="{pop}"> Atrás </Button>
+		<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> </Button> <!--Atras / volver-->
 	</main>

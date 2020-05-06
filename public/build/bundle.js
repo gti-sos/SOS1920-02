@@ -9495,7 +9495,7 @@ var app = (function () {
     			t = text(" Todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$a, 285, 56, 8620);
+    			add_location(i, file$a, 285, 56, 8642);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9528,7 +9528,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Datos Iniciales");
     			attr_dev(i, "class", "fas fa-spinner");
-    			add_location(i, file$a, 286, 60, 8772);
+    			add_location(i, file$a, 286, 60, 8794);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -10191,7 +10191,7 @@ var app = (function () {
     	return block;
     }
 
-    // (89:11) <Button outline color="primary" on:click={updateRoute}>
+    // (89:11) <Button style="margin-bottom:3%;" color="primary" on:click={insertRoute}>
     function create_default_slot_2$1(ctx) {
     	let t;
 
@@ -10211,7 +10211,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(89:11) <Button outline color=\\\"primary\\\" on:click={updateRoute}>",
+    		source: "(89:11) <Button style=\\\"margin-bottom:3%;\\\" color=\\\"primary\\\" on:click={insertRoute}>",
     		ctx
     	});
 
@@ -10295,7 +10295,7 @@ var app = (function () {
 
     	const button = new Button({
     			props: {
-    				outline: true,
+    				style: "margin-bottom:3%;",
     				color: "primary",
     				$$slots: { default: [create_default_slot_2$1] },
     				$$scope: { ctx }
@@ -10303,7 +10303,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	button.$on("click", /*updateRoute*/ ctx[9]);
+    	button.$on("click", insertRoute);
 
     	const block = {
     		c: function create() {
@@ -10516,7 +10516,7 @@ var app = (function () {
     			t0 = text("ERROR: ");
     			t1 = text(/*msgBad*/ ctx[7]);
     			set_style(p, "color", "red");
-    			add_location(p, file$b, 95, 1, 2671);
+    			add_location(p, file$b, 95, 1, 2691);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -10554,7 +10554,7 @@ var app = (function () {
     			t0 = text("EXITO: ");
     			t1 = text(/*msgOk*/ ctx[6]);
     			set_style(p, "color", "green");
-    			add_location(p, file$b, 98, 1, 2737);
+    			add_location(p, file$b, 98, 1, 2757);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -10582,17 +10582,19 @@ var app = (function () {
 
     // (101:2) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$1(ctx) {
-    	let t;
+    	let i;
 
     	const block = {
     		c: function create() {
-    			t = text("Atrás");
+    			i = element("i");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$b, 100, 54, 2863);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
+    			insert_dev(target, i, anchor);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
+    			if (detaching) detach_dev(i);
     		}
     	};
 
@@ -10909,8 +10911,8 @@ var app = (function () {
     		msgOk,
     		msgBad,
     		route,
-    		updateRoute,
     		getRoute,
+    		updateRoute,
     		input0_value_binding,
     		input1_value_binding,
     		input2_value_binding
