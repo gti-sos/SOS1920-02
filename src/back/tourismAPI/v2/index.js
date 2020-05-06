@@ -12,7 +12,7 @@ module.exports = function(app){
 			});
 
 	
-	const BASE_API_URL = "/api/v1";
+	const BASE_API_URL = "/api/v2";
 	
 	var initialTourism =  [{"province": "almeria","year": 2015,"traveller": 11260,"overnightstay":37406,"averagestay": 3.3},
 					{"province": "cadiz","year": 2015,"traveller": 28859,"overnightstay":77652,"averagestay": 2.7},
