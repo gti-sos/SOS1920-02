@@ -9508,7 +9508,7 @@ var app = (function () {
     		c: function create() {
     			i = element("i");
     			t = text(" Datos Iniciales");
-    			attr_dev(i, "class", "fas fa-download");
+    			attr_dev(i, "class", "fas fa-spinner");
     			add_location(i, file$a, 286, 60, 8772);
     		},
     		m: function mount(target, anchor) {
@@ -10933,16 +10933,22 @@ var app = (function () {
 
     // (146:2) <Button outline  color="primary" on:click={loadInitialData}>
     function create_default_slot_18$1(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Inicializar");
+    			i = element("i");
+    			t = text(" Inicializar");
+    			attr_dev(i, "class", "fas fa-spinner");
+    			add_location(i, file$c, 145, 63, 3978);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -10969,7 +10975,7 @@ var app = (function () {
     			t = text(" Eliminar todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$c, 146, 62, 4061);
+    			add_location(i, file$c, 146, 62, 4093);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -11089,7 +11095,7 @@ var app = (function () {
     			h3.textContent = "Añadir nuevo dato:";
     			t5 = space();
     			create_component(table1.$$.fragment);
-    			add_location(h3, file$c, 202, 2, 6025);
+    			add_location(h3, file$c, 202, 2, 6057);
     		},
     		m: function mount(target, anchor) {
     			mount_component(formgroup0, target, anchor);
@@ -11222,22 +11228,22 @@ var app = (function () {
     			option0.selected = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-    			add_location(option0, file$c, 157, 4, 4398);
+    			add_location(option0, file$c, 157, 4, 4430);
     			option1.__value = "province";
     			option1.value = option1.__value;
-    			add_location(option1, file$c, 158, 4, 4439);
+    			add_location(option1, file$c, 158, 4, 4471);
     			option2.__value = "year";
     			option2.value = option2.__value;
-    			add_location(option2, file$c, 159, 4, 4488);
+    			add_location(option2, file$c, 159, 4, 4520);
     			option3.__value = "traveller";
     			option3.value = option3.__value;
-    			add_location(option3, file$c, 160, 4, 4527);
+    			add_location(option3, file$c, 160, 4, 4559);
     			option4.__value = "overnightstay";
     			option4.value = option4.__value;
-    			add_location(option4, file$c, 161, 4, 4575);
+    			add_location(option4, file$c, 161, 4, 4607);
     			option5.__value = "averagestay";
     			option5.value = option5.__value;
-    			add_location(option5, file$c, 162, 4, 4632);
+    			add_location(option5, file$c, 162, 4, 4664);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option0, anchor);
@@ -11310,7 +11316,7 @@ var app = (function () {
     			label.textContent = "Selecciona el campo por el que buscar:";
     			t1 = space();
     			create_component(input.$$.fragment);
-    			add_location(label, file$c, 155, 3, 4258);
+    			add_location(label, file$c, 155, 3, 4290);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -11390,7 +11396,7 @@ var app = (function () {
     			label.textContent = "Valor del campo:";
     			t1 = space();
     			create_component(input.$$.fragment);
-    			add_location(label, file$c, 167, 3, 4757);
+    			add_location(label, file$c, 167, 3, 4789);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -11474,7 +11480,7 @@ var app = (function () {
     			t = text(" Eliminar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$c, 197, 109, 5860);
+    			add_location(i, file$c, 197, 109, 5892);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -11563,14 +11569,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/rural-tourism-stats/" + /*tou*/ ctx[27].province + "/" + /*tou*/ ctx[27].year);
-    			add_location(a, file$c, 191, 25, 5477);
-    			add_location(td0, file$c, 190, 6, 5446);
-    			add_location(td1, file$c, 193, 24, 5592);
-    			add_location(td2, file$c, 194, 24, 5637);
-    			add_location(td3, file$c, 195, 6, 5669);
-    			add_location(td4, file$c, 196, 24, 5723);
-    			add_location(td5, file$c, 197, 24, 5775);
-    			add_location(tr, file$c, 189, 20, 5434);
+    			add_location(a, file$c, 191, 25, 5509);
+    			add_location(td0, file$c, 190, 6, 5478);
+    			add_location(td1, file$c, 193, 24, 5624);
+    			add_location(td2, file$c, 194, 24, 5669);
+    			add_location(td3, file$c, 195, 6, 5701);
+    			add_location(td4, file$c, 196, 24, 5755);
+    			add_location(td5, file$c, 197, 24, 5807);
+    			add_location(tr, file$c, 189, 20, 5466);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11699,15 +11705,15 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$c, 179, 20, 5128);
-    			add_location(th1, file$c, 180, 17, 5165);
-    			add_location(th2, file$c, 181, 17, 5196);
-    			add_location(th3, file$c, 182, 17, 5231);
-    			add_location(th4, file$c, 183, 5, 5259);
-    			add_location(th5, file$c, 184, 5, 5289);
-    			add_location(tr, file$c, 178, 16, 5102);
-    			add_location(thead, file$c, 177, 12, 5077);
-    			add_location(tbody, file$c, 187, 12, 5365);
+    			add_location(th0, file$c, 179, 20, 5160);
+    			add_location(th1, file$c, 180, 17, 5197);
+    			add_location(th2, file$c, 181, 17, 5228);
+    			add_location(th3, file$c, 182, 17, 5263);
+    			add_location(th4, file$c, 183, 5, 5291);
+    			add_location(th5, file$c, 184, 5, 5321);
+    			add_location(tr, file$c, 178, 16, 5134);
+    			add_location(thead, file$c, 177, 12, 5109);
+    			add_location(tbody, file$c, 187, 12, 5397);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -11908,28 +11914,28 @@ var app = (function () {
     			strong5.textContent = "Acción:";
     			t16 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong0, file$c, 205, 8, 6116);
-    			add_location(input0, file$c, 205, 36, 6144);
-    			add_location(td0, file$c, 205, 4, 6112);
-    			add_location(strong1, file$c, 206, 8, 6201);
+    			add_location(strong0, file$c, 205, 8, 6148);
+    			add_location(input0, file$c, 205, 36, 6176);
+    			add_location(td0, file$c, 205, 4, 6144);
+    			add_location(strong1, file$c, 206, 8, 6233);
     			attr_dev(input1, "type", "number");
-    			add_location(input1, file$c, 206, 30, 6223);
-    			add_location(td1, file$c, 206, 4, 6197);
-    			add_location(strong2, file$c, 207, 8, 6290);
+    			add_location(input1, file$c, 206, 30, 6255);
+    			add_location(td1, file$c, 206, 4, 6229);
+    			add_location(strong2, file$c, 207, 8, 6322);
     			attr_dev(input2, "type", "number");
-    			add_location(input2, file$c, 207, 34, 6316);
-    			add_location(td2, file$c, 207, 4, 6286);
-    			add_location(strong3, file$c, 208, 8, 6388);
+    			add_location(input2, file$c, 207, 34, 6348);
+    			add_location(td2, file$c, 207, 4, 6318);
+    			add_location(strong3, file$c, 208, 8, 6420);
     			attr_dev(input3, "type", "number");
-    			add_location(input3, file$c, 208, 39, 6419);
-    			add_location(td3, file$c, 208, 4, 6384);
-    			add_location(strong4, file$c, 209, 8, 6495);
+    			add_location(input3, file$c, 208, 39, 6451);
+    			add_location(td3, file$c, 208, 4, 6416);
+    			add_location(strong4, file$c, 209, 8, 6527);
     			attr_dev(input4, "type", "number");
-    			add_location(input4, file$c, 209, 41, 6528);
-    			add_location(td4, file$c, 209, 4, 6491);
-    			add_location(strong5, file$c, 210, 8, 6602);
-    			add_location(td5, file$c, 210, 4, 6598);
-    			add_location(tr, file$c, 204, 3, 6102);
+    			add_location(input4, file$c, 209, 41, 6560);
+    			add_location(td4, file$c, 209, 4, 6523);
+    			add_location(strong5, file$c, 210, 8, 6634);
+    			add_location(td5, file$c, 210, 4, 6630);
+    			add_location(tr, file$c, 204, 3, 6134);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, tr, anchor);
@@ -12076,7 +12082,7 @@ var app = (function () {
     			t0 = text(/*exitoMsg*/ ctx[5]);
     			t1 = text(". Dato insertado con éxito");
     			set_style(p, "color", "green");
-    			add_location(p, file$c, 216, 8, 6763);
+    			add_location(p, file$c, 216, 8, 6795);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -14036,7 +14042,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "primary",
-    				style: "float: left;;",
+    				style: "float: left;",
     				$$slots: { default: [create_default_slot_10$2] },
     				$$scope: { ctx }
     			},
@@ -14958,18 +14964,24 @@ var app = (function () {
     	return block;
     }
 
-    // (225:8) <Button outline color="primary" on:click={loadInitialData} style="float: left;;">
+    // (225:8) <Button outline color="primary" on:click={loadInitialData} style="float: left;">
     function create_default_slot_10$2(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Inicializar");
+    			i = element("i");
+    			t = text(" Inicializar");
+    			attr_dev(i, "class", "fas fa-spinner");
+    			add_location(i, file$e, 224, 89, 8726);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -14978,7 +14990,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_10$2.name,
     		type: "slot",
-    		source: "(225:8) <Button outline color=\\\"primary\\\" on:click={loadInitialData} style=\\\"float: left;;\\\">",
+    		source: "(225:8) <Button outline color=\\\"primary\\\" on:click={loadInitialData} style=\\\"float: left;\\\">",
     		ctx
     	});
 
@@ -14996,7 +15008,7 @@ var app = (function () {
     			t = text(" Borrar todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$e, 225, 91, 8839);
+    			add_location(i, file$e, 225, 91, 8870);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);

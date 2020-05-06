@@ -222,7 +222,7 @@
                 {/each}
             </tbody>
         </Table>
-        <Button outline color="primary" on:click={loadInitialData} style="float: left;;">Inicializar</Button>
+        <Button outline color="primary" on:click={loadInitialData} style="float: left;"> <i class="fas fa-spinner"></i> Inicializar</Button>
         <Button outline color="danger" on:click={deleteAllAccidents} style="float: right;"><i class="fa fa-trash" aria-hidden="true"></i> Borrar todo</Button>
     {/await}
 
