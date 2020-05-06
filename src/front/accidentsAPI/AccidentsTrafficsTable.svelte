@@ -147,7 +147,7 @@
 
 <main>
 
-    <h2>Accidentes de Trafico</h2>
+    <h2 style="text-align: center;"> <i class="fas fa-car"></i> Accidentes de Tráfico</h2>
     <Button outline color="secondary" on:click="{pop}">Volver</Button>
 
     {#if successMsg}

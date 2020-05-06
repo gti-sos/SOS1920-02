@@ -20,7 +20,7 @@
 	
 		async function getRoute() {
 			console.log("Fetching routes...");
-			const res = await fetch("/api/v1/evolution-of-cycling-routes/"+ params.province + "/" + params.year);
+			const res = await fetch("/api/v2/evolution-of-cycling-routes/"+ params.province + "/" + params.year);
 			if (res.ok) {
 				console.log("Ok:");
 				const json = await res.json();
@@ -38,7 +38,7 @@
 	
 		async function updateRoute(){
 			console.log("Updating routes...");
-			const res = await fetch("/api/v1/evolution-of-cycling-routes/" + params.province + "/" + params.year, {
+			const res = await fetch("/api/v2/evolution-of-cycling-routes/" + params.province + "/" + params.year, {
 				method: "PUT",
 				body: JSON.stringify({
 					province: params.province,
@@ -86,7 +86,7 @@
 						<td><Input type="number" bind:value="{updatedMetropolitan}"/></td>
 						<td><Input type="number" bind:value="{updatedUrban}"/></td>
 						<td><Input type="number" bind:value="{updatedRest}"/></td>
-						<td> <Button style="margin-bottom:3%;" color="primary" on:click={insertRoute}> Actualizar </Button> </td>
+						<td> <Button style="margin-bottom:3%;" color="primary" on:click={updateRoute}> Actualizar </Button> </td>
 					</tr>
 				</tbody>
 			</Table>

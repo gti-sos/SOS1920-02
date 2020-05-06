@@ -1705,21 +1705,21 @@ var app = (function () {
     			add_location(ul2, file$1, 2, 2, 35);
     			add_location(br, file$1, 23, 2, 1509);
     			attr_dev(button0, "type", "button");
-    			attr_dev(button0, "class", "btn btn-outline-success");
+    			attr_dev(button0, "class", "btn btn-primary");
     			attr_dev(button0, "onclick", "window.location.href='#/evolution-of-cycling-routes'");
     			set_style(button0, "margin-left", "12.5%");
     			set_style(button0, "width", "25%");
     			add_location(button0, file$1, 24, 2, 1517);
     			attr_dev(button1, "type", "button");
-    			attr_dev(button1, "class", "btn btn-outline-success");
+    			attr_dev(button1, "class", "btn btn-warning");
     			attr_dev(button1, "onclick", "window.location.href='#/rural-tourism-stats'");
     			set_style(button1, "width", "25%");
-    			add_location(button1, file$1, 25, 2, 1715);
+    			add_location(button1, file$1, 25, 2, 1707);
     			attr_dev(button2, "type", "button");
-    			attr_dev(button2, "class", "btn btn-outline-success");
+    			attr_dev(button2, "class", "btn btn-danger");
     			attr_dev(button2, "onclick", "window.location.href='#/traffic-accidents'");
     			set_style(button2, "width", "25%");
-    			add_location(button2, file$1, 26, 2, 1874);
+    			add_location(button2, file$1, 26, 2, 1858);
     			attr_dev(div, "class", "div-home");
     			add_location(div, file$1, 1, 1, 9);
     			add_location(main, file$1, 0, 0, 0);
@@ -7482,7 +7482,7 @@ var app = (function () {
     			h4.textContent = "Introducir nuevo dato:";
     			t5 = space();
     			create_component(table1.$$.fragment);
-    			add_location(h4, file$a, 237, 2, 6669);
+    			add_location(h4, file$a, 237, 2, 6701);
     		},
     		m: function mount(target, anchor) {
     			mount_component(formgroup0, target, anchor);
@@ -7619,7 +7619,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*province*/ ctx[37];
     			option.value = option.__value;
-    			add_location(option, file$a, 191, 3, 5376);
+    			add_location(option, file$a, 191, 3, 5408);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -7673,7 +7673,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$a, 193, 3, 5420);
+    			add_location(option, file$a, 193, 3, 5452);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -7863,7 +7863,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*year*/ ctx[34];
     			option.value = option.__value;
-    			add_location(option, file$a, 201, 3, 5659);
+    			add_location(option, file$a, 201, 3, 5691);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -7917,7 +7917,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$a, 203, 3, 5699);
+    			add_location(option, file$a, 203, 3, 5731);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -8103,7 +8103,7 @@ var app = (function () {
     			i = element("i");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$a, 231, 7, 6519);
+    			add_location(i, file$a, 231, 7, 6551);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -8189,13 +8189,13 @@ var app = (function () {
     			t10 = space();
     			set_style(a, "text-align", "center");
     			attr_dev(a, "href", a_href_value = "#/evolution-of-cycling-routes/" + /*route*/ ctx[31].province + "/" + /*route*/ ctx[31].year);
-    			add_location(a, file$a, 225, 6, 6170);
-    			add_location(td0, file$a, 226, 6, 6296);
-    			add_location(td1, file$a, 227, 6, 6325);
-    			add_location(td2, file$a, 228, 6, 6362);
-    			add_location(td3, file$a, 229, 6, 6392);
-    			add_location(td4, file$a, 230, 6, 6421);
-    			add_location(tr, file$a, 224, 5, 6158);
+    			add_location(a, file$a, 225, 6, 6202);
+    			add_location(td0, file$a, 226, 6, 6328);
+    			add_location(td1, file$a, 227, 6, 6357);
+    			add_location(td2, file$a, 228, 6, 6394);
+    			add_location(td3, file$a, 229, 6, 6424);
+    			add_location(td4, file$a, 230, 6, 6453);
+    			add_location(tr, file$a, 224, 5, 6190);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -8323,15 +8323,15 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$a, 212, 5, 5948);
-    			add_location(th1, file$a, 213, 5, 5974);
-    			add_location(th2, file$a, 214, 5, 5993);
-    			add_location(th3, file$a, 215, 5, 6022);
-    			add_location(th4, file$a, 216, 5, 6044);
-    			add_location(th5, file$a, 217, 5, 6065);
-    			add_location(tr, file$a, 211, 4, 5937);
-    			add_location(thead, file$a, 210, 3, 5924);
-    			add_location(tbody, file$a, 220, 3, 6111);
+    			add_location(th0, file$a, 212, 5, 5980);
+    			add_location(th1, file$a, 213, 5, 6006);
+    			add_location(th2, file$a, 214, 5, 6025);
+    			add_location(th3, file$a, 215, 5, 6054);
+    			add_location(th4, file$a, 216, 5, 6076);
+    			add_location(th5, file$a, 217, 5, 6097);
+    			add_location(tr, file$a, 211, 4, 5969);
+    			add_location(thead, file$a, 210, 3, 5956);
+    			add_location(tbody, file$a, 220, 3, 6143);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -8567,13 +8567,13 @@ var app = (function () {
     			t4 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(td0, file$a, 240, 4, 6760);
-    			add_location(td1, file$a, 241, 4, 6828);
-    			add_location(td2, file$a, 242, 4, 6894);
-    			add_location(td3, file$a, 243, 4, 6968);
-    			add_location(td4, file$a, 244, 4, 7035);
-    			add_location(td5, file$a, 245, 4, 7101);
-    			add_location(tr, file$a, 239, 3, 6750);
+    			add_location(td0, file$a, 240, 4, 6792);
+    			add_location(td1, file$a, 241, 4, 6860);
+    			add_location(td2, file$a, 242, 4, 6926);
+    			add_location(td3, file$a, 243, 4, 7000);
+    			add_location(td4, file$a, 244, 4, 7067);
+    			add_location(td5, file$a, 245, 4, 7133);
+    			add_location(tr, file$a, 239, 3, 6782);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -8733,7 +8733,7 @@ var app = (function () {
     			t0 = text("ERROR: ");
     			t1 = text(/*msgBad*/ ctx[8]);
     			set_style(p, "color", "red");
-    			add_location(p, file$a, 252, 8, 7336);
+    			add_location(p, file$a, 252, 8, 7368);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -8771,7 +8771,7 @@ var app = (function () {
     			t0 = text("EXITO: ");
     			t1 = text(/*msgOk*/ ctx[7]);
     			set_style(p, "color", "green");
-    			add_location(p, file$a, 255, 8, 7409);
+    			add_location(p, file$a, 255, 8, 7441);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -9219,7 +9219,10 @@ var app = (function () {
     	let current;
 
     	const paginationlink = new PaginationLink({
-    			props: { next: true, href: "#/routesAPI" },
+    			props: {
+    				next: true,
+    				href: "#/evolution-of-cycling-routes"
+    			},
     			$$inline: true
     		});
 
@@ -9444,7 +9447,7 @@ var app = (function () {
     		c: function create() {
     			i = element("i");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$a, 284, 52, 8512);
+    			add_location(i, file$a, 284, 52, 8562);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9476,7 +9479,7 @@ var app = (function () {
     			t = text(" Todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$a, 285, 56, 8642);
+    			add_location(i, file$a, 285, 56, 8692);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9509,7 +9512,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Datos Iniciales");
     			attr_dev(i, "class", "fas fa-spinner");
-    			add_location(i, file$a, 286, 60, 8794);
+    			add_location(i, file$a, 286, 60, 8844);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9535,6 +9538,8 @@ var app = (function () {
     function create_fragment$b(ctx) {
     	let main;
     	let h2;
+    	let i;
+    	let t0;
     	let t1;
     	let promise;
     	let t2;
@@ -9610,7 +9615,8 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			h2 = element("h2");
-    			h2.textContent = "Evolucion Carriles Bici";
+    			i = element("i");
+    			t0 = text(" Evolucion Carriles Bici");
     			t1 = space();
     			info.block.c();
     			t2 = space();
@@ -9625,6 +9631,8 @@ var app = (function () {
     			create_component(button1.$$.fragment);
     			t7 = space();
     			create_component(button2.$$.fragment);
+    			attr_dev(i, "class", "fas fa-bicycle");
+    			add_location(i, file$a, 182, 34, 5061);
     			set_style(h2, "text-align", "center");
     			add_location(h2, file$a, 182, 1, 5028);
     			add_location(main, file$a, 181, 0, 5019);
@@ -9635,6 +9643,8 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, h2);
+    			append_dev(h2, i);
+    			append_dev(h2, t0);
     			append_dev(main, t1);
     			info.block.m(main, info.anchor = null);
     			info.mount = () => main;
@@ -9789,7 +9799,7 @@ var app = (function () {
     	onMount(getProvincesYears);
 
     	async function getProvincesYears() {
-    		const res = await fetch("/api/v1/evolution-of-cycling-routes");
+    		const res = await fetch("/api/v2/evolution-of-cycling-routes");
 
     		if (res.ok) {
     			const json = await res.json();
@@ -9814,10 +9824,10 @@ var app = (function () {
     	// GET /evolution-of-cycling-routes
     	async function getRoutes() {
     		console.log("Fetching routes...");
-    		const res = await fetch("/api/v1/evolution-of-cycling-routes?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages);
-    		const resNext = await fetch("/api/v1/evolution-of-cycling-routes?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages);
+    		const res = await fetch("/api/v2/evolution-of-cycling-routes?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages);
+    		const resNext = await fetch("/api/v2/evolution-of-cycling-routes?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages);
 
-    		//const res = await fetch("/api/v1/evolution-of-cycling-routes");
+    		//const res = await fetch("/api/v2/evolution-of-cycling-routes");
     		if (res.ok && resNext.ok) {
     			console.log("Ok:");
     			const json = await res.json();
@@ -9840,7 +9850,7 @@ var app = (function () {
     	async function insertRoute() {
     		console.log("Inserting route..." + JSON.stringify(newRoute));
 
-    		const res = await fetch("/api/v1/evolution-of-cycling-routes/", {
+    		const res = await fetch("/api/v2/evolution-of-cycling-routes/", {
     			method: "POST",
     			body: JSON.stringify(newRoute),
     			headers: { "Content-Type": "application/json" }
@@ -9868,7 +9878,7 @@ var app = (function () {
     	async function deleteRoutes() {
     		console.log("Deleting all routes...");
 
-    		const res = await fetch("/api/v1/evolution-of-cycling-routes/", { method: "DELETE" }).then(function (res) {
+    		const res = await fetch("/api/v2/evolution-of-cycling-routes/", { method: "DELETE" }).then(function (res) {
     			getRoutes();
     			getProvincesYears();
 
@@ -9883,7 +9893,7 @@ var app = (function () {
     	async function deleteRoute(province, year) {
     		console.log("Deleting one route...");
 
-    		const res = await fetch("/api/v1/evolution-of-cycling-routes/" + province + "/" + year, { method: "DELETE" }).then(function (res) {
+    		const res = await fetch("/api/v2/evolution-of-cycling-routes/" + province + "/" + year, { method: "DELETE" }).then(function (res) {
     			getRoutes();
     			getProvincesYears();
 
@@ -9896,7 +9906,7 @@ var app = (function () {
 
     	// LOAD INITIAL DATA
     	async function loadInitialData() {
-    		const res = await fetch("/api/v1/evolution-of-cycling-routes/loadInitialData", { method: "GET" }).then(function (res) {
+    		const res = await fetch("/api/v2/evolution-of-cycling-routes/loadInitialData", { method: "GET" }).then(function (res) {
     			getRoutes();
     			getProvincesYears();
 
@@ -9910,7 +9920,7 @@ var app = (function () {
     	//	SEARCH /evolution-of-cycling-routes	
     	async function searchRoutes(province, year) {
     		console.log("Searching data: " + province + " and " + year);
-    		var url = "/api/v1/evolution-of-cycling-routes";
+    		var url = "/api/v2/evolution-of-cycling-routes";
 
     		if (province != "-" && year != "-") {
     			url = url + "?province=" + province + "&year=" + year;
@@ -10172,7 +10182,7 @@ var app = (function () {
     	return block;
     }
 
-    // (89:11) <Button style="margin-bottom:3%;" color="primary" on:click={insertRoute}>
+    // (89:11) <Button style="margin-bottom:3%;" color="primary" on:click={updateRoute}>
     function create_default_slot_2$1(ctx) {
     	let t;
 
@@ -10192,7 +10202,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(89:11) <Button style=\\\"margin-bottom:3%;\\\" color=\\\"primary\\\" on:click={insertRoute}>",
+    		source: "(89:11) <Button style=\\\"margin-bottom:3%;\\\" color=\\\"primary\\\" on:click={updateRoute}>",
     		ctx
     	});
 
@@ -10284,7 +10294,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	button.$on("click", insertRoute);
+    	button.$on("click", /*updateRoute*/ ctx[9]);
 
     	const block = {
     		c: function create() {
@@ -10776,7 +10786,7 @@ var app = (function () {
 
     	async function getRoute() {
     		console.log("Fetching routes...");
-    		const res = await fetch("/api/v1/evolution-of-cycling-routes/" + params.province + "/" + params.year);
+    		const res = await fetch("/api/v2/evolution-of-cycling-routes/" + params.province + "/" + params.year);
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -10796,7 +10806,7 @@ var app = (function () {
     	async function updateRoute() {
     		console.log("Updating routes...");
 
-    		const res = await fetch("/api/v1/evolution-of-cycling-routes/" + params.province + "/" + params.year, {
+    		const res = await fetch("/api/v2/evolution-of-cycling-routes/" + params.province + "/" + params.year, {
     			method: "PUT",
     			body: JSON.stringify({
     				province: params.province,
@@ -10892,8 +10902,8 @@ var app = (function () {
     		msgOk,
     		msgBad,
     		route,
-    		getRoute,
     		updateRoute,
+    		getRoute,
     		input0_value_binding,
     		input1_value_binding,
     		input2_value_binding
@@ -10943,7 +10953,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Inicializar");
     			attr_dev(i, "class", "fas fa-spinner");
-    			add_location(i, file$c, 145, 63, 3978);
+    			add_location(i, file$c, 145, 63, 4039);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -10977,7 +10987,7 @@ var app = (function () {
     			t = text(" Eliminar todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$c, 146, 62, 4093);
+    			add_location(i, file$c, 146, 62, 4154);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -11097,7 +11107,7 @@ var app = (function () {
     			h3.textContent = "Añadir nuevo dato:";
     			t5 = space();
     			create_component(table1.$$.fragment);
-    			add_location(h3, file$c, 202, 2, 6057);
+    			add_location(h3, file$c, 202, 2, 6118);
     		},
     		m: function mount(target, anchor) {
     			mount_component(formgroup0, target, anchor);
@@ -11230,22 +11240,22 @@ var app = (function () {
     			option0.selected = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-    			add_location(option0, file$c, 157, 4, 4430);
+    			add_location(option0, file$c, 157, 4, 4491);
     			option1.__value = "province";
     			option1.value = option1.__value;
-    			add_location(option1, file$c, 158, 4, 4471);
+    			add_location(option1, file$c, 158, 4, 4532);
     			option2.__value = "year";
     			option2.value = option2.__value;
-    			add_location(option2, file$c, 159, 4, 4520);
+    			add_location(option2, file$c, 159, 4, 4581);
     			option3.__value = "traveller";
     			option3.value = option3.__value;
-    			add_location(option3, file$c, 160, 4, 4559);
+    			add_location(option3, file$c, 160, 4, 4620);
     			option4.__value = "overnightstay";
     			option4.value = option4.__value;
-    			add_location(option4, file$c, 161, 4, 4607);
+    			add_location(option4, file$c, 161, 4, 4668);
     			option5.__value = "averagestay";
     			option5.value = option5.__value;
-    			add_location(option5, file$c, 162, 4, 4664);
+    			add_location(option5, file$c, 162, 4, 4725);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option0, anchor);
@@ -11318,7 +11328,7 @@ var app = (function () {
     			label.textContent = "Selecciona el campo por el que buscar:";
     			t1 = space();
     			create_component(input.$$.fragment);
-    			add_location(label, file$c, 155, 3, 4290);
+    			add_location(label, file$c, 155, 3, 4351);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -11398,7 +11408,7 @@ var app = (function () {
     			label.textContent = "Valor del campo:";
     			t1 = space();
     			create_component(input.$$.fragment);
-    			add_location(label, file$c, 167, 3, 4789);
+    			add_location(label, file$c, 167, 3, 4850);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label, anchor);
@@ -11482,7 +11492,7 @@ var app = (function () {
     			t = text(" Eliminar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$c, 197, 109, 5892);
+    			add_location(i, file$c, 197, 109, 5953);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -11571,14 +11581,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/rural-tourism-stats/" + /*tou*/ ctx[27].province + "/" + /*tou*/ ctx[27].year);
-    			add_location(a, file$c, 191, 25, 5509);
-    			add_location(td0, file$c, 190, 6, 5478);
-    			add_location(td1, file$c, 193, 24, 5624);
-    			add_location(td2, file$c, 194, 24, 5669);
-    			add_location(td3, file$c, 195, 6, 5701);
-    			add_location(td4, file$c, 196, 24, 5755);
-    			add_location(td5, file$c, 197, 24, 5807);
-    			add_location(tr, file$c, 189, 20, 5466);
+    			add_location(a, file$c, 191, 25, 5570);
+    			add_location(td0, file$c, 190, 6, 5539);
+    			add_location(td1, file$c, 193, 24, 5685);
+    			add_location(td2, file$c, 194, 24, 5730);
+    			add_location(td3, file$c, 195, 6, 5762);
+    			add_location(td4, file$c, 196, 24, 5816);
+    			add_location(td5, file$c, 197, 24, 5868);
+    			add_location(tr, file$c, 189, 20, 5527);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11707,15 +11717,15 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$c, 179, 20, 5160);
-    			add_location(th1, file$c, 180, 17, 5197);
-    			add_location(th2, file$c, 181, 17, 5228);
-    			add_location(th3, file$c, 182, 17, 5263);
-    			add_location(th4, file$c, 183, 5, 5291);
-    			add_location(th5, file$c, 184, 5, 5321);
-    			add_location(tr, file$c, 178, 16, 5134);
-    			add_location(thead, file$c, 177, 12, 5109);
-    			add_location(tbody, file$c, 187, 12, 5397);
+    			add_location(th0, file$c, 179, 20, 5221);
+    			add_location(th1, file$c, 180, 17, 5258);
+    			add_location(th2, file$c, 181, 17, 5289);
+    			add_location(th3, file$c, 182, 17, 5324);
+    			add_location(th4, file$c, 183, 5, 5352);
+    			add_location(th5, file$c, 184, 5, 5382);
+    			add_location(tr, file$c, 178, 16, 5195);
+    			add_location(thead, file$c, 177, 12, 5170);
+    			add_location(tbody, file$c, 187, 12, 5458);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -11916,28 +11926,28 @@ var app = (function () {
     			strong5.textContent = "Acción:";
     			t16 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong0, file$c, 205, 8, 6148);
-    			add_location(input0, file$c, 205, 36, 6176);
-    			add_location(td0, file$c, 205, 4, 6144);
-    			add_location(strong1, file$c, 206, 8, 6233);
+    			add_location(strong0, file$c, 205, 8, 6209);
+    			add_location(input0, file$c, 205, 36, 6237);
+    			add_location(td0, file$c, 205, 4, 6205);
+    			add_location(strong1, file$c, 206, 8, 6294);
     			attr_dev(input1, "type", "number");
-    			add_location(input1, file$c, 206, 30, 6255);
-    			add_location(td1, file$c, 206, 4, 6229);
-    			add_location(strong2, file$c, 207, 8, 6322);
+    			add_location(input1, file$c, 206, 30, 6316);
+    			add_location(td1, file$c, 206, 4, 6290);
+    			add_location(strong2, file$c, 207, 8, 6383);
     			attr_dev(input2, "type", "number");
-    			add_location(input2, file$c, 207, 34, 6348);
-    			add_location(td2, file$c, 207, 4, 6318);
-    			add_location(strong3, file$c, 208, 8, 6420);
+    			add_location(input2, file$c, 207, 34, 6409);
+    			add_location(td2, file$c, 207, 4, 6379);
+    			add_location(strong3, file$c, 208, 8, 6481);
     			attr_dev(input3, "type", "number");
-    			add_location(input3, file$c, 208, 39, 6451);
-    			add_location(td3, file$c, 208, 4, 6416);
-    			add_location(strong4, file$c, 209, 8, 6527);
+    			add_location(input3, file$c, 208, 39, 6512);
+    			add_location(td3, file$c, 208, 4, 6477);
+    			add_location(strong4, file$c, 209, 8, 6588);
     			attr_dev(input4, "type", "number");
-    			add_location(input4, file$c, 209, 41, 6560);
-    			add_location(td4, file$c, 209, 4, 6523);
-    			add_location(strong5, file$c, 210, 8, 6634);
-    			add_location(td5, file$c, 210, 4, 6630);
-    			add_location(tr, file$c, 204, 3, 6134);
+    			add_location(input4, file$c, 209, 41, 6621);
+    			add_location(td4, file$c, 209, 4, 6584);
+    			add_location(strong5, file$c, 210, 8, 6695);
+    			add_location(td5, file$c, 210, 4, 6691);
+    			add_location(tr, file$c, 204, 3, 6195);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, tr, anchor);
@@ -12084,7 +12094,7 @@ var app = (function () {
     			t0 = text(/*exitoMsg*/ ctx[5]);
     			t1 = text(". Dato insertado con éxito");
     			set_style(p, "color", "green");
-    			add_location(p, file$c, 216, 8, 6795);
+    			add_location(p, file$c, 216, 8, 6856);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -12755,6 +12765,8 @@ var app = (function () {
     function create_fragment$d(ctx) {
     	let main;
     	let h2;
+    	let i;
+    	let t0;
     	let t1;
     	let div;
     	let t2;
@@ -12815,7 +12827,8 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			h2 = element("h2");
-    			h2.textContent = "Turismo rural";
+    			i = element("i");
+    			t0 = text(" Turismo Rural");
     			t1 = space();
     			div = element("div");
     			create_component(button0.$$.fragment);
@@ -12827,10 +12840,13 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t5 = space();
     			create_component(pagination.$$.fragment);
+    			attr_dev(i, "class", "fas fa-suitcase");
+    			add_location(i, file$c, 143, 34, 3869);
+    			set_style(h2, "text-align", "center");
     			add_location(h2, file$c, 143, 1, 3836);
     			set_style(div, "text-align", "center");
     			set_style(div, "padding-bottom", "3%");
-    			add_location(div, file$c, 144, 2, 3862);
+    			add_location(div, file$c, 144, 2, 3923);
     			add_location(main, file$c, 142, 0, 3827);
     		},
     		l: function claim(nodes) {
@@ -12839,6 +12855,8 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, h2);
+    			append_dev(h2, i);
+    			append_dev(h2, t0);
     			append_dev(main, t1);
     			append_dev(main, div);
     			mount_component(button0, div, null);
@@ -13969,7 +13987,7 @@ var app = (function () {
     			p = element("p");
     			t = text(/*success*/ ctx[6]);
     			set_style(p, "color", "green");
-    			add_location(p, file$e, 153, 8, 5161);
+    			add_location(p, file$e, 153, 8, 5217);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -14189,22 +14207,22 @@ var app = (function () {
     			option0.selected = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-    			add_location(option0, file$e, 173, 32, 5848);
+    			add_location(option0, file$e, 173, 32, 5904);
     			option1.__value = "province";
     			option1.value = option1.__value;
-    			add_location(option1, file$e, 174, 32, 5917);
+    			add_location(option1, file$e, 174, 32, 5973);
     			option2.__value = "year";
     			option2.value = option2.__value;
-    			add_location(option2, file$e, 175, 32, 5994);
+    			add_location(option2, file$e, 175, 32, 6050);
     			option3.__value = "trafficaccidentvictim";
     			option3.value = option3.__value;
-    			add_location(option3, file$e, 176, 32, 6061);
+    			add_location(option3, file$e, 176, 32, 6117);
     			option4.__value = "dead";
     			option4.value = option4.__value;
-    			add_location(option4, file$e, 177, 32, 6165);
+    			add_location(option4, file$e, 177, 32, 6221);
     			option5.__value = "injured";
     			option5.value = option5.__value;
-    			add_location(option5, file$e, 178, 32, 6239);
+    			add_location(option5, file$e, 178, 32, 6295);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option0, anchor);
@@ -14367,22 +14385,22 @@ var app = (function () {
     			t6 = space();
     			td2 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(label0, file$e, 164, 28, 5435);
-    			add_location(th0, file$e, 164, 24, 5431);
-    			add_location(label1, file$e, 165, 28, 5496);
-    			add_location(th1, file$e, 165, 24, 5492);
-    			add_location(th2, file$e, 166, 24, 5548);
-    			add_location(tr0, file$e, 163, 20, 5401);
-    			add_location(thead, file$e, 162, 16, 5372);
+    			add_location(label0, file$e, 164, 28, 5491);
+    			add_location(th0, file$e, 164, 24, 5487);
+    			add_location(label1, file$e, 165, 28, 5552);
+    			add_location(th1, file$e, 165, 24, 5548);
+    			add_location(th2, file$e, 166, 24, 5604);
+    			add_location(tr0, file$e, 163, 20, 5457);
+    			add_location(thead, file$e, 162, 16, 5428);
     			set_style(td0, "width", "25%");
-    			add_location(td0, file$e, 171, 24, 5687);
+    			add_location(td0, file$e, 171, 24, 5743);
     			set_style(td1, "width", "25%");
-    			add_location(td1, file$e, 181, 24, 6374);
+    			add_location(td1, file$e, 181, 24, 6430);
     			set_style(td2, "width", "25%");
-    			add_location(td2, file$e, 184, 24, 6559);
-    			add_location(tr1, file$e, 170, 20, 5657);
-    			add_location(tbody, file$e, 169, 16, 5628);
-    			add_location(table, file$e, 161, 12, 5347);
+    			add_location(td2, file$e, 184, 24, 6615);
+    			add_location(tr1, file$e, 170, 20, 5713);
+    			add_location(tbody, file$e, 169, 16, 5684);
+    			add_location(table, file$e, 161, 12, 5403);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, table, anchor);
@@ -14510,7 +14528,7 @@ var app = (function () {
     			t = text(" Borrar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$e, 219, 135, 8476);
+    			add_location(i, file$e, 219, 135, 8532);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14599,14 +14617,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/traffic-accidents/" + /*trafficAccident*/ ctx[29].province + "/" + /*trafficAccident*/ ctx[29].year);
-    			add_location(a, file$e, 214, 28, 7976);
-    			add_location(td0, file$e, 214, 24, 7972);
-    			add_location(td1, file$e, 215, 24, 8117);
-    			add_location(td2, file$e, 216, 24, 8174);
-    			add_location(td3, file$e, 217, 24, 8248);
-    			add_location(td4, file$e, 218, 24, 8305);
-    			add_location(td5, file$e, 219, 24, 8365);
-    			add_location(tr, file$e, 213, 20, 7942);
+    			add_location(a, file$e, 214, 28, 8032);
+    			add_location(td0, file$e, 214, 24, 8028);
+    			add_location(td1, file$e, 215, 24, 8173);
+    			add_location(td2, file$e, 216, 24, 8230);
+    			add_location(td3, file$e, 217, 24, 8304);
+    			add_location(td4, file$e, 218, 24, 8361);
+    			add_location(td5, file$e, 219, 24, 8421);
+    			add_location(tr, file$e, 213, 20, 7998);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -14785,32 +14803,32 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$e, 195, 20, 6936);
-    			add_location(th1, file$e, 196, 20, 6976);
-    			add_location(th2, file$e, 197, 20, 7010);
-    			add_location(th3, file$e, 198, 20, 7064);
-    			add_location(th4, file$e, 199, 20, 7105);
-    			add_location(th5, file$e, 200, 20, 7143);
-    			add_location(tr0, file$e, 194, 16, 6910);
-    			add_location(thead, file$e, 193, 12, 6885);
+    			add_location(th0, file$e, 195, 20, 6992);
+    			add_location(th1, file$e, 196, 20, 7032);
+    			add_location(th2, file$e, 197, 20, 7066);
+    			add_location(th3, file$e, 198, 20, 7120);
+    			add_location(th4, file$e, 199, 20, 7161);
+    			add_location(th5, file$e, 200, 20, 7199);
+    			add_location(tr0, file$e, 194, 16, 6966);
+    			add_location(thead, file$e, 193, 12, 6941);
     			attr_dev(input0, "type", "text");
-    			add_location(input0, file$e, 205, 24, 7272);
-    			add_location(td0, file$e, 205, 20, 7268);
+    			add_location(input0, file$e, 205, 24, 7328);
+    			add_location(td0, file$e, 205, 20, 7324);
     			attr_dev(input1, "type", "number");
-    			add_location(input1, file$e, 206, 24, 7365);
-    			add_location(td1, file$e, 206, 20, 7361);
+    			add_location(input1, file$e, 206, 24, 7421);
+    			add_location(td1, file$e, 206, 20, 7417);
     			attr_dev(input2, "type", "number");
-    			add_location(input2, file$e, 207, 24, 7456);
-    			add_location(td2, file$e, 207, 20, 7452);
+    			add_location(input2, file$e, 207, 24, 7512);
+    			add_location(td2, file$e, 207, 20, 7508);
     			attr_dev(input3, "type", "number");
-    			add_location(input3, file$e, 208, 24, 7564);
-    			add_location(td3, file$e, 208, 20, 7560);
+    			add_location(input3, file$e, 208, 24, 7620);
+    			add_location(td3, file$e, 208, 20, 7616);
     			attr_dev(input4, "type", "number");
-    			add_location(input4, file$e, 209, 24, 7655);
-    			add_location(td4, file$e, 209, 20, 7651);
-    			add_location(td5, file$e, 210, 20, 7745);
-    			add_location(tr1, file$e, 204, 16, 7242);
-    			add_location(tbody, file$e, 203, 12, 7217);
+    			add_location(input4, file$e, 209, 24, 7711);
+    			add_location(td4, file$e, 209, 20, 7707);
+    			add_location(td5, file$e, 210, 20, 7801);
+    			add_location(tr1, file$e, 204, 16, 7298);
+    			add_location(tbody, file$e, 203, 12, 7273);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -14976,7 +14994,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Inicializar");
     			attr_dev(i, "class", "fas fa-spinner");
-    			add_location(i, file$e, 224, 89, 8726);
+    			add_location(i, file$e, 224, 89, 8782);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15010,7 +15028,7 @@ var app = (function () {
     			t = text(" Borrar todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$e, 225, 91, 8870);
+    			add_location(i, file$e, 225, 91, 8926);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15705,6 +15723,8 @@ var app = (function () {
     function create_fragment$f(ctx) {
     	let main;
     	let h2;
+    	let i;
+    	let t0;
     	let t1;
     	let t2;
     	let t3;
@@ -15752,7 +15772,8 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			h2 = element("h2");
-    			h2.textContent = "Accidentes de Trafico";
+    			i = element("i");
+    			t0 = text(" Accidentes de Tráfico");
     			t1 = space();
     			create_component(button.$$.fragment);
     			t2 = space();
@@ -15761,6 +15782,9 @@ var app = (function () {
     			info.block.c();
     			t4 = space();
     			create_component(pagination.$$.fragment);
+    			attr_dev(i, "class", "fas fa-car");
+    			add_location(i, file$e, 149, 37, 5058);
+    			set_style(h2, "text-align", "center");
     			add_location(h2, file$e, 149, 4, 5025);
     			add_location(main, file$e, 147, 0, 5011);
     		},
@@ -15770,6 +15794,8 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, h2);
+    			append_dev(h2, i);
+    			append_dev(h2, t0);
     			append_dev(main, t1);
     			mount_component(button, main, null);
     			append_dev(main, t2);

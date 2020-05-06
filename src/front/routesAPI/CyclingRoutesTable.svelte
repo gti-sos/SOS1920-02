@@ -34,7 +34,7 @@
 	onMount(getProvincesYears);
 
 	async function getProvincesYears() {
-		const res = await fetch("/api/v1/evolution-of-cycling-routes");
+		const res = await fetch("/api/v2/evolution-of-cycling-routes");
 		if (res.ok) {
 			const json = await res.json();
 			provinces = json.map((d) => {
@@ -54,10 +54,10 @@
 // GET /evolution-of-cycling-routes
 	async function getRoutes() {
 		console.log("Fetching routes...");
-		const res = await fetch("/api/v1/evolution-of-cycling-routes?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
-		const resNext = await fetch("/api/v1/evolution-of-cycling-routes?offset=" + numberElementsPages * (offset + 1) 
+		const res = await fetch("/api/v2/evolution-of-cycling-routes?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
+		const resNext = await fetch("/api/v2/evolution-of-cycling-routes?offset=" + numberElementsPages * (offset + 1) 
 		+ "&limit=" + numberElementsPages); 
-		//const res = await fetch("/api/v1/evolution-of-cycling-routes");
+		//const res = await fetch("/api/v2/evolution-of-cycling-routes");
 		
 		if (res.ok && resNext.ok) {
 			console.log("Ok:");
@@ -80,7 +80,7 @@
 // POST /evolution-of-cycling-routes
 	async function insertRoute() {
 		console.log("Inserting route..." + JSON.stringify(newRoute));
-		const res = await fetch("/api/v1/evolution-of-cycling-routes/", {
+		const res = await fetch("/api/v2/evolution-of-cycling-routes/", {
 			method: "POST",
 			body: JSON.stringify(newRoute),
 			headers: {
@@ -104,7 +104,7 @@
 //	DELETE /evolution-of-cycling-routes
 async function deleteRoutes() {
 	console.log("Deleting all routes...");
-		const res = await fetch("/api/v1/evolution-of-cycling-routes/" , {
+		const res = await fetch("/api/v2/evolution-of-cycling-routes/" , {
 			method: "DELETE"
 		}).then(function (res) {
 			getRoutes();
@@ -119,7 +119,7 @@ async function deleteRoutes() {
 //	DELETE /evolution-of-cycling-routes/XXX/YYY
 	async function deleteRoute(province, year) {
 		console.log("Deleting one route...");
-		const res = await fetch("/api/v1/evolution-of-cycling-routes/" + province +"/" + year, {
+		const res = await fetch("/api/v2/evolution-of-cycling-routes/" + province +"/" + year, {
 			method: "DELETE"
 		}).then(function (res) {
 			getRoutes();
@@ -133,7 +133,7 @@ async function deleteRoutes() {
 
 // LOAD INITIAL DATA
 	async function loadInitialData() {
-        const res = await fetch("/api/v1/evolution-of-cycling-routes/loadInitialData", {
+        const res = await fetch("/api/v2/evolution-of-cycling-routes/loadInitialData", {
             method: "GET"
         }).then(function (res) {
 			getRoutes();
@@ -148,7 +148,7 @@ async function deleteRoutes() {
 //	SEARCH /evolution-of-cycling-routes	
 	async function searchRoutes(province, year) {
 		console.log("Searching data: " + province + " and " + year);
-		var url = "/api/v1/evolution-of-cycling-routes";
+		var url = "/api/v2/evolution-of-cycling-routes";
 
 		if (province != "-" && year != "-") {
 			url = url + "?province=" + province + "&year=" + year; 
@@ -180,7 +180,7 @@ async function deleteRoutes() {
 </script>
 
 <main>
-	<h2 style="text-align: center;">Evolucion Carriles Bici</h2>	
+	<h2 style="text-align: center;"> <i class="fas fa-bicycle"></i> Evolucion Carriles Bici</h2>	
 	{#await routes}
 		Loading cycling routes...
 	{:then routes}
@@ -278,7 +278,7 @@ async function deleteRoutes() {
 		</PaginationItem>
 		{/if}
 		<PaginationItem class="{moreData ? '' : 'disabled'}">
-			<PaginationLink next href="#/routesAPI" on:click="{() => addOffset(1)}"/>
+			<PaginationLink next href="#/evolution-of-cycling-routes" on:click="{() => addOffset(1)}"/>
 		  </PaginationItem>  
 </Pagination>
 

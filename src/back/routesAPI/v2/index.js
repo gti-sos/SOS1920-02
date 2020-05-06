@@ -10,17 +10,27 @@ module.exports = function(app){
 		autoload: true,				//Operacion de carga
 	});
 	
-	const BASE_API_URL = "/api/v1";
+	const BASE_API_URL = "/api/v2";
 	
 	var initialRoutes = [
-	{province: "almeria", year: 2015, metropolitan: 77.6, urban: 53.2, rest: 24.3},
-	{province: "cadiz", year: 2015, metropolitan: 195.6, urban: 9.6, rest: 2.8},
-	{province: "cordoba", year: 2015, metropolitan: 10.9, urban: 59.5, rest: 6.1},
-	{province: "granada", year: 2015, metropolitan: 47.7, urban: 24.8,rest: 13.6},
-	{province: "huelva", year: 2015, metropolitan: 116, urban: 15.7,rest: 2.1},
-	{province: "jaen", year: 2015, metropolitan: 10, urban: 7.8, rest: 23.5	},
-	{province: "malaga", year: 2015, metropolitan: 47.7, urban: 45.3, rest: 22.8},
-	{province: "sevilla", year: 2015, metropolitan: 146.2, urban: 165.7, rest: 3.7}];
+		{province: "almeria", year: 2015, metropolitan: 77.6, urban: 53.2, rest: 24.3},
+		{province: "cadiz", year: 2015, metropolitan: 195.6, urban: 9.6, rest: 2.8},
+		{province: "cordoba", year: 2015, metropolitan: 10.9, urban: 59.5, rest: 6.1},
+		{province: "granada", year: 2015, metropolitan: 47.7, urban: 24.8,rest: 13.6},
+		{province: "huelva", year: 2015, metropolitan: 116, urban: 15.7,rest: 2.1},
+		{province: "jaen", year: 2015, metropolitan: 10, urban: 7.8, rest: 23.5	},
+		{province: "malaga", year: 2015, metropolitan: 47.7, urban: 45.3, rest: 22.8},
+		{province: "sevilla", year: 2015, metropolitan: 146.2, urban: 165.7, rest: 3.7},
+
+		{province: "almeria", year: 2016, metropolitan: 62.3, urban: 18, rest: 24.3},
+		{province: "cadiz", year: 2016, metropolitan: 181.2, urban: 8.8, rest: 2.8},
+		{province: "cordoba", year: 2016, metropolitan: 7.5, urban: 55.6, rest: 6.1},
+		{province: "granada", year: 2016, metropolitan: 38.4, urban: 24.1,rest: 13.6},
+		{province: "huelva", year: 2017, metropolitan: 120.7, urban: 15.7,rest: 2.1},
+		{province: "jaen", year: 2017, metropolitan: 20, urban: 10.8, rest: 25.5},
+		{province: "malaga", year: 2017, metropolitan: 57.7, urban: 48.3, rest: 22.8},
+		{province: "sevilla", year: 2017, metropolitan: 189.2, urban: 175.7, rest: 6.7}];
+		
 
 // GET LOAD INITIAL DATA /evolution-of-cycling-routes/loadInitialData
 app.get(BASE_API_URL+"/evolution-of-cycling-routes/loadInitialData", (req,res) =>{
