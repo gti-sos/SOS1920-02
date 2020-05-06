@@ -25,17 +25,19 @@
 	let moreData = true; 
 	
 	//Variables para busqueda
-	let campo = "";
-	let valor = "";
- 
+	let campo1 = "";
+	let valor1 = "";
+	let campo2 = "";
+	let valor2 = "";
+	
     onMount(getTourism);
 	
 	
     async function getTourism() {
  
         console.log("Fetching rural-tourism-stats...");
-        const res = await fetch("/api/v1/rural-tourism-stats?offset="  + numeroRecursos * offset + "&limit=" + numeroRecursos);
-		const resNext = await fetch("/api/v1/rural-tourism-stats?offset="  + numeroRecursos * (offset + 1) + "&limit=" + numeroRecursos);
+        const res = await fetch("/api/v2/rural-tourism-stats?offset="  + numeroRecursos * offset + "&limit=" + numeroRecursos);
+		const resNext = await fetch("/api/v2/rural-tourism-stats?offset="  + numeroRecursos * (offset + 1) + "&limit=" + numeroRecursos);
  
         if (res.ok  && resNext.ok) {
             console.log("Ok:");
@@ -61,10 +63,10 @@
 	}
  
   	async function insertTourism() {
-	  
+	  	exitoMsg ="";
         console.log("Inserting new data..." + JSON.stringify(newTourism));
  
-        const res = await fetch("/api/v1/rural-tourism-stats", {
+        const res = await fetch("/api/v2/rural-tourism-stats", {
             method: "POST",
             body: JSON.stringify(newTourism),
             headers: {
@@ -80,47 +82,52 @@
 					overnightstay: "",
 					averagestay: ""
 				};
-				exitoMsg = res.status + ": " + res.statusText;
+				exitoMsg = res.status + ": " + res.statusText + ". Dato insertado con éxito";
 			}
 			else if (res.status == 400) {
            		window.alert("ERROR: Debe completar todos los campos");
+				
 			}
 			else if (res.status == 409) {
 				window.alert("ERROR: el dato " + newTourism.province+ " " + newTourism.year + " ya existe.");
+				
 			}
         });
  
     }
     async function deleteTourism(province, year) {
-        const res = await fetch("/api/v1/rural-tourism-stats/" + province +"/" + year, {
+        const res = await fetch("/api/v2/rural-tourism-stats/" + province +"/" + year, {
             method: "DELETE"
         }).then(function (res) {
             getTourism();
+			exitoMsg = res.status + ": " + res.statusText + ". Dato eliminado con éxito";
         });
     }
 	async function deleteAllTourism() {
-        const res = await fetch("/api/v1/rural-tourism-stats/", {
+        const res = await fetch("/api/v2/rural-tourism-stats/", {
             method: "DELETE"
         }).then(function (res) {
             getTourism();
+			exitoMsg = res.status + ": " + res.statusText + ". Datos eliminados con éxito";
         });
     }
 	async function loadInitialData() {
-        const res = await fetch("/api/v1/rural-tourism-stats/loadInitialData", {
+        const res = await fetch("/api/v2/rural-tourism-stats/loadInitialData", {
             method: "GET"
         }).then(function (res) {
             getTourism();
+			exitoMsg = res.status + ": " + res.statusText + ". Datos reiniciados con éxito";
         });
     }
 	
-	async function busqueda(campo, valor) {
+	async function busqueda(campo1, valor1, campo2, valor2) {
+		exitoMsg=""
+		console.log("Searching data: " + campo1 + " and " + valor1);
 		
-		console.log("Searching data: " + campo + " and " + valor);
+		var url = "/api/v2/rural-tourism-stats";
 		
-		var url = "/api/v1/rural-tourism-stats";
-		
-		if (campo != "" && valor != "") {
-			url = url + "?" + campo + "=" + valor; 
+		if (campo1 != "" && valor1 != "") {
+			url = url + "?" + campo1 + "=" + valor1; 
 		}
 		
 		console.log(url)
@@ -133,6 +140,7 @@
 			tourism = json;			
 			console.log("Found " + tourism.length + " rural-tourism-stats.");
 		} else {
+			window.alert("ERROR: Compruebe que ha insertado valores correctos para la búsqueda");
 			console.log("ERROR!");
 		}
 	}
@@ -143,7 +151,7 @@
 <main>
 	<h2 style="text-align: center;"> <i class="fas fa-suitcase"></i> Turismo Rural</h2>
  	<div style="text-align:center;padding-bottom: 3%;">
-		<Button outline  color="primary" on:click={loadInitialData}> <i class="fas fa-spinner"></i> Inicializar</Button>
+		<Button outline  color="primary" on:click={loadInitialData}><i class="fas fa-spinner"></i>Inicializar</Button>
 		<Button outline  color="danger" on:click={deleteAllTourism}><i class="fa fa-trash" aria-hidden="true"></i> Eliminar todo</Button>
 	</div>
 	
@@ -152,24 +160,49 @@
     {:then tourism}
 	
 	
-		<FormGroup  style="width:25%;"> 
-			<label>Selecciona el campo por el que buscar:</label>
-			<Input type="select" name="inputCampo" id="inputCampo" bind:value="{campo}">
-				<option disabled selected></option>
-				<option value="province">Provincia</option>
-				<option value="year">Año</option>
-				<option value="traveller">Viajero</option>
-				<option value="overnightstay">Pernoctación</option>
-				<option value="averagestay">Estancia media</option>
-			</Input>
-		</FormGroup>
+		<FormGroup> 
+			<table>
+				<tr>
+					<td>
+						<label>Buscar por:</label>
+						<Input type="select" name="inputCampo" id="inputCampo" bind:value="{campo1}">
+							<option disabled selected></option>
+							<option value="province">Provincia</option>
+							<option value="year">Año</option>
+							<option value="traveller">Viajero</option>
+							<option value="overnightstay">Pernoctación</option>
+							<option value="averagestay">Estancia media</option>
+						</Input>
+					</td>
+					<td>
+						<label>Valor:</label>
+						<Input type="text"  name="inputValor" id="inputValor" bind:value="{valor1}"></Input>
+					
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Buscar por:</label>
+						<Input type="select" name="inputCampo" id="inputCampo" bind:value="{campo2}">
+							<option disabled selected></option>
+							<option value="province">Provincia</option>
+							<option value="year">Año</option>
+							<option value="traveller">Viajero</option>
+							<option value="overnightstay">Pernoctación</option>
+							<option value="averagestay">Estancia media</option>
+						</Input>
+					</td>
+					<td>
+						<label>Valor:</label>
+						<Input type="text"  name="inputValor" id="inputValor" bind:value="{valor2}"></Input>
+					
+					</td>
+				</tr>
 				
-		<FormGroup style="width:25%;">
-			<label>Valor del campo:</label>
-			<Input type="text"  name="inputValor" id="inputValor" bind:value="{valor}"></Input>
+			</table>
 		</FormGroup>
 
-		<Button style="margin-bottom:3%;" color="primary" on:click="{busqueda(campo, valor)}" class="button-search" >Buscar </Button>
+		<Button style="margin-bottom:3%;" color="primary" on:click="{busqueda(campo1, valor1,campo2, valor2)}" class="button-search" >Buscar </Button>
 			
 	
 	
@@ -214,7 +247,7 @@
 	
     {/await}
 	{#if exitoMsg}
-        <p style="color: green">{exitoMsg}. Dato insertado con éxito</p>
+        <p style="color: green">{exitoMsg}</p>
     {/if}
  	<Pagination ariaLabel="Cambiar de página">
 
@@ -241,7 +274,7 @@
 		{/if}
 
 		<PaginationItem class="{moreData ? '' : 'disabled'}">
-		  <PaginationLink next href="#/rural-tourism-stats" on:click="{() => incrementOffset(1)}"/>
+			<PaginationLink next href="#/rural-tourism-stats" on:click="{() => incrementOffset(1)}"/>
 		</PaginationItem>
 
 	</Pagination>

@@ -25,7 +25,7 @@
     async function getTourism() {
 
         console.log("Fetching tourism...");
-        const res = await fetch("/api/v1/rural-tourism-stats/" + params.tourismProvince + "/" + params.tourismYear);
+        const res = await fetch("/api/v2/rural-tourism-stats/" + params.tourismProvince + "/" + params.tourismYear);
 		
         if (res.ok) {
             console.log("Ok:");
@@ -45,10 +45,10 @@
 
 
     async function updateTourism() {
-
+		exitoMsg = ""
         console.log("Updating tourism..." + JSON.stringify(params.tourismProvince));
 		
-        const res = await fetch("/api/v1/rural-tourism-stats/" + params.tourismProvince + "/" + params.tourismYear, {
+        const res = await fetch("/api/v2/rural-tourism-stats/" + params.tourismProvince + "/" + params.tourismYear, {
             method: "PUT",
             body: JSON.stringify({
                 province: params.tourismProvince,
@@ -63,7 +63,7 @@
         }).then(function (res) {
             getTourism();
 			if(res.ok){	
-				exitoMsg = res.status + ": " + res.statusText;
+				exitoMsg = res.status + ": " + res.statusText + ". Dato actualizado con éxito";
 				console.log("OK!" + exitoMsg);
 
 			}else if(res.status == 400){
@@ -104,7 +104,7 @@
         </Table>
     {/await}
     {#if exitoMsg}
-        <p style="color: green">{exitoMsg}. Dato actualizado con éxito</p>
+        <p style="color: green">{exitoMsg}</p>
     {/if}
     <Button outline color="secondary" on:click="{pop}">Volver</Button>
 </main>
