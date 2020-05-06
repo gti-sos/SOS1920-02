@@ -198,9 +198,19 @@
                                 <option value="injured">Heridos</option>
                             </Input>
                         </td>
-                        <td style="width: 25%;">
-                            <Input type="text" name="valor" id="valor" bind:value="{valores}"></Input>
-                        </td>
+                        {#if buscar!="province"}
+                            <td style="width: 25%;">
+                                <Input type="text" name="valor" id="valor" bind:value="{valores}"></Input>
+                            </td>
+                        {:else}
+                            <td style="width: 25%;">
+                                <Input type="select" name="valor" id="valor" bind:value="{valores}">
+                                    {#each trafficAccidents as trafficAccident}
+                                        <option>{trafficAccident.province}</option>
+                                    {/each}
+                                </Input>
+                            </td>
+                        {/if}
                         <td style="width: 25%;">
                             <Button color="primary" on:click="{findObject(buscar, valores)}" class="button-search">Buscar</Button>
                         </td>
