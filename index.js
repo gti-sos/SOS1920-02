@@ -4,7 +4,8 @@ const bodyParser = require("body-parser");
 const routesAPI = require("./src/back/routesAPI");
 const backMarta1 = require("./src/back/tourismAPI/v1");
 const backMarta2 = require("./src/back/tourismAPI/v2");
-const trafficsAPI = require("./src/back/accidentsAPI");
+const trafficsAPIV1 = require("./src/back/accidentsAPI/v1");
+const trafficsAPIV2 = require("./src/back/accidentsAPI/v2");
 
 var app = express();
 
@@ -13,7 +14,8 @@ app.use(bodyParser.json());
 routesAPI(app);
 backMarta1(app);
 backMarta2(app);
-trafficsAPI(app);
+trafficsAPIV1(app);
+trafficsAPIV2(app);
 
 var port = process.env.PORT || 9999;
 
