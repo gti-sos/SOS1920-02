@@ -122,14 +122,18 @@
 	
 	async function busqueda(campo1, valor1, campo2, valor2) {
 		exitoMsg=""
-		console.log("Searching data: " + campo1 + " and " + valor1);
+		console.log("Searching data: " + campo1 + ": " + valor1 + ", " + campo2 + ": " + valor2);
 		
 		var url = "/api/v2/rural-tourism-stats";
 		
-		if (campo1 != "" && valor1 != "") {
-			url = url + "?" + campo1 + "=" + valor1; 
+		if (campo1 != "" && campo2 != "" && valor1 != "" && valor2 != "") {
+			url = url + "?" + campo1 + "=" + valor1 + "&" + campo2 + "=" + valor2; 
+		}else if(campo1 == "" && campo2 != "" && valor2 != ""){
+			url = url + "?" + campo2 + "=" + valor2;
+		}else if(campo1 != "" && campo2 == "" && valor1 != ""){
+			url = url + "?" + campo1 + "=" + valor1;
 		}
-		
+			
 		console.log(url)
 		
 		const res = await fetch(url);
