@@ -22,7 +22,11 @@
 						Fraire Gonzalez</a>)</li>
 					<li><a href="https://documenter.getpostman.com/view/10653459/SzYT6hqm">https://sos1920-02.herokuapp.com/api/v1/traffic-accidents</a> (developed by <a href="https://github.com/josmorrui2">Jose
 						Francisco Morales Ruiz</a>)</li>
+					<li><a href="">https://sos1920-02.herokuapp.com/api/v2/traffic-accidents</a> (developed by <a href="https://github.com/josmorrui2">Jose
+						Francisco Morales Ruiz</a>)</li>
 					<li><a href="https://documenter.getpostman.com/view/6870023/SzYZ2KVA">https://sos1920-02.herokuapp.com/api/v1/rural-tourism-stats</a> (developed by <a href="https://github.com/martaverdugo6">
+						Marta Verdugo Martinez</a>)</li>
+					<li><a href="">https://sos1920-02.herokuapp.com/api/v2/rural-tourism-stats</a> (developed by <a href="https://github.com/martaverdugo6">
 						Marta Verdugo Martinez</a>)</li>
 				</ul>
 
