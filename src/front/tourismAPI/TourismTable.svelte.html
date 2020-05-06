@@ -146,6 +146,7 @@
 			const json = await res.json();
 			tourism = json;			
 			console.log("Found " + tourism.length + " rural-tourism-stats.");
+			exitoMsg = res.status + ": " + res.statusText + ". Búsqueda realizada con éxito";
 		} else {
 			window.alert("ERROR: Compruebe que ha insertado valores correctos para la búsqueda");
 			console.log("ERROR!");
