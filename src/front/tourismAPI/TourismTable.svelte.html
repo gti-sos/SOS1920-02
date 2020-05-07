@@ -124,7 +124,7 @@
 		offset = 0;
 		currentPage = 1; 
 		moreData = false;
-		exitoMsg=""
+		exitoMsg="";
 		console.log("Searching data: " + campo1 + ": " + valor1 + ", " + campo2 + ": " + valor2);
 		
 		var url = "/api/v2/rural-tourism-stats";
@@ -137,7 +137,7 @@
 			url = url + "?" + campo1 + "=" + valor1;
 		}
 			
-		console.log(url)
+		console.log(url);
 		
 		const res = await fetch(url);
 		
@@ -146,14 +146,14 @@
 			const json = await res.json();
 			tourism = json;			
 			console.log("Found " + tourism.length + " rural-tourism-stats.");
-			exitoMsg = res.status + ": " + res.statusText + ". Búsqueda realizada con éxito";
+			exitoMsg = res.status + ": " + res.statusText + ". Búsqueda realizada con éxito. " + tourism.length + " elementos encontrados.";
 		} else {
 			window.alert("ERROR: Compruebe que ha insertado valores correctos para la búsqueda");
 			console.log("ERROR!");
 		}
 	}
 	
-	let exitoMsg=""
+	let exitoMsg="";
 </script>
  
 <main>
