@@ -183,7 +183,7 @@ async function deleteRoutes() {
 </script>
 
 <main>
-	<h2 style="text-align: center;"> <i class="fas fa-bicycle"></i> Evolucion Carriles Bici</h2>	
+	<h2 style="text-align: center;"> <i class="fas fa-bicycle"></i> Evolución Carriles Bici</h2>	
 	{#await routes}
 		Loading cycling routes...
 	{:then routes}
