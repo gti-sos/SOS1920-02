@@ -10,7 +10,7 @@
     import Button from "sveltestrap/src/Button.svelte";
     import Input from "sveltestrap/src/Input.svelte";
 	import FormGroup from "sveltestrap/src/FormGroup.svelte";
-    import { Pagination, PaginationItem, PaginationLink } from 'sveltestrap';
+    import {Pagination, PaginationItem, PaginationLink} from 'sveltestrap';
 
     let trafficAccidents = [];
     let newTrafficAccident = {
