@@ -225,7 +225,7 @@
     {:then trafficAccidents}
 
         <FormGroup>
-            <br><input type=checkbox bind:checked={combinada}> <strong>Hacer busqueda con 2 parametros</strong><br>
+            <br><input type=checkbox bind:checked={combinada}> <strong>Hacer búsqueda con 2 parámetros</strong><br>
             {#if combinada}
                 <table style="width: 100%;">
                     <thead>
@@ -313,7 +313,7 @@
                     <th>Accidentes con victimas</th>
                     <th>Fallecidos</th>
                     <th>Heridos</th>
-                    <th>Accion</th>
+                    <th>Acción</th>
                 </tr>
             </thead>
             <tbody>
