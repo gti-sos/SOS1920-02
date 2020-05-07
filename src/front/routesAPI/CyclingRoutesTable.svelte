@@ -18,22 +18,22 @@
 		rest: ""
 	};
 
-	let provinces= [];
-	let years = [];
-	let provinceActual = "-";
-	let yearActual = "-";
+	//Variables para busqueda
+	let campo1 = "";
+	let valor1 = "";
+	let campo2 = "";
+	let valor2 = "";
 
 	let numberElementsPages = 10;
 	let offset = 0;
 	let pageActual = 1;
 	let moreData = true; 
 	let msgOk = false;
-	let msgBad = false;
 
 	onMount(getRoutes);
-	onMount(getProvincesYears);
+	//onMount(getProvincesYears);
 
-	async function getProvincesYears() {
+	/*async function getProvincesYears() {
 		const res = await fetch("/api/v2/evolution-of-cycling-routes");
 		if (res.ok) {
 			const json = await res.json();
@@ -49,7 +49,7 @@
 		} else {
 			console.log("ERROR!");
 		}
-	}
+	}*/
 
 // GET /evolution-of-cycling-routes
 	async function getRoutes() {
@@ -90,13 +90,12 @@
 			getRoutes();
 			if(res.status == 201){
 				msgOk = "Recurso introducido correctamente";
-				msgBad = false;
 			}else if(res.status == 400){ //Bad Request
 				msgOk = false;
-				msgBad = "Todos los campos del recurso deben tener valor";
+				window.alert("ERROR: Todos los campos del recurso deben tener valor");
 			}else{	//ERROR 409 - Conflic
 				msgOk = false;
-				msgBad = "El recurso introducido ya ha sido creado";
+				window.alert("ERROR: El recurso introducido ya ha sido creado");
 			}
 		});
 	}
@@ -108,10 +107,8 @@ async function deleteRoutes() {
 			method: "DELETE"
 		}).then(function (res) {
 			getRoutes();
-			getProvincesYears();
 			if(res.status == 200){
 				msgOk = "Datos borrados correctamente";
-				msgBad = false;
 			}
 		});
 	}
@@ -123,10 +120,8 @@ async function deleteRoutes() {
 			method: "DELETE"
 		}).then(function (res) {
 			getRoutes();
-			getProvincesYears();
 			if(res.status == 200){
 				msgOk = "Dato borrado correctamente";
-				msgBad = false;
 			}
 		});
 	}
@@ -137,25 +132,26 @@ async function deleteRoutes() {
             method: "GET"
         }).then(function (res) {
 			getRoutes();
-			getProvincesYears();
 			if(res.status == 200){
 				msgOk = "Datos iniciales cargados correctamente ";
-				msgBad = false;
 			}
         });
     }
 
 //	SEARCH /evolution-of-cycling-routes	
-	async function searchRoutes(province, year) {
-		console.log("Searching data: " + province + " and " + year);
+	async function searchRoutes(campo1, valor1, campo2, valor2) {
+		offset = 0;
+		pageActual = 1; 
+		moreData = false;
+		console.log("Searching data: " + campo1 + ": " + valor1 + ", " + campo2 + ": " + valor2);
 		var url = "/api/v2/evolution-of-cycling-routes";
 
-		if (province != "-" && year != "-") {
-			url = url + "?province=" + province + "&year=" + year; 
-		} else if (province != "-" && year == "-") {
-			url = url + "?province=" + province;
-		} else if (province == "-" && year != "-") {
-			url = url + "?year=" + year;
+		if (campo1 != "" && campo2 != "" && valor1 != "" && valor2 != "") {
+			url = url + "?" + campo1 + "=" + valor1 + "&" + campo2 + "=" + valor2; 
+		}else if(campo1 == "" && campo2 != "" && valor2 != ""){
+			url = url + "?" + campo2 + "=" + valor2;
+		}else if(campo1 != "" && campo2 == "" && valor1 != ""){
+			url = url + "?" + campo1 + "=" + valor1;
 		}
 		console.log("la url es: " + url);
 		const res = await fetch(url);
@@ -163,10 +159,15 @@ async function deleteRoutes() {
 		if (res.ok) {
 			console.log("Ok:");
 			const json = await res.json();
-			routes = json;
+			routes = json;			
 			console.log("Found " + routes.length + " routes.");
-		} else {
-			console.log("ERROR!");
+			if(routes.length > 0){
+				msgOk = res.status + ": " + res.statusText + ". Búsqueda realizada con éxito";
+			}else {
+			msgOk = false;
+			window.alert("ERROR: Compruebe que ha insertado valores correctos para la búsqueda");
+			console.log("ERROR!");			
+			} 
 		}
 		
 	}
@@ -185,27 +186,55 @@ async function deleteRoutes() {
 		Loading cycling routes...
 	{:then routes}
 
-	<FormGroup style="width:20%;"> 
-		<Label for="selectProvince"> Provincia </Label>
-		<Input type="select" name="selectProvince" id="selectProvince" bind:value="{provinceActual}">
-			{#each provinces as province}
-			<option>{province}</option>
-			{/each}
-			<option>-</option>
-		</Input>
+	<FormGroup> 
+		<table style="width: 100%;">
+			<thead>
+				<tr>
+					<th><label>Buscar por:</label></th>
+					<th><label>Valor:</label></th>
+					<th><label>Buscar por:</label></th>
+					<th><label>Valor:</label></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<Input type="select" name="inputCampo" id="inputCampo" bind:value="{campo1}">
+							<option disabled selected></option>
+							<option value="province">Provincia</option>
+							<option value="year">Año</option>
+							<option value="metropolitan">Metropolitano</option>
+							<option value="urban">Urbano</option>
+							<option value="rest">Resto</option>
+						</Input>
+					</td>
+					<td>
+						<Input type="text"  name="inputValor" id="inputValor" bind:value="{valor1}"></Input>
+					</td>
+					<td>
+						<Input type="select" name="inputCampo" id="inputCampo" bind:value="{campo2}">
+							<option disabled selected></option>
+							<option value="province">Provincia</option>
+							<option value="year">Año</option>
+							<option value="metropolitan">Metropolitano</option>
+							<option value="urban">Urbano</option>
+							<option value="rest">Resto</option>
+						</Input>
+					</td>
+					<td>
+						<Input type="text"  name="inputValor" id="inputValor" bind:value="{valor2}"></Input>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 25%;">
+						<Button color="primary" on:click="{searchRoutes(campo1, valor1,campo2, valor2)}" class="button-search">Buscar</Button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 	</FormGroup>
 
-	<FormGroup style="width:20%;"> 
-		<Label for="selectYear"> Año </Label>
-		<Input type="select"  name="selectYear" id="selectYear" bind:value="{yearActual}">
-			{#each years as year}
-			<option>{year}</option>
-			{/each}
-			<option>-</option>
-		</Input>
-	</FormGroup>
-
-	<Button style="margin-bottom:3%;" color="secondary" on:click="{searchRoutes(provinceActual, yearActual)}" class="button-search" > Buscar </Button>
+	
 	
 		<Table bordered >
 			<thead>
@@ -248,10 +277,7 @@ async function deleteRoutes() {
 		</Table>
 	{/await}
 
-<!--Mensajes acierto/error-->	
-	{#if msgBad}
-        <p style="color: red">ERROR: {msgBad}</p>
-	{/if}
+<!--Mensajes acierto-->	
 	{#if msgOk}
         <p style="color: green">EXITO: {msgOk}</p>
     {/if}
