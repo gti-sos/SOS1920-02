@@ -161,13 +161,15 @@ async function deleteRoutes() {
 			const json = await res.json();
 			routes = json;			
 			console.log("Found " + routes.length + " routes.");
-			if(routes.length > 0){
+			if(routes.length>0){
 				msgOk = res.status + ": " + res.statusText + ". Búsqueda realizada con éxito";
-			}else {
+			}else{
+				msgOk = res.status + ": " + res.statusText + ". Búsqueda realizada con éxito. 0 elementos encontrados";
+			}
+		}else {
 			msgOk = false;
 			window.alert("ERROR: Compruebe que ha insertado valores correctos para la búsqueda");
 			console.log("ERROR!");			
-			} 
 		}
 		
 	}
