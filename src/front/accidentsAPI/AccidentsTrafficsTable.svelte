@@ -156,6 +156,10 @@
             const json = await res.json();
             trafficAccidents = json;
 
+            successMsg = res.status + ": " + res.statusText;
+            console.log(successMsg);
+            success = "Se han encontrado " + trafficAccidents.length + " datos en la busqueda."
+
             console.log("Found " + trafficAccidents.length + "traffic-accidents.")
         } else {
             window.alert("ERROR: Introduzca correctamente los valores para la busqueda.");
@@ -187,6 +191,10 @@
             console.log("OK: ");
             const json = await res.json();
             trafficAccidents = json;
+
+            successMsg = res.status + ": " + res.statusText;
+            console.log(successMsg);
+            success = "Se han encontrado " + trafficAccidents.length + " datos en la busqueda."
 
             console.log("Found " + trafficAccidents.length + "traffic-accidents.")
         } else {
