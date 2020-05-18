@@ -243,7 +243,7 @@
                                     <option disabled selected></option>
                                     <option value="province">Provincia</option>
                                     <option value="year">Año</option>
-                                    <option value="trafficaccidentvictim">Accidentes con victimas</option>
+                                    <option value="trafficaccidentvictim">Accidentes con víctimas</option>
                                     <option value="dead">Fallecidos</option>
                                     <option value="injured">Heridos</option>
                                 </Input>
@@ -256,7 +256,7 @@
                                     <option disabled selected></option>
                                     <option value="province">Provincia</option>
                                     <option value="year">Año</option>
-                                    <option value="trafficaccidentvictim">Accidentes con victimas</option>
+                                    <option value="trafficaccidentvictim">Accidentes con víctimas</option>
                                     <option value="dead">Fallecidos</option>
                                     <option value="injured">Heridos</option>
                                 </Input>
@@ -288,7 +288,7 @@
                                     <option disabled selected></option>
                                     <option value="province">Provincia</option>
                                     <option value="year">Año</option>
-                                    <option value="trafficaccidentvictim">Accidentes con victimas</option>
+                                    <option value="trafficaccidentvictim">Accidentes con víctimas</option>
                                     <option value="dead">Fallecidos</option>
                                     <option value="injured">Heridos</option>
                                 </Input>
@@ -310,7 +310,7 @@
                 <tr>
                     <th>Provincia</th>
                     <th>Año</th>
-                    <th>Accidentes con victimas</th>
+                    <th>Accidentes con víctimas</th>
                     <th>Fallecidos</th>
                     <th>Heridos</th>
                     <th>Acción</th>

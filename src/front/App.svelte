@@ -11,6 +11,7 @@ import Home from './Home.svelte';
 // API JOSE FRANCISCO
 	import AccidentsTrafficsTable from './accidentsAPI/AccidentsTrafficsTable.svelte';
 	import EditAccidentsTraffics from './accidentsAPI/EditAccidentsTraffics.svelte';
+	import GraphAccidents from './accidentsAPI/GraphAccidents.svelte';
 
 	const routes = {
 		"/": Home,
@@ -22,6 +23,7 @@ import Home from './Home.svelte';
 
 		"/traffic-accidents": AccidentsTrafficsTable,
 		"/traffic-accidents/:accidentProcince/:accidentYear": EditAccidentsTraffics,
+		"/traffic-accidents/graph": GraphAccidents,
 		
 		"*": NotFound
 	};

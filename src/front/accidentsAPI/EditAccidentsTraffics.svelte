@@ -37,7 +37,7 @@
             updateTrafficaccidentvictim = trafficAccident.trafficaccidentvictim;
             updateDead = trafficAccident.dead;
             updateInjured = trafficAccident.injured;
-            console.log("Received traffic-accident.")
+            console.log("Received traffic-accident.");
         } else {
             errorMsg = res.status + ": " + res.statusText;
             console.log("ERROR!" + errorMsg);
@@ -86,6 +86,8 @@
 
     <h3>Editar datos de: <strong>{params.accidentProcince} {params.accidentYear}</strong></h3>
 
+    <Button outline color="secondary" on:click="{pop}">Volver</Button>
+
     {#await trafficAccident}
         Loading Traffic Accident...
     {:then trafficAccident}
@@ -112,5 +114,4 @@
             </tbody>
         </Table>
     {/await}
-    <Button outline color="secondary" on:click="{pop}">Volver</Button>
 </main>

@@ -13,6 +13,7 @@ const trafficsAPIV2 = require("./src/back/accidentsAPI/v2");
 
 var app = express();
 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 routesAPIv1(app);   //ANA
