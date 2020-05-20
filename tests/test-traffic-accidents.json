@@ -1,0 +1,730 @@
+{
+	"info": {
+		"_postman_id": "e57b74bd-d3c8-4ec2-b972-9e613b70be07",
+		"name": "SOS1920-02-traffic-accidents v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET traffic-accidents",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "355a584f-aaa0-4ee0-8794-757169bc3283",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents?limit=10&offset=0",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET traffic-accidents 4 primeros",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "355a584f-aaa0-4ee0-8794-757169bc3283",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents?limit=4&offset=0",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "4"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET traffic-accidents 4 Centro",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "355a584f-aaa0-4ee0-8794-757169bc3283",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents?limit=4&offset=2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "4"
+						},
+						{
+							"key": "offset",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET traffic-accidents 4 Final",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "355a584f-aaa0-4ee0-8794-757169bc3283",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents?limit=4&offset=12",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "4"
+						},
+						{
+							"key": "offset",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET traffic-accidents Busqueda dead",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "355a584f-aaa0-4ee0-8794-757169bc3283",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents?dead=26",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents"
+					],
+					"query": [
+						{
+							"key": "dead",
+							"value": "26"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET traffic-accidents Busqueda injured",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "355a584f-aaa0-4ee0-8794-757169bc3283",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents?injured=1134",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents"
+					],
+					"query": [
+						{
+							"key": "injured",
+							"value": "1134"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET traffic-accidents Busqueda trafficaccidentvictim",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "355a584f-aaa0-4ee0-8794-757169bc3283",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents?trafficaccidentvictim=10023",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents"
+					],
+					"query": [
+						{
+							"key": "trafficaccidentvictim",
+							"value": "10023"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST traffic-accidents",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2a955d29-6384-429b-9ba2-d5fa789064fa",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([201,202]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"province\": \"ejemplo\",\r\n\"year\": 2015,\r\n\"trafficaccidentvictim\": 6578,\r\n\"dead\": 54,\r\n\"injured\": 6547\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST traffic-accidents Erroneo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2a955d29-6384-429b-9ba2-d5fa789064fa",
+						"exec": [
+							"pm.test(\"Format Incorrect\", function () {",
+							"    pm.response.to.have.status(409);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"province\": \"ejemplo\",\r\n\"year\": 2015,\r\n\"trafficaccidentvictim\": 6578,\r\n\"dead\": 54,\r\n\"injured\": 6547,\r\n\"error\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ejemplo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e63d23a1-3299-4878-85fe-4c46655b2a12",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents/ejemplo/2015",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents",
+						"ejemplo",
+						"2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT ejemplo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "022f0963-33b9-4a0c-9021-0dec9cb39c4c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"province\": \"ejemplo\",\r\n\"year\": 2015,\r\n\"trafficaccidentvictim\": 1,\r\n\"dead\": 1,\r\n\"injured\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents/ejemplo/2015",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents",
+						"ejemplo",
+						"2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT ejemplo Erroneo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "022f0963-33b9-4a0c-9021-0dec9cb39c4c",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"province\": \"ejemplo\",\r\n\"year\": 2015,\r\n\"trafficaccidentvictim\": 1,\r\n\"dead\": 1,\r\n\"injured\": 1,\r\n\"error\": 23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents/ejemplo/2015",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents",
+						"ejemplo",
+						"2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST ejemplo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c62b6746-bfcc-44bc-bb94-dd23eb9d1385",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([405]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"province\": \"ejemplo\",\r\n\"year\": 2015,\r\n\"trafficaccidentvictim\": 7000,\r\n\"dead\": 54,\r\n\"injured\": 6547,\r\n\"ejemplo\": 76544\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents/ejemplo",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents",
+						"ejemplo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ejemplo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e55cd327-5375-451a-a07b-39f6e45a80aa",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents/ejemplo/2015",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents",
+						"ejemplo",
+						"2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT traffic-accidents",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b69e3900-7d3f-4ad2-991e-c00fe14df522",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE traffic-accidents",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "818b6ed0-d862-4bef-be90-6ca8aab2c3e8",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET loadInitialData",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6a0fa884-828e-4680-84ad-d39abfbd7cf2",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v2/traffic-accidents/loadInitialData",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"traffic-accidents",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
