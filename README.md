@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/gti-sos/SOS1920-02.svg?branch=master)](https://travis-ci.org/gti-sos/SOS1920-02)
+
 ## SOS1920-02
 
 - **Team**
