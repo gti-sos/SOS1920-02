@@ -7,8 +7,9 @@
 - **Project description**: Repositorio grupo 02
 - **Repository**: [gti-sos/SOS1920-02](https://github.com/gti-sos/SOS1920-02)
 - **URL Heroku**: [http://sos1920-02.herokuapp.com](http://sos1920-02.herokuapp.com)
-  **URL Azure**: [https://sos1920-02.azurewebsites.net](https://sos1920-02.azurewebsites.net/)
+- **URL Azure**: [https://sos1920-02.azurewebsites.net](https://sos1920-02.azurewebsites.net/)
 -  **APIs**:
+      [![Build Status](https://travis-ci.org/gti-sos/SOS1920-02.svg?branch=master)](https://travis-ci.org/gti-sos/SOS1920-02)
     - [https://sos1920-02.herokuapp.com/api/v1/evolution-of-cycling-routes](https://documenter.getpostman.com/view/10637431/SzezcrsS) (developed by [Ana Fraire Gonzalez](https://github.com/anafraire))
     - [https://sos1920-02.herokuapp.com/api/v2/evolution-of-cycling-routes](https://documenter.getpostman.com/view/10637431/Szmcaz3h) (developed by [Ana Fraire Gonzalez](https://github.com/anafraire))
     - [https://sos1920-02.herokuapp.com/api/v1/traffic-accidents](https://documenter.getpostman.com/view/10653459/SzYT6hqm) (developed by [Jose Francisco Morales Ruiz](https://github.com/josmorrui2))
