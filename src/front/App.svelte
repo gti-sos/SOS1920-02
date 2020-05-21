@@ -12,6 +12,7 @@ import Home from './Home.svelte';
 	import AccidentsTrafficsTable from './accidentsAPI/AccidentsTrafficsTable.svelte';
 	import EditAccidentsTraffics from './accidentsAPI/EditAccidentsTraffics.svelte';
 	import GraphAccidents from './accidentsAPI/GraphAccidents.svelte';
+	import GraphAccidentsV2 from './accidentsAPI/GraphAccidentsV2.svelte';
 
 	const routes = {
 		"/": Home,
@@ -24,7 +25,8 @@ import Home from './Home.svelte';
 		"/traffic-accidents": AccidentsTrafficsTable,
 		"/traffic-accidents/:accidentProcince/:accidentYear": EditAccidentsTraffics,
 		"/traffic-accidents/graph": GraphAccidents,
-		
+		"/traffic-accidents/graph-v2": GraphAccidentsV2,
+
 		"*": NotFound
 	};
 
