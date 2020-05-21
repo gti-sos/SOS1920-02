@@ -215,7 +215,6 @@
 
     <h2 style="text-align: center;"> <i class="fas fa-car"></i> Accidentes de Tráfico</h2>
     <Button outline color="secondary" on:click="{pop}">Volver</Button>
-    <Button color="primary" onclick="window.location.href='#/traffic-accidents/graph-v2'">Gráfica Muertes</Button>
 
     {#if successMsg}
         <p style="color: green">{success}</p>
