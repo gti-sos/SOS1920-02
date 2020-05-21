@@ -47,6 +47,7 @@
 
 <svelte:head>    
     <script src="https://code.jscharting.com/latest/jscharting.js"></script>
+    <script src="https://code.jscharting.com/latest/modules/toolbar.js"></script>
     <script src="https://code.jscharting.com/latest/modules/maps.js" on:load="{loadGraph}"></script>
 </svelte:head>
 
