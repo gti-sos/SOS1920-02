@@ -2,6 +2,8 @@
 import Router from 'svelte-spa-router';
 import NotFound from './NotFound.svelte';
 import Home from './Home.svelte';
+import Integrations from './Integrations.svelte';
+import Analytics from './Analytics.svelte';
 // API ANA
 	import CyclingRoutesTable from './routesAPI/CyclingRoutesTable.svelte';
 	import EditCyclingRoute from './routesAPI/EditCyclingRoute.svelte';
@@ -16,6 +18,8 @@ import Home from './Home.svelte';
 
 	const routes = {
 		"/": Home,
+		"/analytics": Analytics,
+		"/integrations": Integrations,
 		"/evolution-of-cycling-routes": CyclingRoutesTable,
 		"/evolution-of-cycling-routes/:province/:year": EditCyclingRoute,
 		

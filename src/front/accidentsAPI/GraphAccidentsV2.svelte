@@ -8,6 +8,10 @@
 
     import Button from "sveltestrap/src/Button.svelte";
 
+    function loadData() {
+        return "Jose";
+    }
+
     async function loadGraph() {
 
         let MyData = [];
@@ -31,7 +35,7 @@
         legend_visible:false,
 
         title_label_text:'',
-        defaultPoint_tooltip:'%name ('+MyDataGraph+')',
+        defaultPoint_tooltip:'%name ('+loadData()+')',
 
         series:[
             {
