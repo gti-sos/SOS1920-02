@@ -11512,6 +11512,8 @@ var app = (function () {
     	let t0;
     	let main;
     	let h3;
+    	let i;
+    	let t1;
     	let t2;
     	let t3;
     	let figure;
@@ -11543,7 +11545,8 @@ var app = (function () {
     			t0 = space();
     			main = element("main");
     			h3 = element("h3");
-    			h3.textContent = "Estadísticas de carriles bici";
+    			i = element("i");
+    			t1 = text(" Estadísticas de carriles bici");
     			t2 = space();
     			create_component(button.$$.fragment);
     			t3 = space();
@@ -11562,14 +11565,17 @@ var app = (function () {
     			add_location(script3, file$e, 75, 4, 2420);
     			if (script4.src !== (script4_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script4, "src", script4_src_value);
     			add_location(script4, file$e, 76, 4, 2500);
+    			attr_dev(i, "class", "fas fa-bicycle");
+    			add_location(i, file$e, 81, 37, 2665);
+    			set_style(h3, "text-align", "center");
     			add_location(h3, file$e, 81, 4, 2632);
     			attr_dev(div, "id", "container");
     			attr_dev(div, "class", "svelte-1s35res");
-    			add_location(div, file$e, 86, 8, 2796);
+    			add_location(div, file$e, 86, 8, 2857);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$e, 87, 8, 2832);
+    			add_location(p, file$e, 87, 8, 2893);
     			attr_dev(figure, "class", "highcharts-figure svelte-1s35res");
-    			add_location(figure, file$e, 85, 4, 2752);
+    			add_location(figure, file$e, 85, 4, 2813);
     			add_location(main, file$e, 79, 0, 2618);
     		},
     		l: function claim(nodes) {
@@ -11584,6 +11590,8 @@ var app = (function () {
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, h3);
+    			append_dev(h3, i);
+    			append_dev(h3, t1);
     			append_dev(main, t2);
     			mount_component(button, main, null);
     			append_dev(main, t3);
@@ -11754,6 +11762,8 @@ var app = (function () {
     	let t0;
     	let main;
     	let h3;
+    	let i;
+    	let t1;
     	let t2;
     	let t3;
     	let div;
@@ -11781,7 +11791,8 @@ var app = (function () {
     			t0 = space();
     			main = element("main");
     			h3 = element("h3");
-    			h3.textContent = "Kilómetros de carriles bici en 2015";
+    			i = element("i");
+    			t1 = text(" Estadísticas carril metropolitano en 2015");
     			t2 = space();
     			create_component(button.$$.fragment);
     			t3 = space();
@@ -11794,10 +11805,13 @@ var app = (function () {
     			add_location(script2, file$f, 66, 4, 2085);
     			if (script3.src !== (script3_src_value = "https://www.amcharts.com/lib/4/themes/animated.js")) attr_dev(script3, "src", script3_src_value);
     			add_location(script3, file$f, 67, 4, 2162);
+    			attr_dev(i, "class", "fas fa-bicycle");
+    			add_location(i, file$f, 80, 37, 2404);
+    			set_style(h3, "text-align", "center");
     			add_location(h3, file$f, 80, 4, 2371);
     			attr_dev(div, "id", "chartdiv");
     			attr_dev(div, "class", "svelte-1cy2rwj");
-    			add_location(div, file$f, 84, 4, 2493);
+    			add_location(div, file$f, 84, 4, 2560);
     			add_location(main, file$f, 78, 0, 2359);
     		},
     		l: function claim(nodes) {
@@ -11811,6 +11825,8 @@ var app = (function () {
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, h3);
+    			append_dev(h3, i);
+    			append_dev(h3, t1);
     			append_dev(main, t2);
     			mount_component(button, main, null);
     			append_dev(main, t3);

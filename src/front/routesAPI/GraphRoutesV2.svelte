@@ -78,7 +78,7 @@
 
 <main>
 
-    <h3>Kilómetros de carriles bici en 2015</h3>
+    <h3 style="text-align: center;"> <i class="fas fa-bicycle"></i> Estadísticas carril metropolitano en 2015</h3>	
 
     <Button outline color="secondary" on:click="{pop}">Volver</Button>
 

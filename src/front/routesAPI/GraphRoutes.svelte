@@ -79,7 +79,7 @@
 
 <main>
 
-    <h3>Estadísticas de carriles bici</h3>
+    <h3 style="text-align: center;"> <i class="fas fa-bicycle"></i> Estadísticas de carriles bici</h3>	
 
     <Button outline color="secondary" on:click="{pop}">Volver</Button>
 
