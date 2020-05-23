@@ -1,10 +1,6 @@
 <script>
-    import {
-        onMount
-    } from "svelte";
-    import {
-        pop
-    } from "svelte-spa-router";
+    import {onMount} from "svelte";
+    import {pop} from "svelte-spa-router";
 
     import Button from "sveltestrap/src/Button.svelte";
 
@@ -15,13 +11,18 @@
     async function loadGraph() {
 
         let MyData = [];
+        //let MyDataGraphM = [];
+        //let MyDataGraphL = [];
         let MyDataGraph = [];
+
 
         const resData = await fetch("/api/v2/evolution-of-cycling-routes");
         MyData = await resData.json();
         MyData.forEach( (x) => {
             if (x.year == 2015) {
-                MyDataGraph.push(parseFloat(x.metropolitan));
+                //MyDataGraphM.push(parseFloat(x.metropolitan));
+                //MyDataGraphL.push(x.province);
+                MyDataGraph.push({province: x.province + " " + x.year, kilometres: [parseInt(x.metropolitan)]});
             }
         });
 
@@ -34,44 +35,18 @@
 
             // Create chart instance
             var chart = am4core.create("chartdiv", am4charts.PieChart);
+            
 
             // Add data
-            chart.data = [ {
-            "country": "Lithuania",
-            "litres": 501.9
-            }, {
-            "country": "Czech Republic",
-            "litres": 301.9
-            }, {
-            "country": "Ireland",
-            "litres": 201.1
-            }, {
-            "country": "Germany",
-            "litres": 165.8
-            }, {
-            "country": "Australia",
-            "litres": 139.9
-            }, {
-            "country": "Austria",
-            "litres": 128.3
-            }, {
-            "country": "UK",
-            "litres": 99
-            }, {
-            "country": "Belgium",
-            "litres": 60
-            }, {
-            "country": "The Netherlands",
-            "litres": 50
-            } ];
+            chart.data = MyDataGraph;
 
             // Set inner radius
             chart.innerRadius = am4core.percent(50);
 
             // Add and configure Series
             var pieSeries = chart.series.push(new am4charts.PieSeries());
-            pieSeries.dataFields.value = "litres";
-            pieSeries.dataFields.category = "country";
+            pieSeries.dataFields.value = "kilometres";
+            pieSeries.dataFields.category = "province";
             pieSeries.slices.template.stroke = am4core.color("#fff");
             pieSeries.slices.template.strokeWidth = 2;
             pieSeries.slices.template.strokeOpacity = 1;
@@ -103,7 +78,7 @@
 
 <main>
 
-    <h3>Número de accidentes de trafico por provincias en 2018</h3>
+    <h3>Kilómetros de carriles bici en 2015</h3>
 
     <Button outline color="secondary" on:click="{pop}">Volver</Button>
 

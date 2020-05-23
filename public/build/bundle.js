@@ -1675,14 +1675,6 @@ var app = (function () {
     			strong4 = element("strong");
     			strong4.textContent = "URL AZURE: ";
     			a5 = element("a");
-<<<<<<< HEAD
-    			a5.textContent = "https://sos1920-02.herokuapp.com/api/v1/evolution-of-cycling-routes";
-    			t21 = text(" (developed by ");
-    			a6 = element("a");
-    			a6.textContent = "Ana\r\n\t\t\t\t\t\tFraire Gonzalez";
-    			t23 = text(")");
-    			t24 = space();
-=======
     			a5.textContent = "https://sos1920-02.azurewebsites.net/";
     			t20 = space();
     			li8 = element("li");
@@ -1690,58 +1682,30 @@ var app = (function () {
     			strong5.textContent = "APIs:";
     			t22 = space();
     			ul1 = element("ul");
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			li9 = element("li");
     			a6 = element("a");
     			a6.textContent = "https://sos1920-02.herokuapp.com/api/v1/evolution-of-cycling-routes";
     			t24 = text(" (developed by ");
     			a7 = element("a");
-<<<<<<< HEAD
-    			a7.textContent = "https://sos1920-02.herokuapp.com/api/v2/evolution-of-cycling-routes";
-    			t26 = text(" (developed by ");
-    			a8 = element("a");
-    			a8.textContent = "Ana\r\n\t\t\t\t\t\tFraire Gonzalez";
-    			t28 = text(")");
-    			t29 = space();
-=======
     			a7.textContent = "Ana\r\n\t\t\t\t\t\tFraire Gonzalez";
     			t26 = text(")");
     			t27 = space();
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			li10 = element("li");
     			a8 = element("a");
     			a8.textContent = "https://sos1920-02.herokuapp.com/api/v2/evolution-of-cycling-routes";
     			t29 = text(" (developed by ");
     			a9 = element("a");
-<<<<<<< HEAD
-    			a9.textContent = "https://sos1920-02.herokuapp.com/api/v1/traffic-accidents";
-    			t31 = text(" (developed by ");
-    			a10 = element("a");
-    			a10.textContent = "Jose\r\n\t\t\t\t\t\tFrancisco Morales Ruiz";
-    			t33 = text(")");
-    			t34 = space();
-=======
     			a9.textContent = "Ana\r\n\t\t\t\t\t\tFraire Gonzalez";
     			t31 = text(")");
     			t32 = space();
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			li11 = element("li");
     			a10 = element("a");
     			a10.textContent = "https://sos1920-02.herokuapp.com/api/v1/traffic-accidents";
     			t34 = text(" (developed by ");
     			a11 = element("a");
-<<<<<<< HEAD
-    			a11.textContent = "https://sos1920-02.herokuapp.com/api/v2/traffic-accidents";
-    			t36 = text(" (developed by ");
-    			a12 = element("a");
-    			a12.textContent = "Jose\r\n\t\t\t\t\t\tFrancisco Morales Ruiz";
-    			t38 = text(")");
-    			t39 = space();
-=======
     			a11.textContent = "Jose\r\n\t\t\t\t\t\tFrancisco Morales Ruiz";
     			t36 = text(")");
     			t37 = space();
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			li12 = element("li");
     			a12 = element("a");
     			a12.textContent = "https://sos1920-02.herokuapp.com/api/v2/traffic-accidents";
@@ -1777,8 +1741,6 @@ var app = (function () {
     			button2 = element("button");
     			button2.textContent = "API Accidentes De Tráfico ";
     			br2 = element("br");
-<<<<<<< HEAD
-=======
     			br3 = element("br");
     			t59 = space();
     			button3 = element("button");
@@ -1810,7 +1772,6 @@ var app = (function () {
     			button10.textContent = "Integraciones";
     			t75 = space();
     			br8 = element("br");
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			add_location(br0, file$1, 4, 3, 75);
     			add_location(strong0, file$1, 6, 8, 98);
     			add_location(li0, file$1, 6, 4, 94);
@@ -1832,45 +1793,6 @@ var app = (function () {
     			add_location(li5, file$1, 14, 4, 568);
     			add_location(strong3, file$1, 15, 8, 686);
     			attr_dev(a4, "href", "http://sos1920-02.herokuapp.com");
-<<<<<<< HEAD
-    			add_location(a4, file$1, 15, 30, 708);
-    			add_location(li6, file$1, 15, 4, 682);
-    			add_location(strong4, file$1, 16, 8, 800);
-    			add_location(li7, file$1, 16, 4, 796);
-    			attr_dev(a5, "href", "https://documenter.getpostman.com/view/10637431/SzezcrsS");
-    			add_location(a5, file$1, 18, 9, 849);
-    			attr_dev(a6, "href", "https://github.com/anafraire");
-    			add_location(a6, file$1, 18, 162, 1002);
-    			add_location(li8, file$1, 18, 5, 845);
-    			attr_dev(a7, "href", "https://documenter.getpostman.com/view/10637431/Szmcaz3h");
-    			add_location(a7, file$1, 20, 9, 1088);
-    			attr_dev(a8, "href", "https://github.com/anafraire");
-    			add_location(a8, file$1, 20, 162, 1241);
-    			add_location(li9, file$1, 20, 5, 1084);
-    			attr_dev(a9, "href", "https://documenter.getpostman.com/view/10653459/SzYT6hqm");
-    			add_location(a9, file$1, 22, 9, 1327);
-    			attr_dev(a10, "href", "https://github.com/josmorrui2");
-    			add_location(a10, file$1, 22, 152, 1470);
-    			add_location(li10, file$1, 22, 5, 1323);
-    			attr_dev(a11, "href", "https://documenter.getpostman.com/view/10653459/SzmcbKXc");
-    			add_location(a11, file$1, 24, 9, 1565);
-    			attr_dev(a12, "href", "https://github.com/josmorrui2");
-    			add_location(a12, file$1, 24, 152, 1708);
-    			add_location(li11, file$1, 24, 5, 1561);
-    			attr_dev(a13, "href", "https://documenter.getpostman.com/view/6870023/SzYZ2KVA");
-    			add_location(a13, file$1, 26, 9, 1803);
-    			attr_dev(a14, "href", "https://github.com/martaverdugo6");
-    			add_location(a14, file$1, 26, 153, 1947);
-    			add_location(li12, file$1, 26, 5, 1799);
-    			attr_dev(a15, "href", "https://documenter.getpostman.com/view/6870023/SzmcbKTA");
-    			add_location(a15, file$1, 28, 9, 2041);
-    			attr_dev(a16, "href", "https://github.com/martaverdugo6");
-    			add_location(a16, file$1, 28, 153, 2185);
-    			add_location(li13, file$1, 28, 5, 2037);
-    			add_location(ul1, file$1, 17, 4, 834);
-    			add_location(ul2, file$1, 5, 3, 84);
-    			add_location(br1, file$1, 35, 2, 2299);
-=======
     			add_location(a4, file$1, 15, 37, 715);
     			add_location(li6, file$1, 15, 4, 682);
     			add_location(strong4, file$1, 16, 8, 807);
@@ -1912,34 +1834,21 @@ var app = (function () {
     			add_location(ul1, file$1, 18, 4, 973);
     			add_location(ul2, file$1, 5, 3, 84);
     			add_location(br1, file$1, 36, 2, 2438);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn btn-primary");
     			attr_dev(button0, "onclick", "window.location.href='#/evolution-of-cycling-routes'");
     			set_style(button0, "margin-left", "6.75%");
     			set_style(button0, "width", "25%");
-<<<<<<< HEAD
-    			add_location(button0, file$1, 36, 2, 2307);
-=======
     			add_location(button0, file$1, 37, 2, 2446);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "btn btn-warning");
     			attr_dev(button1, "onclick", "window.location.href='#/rural-tourism-stats'");
     			set_style(button1, "width", "25%");
-<<<<<<< HEAD
-    			add_location(button1, file$1, 37, 2, 2497);
-=======
     			add_location(button1, file$1, 38, 2, 2636);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-danger");
     			attr_dev(button2, "onclick", "window.location.href='#/traffic-accidents'");
     			set_style(button2, "width", "25%");
-<<<<<<< HEAD
-    			add_location(button2, file$1, 38, 2, 2648);
-    			add_location(br2, file$1, 39, 2, 2805);
-=======
     			add_location(button2, file$1, 39, 2, 2788);
     			add_location(br2, file$1, 39, 156, 2942);
     			add_location(br3, file$1, 39, 160, 2946);
@@ -1991,7 +1900,6 @@ var app = (function () {
     			set_style(button10, "width", "25%");
     			add_location(button10, file$1, 47, 2, 4198);
     			add_location(br8, file$1, 48, 2, 4338);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			set_style(div0, "margin-left", "12.5%");
     			add_location(div0, file$1, 3, 2, 37);
     			attr_dev(div1, "class", "div-home");
@@ -2217,13 +2125,8 @@ var app = (function () {
       return rest;
     }
 
-<<<<<<< HEAD
-    /* node_modules\sveltestrap\src\Table.svelte generated by Svelte v3.21.0 */
-    const file$2 = "node_modules\\sveltestrap\\src\\Table.svelte";
-=======
     /* node_modules\sveltestrap\src\Button.svelte generated by Svelte v3.21.0 */
     const file$2 = "node_modules\\sveltestrap\\src\\Button.svelte";
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     // (53:0) {:else}
     function create_else_block_1(ctx) {
@@ -2563,177 +2466,7 @@ var app = (function () {
     		return 2;
     	}
 
-<<<<<<< HEAD
-    	set size(value) {
-    		throw new Error("<Table>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get bordered() {
-    		throw new Error("<Table>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set bordered(value) {
-    		throw new Error("<Table>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get borderless() {
-    		throw new Error("<Table>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set borderless(value) {
-    		throw new Error("<Table>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get striped() {
-    		throw new Error("<Table>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set striped(value) {
-    		throw new Error("<Table>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get dark() {
-    		throw new Error("<Table>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set dark(value) {
-    		throw new Error("<Table>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get hover() {
-    		throw new Error("<Table>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set hover(value) {
-    		throw new Error("<Table>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get responsive() {
-    		throw new Error("<Table>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set responsive(value) {
-    		throw new Error("<Table>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-    }
-
-    /* node_modules\sveltestrap\src\Button.svelte generated by Svelte v3.21.0 */
-    const file$3 = "node_modules\\sveltestrap\\src\\Button.svelte";
-
-    // (53:0) {:else}
-    function create_else_block_1(ctx) {
-    	let button;
-    	let current;
-    	let dispose;
-    	const default_slot_template = /*$$slots*/ ctx[19].default;
-    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[18], null);
-    	const default_slot_or_fallback = default_slot || fallback_block(ctx);
-
-    	let button_levels = [
-    		/*props*/ ctx[10],
-    		{ id: /*id*/ ctx[4] },
-    		{ class: /*classes*/ ctx[8] },
-    		{ disabled: /*disabled*/ ctx[2] },
-    		{ value: /*value*/ ctx[6] },
-    		{
-    			"aria-label": /*ariaLabel*/ ctx[7] || /*defaultAriaLabel*/ ctx[9]
-    		},
-    		{ style: /*style*/ ctx[5] }
-    	];
-
-    	let button_data = {};
-
-    	for (let i = 0; i < button_levels.length; i += 1) {
-    		button_data = assign(button_data, button_levels[i]);
-    	}
-
-    	const block_1 = {
-    		c: function create() {
-    			button = element("button");
-    			if (default_slot_or_fallback) default_slot_or_fallback.c();
-    			set_attributes(button, button_data);
-    			add_location(button, file$3, 53, 2, 1061);
-    		},
-    		m: function mount(target, anchor, remount) {
-    			insert_dev(target, button, anchor);
-
-    			if (default_slot_or_fallback) {
-    				default_slot_or_fallback.m(button, null);
-    			}
-
-    			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(button, "click", /*click_handler_1*/ ctx[21], false, false, false);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (default_slot) {
-    				if (default_slot.p && dirty & /*$$scope*/ 262144) {
-    					default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[18], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[18], dirty, null));
-    				}
-    			} else {
-    				if (default_slot_or_fallback && default_slot_or_fallback.p && dirty & /*close, children, $$scope*/ 262147) {
-    					default_slot_or_fallback.p(ctx, dirty);
-    				}
-    			}
-
-    			set_attributes(button, get_spread_update(button_levels, [
-    				dirty & /*props*/ 1024 && /*props*/ ctx[10],
-    				dirty & /*id*/ 16 && { id: /*id*/ ctx[4] },
-    				dirty & /*classes*/ 256 && { class: /*classes*/ ctx[8] },
-    				dirty & /*disabled*/ 4 && { disabled: /*disabled*/ ctx[2] },
-    				dirty & /*value*/ 64 && { value: /*value*/ ctx[6] },
-    				dirty & /*ariaLabel, defaultAriaLabel*/ 640 && {
-    					"aria-label": /*ariaLabel*/ ctx[7] || /*defaultAriaLabel*/ ctx[9]
-    				},
-    				dirty & /*style*/ 32 && { style: /*style*/ ctx[5] }
-    			]));
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(default_slot_or_fallback, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(default_slot_or_fallback, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(button);
-    			if (default_slot_or_fallback) default_slot_or_fallback.d(detaching);
-    			dispose();
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block: block_1,
-    		id: create_else_block_1.name,
-    		type: "else",
-    		source: "(53:0) {:else}",
-    		ctx
-    	});
-
-    	return block_1;
-    }
-
-    // (37:0) {#if href}
-    function create_if_block$2(ctx) {
-    	let a;
-    	let current_block_type_index;
-    	let if_block;
-    	let current;
-    	let dispose;
-    	const if_block_creators = [create_if_block_1, create_else_block$2];
-    	const if_blocks = [];
-
-    	function select_block_type_1(ctx, dirty) {
-    		if (/*children*/ ctx[0]) return 0;
-    		return 1;
-    	}
-
-    	current_block_type_index = select_block_type_1(ctx);
-=======
     	current_block_type_index = select_block_type_2(ctx);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
 
     	const block_1 = {
@@ -3225,34 +2958,8 @@ var app = (function () {
     	}
     }
 
-<<<<<<< HEAD
-    /* node_modules\sveltestrap\src\Input.svelte generated by Svelte v3.21.0 */
-
-    const { console: console_1$1 } = globals;
-    const file$4 = "node_modules\\sveltestrap\\src\\Input.svelte";
-
-    // (391:39) 
-    function create_if_block_17(ctx) {
-    	let select;
-    	let current;
-    	let dispose;
-    	const default_slot_template = /*$$slots*/ ctx[26].default;
-    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[25], null);
-
-    	let select_levels = [
-    		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
-    		{ multiple: true },
-    		{ class: /*classes*/ ctx[10] },
-    		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] }
-    	];
-
-    	let select_data = {};
-=======
     /* src\front\Integrations.svelte generated by Svelte v3.21.0 */
     const file$3 = "src\\front\\Integrations.svelte";
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     // (12:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot(ctx) {
@@ -3281,31 +2988,6 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-    			dispose = [
-    				listen_dev(select, "blur", /*blur_handler_17*/ ctx[141], false, false, false),
-    				listen_dev(select, "focus", /*focus_handler_17*/ ctx[142], false, false, false),
-    				listen_dev(select, "change", /*change_handler_16*/ ctx[143], false, false, false),
-    				listen_dev(select, "input", /*input_handler_16*/ ctx[144], false, false, false),
-    				listen_dev(select, "change", /*select_change_handler_1*/ ctx[161])
-    			];
-    		},
-    		p: function update(ctx, dirty) {
-    			if (default_slot) {
-    				if (default_slot.p && dirty[0] & /*$$scope*/ 33554432) {
-    					default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[25], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[25], dirty, null));
-    				}
-    			}
-
-    			set_attributes(select, get_spread_update(select_levels, [
-    				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				{ multiple: true },
-    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
-    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] }
-    			]));
-=======
     function create_fragment$4(ctx) {
     	let main;
     	let h2;
@@ -3321,7 +3003,6 @@ var app = (function () {
     			},
     			$$inline: true
     		});
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     	button.$on("click", pop);
 
@@ -3584,20 +3265,6 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-    // (360:29) 
-    function create_if_block_15(ctx) {
-    	let textarea;
-    	let dispose;
-
-    	let textarea_levels = [
-    		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
-    		{ class: /*classes*/ ctx[10] },
-    		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] }
-    	];
-=======
     async function loadGraph() {
     	let MyDataA = [];
     	let MyDataC = [];
@@ -3633,7 +3300,6 @@ var app = (function () {
     			});
     		});
     	});
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     	Highcharts.chart("container", {
     		chart: { polar: true, type: "line" },
@@ -3741,26 +3407,6 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, table, anchor);
 
-<<<<<<< HEAD
-    			dispose = [
-    				listen_dev(textarea, "blur", /*blur_handler_15*/ ctx[130], false, false, false),
-    				listen_dev(textarea, "focus", /*focus_handler_15*/ ctx[131], false, false, false),
-    				listen_dev(textarea, "keydown", /*keydown_handler_15*/ ctx[132], false, false, false),
-    				listen_dev(textarea, "keypress", /*keypress_handler_15*/ ctx[133], false, false, false),
-    				listen_dev(textarea, "keyup", /*keyup_handler_15*/ ctx[134], false, false, false),
-    				listen_dev(textarea, "change", /*change_handler_14*/ ctx[135], false, false, false),
-    				listen_dev(textarea, "input", /*input_handler_14*/ ctx[136], false, false, false),
-    				listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[159])
-    			];
-    		},
-    		p: function update(ctx, dirty) {
-    			set_attributes(textarea, get_spread_update(textarea_levels, [
-    				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
-    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] }
-=======
     			if (default_slot) {
     				default_slot.m(table, null);
     			}
@@ -3777,7 +3423,6 @@ var app = (function () {
     			set_attributes(table, get_spread_update(table_levels, [
     				dirty & /*props*/ 8 && /*props*/ ctx[3],
     				dirty & /*classes*/ 2 && { class: /*classes*/ ctx[1] }
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			]));
     		},
     		i: function intro(local) {
@@ -4161,12 +3806,7 @@ var app = (function () {
     	let select_levels = [
     		/*props*/ ctx[12],
     		{ id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    		{ type: /*type*/ ctx[3] },
-    		{ readOnly: /*readonly*/ ctx[4] },
-=======
     		{ multiple: true },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
     		{ disabled: /*disabled*/ ctx[9] }
@@ -4215,12 +3855,7 @@ var app = (function () {
     			set_attributes(select, get_spread_update(select_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    				dirty[0] & /*type*/ 8 && { type: /*type*/ ctx[3] },
-    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
-=======
     				{ multiple: true },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] }
@@ -4268,18 +3903,9 @@ var app = (function () {
     	let select_levels = [
     		/*props*/ ctx[12],
     		{ id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    		{ type: "search" },
-    		{ readOnly: /*readonly*/ ctx[4] },
-    		{ class: /*classes*/ ctx[10] },
-    		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
-    		{ placeholder: /*placeholder*/ ctx[8] }
-=======
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
     		{ disabled: /*disabled*/ ctx[9] }
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     	];
 
     	let select_data = {};
@@ -4308,22 +3934,11 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-<<<<<<< HEAD
-    				listen_dev(input, "blur", /*blur_handler_13*/ ctx[118], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_13*/ ctx[119], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_13*/ ctx[120], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_13*/ ctx[121], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_13*/ ctx[122], false, false, false),
-    				listen_dev(input, "change", /*change_handler_13*/ ctx[123], false, false, false),
-    				listen_dev(input, "input", /*input_handler_13*/ ctx[124], false, false, false),
-    				listen_dev(input, "input", /*input_input_handler_9*/ ctx[158])
-=======
     				listen_dev(select, "blur", /*blur_handler_16*/ ctx[137], false, false, false),
     				listen_dev(select, "focus", /*focus_handler_16*/ ctx[138], false, false, false),
     				listen_dev(select, "change", /*change_handler_15*/ ctx[139], false, false, false),
     				listen_dev(select, "input", /*input_handler_15*/ ctx[140], false, false, false),
     				listen_dev(select, "change", /*select_change_handler*/ ctx[160])
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			];
     		},
     		p: function update(ctx, dirty) {
@@ -4336,18 +3951,9 @@ var app = (function () {
     			set_attributes(select, get_spread_update(select_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    				{ type: "search" },
-    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
-    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
-    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
-    				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
-=======
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] }
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			]));
 
     			if (dirty[0] & /*value*/ 2) {
@@ -4389,18 +3995,9 @@ var app = (function () {
     	let textarea_levels = [
     		/*props*/ ctx[12],
     		{ id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    		{ type: "range" },
-    		{ readOnly: /*readonly*/ ctx[4] },
-    		{ class: /*classes*/ ctx[10] },
-    		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
-    		{ placeholder: /*placeholder*/ ctx[8] }
-=======
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
     		{ disabled: /*disabled*/ ctx[9] }
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     	];
 
     	let textarea_data = {};
@@ -4421,17 +4018,6 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-<<<<<<< HEAD
-    				listen_dev(input, "blur", /*blur_handler_12*/ ctx[111], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_12*/ ctx[112], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_12*/ ctx[113], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_12*/ ctx[114], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_12*/ ctx[115], false, false, false),
-    				listen_dev(input, "change", /*change_handler_12*/ ctx[116], false, false, false),
-    				listen_dev(input, "input", /*input_handler_12*/ ctx[117], false, false, false),
-    				listen_dev(input, "change", /*input_change_input_handler*/ ctx[157]),
-    				listen_dev(input, "input", /*input_change_input_handler*/ ctx[157])
-=======
     				listen_dev(textarea, "blur", /*blur_handler_15*/ ctx[130], false, false, false),
     				listen_dev(textarea, "focus", /*focus_handler_15*/ ctx[131], false, false, false),
     				listen_dev(textarea, "keydown", /*keydown_handler_15*/ ctx[132], false, false, false),
@@ -4440,25 +4026,15 @@ var app = (function () {
     				listen_dev(textarea, "change", /*change_handler_14*/ ctx[135], false, false, false),
     				listen_dev(textarea, "input", /*input_handler_14*/ ctx[136], false, false, false),
     				listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[159])
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			];
     		},
     		p: function update(ctx, dirty) {
     			set_attributes(textarea, get_spread_update(textarea_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    				{ type: "range" },
-    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
-    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
-    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
-    				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
-=======
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] }
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			]));
 
     			if (dirty[0] & /*value*/ 2) {
@@ -4484,29 +4060,9 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-    // (286:29) 
-    function create_if_block_12(ctx) {
-    	let input;
-    	let dispose;
-
-    	let input_levels = [
-    		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
-    		{ type: "color" },
-    		{ readOnly: /*readonly*/ ctx[4] },
-    		{ class: /*classes*/ ctx[10] },
-    		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
-    		{ placeholder: /*placeholder*/ ctx[8] }
-    	];
-
-    	let input_data = {};
-=======
     // (86:0) {#if tag === 'input'}
     function create_if_block$3(ctx) {
     	let if_block_anchor;
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     	function select_block_type_1(ctx, dirty) {
     		if (/*type*/ ctx[3] === "text") return create_if_block_1$1;
@@ -4534,35 +4090,6 @@ var app = (function () {
     			if_block.c();
     			if_block_anchor = empty();
     		},
-<<<<<<< HEAD
-    		m: function mount(target, anchor, remount) {
-    			insert_dev(target, input, anchor);
-    			set_input_value(input, /*value*/ ctx[1]);
-    			if (remount) run_all(dispose);
-
-    			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_11*/ ctx[104], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_11*/ ctx[105], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_11*/ ctx[106], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_11*/ ctx[107], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_11*/ ctx[108], false, false, false),
-    				listen_dev(input, "change", /*change_handler_11*/ ctx[109], false, false, false),
-    				listen_dev(input, "input", /*input_handler_11*/ ctx[110], false, false, false),
-    				listen_dev(input, "input", /*input_input_handler_8*/ ctx[156])
-    			];
-    		},
-    		p: function update(ctx, dirty) {
-    			set_attributes(input, get_spread_update(input_levels, [
-    				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				{ type: "color" },
-    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
-    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
-    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
-    				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
-    			]));
-=======
     		m: function mount(target, anchor) {
     			if_block.m(target, anchor);
     			insert_dev(target, if_block_anchor, anchor);
@@ -4573,7 +4100,6 @@ var app = (function () {
     			} else {
     				if_block.d(1);
     				if_block = current_block_type(ctx);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     				if (if_block) {
     					if_block.c();
@@ -4608,21 +4134,13 @@ var app = (function () {
     	let input_levels = [
     		/*props*/ ctx[12],
     		{ id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    		{ type: "datetime" },
-=======
     		{ type: /*type*/ ctx[3] },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
     		{ disabled: /*disabled*/ ctx[9] },
-<<<<<<< HEAD
-    		{ placeholder: /*placeholder*/ ctx[8] }
-=======
     		{ placeholder: /*placeholder*/ ctx[8] },
     		{ value: /*value*/ ctx[1] }
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     	];
 
     	let input_data = {};
@@ -4642,16 +4160,6 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-<<<<<<< HEAD
-    				listen_dev(input, "blur", /*blur_handler_10*/ ctx[97], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_10*/ ctx[98], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_10*/ ctx[99], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_10*/ ctx[100], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_10*/ ctx[101], false, false, false),
-    				listen_dev(input, "change", /*change_handler_10*/ ctx[102], false, false, false),
-    				listen_dev(input, "input", /*input_handler_10*/ ctx[103], false, false, false),
-    				listen_dev(input, "input", /*input_input_handler_7*/ ctx[155])
-=======
     				listen_dev(input, "blur", /*blur_handler_14*/ ctx[125], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_14*/ ctx[126], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_14*/ ctx[127], false, false, false),
@@ -4659,28 +4167,19 @@ var app = (function () {
     				listen_dev(input, "keyup", /*keyup_handler_14*/ ctx[129], false, false, false),
     				listen_dev(input, "input", /*handleInput*/ ctx[13], false, false, false),
     				listen_dev(input, "change", /*handleInput*/ ctx[13], false, false, false)
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			];
     		},
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    				{ type: "datetime" },
-=======
     				dirty[0] & /*type*/ 8 && { type: /*type*/ ctx[3] },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
-<<<<<<< HEAD
-    				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
-=======
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] },
     				dirty[0] & /*value*/ 2 && { value: /*value*/ ctx[1] }
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			]));
     		},
     		d: function destroy(detaching) {
@@ -4708,11 +4207,7 @@ var app = (function () {
     	let input_levels = [
     		/*props*/ ctx[12],
     		{ id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    		{ type: "time" },
-=======
     		{ type: "search" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
@@ -4738,16 +4233,6 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-<<<<<<< HEAD
-    				listen_dev(input, "blur", /*blur_handler_9*/ ctx[90], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_9*/ ctx[91], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_9*/ ctx[92], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_9*/ ctx[93], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_9*/ ctx[94], false, false, false),
-    				listen_dev(input, "change", /*change_handler_9*/ ctx[95], false, false, false),
-    				listen_dev(input, "input", /*input_handler_9*/ ctx[96], false, false, false),
-    				listen_dev(input, "input", /*input_input_handler_6*/ ctx[154])
-=======
     				listen_dev(input, "blur", /*blur_handler_13*/ ctx[118], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_13*/ ctx[119], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_13*/ ctx[120], false, false, false),
@@ -4756,18 +4241,13 @@ var app = (function () {
     				listen_dev(input, "change", /*change_handler_13*/ ctx[123], false, false, false),
     				listen_dev(input, "input", /*input_handler_13*/ ctx[124], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_9*/ ctx[158])
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			];
     		},
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    				{ type: "time" },
-=======
     				{ type: "search" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
@@ -4804,11 +4284,7 @@ var app = (function () {
     	let input_levels = [
     		/*props*/ ctx[12],
     		{ id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    		{ type: "date" },
-=======
     		{ type: "range" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
@@ -4834,16 +4310,6 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-<<<<<<< HEAD
-    				listen_dev(input, "blur", /*blur_handler_8*/ ctx[83], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_8*/ ctx[84], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_8*/ ctx[85], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_8*/ ctx[86], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_8*/ ctx[87], false, false, false),
-    				listen_dev(input, "change", /*change_handler_8*/ ctx[88], false, false, false),
-    				listen_dev(input, "input", /*input_handler_8*/ ctx[89], false, false, false),
-    				listen_dev(input, "input", /*input_input_handler_5*/ ctx[153])
-=======
     				listen_dev(input, "blur", /*blur_handler_12*/ ctx[111], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_12*/ ctx[112], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_12*/ ctx[113], false, false, false),
@@ -4853,18 +4319,13 @@ var app = (function () {
     				listen_dev(input, "input", /*input_handler_12*/ ctx[117], false, false, false),
     				listen_dev(input, "change", /*input_change_input_handler*/ ctx[157]),
     				listen_dev(input, "input", /*input_change_input_handler*/ ctx[157])
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			];
     		},
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    				{ type: "date" },
-=======
     				{ type: "range" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
@@ -4901,11 +4362,7 @@ var app = (function () {
     	let input_levels = [
     		/*props*/ ctx[12],
     		{ id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    		{ type: "number" },
-=======
     		{ type: "color" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
@@ -4931,16 +4388,6 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-<<<<<<< HEAD
-    				listen_dev(input, "blur", /*blur_handler_7*/ ctx[76], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_7*/ ctx[77], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_7*/ ctx[78], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_7*/ ctx[79], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_7*/ ctx[80], false, false, false),
-    				listen_dev(input, "change", /*change_handler_7*/ ctx[81], false, false, false),
-    				listen_dev(input, "input", /*input_handler_7*/ ctx[82], false, false, false),
-    				listen_dev(input, "input", /*input_input_handler_4*/ ctx[152])
-=======
     				listen_dev(input, "blur", /*blur_handler_11*/ ctx[104], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_11*/ ctx[105], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_11*/ ctx[106], false, false, false),
@@ -4949,18 +4396,13 @@ var app = (function () {
     				listen_dev(input, "change", /*change_handler_11*/ ctx[109], false, false, false),
     				listen_dev(input, "input", /*input_handler_11*/ ctx[110], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_8*/ ctx[156])
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			];
     		},
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    				{ type: "number" },
-=======
     				{ type: "color" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
@@ -4997,11 +4439,7 @@ var app = (function () {
     	let input_levels = [
     		/*props*/ ctx[12],
     		{ id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    		{ type: "url" },
-=======
     		{ type: "datetime" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
@@ -5027,16 +4465,6 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-<<<<<<< HEAD
-    				listen_dev(input, "blur", /*blur_handler_6*/ ctx[69], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_6*/ ctx[70], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_6*/ ctx[71], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_6*/ ctx[72], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_6*/ ctx[73], false, false, false),
-    				listen_dev(input, "change", /*change_handler_6*/ ctx[74], false, false, false),
-    				listen_dev(input, "input", /*input_handler_6*/ ctx[75], false, false, false),
-    				listen_dev(input, "input", /*input_input_handler_3*/ ctx[151])
-=======
     				listen_dev(input, "blur", /*blur_handler_10*/ ctx[97], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_10*/ ctx[98], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_10*/ ctx[99], false, false, false),
@@ -5045,18 +4473,13 @@ var app = (function () {
     				listen_dev(input, "change", /*change_handler_10*/ ctx[102], false, false, false),
     				listen_dev(input, "input", /*input_handler_10*/ ctx[103], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_7*/ ctx[155])
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			];
     		},
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    				{ type: "url" },
-=======
     				{ type: "datetime" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
@@ -5093,11 +4516,7 @@ var app = (function () {
     	let input_levels = [
     		/*props*/ ctx[12],
     		{ id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    		{ type: "radio" },
-=======
     		{ type: "time" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
@@ -5123,16 +4542,6 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-<<<<<<< HEAD
-    				listen_dev(input, "blur", /*blur_handler_5*/ ctx[62], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_5*/ ctx[63], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_5*/ ctx[64], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_5*/ ctx[65], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_5*/ ctx[66], false, false, false),
-    				listen_dev(input, "change", /*change_handler_5*/ ctx[67], false, false, false),
-    				listen_dev(input, "input", /*input_handler_5*/ ctx[68], false, false, false),
-    				listen_dev(input, "change", /*input_change_handler_2*/ ctx[150])
-=======
     				listen_dev(input, "blur", /*blur_handler_9*/ ctx[90], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_9*/ ctx[91], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_9*/ ctx[92], false, false, false),
@@ -5141,18 +4550,13 @@ var app = (function () {
     				listen_dev(input, "change", /*change_handler_9*/ ctx[95], false, false, false),
     				listen_dev(input, "input", /*input_handler_9*/ ctx[96], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_6*/ ctx[154])
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			];
     		},
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    				{ type: "radio" },
-=======
     				{ type: "time" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
@@ -5189,11 +4593,7 @@ var app = (function () {
     	let input_levels = [
     		/*props*/ ctx[12],
     		{ id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    		{ type: "checkbox" },
-=======
     		{ type: "date" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
@@ -5215,24 +4615,10 @@ var app = (function () {
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, input, anchor);
-<<<<<<< HEAD
-    			input.checked = /*checked*/ ctx[0];
-=======
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			set_input_value(input, /*value*/ ctx[1]);
     			if (remount) run_all(dispose);
 
     			dispose = [
-<<<<<<< HEAD
-    				listen_dev(input, "blur", /*blur_handler_4*/ ctx[55], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_4*/ ctx[56], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_4*/ ctx[57], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_4*/ ctx[58], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_4*/ ctx[59], false, false, false),
-    				listen_dev(input, "change", /*change_handler_4*/ ctx[60], false, false, false),
-    				listen_dev(input, "input", /*input_handler_4*/ ctx[61], false, false, false),
-    				listen_dev(input, "change", /*input_change_handler_1*/ ctx[149])
-=======
     				listen_dev(input, "blur", /*blur_handler_8*/ ctx[83], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_8*/ ctx[84], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_8*/ ctx[85], false, false, false),
@@ -5241,18 +4627,13 @@ var app = (function () {
     				listen_dev(input, "change", /*change_handler_8*/ ctx[88], false, false, false),
     				listen_dev(input, "input", /*input_handler_8*/ ctx[89], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_5*/ ctx[153])
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			];
     		},
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    				{ type: "checkbox" },
-=======
     				{ type: "date" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
@@ -5260,13 +4641,6 @@ var app = (function () {
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
-<<<<<<< HEAD
-    			if (dirty[0] & /*checked*/ 1) {
-    				input.checked = /*checked*/ ctx[0];
-    			}
-
-=======
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			if (dirty[0] & /*value*/ 2) {
     				set_input_value(input, /*value*/ ctx[1]);
     			}
@@ -5296,11 +4670,7 @@ var app = (function () {
     	let input_levels = [
     		/*props*/ ctx[12],
     		{ id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    		{ type: "file" },
-=======
     		{ type: "number" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
@@ -5326,16 +4696,6 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-<<<<<<< HEAD
-    				listen_dev(input, "blur", /*blur_handler_3*/ ctx[48], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_3*/ ctx[49], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_3*/ ctx[50], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_3*/ ctx[51], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_3*/ ctx[52], false, false, false),
-    				listen_dev(input, "change", /*change_handler_3*/ ctx[53], false, false, false),
-    				listen_dev(input, "input", /*input_handler_3*/ ctx[54], false, false, false),
-    				listen_dev(input, "change", /*input_change_handler*/ ctx[148])
-=======
     				listen_dev(input, "blur", /*blur_handler_7*/ ctx[76], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_7*/ ctx[77], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_7*/ ctx[78], false, false, false),
@@ -5344,18 +4704,13 @@ var app = (function () {
     				listen_dev(input, "change", /*change_handler_7*/ ctx[81], false, false, false),
     				listen_dev(input, "input", /*input_handler_7*/ ctx[82], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_4*/ ctx[152])
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			];
     		},
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    				{ type: "file" },
-=======
     				{ type: "number" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
@@ -5392,11 +4747,7 @@ var app = (function () {
     	let input_levels = [
     		/*props*/ ctx[12],
     		{ id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    		{ type: "email" },
-=======
     		{ type: "url" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
@@ -5422,16 +4773,6 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-<<<<<<< HEAD
-    				listen_dev(input, "blur", /*blur_handler_2*/ ctx[41], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_2*/ ctx[42], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_2*/ ctx[43], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_2*/ ctx[44], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_2*/ ctx[45], false, false, false),
-    				listen_dev(input, "change", /*change_handler_2*/ ctx[46], false, false, false),
-    				listen_dev(input, "input", /*input_handler_2*/ ctx[47], false, false, false),
-    				listen_dev(input, "input", /*input_input_handler_2*/ ctx[147])
-=======
     				listen_dev(input, "blur", /*blur_handler_6*/ ctx[69], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_6*/ ctx[70], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_6*/ ctx[71], false, false, false),
@@ -5440,18 +4781,13 @@ var app = (function () {
     				listen_dev(input, "change", /*change_handler_6*/ ctx[74], false, false, false),
     				listen_dev(input, "input", /*input_handler_6*/ ctx[75], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_3*/ ctx[151])
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			];
     		},
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    				{ type: "email" },
-=======
     				{ type: "url" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
@@ -5488,11 +4824,7 @@ var app = (function () {
     	let input_levels = [
     		/*props*/ ctx[12],
     		{ id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    		{ type: "password" },
-=======
     		{ type: "radio" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
@@ -5518,16 +4850,6 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-<<<<<<< HEAD
-    				listen_dev(input, "blur", /*blur_handler_1*/ ctx[34], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_1*/ ctx[35], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_1*/ ctx[36], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_1*/ ctx[37], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_1*/ ctx[38], false, false, false),
-    				listen_dev(input, "change", /*change_handler_1*/ ctx[39], false, false, false),
-    				listen_dev(input, "input", /*input_handler_1*/ ctx[40], false, false, false),
-    				listen_dev(input, "input", /*input_input_handler_1*/ ctx[146])
-=======
     				listen_dev(input, "blur", /*blur_handler_5*/ ctx[62], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_5*/ ctx[63], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_5*/ ctx[64], false, false, false),
@@ -5536,18 +4858,13 @@ var app = (function () {
     				listen_dev(input, "change", /*change_handler_5*/ ctx[67], false, false, false),
     				listen_dev(input, "input", /*input_handler_5*/ ctx[68], false, false, false),
     				listen_dev(input, "change", /*input_change_handler_2*/ ctx[150])
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			];
     		},
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    				{ type: "password" },
-=======
     				{ type: "radio" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
@@ -5584,11 +4901,7 @@ var app = (function () {
     	let input_levels = [
     		/*props*/ ctx[12],
     		{ id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    		{ type: "text" },
-=======
     		{ type: "checkbox" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
@@ -5615,16 +4928,6 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-<<<<<<< HEAD
-    				listen_dev(input, "blur", /*blur_handler*/ ctx[27], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler*/ ctx[28], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler*/ ctx[29], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler*/ ctx[30], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler*/ ctx[31], false, false, false),
-    				listen_dev(input, "change", /*change_handler*/ ctx[32], false, false, false),
-    				listen_dev(input, "input", /*input_handler*/ ctx[33], false, false, false),
-    				listen_dev(input, "input", /*input_input_handler*/ ctx[145])
-=======
     				listen_dev(input, "blur", /*blur_handler_4*/ ctx[55], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_4*/ ctx[56], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_4*/ ctx[57], false, false, false),
@@ -5633,18 +4936,13 @@ var app = (function () {
     				listen_dev(input, "change", /*change_handler_4*/ ctx[60], false, false, false),
     				listen_dev(input, "input", /*input_handler_4*/ ctx[61], false, false, false),
     				listen_dev(input, "change", /*input_change_handler_1*/ ctx[149])
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     			];
     		},
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-<<<<<<< HEAD
-    				{ type: "text" },
-=======
     				{ type: "checkbox" },
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
@@ -5765,15 +5063,10 @@ var app = (function () {
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
-<<<<<<< HEAD
-    	function blur_handler(event) {
-    		bubble($$self, event);
-=======
     	let input_data = {};
 
     	for (let i = 0; i < input_levels.length; i += 1) {
     		input_data = assign(input_data, input_levels[i]);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     	}
 
     	const block = {
@@ -5828,15 +5121,6 @@ var app = (function () {
     		ctx
     	});
 
-<<<<<<< HEAD
-    	function change_handler(event) {
-    		bubble($$self, event);
-    	}
-
-    	function input_handler(event) {
-    		bubble($$self, event);
-    	}
-=======
     	return block;
     }
 
@@ -5844,7 +5128,6 @@ var app = (function () {
     function create_if_block_2$1(ctx) {
     	let input;
     	let dispose;
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     	let input_levels = [
     		/*props*/ ctx[12],
@@ -5874,15 +5157,6 @@ var app = (function () {
     			set_input_value(input, /*value*/ ctx[1]);
     			if (remount) run_all(dispose);
 
-<<<<<<< HEAD
-    	function change_handler_1(event) {
-    		bubble($$self, event);
-    	}
-
-    	function input_handler_1(event) {
-    		bubble($$self, event);
-    	}
-=======
     			dispose = [
     				listen_dev(input, "blur", /*blur_handler_1*/ ctx[34], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_1*/ ctx[35], false, false, false),
@@ -5915,7 +5189,6 @@ var app = (function () {
     			run_all(dispose);
     		}
     	};
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
@@ -5946,15 +5219,6 @@ var app = (function () {
 
     	let input_data = {};
 
-<<<<<<< HEAD
-    	function change_handler_2(event) {
-    		bubble($$self, event);
-    	}
-
-    	function input_handler_2(event) {
-    		bubble($$self, event);
-    	}
-=======
     	for (let i = 0; i < input_levels.length; i += 1) {
     		input_data = assign(input_data, input_levels[i]);
     	}
@@ -5969,7 +5233,6 @@ var app = (function () {
     			insert_dev(target, input, anchor);
     			set_input_value(input, /*value*/ ctx[1]);
     			if (remount) run_all(dispose);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     			dispose = [
     				listen_dev(input, "blur", /*blur_handler*/ ctx[27], false, false, false),
@@ -6023,14 +5286,6 @@ var app = (function () {
     	const if_block_creators = [create_if_block$3, create_if_block_15, create_if_block_16, create_if_block_17];
     	const if_blocks = [];
 
-<<<<<<< HEAD
-    	function change_handler_3(event) {
-    		bubble($$self, event);
-    	}
-
-    	function input_handler_3(event) {
-    		bubble($$self, event);
-=======
     	function select_block_type(ctx, dirty) {
     		if (/*tag*/ ctx[11] === "input") return 0;
     		if (/*tag*/ ctx[11] === "textarea") return 1;
@@ -6041,7 +5296,6 @@ var app = (function () {
 
     	if (~(current_block_type_index = select_block_type(ctx))) {
     		if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     	}
 
     	const block = {
@@ -6079,15 +5333,6 @@ var app = (function () {
     					check_outros();
     				}
 
-<<<<<<< HEAD
-    	function change_handler_4(event) {
-    		bubble($$self, event);
-    	}
-
-    	function input_handler_4(event) {
-    		bubble($$self, event);
-    	}
-=======
     				if (~current_block_type_index) {
     					if_block = if_blocks[current_block_type_index];
 
@@ -6095,7 +5340,6 @@ var app = (function () {
     						if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
     						if_block.c();
     					}
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -7211,11 +6455,7 @@ var app = (function () {
     }
 
     /* node_modules\sveltestrap\src\Label.svelte generated by Svelte v3.21.0 */
-<<<<<<< HEAD
-    const file$5 = "node_modules\\sveltestrap\\src\\Label.svelte";
-=======
     const file$7 = "node_modules\\sveltestrap\\src\\Label.svelte";
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     function create_fragment$8(ctx) {
     	let label;
@@ -7566,11 +6806,7 @@ var app = (function () {
     }
 
     /* node_modules\sveltestrap\src\FormGroup.svelte generated by Svelte v3.21.0 */
-<<<<<<< HEAD
-    const file$6 = "node_modules\\sveltestrap\\src\\FormGroup.svelte";
-=======
     const file$8 = "node_modules\\sveltestrap\\src\\FormGroup.svelte";
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     // (29:0) {:else}
     function create_else_block$4(ctx) {
@@ -7948,11 +7184,7 @@ var app = (function () {
     }
 
     /* node_modules\sveltestrap\src\Pagination.svelte generated by Svelte v3.21.0 */
-<<<<<<< HEAD
-    const file$7 = "node_modules\\sveltestrap\\src\\Pagination.svelte";
-=======
     const file$9 = "node_modules\\sveltestrap\\src\\Pagination.svelte";
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     function create_fragment$a(ctx) {
     	let nav;
@@ -8165,11 +7397,7 @@ var app = (function () {
     }
 
     /* node_modules\sveltestrap\src\PaginationItem.svelte generated by Svelte v3.21.0 */
-<<<<<<< HEAD
-    const file$8 = "node_modules\\sveltestrap\\src\\PaginationItem.svelte";
-=======
     const file$a = "node_modules\\sveltestrap\\src\\PaginationItem.svelte";
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     function create_fragment$b(ctx) {
     	let li;
@@ -8329,11 +7557,7 @@ var app = (function () {
     }
 
     /* node_modules\sveltestrap\src\PaginationLink.svelte generated by Svelte v3.21.0 */
-<<<<<<< HEAD
-    const file$9 = "node_modules\\sveltestrap\\src\\PaginationLink.svelte";
-=======
     const file$b = "node_modules\\sveltestrap\\src\\PaginationLink.svelte";
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     // (50:2) {:else}
     function create_else_block$5(ctx) {
@@ -8795,11 +8019,7 @@ var app = (function () {
     /* src\front\routesAPI\CyclingRoutesTable.svelte generated by Svelte v3.21.0 */
 
     const { console: console_1$2 } = globals;
-<<<<<<< HEAD
-    const file$a = "src\\front\\routesAPI\\CyclingRoutesTable.svelte";
-=======
     const file$c = "src\\front\\routesAPI\\CyclingRoutesTable.svelte";
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
@@ -8873,11 +8093,7 @@ var app = (function () {
     			h4.textContent = "Introducir nuevo dato:";
     			t3 = space();
     			create_component(table1.$$.fragment);
-<<<<<<< HEAD
-    			add_location(h4, file$a, 268, 2, 7930);
-=======
     			add_location(h4, file$c, 268, 2, 7930);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			mount_component(formgroup, target, anchor);
@@ -8983,24 +8199,6 @@ var app = (function () {
     			option0.selected = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-<<<<<<< HEAD
-    			add_location(option0, file$a, 204, 7, 5961);
-    			option1.__value = "province";
-    			option1.value = option1.__value;
-    			add_location(option1, file$a, 205, 7, 6005);
-    			option2.__value = "year";
-    			option2.value = option2.__value;
-    			add_location(option2, file$a, 206, 7, 6057);
-    			option3.__value = "metropolitan";
-    			option3.value = option3.__value;
-    			add_location(option3, file$a, 207, 7, 6099);
-    			option4.__value = "urban";
-    			option4.value = option4.__value;
-    			add_location(option4, file$a, 208, 7, 6159);
-    			option5.__value = "rest";
-    			option5.value = option5.__value;
-    			add_location(option5, file$a, 209, 7, 6205);
-=======
     			add_location(option0, file$c, 204, 7, 5961);
     			option1.__value = "province";
     			option1.value = option1.__value;
@@ -9017,7 +8215,6 @@ var app = (function () {
     			option5.__value = "rest";
     			option5.value = option5.__value;
     			add_location(option5, file$c, 209, 7, 6205);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option0, anchor);
@@ -9094,24 +8291,6 @@ var app = (function () {
     			option0.selected = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-<<<<<<< HEAD
-    			add_location(option0, file$a, 217, 7, 6488);
-    			option1.__value = "province";
-    			option1.value = option1.__value;
-    			add_location(option1, file$a, 218, 7, 6532);
-    			option2.__value = "year";
-    			option2.value = option2.__value;
-    			add_location(option2, file$a, 219, 7, 6584);
-    			option3.__value = "metropolitan";
-    			option3.value = option3.__value;
-    			add_location(option3, file$a, 220, 7, 6626);
-    			option4.__value = "urban";
-    			option4.value = option4.__value;
-    			add_location(option4, file$a, 221, 7, 6686);
-    			option5.__value = "rest";
-    			option5.value = option5.__value;
-    			add_location(option5, file$a, 222, 7, 6732);
-=======
     			add_location(option0, file$c, 217, 7, 6488);
     			option1.__value = "province";
     			option1.value = option1.__value;
@@ -9128,7 +8307,6 @@ var app = (function () {
     			option5.__value = "rest";
     			option5.value = option5.__value;
     			add_location(option5, file$c, 222, 7, 6732);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option0, anchor);
@@ -9355,29 +8533,6 @@ var app = (function () {
     			tr2 = element("tr");
     			td4 = element("td");
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-    			add_location(label0, file$a, 194, 9, 5663);
-    			add_location(th0, file$a, 194, 5, 5659);
-    			add_location(label1, file$a, 195, 9, 5705);
-    			add_location(th1, file$a, 195, 5, 5701);
-    			add_location(label2, file$a, 196, 9, 5742);
-    			add_location(th2, file$a, 196, 5, 5738);
-    			add_location(label3, file$a, 197, 9, 5784);
-    			add_location(th3, file$a, 197, 5, 5780);
-    			add_location(tr0, file$a, 193, 4, 5648);
-    			add_location(thead, file$a, 192, 3, 5635);
-    			add_location(td0, file$a, 202, 5, 5863);
-    			add_location(td1, file$a, 212, 5, 6275);
-    			add_location(td2, file$a, 215, 5, 6390);
-    			add_location(td3, file$a, 225, 5, 6802);
-    			add_location(tr1, file$a, 201, 4, 5852);
-    			set_style(td4, "width", "25%");
-    			add_location(td4, file$a, 230, 5, 6938);
-    			add_location(tr2, file$a, 229, 4, 6927);
-    			add_location(tbody, file$a, 200, 3, 5839);
-    			set_style(table, "width", "100%");
-    			add_location(table, file$a, 191, 2, 5602);
-=======
     			add_location(label0, file$c, 194, 9, 5663);
     			add_location(th0, file$c, 194, 5, 5659);
     			add_location(label1, file$c, 195, 9, 5705);
@@ -9399,7 +8554,6 @@ var app = (function () {
     			add_location(tbody, file$c, 200, 3, 5839);
     			set_style(table, "width", "100%");
     			add_location(table, file$c, 191, 2, 5602);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, table, anchor);
@@ -9537,11 +8691,7 @@ var app = (function () {
     			i = element("i");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-<<<<<<< HEAD
-    			add_location(i, file$a, 262, 7, 7780);
-=======
     			add_location(i, file$c, 262, 7, 7780);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9627,15 +8777,6 @@ var app = (function () {
     			t10 = space();
     			set_style(a, "text-align", "center");
     			attr_dev(a, "href", a_href_value = "#/evolution-of-cycling-routes/" + /*route*/ ctx[31].province + "/" + /*route*/ ctx[31].year);
-<<<<<<< HEAD
-    			add_location(a, file$a, 256, 6, 7431);
-    			add_location(td0, file$a, 257, 6, 7557);
-    			add_location(td1, file$a, 258, 6, 7586);
-    			add_location(td2, file$a, 259, 6, 7623);
-    			add_location(td3, file$a, 260, 6, 7653);
-    			add_location(td4, file$a, 261, 6, 7682);
-    			add_location(tr, file$a, 255, 5, 7419);
-=======
     			add_location(a, file$c, 256, 6, 7431);
     			add_location(td0, file$c, 257, 6, 7557);
     			add_location(td1, file$c, 258, 6, 7586);
@@ -9643,7 +8784,6 @@ var app = (function () {
     			add_location(td3, file$c, 260, 6, 7653);
     			add_location(td4, file$c, 261, 6, 7682);
     			add_location(tr, file$c, 255, 5, 7419);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -9771,17 +8911,6 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-<<<<<<< HEAD
-    			add_location(th0, file$a, 243, 5, 7209);
-    			add_location(th1, file$a, 244, 5, 7235);
-    			add_location(th2, file$a, 245, 5, 7254);
-    			add_location(th3, file$a, 246, 5, 7283);
-    			add_location(th4, file$a, 247, 5, 7305);
-    			add_location(th5, file$a, 248, 5, 7326);
-    			add_location(tr, file$a, 242, 4, 7198);
-    			add_location(thead, file$a, 241, 3, 7185);
-    			add_location(tbody, file$a, 251, 3, 7372);
-=======
     			add_location(th0, file$c, 243, 5, 7209);
     			add_location(th1, file$c, 244, 5, 7235);
     			add_location(th2, file$c, 245, 5, 7254);
@@ -9791,7 +8920,6 @@ var app = (function () {
     			add_location(tr, file$c, 242, 4, 7198);
     			add_location(thead, file$c, 241, 3, 7185);
     			add_location(tbody, file$c, 251, 3, 7372);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -10027,15 +9155,6 @@ var app = (function () {
     			t4 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-    			add_location(td0, file$a, 271, 4, 8021);
-    			add_location(td1, file$a, 272, 4, 8089);
-    			add_location(td2, file$a, 273, 4, 8155);
-    			add_location(td3, file$a, 274, 4, 8229);
-    			add_location(td4, file$a, 275, 4, 8296);
-    			add_location(td5, file$a, 276, 4, 8362);
-    			add_location(tr, file$a, 270, 3, 8011);
-=======
     			add_location(td0, file$c, 271, 4, 8021);
     			add_location(td1, file$c, 272, 4, 8089);
     			add_location(td2, file$c, 273, 4, 8155);
@@ -10043,7 +9162,6 @@ var app = (function () {
     			add_location(td4, file$c, 275, 4, 8296);
     			add_location(td5, file$c, 276, 4, 8362);
     			add_location(tr, file$c, 270, 3, 8011);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -10203,11 +9321,7 @@ var app = (function () {
     			t0 = text("EXITO: ");
     			t1 = text(/*msgOk*/ ctx[7]);
     			set_style(p, "color", "green");
-<<<<<<< HEAD
-    			add_location(p, file$a, 283, 8, 8590);
-=======
     			add_location(p, file$c, 283, 8, 8590);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -10883,11 +9997,7 @@ var app = (function () {
     		c: function create() {
     			i = element("i");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-<<<<<<< HEAD
-    			add_location(i, file$a, 312, 52, 9711);
-=======
     			add_location(i, file$c, 312, 52, 9711);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -10919,11 +10029,7 @@ var app = (function () {
     			t = text(" Todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-<<<<<<< HEAD
-    			add_location(i, file$a, 313, 56, 9841);
-=======
     			add_location(i, file$c, 313, 56, 9841);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -10947,11 +10053,7 @@ var app = (function () {
     }
 
     // (315:0) <Button outline on:click={loadInitialData} color="primary">
-<<<<<<< HEAD
-    function create_default_slot(ctx) {
-=======
     function create_default_slot$2(ctx) {
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     	let i;
     	let t;
 
@@ -10960,11 +10062,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Datos Iniciales");
     			attr_dev(i, "class", "fas fa-spinner");
-<<<<<<< HEAD
-    			add_location(i, file$a, 314, 60, 9993);
-=======
     			add_location(i, file$c, 314, 60, 9993);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -11066,7 +10164,7 @@ var app = (function () {
     			main = element("main");
     			h2 = element("h2");
     			i = element("i");
-    			t0 = text(" Evolucion Carriles Bici");
+    			t0 = text(" Evolución Carriles Bici");
     			t1 = space();
     			info.block.c();
     			t2 = space();
@@ -11080,17 +10178,10 @@ var app = (function () {
     			t6 = space();
     			create_component(button2.$$.fragment);
     			attr_dev(i, "class", "fas fa-bicycle");
-<<<<<<< HEAD
-    			add_location(i, file$a, 185, 34, 5457);
-    			set_style(h2, "text-align", "center");
-    			add_location(h2, file$a, 185, 1, 5424);
-    			add_location(main, file$a, 184, 0, 5415);
-=======
     			add_location(i, file$c, 185, 34, 5457);
     			set_style(h2, "text-align", "center");
     			add_location(h2, file$c, 185, 1, 5424);
     			add_location(main, file$c, 184, 0, 5415);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11548,11 +10639,7 @@ var app = (function () {
     /* src\front\routesAPI\EditCyclingRoute.svelte generated by Svelte v3.21.0 */
 
     const { console: console_1$3 } = globals;
-<<<<<<< HEAD
-    const file$b = "src\\front\\routesAPI\\EditCyclingRoute.svelte";
-=======
     const file$d = "src\\front\\routesAPI\\EditCyclingRoute.svelte";
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     // (1:0) <script>   import {onMount}
     function create_catch_block$1(ctx) {
@@ -11786,24 +10873,6 @@ var app = (function () {
     			t18 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-    			add_location(th0, file$b, 73, 6, 1996);
-    			add_location(th1, file$b, 74, 6, 2022);
-    			add_location(th2, file$b, 75, 6, 2042);
-    			add_location(th3, file$b, 76, 6, 2072);
-    			add_location(th4, file$b, 77, 6, 2095);
-    			add_location(th5, file$b, 78, 6, 2117);
-    			add_location(tr0, file$b, 72, 5, 1984);
-    			add_location(thead, file$b, 71, 4, 1970);
-    			add_location(td0, file$b, 83, 6, 2192);
-    			add_location(td1, file$b, 84, 6, 2226);
-    			add_location(td2, file$b, 85, 6, 2276);
-    			add_location(td3, file$b, 86, 6, 2350);
-    			add_location(td4, file$b, 87, 6, 2417);
-    			add_location(td5, file$b, 88, 6, 2483);
-    			add_location(tr1, file$b, 82, 5, 2180);
-    			add_location(tbody, file$b, 81, 4, 2166);
-=======
     			add_location(th0, file$d, 73, 6, 1996);
     			add_location(th1, file$d, 74, 6, 2022);
     			add_location(th2, file$d, 75, 6, 2042);
@@ -11820,7 +10889,6 @@ var app = (function () {
     			add_location(td5, file$d, 88, 6, 2483);
     			add_location(tr1, file$d, 82, 5, 2180);
     			add_location(tbody, file$d, 81, 4, 2166);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -11975,11 +11043,7 @@ var app = (function () {
     			t0 = text("ERROR: ");
     			t1 = text(/*msgBad*/ ctx[7]);
     			set_style(p, "color", "red");
-<<<<<<< HEAD
-    			add_location(p, file$b, 95, 1, 2691);
-=======
     			add_location(p, file$d, 95, 1, 2691);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -12017,11 +11081,7 @@ var app = (function () {
     			t0 = text("EXITO: ");
     			t1 = text(/*msgOk*/ ctx[6]);
     			set_style(p, "color", "green");
-<<<<<<< HEAD
-    			add_location(p, file$b, 98, 1, 2757);
-=======
     			add_location(p, file$d, 98, 1, 2757);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -12055,11 +11115,7 @@ var app = (function () {
     		c: function create() {
     			i = element("i");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-<<<<<<< HEAD
-    			add_location(i, file$b, 100, 54, 2863);
-=======
     			add_location(i, file$d, 100, 54, 2863);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -12141,17 +11197,10 @@ var app = (function () {
     			if (if_block1) if_block1.c();
     			t7 = space();
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-    			add_location(strong, file$b, 66, 53, 1834);
-    			set_style(h3, "text-align", "center");
-    			add_location(h3, file$b, 66, 2, 1783);
-    			add_location(main, file$b, 65, 1, 1773);
-=======
     			add_location(strong, file$d, 66, 53, 1834);
     			set_style(h3, "text-align", "center");
     			add_location(h3, file$d, 66, 2, 1783);
     			add_location(main, file$d, 65, 1, 1773);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12419,14 +11468,495 @@ var app = (function () {
     	}
     }
 
+    /* src\front\routesAPI\GraphRoutes.svelte generated by Svelte v3.21.0 */
+    const file$e = "src\\front\\routesAPI\\GraphRoutes.svelte";
+
+    // (84:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$4(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Volver");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$4.name,
+    		type: "slot",
+    		source: "(84:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$f(ctx) {
+    	let script0;
+    	let script0_src_value;
+    	let script1;
+    	let script1_src_value;
+    	let script2;
+    	let script2_src_value;
+    	let script3;
+    	let script3_src_value;
+    	let script4;
+    	let script4_src_value;
+    	let t0;
+    	let main;
+    	let h3;
+    	let t2;
+    	let t3;
+    	let figure;
+    	let div;
+    	let t4;
+    	let p;
+    	let current;
+    	let dispose;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$4] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			script0 = element("script");
+    			script1 = element("script");
+    			script2 = element("script");
+    			script3 = element("script");
+    			script4 = element("script");
+    			t0 = space();
+    			main = element("main");
+    			h3 = element("h3");
+    			h3.textContent = "Estadísticas de carriles bici";
+    			t2 = space();
+    			create_component(button.$$.fragment);
+    			t3 = space();
+    			figure = element("figure");
+    			div = element("div");
+    			t4 = space();
+    			p = element("p");
+    			p.textContent = "En la gráfica podemos observar el número de: carriles bici en redes metropolitanas, urbanas y resto.";
+    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$e, 72, 4, 2190);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/series-label.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$e, 73, 4, 2261);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$e, 74, 4, 2342);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$e, 75, 4, 2420);
+    			if (script4.src !== (script4_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script4, "src", script4_src_value);
+    			add_location(script4, file$e, 76, 4, 2500);
+    			add_location(h3, file$e, 81, 4, 2632);
+    			attr_dev(div, "id", "container");
+    			attr_dev(div, "class", "svelte-1s35res");
+    			add_location(div, file$e, 86, 8, 2796);
+    			attr_dev(p, "class", "highcharts-description");
+    			add_location(p, file$e, 87, 8, 2832);
+    			attr_dev(figure, "class", "highcharts-figure svelte-1s35res");
+    			add_location(figure, file$e, 85, 4, 2752);
+    			add_location(main, file$e, 79, 0, 2618);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor, remount) {
+    			append_dev(document.head, script0);
+    			append_dev(document.head, script1);
+    			append_dev(document.head, script2);
+    			append_dev(document.head, script3);
+    			append_dev(document.head, script4);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, main, anchor);
+    			append_dev(main, h3);
+    			append_dev(main, t2);
+    			mount_component(button, main, null);
+    			append_dev(main, t3);
+    			append_dev(main, figure);
+    			append_dev(figure, div);
+    			append_dev(figure, t4);
+    			append_dev(figure, p);
+    			current = true;
+    			if (remount) dispose();
+    			dispose = listen_dev(script4, "load", loadGraph$1, false, false, false);
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			detach_dev(script0);
+    			detach_dev(script1);
+    			detach_dev(script2);
+    			detach_dev(script3);
+    			detach_dev(script4);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(main);
+    			destroy_component(button);
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$f.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    async function loadGraph$1() {
+    	let MyData = [];
+    	let MyDataGraph = [];
+    	const resData = await fetch("/api/v2/evolution-of-cycling-routes");
+    	MyData = await resData.json();
+
+    	MyData.forEach(x => {
+    		MyDataGraph.push({
+    			name: x.province + " " + x.year,
+    			data: [parseInt(x.metropolitan), parseInt(x.urban), parseInt(x.rest)]
+    		});
+    	});
+
+    	Highcharts.chart("container", {
+    		chart: { type: "line" },
+    		title: { text: "Carriles Bici" },
+    		subtitle: {
+    			text: "Estadísticas de los carriles bici"
+    		},
+    		xAxis: {
+    			categories: ["Metropolitano", "Urbanos", "Resto"],
+    			crosshair: true
+    		},
+    		yAxis: { title: { text: "Números" } },
+    		tooltip: {
+    			headerFormat: "<span style=\"font-size:10px\">{point.key}</span><table>",
+    			pointFormat: "<tr><td style=\"color:{series.color};padding:0\">{series.name}: </td>" + "<td style=\"padding:0\"><b>{point.y}</b></td></tr>",
+    			footerFormat: "</table>",
+    			shared: true,
+    			useHTML: true
+    		},
+    		plotOptions: {
+    			column: { pointPadding: 0.2, borderWidth: 0 }
+    		},
+    		series: MyDataGraph,
+    		responsive: {
+    			condition: { maxWidth: 500 },
+    			chartOptions: {
+    				legend: {
+    					layout: "horizontal",
+    					align: "center",
+    					verticalAlign: "bottom"
+    				}
+    			}
+    		}
+    	});
+    }
+
+    function instance$f($$self, $$props, $$invalidate) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<GraphRoutes> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("GraphRoutes", $$slots, []);
+    	$$self.$capture_state = () => ({ pop, Button, loadGraph: loadGraph$1 });
+    	return [];
+    }
+
+    class GraphRoutes extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$f, create_fragment$f, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "GraphRoutes",
+    			options,
+    			id: create_fragment$f.name
+    		});
+    	}
+    }
+
+    /* src\front\routesAPI\GraphRoutesV2.svelte generated by Svelte v3.21.0 */
+    const file$f = "src\\front\\routesAPI\\GraphRoutesV2.svelte";
+
+    // (83:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$5(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Volver");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$5.name,
+    		type: "slot",
+    		source: "(83:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$g(ctx) {
+    	let script0;
+    	let script0_src_value;
+    	let script1;
+    	let script1_src_value;
+    	let script2;
+    	let script2_src_value;
+    	let script3;
+    	let script3_src_value;
+    	let t0;
+    	let main;
+    	let h3;
+    	let t2;
+    	let t3;
+    	let div;
+    	let current;
+    	let dispose;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$5] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			script0 = element("script");
+    			script1 = element("script");
+    			script2 = element("script");
+    			script3 = element("script");
+    			t0 = space();
+    			main = element("main");
+    			h3 = element("h3");
+    			h3.textContent = "Kilómetros de carriles bici en 2015";
+    			t2 = space();
+    			create_component(button.$$.fragment);
+    			t3 = space();
+    			div = element("div");
+    			if (script0.src !== (script0_src_value = "https://www.amcharts.com/lib/4/core.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$f, 64, 4, 1949);
+    			if (script1.src !== (script1_src_value = "https://www.amcharts.com/lib/4/charts.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$f, 65, 4, 2016);
+    			if (script2.src !== (script2_src_value = "https://www.amcharts.com/lib/4/themes/dataviz.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$f, 66, 4, 2085);
+    			if (script3.src !== (script3_src_value = "https://www.amcharts.com/lib/4/themes/animated.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$f, 67, 4, 2162);
+    			add_location(h3, file$f, 80, 4, 2371);
+    			attr_dev(div, "id", "chartdiv");
+    			attr_dev(div, "class", "svelte-1cy2rwj");
+    			add_location(div, file$f, 84, 4, 2493);
+    			add_location(main, file$f, 78, 0, 2359);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor, remount) {
+    			append_dev(document.head, script0);
+    			append_dev(document.head, script1);
+    			append_dev(document.head, script2);
+    			append_dev(document.head, script3);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, main, anchor);
+    			append_dev(main, h3);
+    			append_dev(main, t2);
+    			mount_component(button, main, null);
+    			append_dev(main, t3);
+    			append_dev(main, div);
+    			current = true;
+    			if (remount) dispose();
+    			dispose = listen_dev(script3, "load", loadGraph$2, false, false, false);
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			detach_dev(script0);
+    			detach_dev(script1);
+    			detach_dev(script2);
+    			detach_dev(script3);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(main);
+    			destroy_component(button);
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$g.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function loadData() {
+    	return "Ana";
+    }
+
+    async function loadGraph$2() {
+    	let MyData = [];
+
+    	//let MyDataGraphM = [];
+    	//let MyDataGraphL = [];
+    	let MyDataGraph = [];
+
+    	const resData = await fetch("/api/v2/evolution-of-cycling-routes");
+    	MyData = await resData.json();
+
+    	MyData.forEach(x => {
+    		if (x.year == 2015) {
+    			//MyDataGraphM.push(parseFloat(x.metropolitan));
+    			//MyDataGraphL.push(x.province);
+    			MyDataGraph.push({
+    				province: x.province + " " + x.year,
+    				kilometres: [parseInt(x.metropolitan)]
+    			});
+    		}
+    	});
+
+    	am4core.ready(function () {
+    		// Themes begin
+    		am4core.useTheme(am4themes_dataviz);
+
+    		am4core.useTheme(am4themes_animated);
+
+    		// Themes end
+    		// Create chart instance
+    		var chart = am4core.create("chartdiv", am4charts.PieChart);
+
+    		// Add data
+    		chart.data = MyDataGraph;
+
+    		// Set inner radius
+    		chart.innerRadius = am4core.percent(50);
+
+    		// Add and configure Series
+    		var pieSeries = chart.series.push(new am4charts.PieSeries());
+
+    		pieSeries.dataFields.value = "kilometres";
+    		pieSeries.dataFields.category = "province";
+    		pieSeries.slices.template.stroke = am4core.color("#fff");
+    		pieSeries.slices.template.strokeWidth = 2;
+    		pieSeries.slices.template.strokeOpacity = 1;
+
+    		// This creates initial animation
+    		pieSeries.hiddenState.properties.opacity = 1;
+
+    		pieSeries.hiddenState.properties.endAngle = -90;
+    		pieSeries.hiddenState.properties.startAngle = -90;
+    	});
+    }
+
+    function instance$g($$self, $$props, $$invalidate) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<GraphRoutesV2> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("GraphRoutesV2", $$slots, []);
+
+    	$$self.$capture_state = () => ({
+    		onMount,
+    		pop,
+    		Button,
+    		loadData,
+    		loadGraph: loadGraph$2
+    	});
+
+    	return [];
+    }
+
+    class GraphRoutesV2 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$g, create_fragment$g, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "GraphRoutesV2",
+    			options,
+    			id: create_fragment$g.name
+    		});
+    	}
+    }
+
     /* src\front\tourismAPI\TourismTable.svelte.html generated by Svelte v3.21.0 */
 
     const { console: console_1$4 } = globals;
-<<<<<<< HEAD
-    const file$c = "src\\front\\tourismAPI\\TourismTable.svelte.html";
-=======
-    const file$e = "src\\front\\tourismAPI\\TourismTable.svelte.html";
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    const file$g = "src\\front\\tourismAPI\\TourismTable.svelte.html";
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
@@ -12444,11 +11974,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Inicializar");
     			attr_dev(i, "class", "fas fa-spinner");
-<<<<<<< HEAD
-    			add_location(i, file$c, 161, 62, 5004);
-=======
-    			add_location(i, file$e, 161, 62, 5004);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(i, file$g, 161, 62, 5004);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -12482,11 +12008,7 @@ var app = (function () {
     			t = text(" Eliminar todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-<<<<<<< HEAD
-    			add_location(i, file$c, 162, 62, 5119);
-=======
-    			add_location(i, file$e, 162, 62, 5119);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(i, file$g, 162, 62, 5119);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -12593,11 +12115,7 @@ var app = (function () {
     			h3.textContent = "Añadir nuevo dato:";
     			t4 = space();
     			create_component(table1.$$.fragment);
-<<<<<<< HEAD
-    			add_location(h3, file$c, 243, 2, 7766);
-=======
-    			add_location(h3, file$e, 243, 2, 7766);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(h3, file$g, 243, 2, 7766);
     		},
     		m: function mount(target, anchor) {
     			mount_component(formgroup, target, anchor);
@@ -12717,41 +12235,22 @@ var app = (function () {
     			option0.selected = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-<<<<<<< HEAD
-    			add_location(option0, file$c, 176, 7, 5452);
+    			add_location(option0, file$g, 176, 7, 5452);
     			option1.__value = "province";
     			option1.value = option1.__value;
-    			add_location(option1, file$c, 177, 7, 5496);
+    			add_location(option1, file$g, 177, 7, 5496);
     			option2.__value = "year";
     			option2.value = option2.__value;
-    			add_location(option2, file$c, 178, 7, 5548);
+    			add_location(option2, file$g, 178, 7, 5548);
     			option3.__value = "traveller";
     			option3.value = option3.__value;
-    			add_location(option3, file$c, 179, 7, 5590);
+    			add_location(option3, file$g, 179, 7, 5590);
     			option4.__value = "overnightstay";
     			option4.value = option4.__value;
-    			add_location(option4, file$c, 180, 7, 5641);
+    			add_location(option4, file$g, 180, 7, 5641);
     			option5.__value = "averagestay";
     			option5.value = option5.__value;
-    			add_location(option5, file$c, 181, 7, 5701);
-=======
-    			add_location(option0, file$e, 176, 7, 5452);
-    			option1.__value = "province";
-    			option1.value = option1.__value;
-    			add_location(option1, file$e, 177, 7, 5496);
-    			option2.__value = "year";
-    			option2.value = option2.__value;
-    			add_location(option2, file$e, 178, 7, 5548);
-    			option3.__value = "traveller";
-    			option3.value = option3.__value;
-    			add_location(option3, file$e, 179, 7, 5590);
-    			option4.__value = "overnightstay";
-    			option4.value = option4.__value;
-    			add_location(option4, file$e, 180, 7, 5641);
-    			option5.__value = "averagestay";
-    			option5.value = option5.__value;
-    			add_location(option5, file$e, 181, 7, 5701);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(option5, file$g, 181, 7, 5701);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option0, anchor);
@@ -12828,41 +12327,22 @@ var app = (function () {
     			option0.selected = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-<<<<<<< HEAD
-    			add_location(option0, file$c, 194, 7, 6091);
+    			add_location(option0, file$g, 194, 7, 6091);
     			option1.__value = "province";
     			option1.value = option1.__value;
-    			add_location(option1, file$c, 195, 7, 6135);
+    			add_location(option1, file$g, 195, 7, 6135);
     			option2.__value = "year";
     			option2.value = option2.__value;
-    			add_location(option2, file$c, 196, 7, 6187);
+    			add_location(option2, file$g, 196, 7, 6187);
     			option3.__value = "traveller";
     			option3.value = option3.__value;
-    			add_location(option3, file$c, 197, 7, 6229);
+    			add_location(option3, file$g, 197, 7, 6229);
     			option4.__value = "overnightstay";
     			option4.value = option4.__value;
-    			add_location(option4, file$c, 198, 7, 6280);
+    			add_location(option4, file$g, 198, 7, 6280);
     			option5.__value = "averagestay";
     			option5.value = option5.__value;
-    			add_location(option5, file$c, 199, 7, 6340);
-=======
-    			add_location(option0, file$e, 194, 7, 6091);
-    			option1.__value = "province";
-    			option1.value = option1.__value;
-    			add_location(option1, file$e, 195, 7, 6135);
-    			option2.__value = "year";
-    			option2.value = option2.__value;
-    			add_location(option2, file$e, 196, 7, 6187);
-    			option3.__value = "traveller";
-    			option3.value = option3.__value;
-    			add_location(option3, file$e, 197, 7, 6229);
-    			option4.__value = "overnightstay";
-    			option4.value = option4.__value;
-    			add_location(option4, file$e, 198, 7, 6280);
-    			option5.__value = "averagestay";
-    			option5.value = option5.__value;
-    			add_location(option5, file$e, 199, 7, 6340);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(option5, file$g, 199, 7, 6340);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option0, anchor);
@@ -13029,31 +12509,17 @@ var app = (function () {
     			label3.textContent = "Valor:";
     			t10 = space();
     			create_component(input3.$$.fragment);
-<<<<<<< HEAD
-    			add_location(label0, file$c, 174, 6, 5332);
-    			add_location(td0, file$c, 173, 5, 5320);
-    			add_location(label1, file$c, 185, 6, 5799);
-    			add_location(td1, file$c, 184, 5, 5787);
-    			add_location(tr0, file$c, 172, 4, 5309);
-    			add_location(label2, file$c, 192, 6, 5971);
-    			add_location(td2, file$c, 191, 5, 5959);
-    			add_location(label3, file$c, 203, 6, 6438);
-    			add_location(td3, file$c, 202, 5, 6426);
-    			add_location(tr1, file$c, 190, 4, 5948);
-    			add_location(table, file$c, 171, 3, 5296);
-=======
-    			add_location(label0, file$e, 174, 6, 5332);
-    			add_location(td0, file$e, 173, 5, 5320);
-    			add_location(label1, file$e, 185, 6, 5799);
-    			add_location(td1, file$e, 184, 5, 5787);
-    			add_location(tr0, file$e, 172, 4, 5309);
-    			add_location(label2, file$e, 192, 6, 5971);
-    			add_location(td2, file$e, 191, 5, 5959);
-    			add_location(label3, file$e, 203, 6, 6438);
-    			add_location(td3, file$e, 202, 5, 6426);
-    			add_location(tr1, file$e, 190, 4, 5948);
-    			add_location(table, file$e, 171, 3, 5296);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(label0, file$g, 174, 6, 5332);
+    			add_location(td0, file$g, 173, 5, 5320);
+    			add_location(label1, file$g, 185, 6, 5799);
+    			add_location(td1, file$g, 184, 5, 5787);
+    			add_location(tr0, file$g, 172, 4, 5309);
+    			add_location(label2, file$g, 192, 6, 5971);
+    			add_location(td2, file$g, 191, 5, 5959);
+    			add_location(label3, file$g, 203, 6, 6438);
+    			add_location(td3, file$g, 202, 5, 6426);
+    			add_location(tr1, file$g, 190, 4, 5948);
+    			add_location(table, file$g, 171, 3, 5296);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, table, anchor);
@@ -13199,11 +12665,7 @@ var app = (function () {
     			t = text(" Eliminar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-<<<<<<< HEAD
-    			add_location(i, file$c, 238, 109, 7601);
-=======
-    			add_location(i, file$e, 238, 109, 7601);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(i, file$g, 238, 109, 7601);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -13292,25 +12754,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/rural-tourism-stats/" + /*tou*/ ctx[31].province + "/" + /*tou*/ ctx[31].year);
-<<<<<<< HEAD
-    			add_location(a, file$c, 232, 25, 7218);
-    			add_location(td0, file$c, 231, 6, 7187);
-    			add_location(td1, file$c, 234, 24, 7333);
-    			add_location(td2, file$c, 235, 24, 7378);
-    			add_location(td3, file$c, 236, 6, 7410);
-    			add_location(td4, file$c, 237, 24, 7464);
-    			add_location(td5, file$c, 238, 24, 7516);
-    			add_location(tr, file$c, 230, 20, 7175);
-=======
-    			add_location(a, file$e, 232, 25, 7218);
-    			add_location(td0, file$e, 231, 6, 7187);
-    			add_location(td1, file$e, 234, 24, 7333);
-    			add_location(td2, file$e, 235, 24, 7378);
-    			add_location(td3, file$e, 236, 6, 7410);
-    			add_location(td4, file$e, 237, 24, 7464);
-    			add_location(td5, file$e, 238, 24, 7516);
-    			add_location(tr, file$e, 230, 20, 7175);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(a, file$g, 232, 25, 7218);
+    			add_location(td0, file$g, 231, 6, 7187);
+    			add_location(td1, file$g, 234, 24, 7333);
+    			add_location(td2, file$g, 235, 24, 7378);
+    			add_location(td3, file$g, 236, 6, 7410);
+    			add_location(td4, file$g, 237, 24, 7464);
+    			add_location(td5, file$g, 238, 24, 7516);
+    			add_location(tr, file$g, 230, 20, 7175);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -13439,27 +12890,15 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-<<<<<<< HEAD
-    			add_location(th0, file$c, 220, 20, 6869);
-    			add_location(th1, file$c, 221, 17, 6906);
-    			add_location(th2, file$c, 222, 17, 6937);
-    			add_location(th3, file$c, 223, 17, 6972);
-    			add_location(th4, file$c, 224, 5, 7000);
-    			add_location(th5, file$c, 225, 5, 7030);
-    			add_location(tr, file$c, 219, 16, 6843);
-    			add_location(thead, file$c, 218, 12, 6818);
-    			add_location(tbody, file$c, 228, 12, 7106);
-=======
-    			add_location(th0, file$e, 220, 20, 6869);
-    			add_location(th1, file$e, 221, 17, 6906);
-    			add_location(th2, file$e, 222, 17, 6937);
-    			add_location(th3, file$e, 223, 17, 6972);
-    			add_location(th4, file$e, 224, 5, 7000);
-    			add_location(th5, file$e, 225, 5, 7030);
-    			add_location(tr, file$e, 219, 16, 6843);
-    			add_location(thead, file$e, 218, 12, 6818);
-    			add_location(tbody, file$e, 228, 12, 7106);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(th0, file$g, 220, 20, 6869);
+    			add_location(th1, file$g, 221, 17, 6906);
+    			add_location(th2, file$g, 222, 17, 6937);
+    			add_location(th3, file$g, 223, 17, 6972);
+    			add_location(th4, file$g, 224, 5, 7000);
+    			add_location(th5, file$g, 225, 5, 7030);
+    			add_location(tr, file$g, 219, 16, 6843);
+    			add_location(thead, file$g, 218, 12, 6818);
+    			add_location(tbody, file$g, 228, 12, 7106);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -13660,53 +13099,28 @@ var app = (function () {
     			strong5.textContent = "Acción:";
     			t16 = space();
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-    			add_location(strong0, file$c, 246, 8, 7857);
-    			add_location(input0, file$c, 246, 36, 7885);
-    			add_location(td0, file$c, 246, 4, 7853);
-    			add_location(strong1, file$c, 247, 8, 7942);
+    			add_location(strong0, file$g, 246, 8, 7857);
+    			add_location(input0, file$g, 246, 36, 7885);
+    			add_location(td0, file$g, 246, 4, 7853);
+    			add_location(strong1, file$g, 247, 8, 7942);
     			attr_dev(input1, "type", "number");
-    			add_location(input1, file$c, 247, 30, 7964);
-    			add_location(td1, file$c, 247, 4, 7938);
-    			add_location(strong2, file$c, 248, 8, 8031);
+    			add_location(input1, file$g, 247, 30, 7964);
+    			add_location(td1, file$g, 247, 4, 7938);
+    			add_location(strong2, file$g, 248, 8, 8031);
     			attr_dev(input2, "type", "number");
-    			add_location(input2, file$c, 248, 34, 8057);
-    			add_location(td2, file$c, 248, 4, 8027);
-    			add_location(strong3, file$c, 249, 8, 8129);
+    			add_location(input2, file$g, 248, 34, 8057);
+    			add_location(td2, file$g, 248, 4, 8027);
+    			add_location(strong3, file$g, 249, 8, 8129);
     			attr_dev(input3, "type", "number");
-    			add_location(input3, file$c, 249, 39, 8160);
-    			add_location(td3, file$c, 249, 4, 8125);
-    			add_location(strong4, file$c, 250, 8, 8236);
+    			add_location(input3, file$g, 249, 39, 8160);
+    			add_location(td3, file$g, 249, 4, 8125);
+    			add_location(strong4, file$g, 250, 8, 8236);
     			attr_dev(input4, "type", "number");
-    			add_location(input4, file$c, 250, 41, 8269);
-    			add_location(td4, file$c, 250, 4, 8232);
-    			add_location(strong5, file$c, 251, 8, 8343);
-    			add_location(td5, file$c, 251, 4, 8339);
-    			add_location(tr, file$c, 245, 3, 7843);
-=======
-    			add_location(strong0, file$e, 246, 8, 7857);
-    			add_location(input0, file$e, 246, 36, 7885);
-    			add_location(td0, file$e, 246, 4, 7853);
-    			add_location(strong1, file$e, 247, 8, 7942);
-    			attr_dev(input1, "type", "number");
-    			add_location(input1, file$e, 247, 30, 7964);
-    			add_location(td1, file$e, 247, 4, 7938);
-    			add_location(strong2, file$e, 248, 8, 8031);
-    			attr_dev(input2, "type", "number");
-    			add_location(input2, file$e, 248, 34, 8057);
-    			add_location(td2, file$e, 248, 4, 8027);
-    			add_location(strong3, file$e, 249, 8, 8129);
-    			attr_dev(input3, "type", "number");
-    			add_location(input3, file$e, 249, 39, 8160);
-    			add_location(td3, file$e, 249, 4, 8125);
-    			add_location(strong4, file$e, 250, 8, 8236);
-    			attr_dev(input4, "type", "number");
-    			add_location(input4, file$e, 250, 41, 8269);
-    			add_location(td4, file$e, 250, 4, 8232);
-    			add_location(strong5, file$e, 251, 8, 8343);
-    			add_location(td5, file$e, 251, 4, 8339);
-    			add_location(tr, file$e, 245, 3, 7843);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(input4, file$g, 250, 41, 8269);
+    			add_location(td4, file$g, 250, 4, 8232);
+    			add_location(strong5, file$g, 251, 8, 8343);
+    			add_location(td5, file$g, 251, 4, 8339);
+    			add_location(tr, file$g, 245, 3, 7843);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, tr, anchor);
@@ -13851,11 +13265,7 @@ var app = (function () {
     			p = element("p");
     			t = text(/*exitoMsg*/ ctx[7]);
     			set_style(p, "color", "green");
-<<<<<<< HEAD
-    			add_location(p, file$c, 257, 8, 8504);
-=======
-    			add_location(p, file$e, 257, 8, 8504);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(p, file$g, 257, 8, 8504);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -14346,7 +13756,7 @@ var app = (function () {
     }
 
     // (260:2) <Pagination ariaLabel="Cambiar de página">
-    function create_default_slot$4(ctx) {
+    function create_default_slot$6(ctx) {
     	let t0;
     	let t1;
     	let t2;
@@ -14513,7 +13923,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$4.name,
+    		id: create_default_slot$6.name,
     		type: "slot",
     		source: "(260:2) <Pagination ariaLabel=\\\"Cambiar de página\\\">",
     		ctx
@@ -14522,7 +13932,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$f(ctx) {
+    function create_fragment$h(ctx) {
     	let main;
     	let h2;
     	let i;
@@ -14577,7 +13987,7 @@ var app = (function () {
     	const pagination = new Pagination({
     			props: {
     				ariaLabel: "Cambiar de página",
-    				$$slots: { default: [create_default_slot$4] },
+    				$$slots: { default: [create_default_slot$6] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -14601,23 +14011,13 @@ var app = (function () {
     			t5 = space();
     			create_component(pagination.$$.fragment);
     			attr_dev(i, "class", "fas fa-suitcase");
-<<<<<<< HEAD
-    			add_location(i, file$c, 159, 34, 4835);
+    			add_location(i, file$g, 159, 34, 4835);
     			set_style(h2, "text-align", "center");
-    			add_location(h2, file$c, 159, 1, 4802);
+    			add_location(h2, file$g, 159, 1, 4802);
     			set_style(div, "text-align", "center");
     			set_style(div, "padding-bottom", "3%");
-    			add_location(div, file$c, 160, 2, 4889);
-    			add_location(main, file$c, 158, 0, 4793);
-=======
-    			add_location(i, file$e, 159, 34, 4835);
-    			set_style(h2, "text-align", "center");
-    			add_location(h2, file$e, 159, 1, 4802);
-    			set_style(div, "text-align", "center");
-    			set_style(div, "padding-bottom", "3%");
-    			add_location(div, file$e, 160, 2, 4889);
-    			add_location(main, file$e, 158, 0, 4793);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(div, file$g, 160, 2, 4889);
+    			add_location(main, file$g, 158, 0, 4793);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14721,7 +14121,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$f.name,
+    		id: create_fragment$h.name,
     		type: "component",
     		source: "",
     		ctx
@@ -14730,7 +14130,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$f($$self, $$props, $$invalidate) {
+    function instance$h($$self, $$props, $$invalidate) {
     	let tourism = [];
 
     	let newTourism = {
@@ -15011,13 +14411,13 @@ var app = (function () {
     class TourismTable_svelte extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$f, create_fragment$f, safe_not_equal, {}, [-1, -1]);
+    		init(this, options, instance$h, create_fragment$h, safe_not_equal, {}, [-1, -1]);
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "TourismTable_svelte",
     			options,
-    			id: create_fragment$f.name
+    			id: create_fragment$h.name
     		});
     	}
     }
@@ -15025,11 +14425,7 @@ var app = (function () {
     /* src\front\tourismAPI\EditTourism.svelte.html generated by Svelte v3.21.0 */
 
     const { console: console_1$5 } = globals;
-<<<<<<< HEAD
-    const file$d = "src\\front\\tourismAPI\\EditTourism.svelte.html";
-=======
-    const file$f = "src\\front\\tourismAPI\\EditTourism.svelte.html";
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    const file$h = "src\\front\\tourismAPI\\EditTourism.svelte.html";
 
     // (1:0) <script>      import {          onMount      }
     function create_catch_block$3(ctx) {
@@ -15225,53 +14621,28 @@ var app = (function () {
     			t18 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-    			add_location(th0, file$d, 85, 19, 2574);
-    			add_location(th1, file$d, 86, 17, 2611);
-    			add_location(th2, file$d, 87, 17, 2642);
-    			add_location(th3, file$d, 88, 17, 2677);
-    			add_location(th4, file$d, 89, 5, 2705);
-    			add_location(th5, file$d, 90, 5, 2735);
-    			add_location(tr0, file$d, 84, 16, 2549);
-    			add_location(thead, file$d, 83, 12, 2524);
-    			add_location(td0, file$d, 95, 20, 2860);
-    			add_location(td1, file$d, 96, 5, 2893);
+    			add_location(th0, file$h, 85, 19, 2574);
+    			add_location(th1, file$h, 86, 17, 2611);
+    			add_location(th2, file$h, 87, 17, 2642);
+    			add_location(th3, file$h, 88, 17, 2677);
+    			add_location(th4, file$h, 89, 5, 2705);
+    			add_location(th5, file$h, 90, 5, 2735);
+    			add_location(tr0, file$h, 84, 16, 2549);
+    			add_location(thead, file$h, 83, 12, 2524);
+    			add_location(td0, file$h, 95, 20, 2860);
+    			add_location(td1, file$h, 96, 5, 2893);
     			attr_dev(input0, "type", "number");
-    			add_location(input0, file$d, 97, 24, 2941);
-    			add_location(td2, file$d, 97, 20, 2937);
+    			add_location(input0, file$h, 97, 24, 2941);
+    			add_location(td2, file$h, 97, 20, 2937);
     			attr_dev(input1, "type", "number");
-    			add_location(input1, file$d, 98, 24, 3025);
-    			add_location(td3, file$d, 98, 20, 3021);
+    			add_location(input1, file$h, 98, 24, 3025);
+    			add_location(td3, file$h, 98, 20, 3021);
     			attr_dev(input2, "type", "number");
-    			add_location(input2, file$d, 99, 9, 3098);
-    			add_location(td4, file$d, 99, 5, 3094);
-    			add_location(td5, file$d, 100, 20, 3180);
-    			add_location(tr1, file$d, 94, 16, 2834);
-    			add_location(tbody, file$d, 93, 12, 2809);
-=======
-    			add_location(th0, file$f, 85, 19, 2574);
-    			add_location(th1, file$f, 86, 17, 2611);
-    			add_location(th2, file$f, 87, 17, 2642);
-    			add_location(th3, file$f, 88, 17, 2677);
-    			add_location(th4, file$f, 89, 5, 2705);
-    			add_location(th5, file$f, 90, 5, 2735);
-    			add_location(tr0, file$f, 84, 16, 2549);
-    			add_location(thead, file$f, 83, 12, 2524);
-    			add_location(td0, file$f, 95, 20, 2860);
-    			add_location(td1, file$f, 96, 5, 2893);
-    			attr_dev(input0, "type", "number");
-    			add_location(input0, file$f, 97, 24, 2941);
-    			add_location(td2, file$f, 97, 20, 2937);
-    			attr_dev(input1, "type", "number");
-    			add_location(input1, file$f, 98, 24, 3025);
-    			add_location(td3, file$f, 98, 20, 3021);
-    			attr_dev(input2, "type", "number");
-    			add_location(input2, file$f, 99, 9, 3098);
-    			add_location(td4, file$f, 99, 5, 3094);
-    			add_location(td5, file$f, 100, 20, 3180);
-    			add_location(tr1, file$f, 94, 16, 2834);
-    			add_location(tbody, file$f, 93, 12, 2809);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(input2, file$h, 99, 9, 3098);
+    			add_location(td4, file$h, 99, 5, 3094);
+    			add_location(td5, file$h, 100, 20, 3180);
+    			add_location(tr1, file$h, 94, 16, 2834);
+    			add_location(tbody, file$h, 93, 12, 2809);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -15412,11 +14783,7 @@ var app = (function () {
     			p = element("p");
     			t = text(/*exitoMsg*/ ctx[6]);
     			set_style(p, "color", "green");
-<<<<<<< HEAD
-    			add_location(p, file$d, 106, 8, 3370);
-=======
-    			add_location(p, file$f, 106, 8, 3370);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(p, file$h, 106, 8, 3370);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -15442,7 +14809,7 @@ var app = (function () {
     }
 
     // (109:4) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$5(ctx) {
+    function create_default_slot$7(ctx) {
     	let t;
 
     	const block = {
@@ -15459,7 +14826,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$5.name,
+    		id: create_default_slot$7.name,
     		type: "slot",
     		source: "(109:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
@@ -15468,7 +14835,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$g(ctx) {
+    function create_fragment$i(ctx) {
     	let main;
     	let h3;
     	let t0;
@@ -15502,7 +14869,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "secondary",
-    				$$slots: { default: [create_default_slot$5] },
+    				$$slots: { default: [create_default_slot$7] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -15525,15 +14892,9 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t6 = space();
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-    			add_location(strong, file$d, 78, 24, 2348);
-    			add_location(h3, file$d, 78, 4, 2328);
-    			add_location(main, file$d, 77, 0, 2316);
-=======
-    			add_location(strong, file$f, 78, 24, 2348);
-    			add_location(h3, file$f, 78, 4, 2328);
-    			add_location(main, file$f, 77, 0, 2316);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(strong, file$h, 78, 24, 2348);
+    			add_location(h3, file$h, 78, 4, 2328);
+    			add_location(main, file$h, 77, 0, 2316);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15616,7 +14977,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$g.name,
+    		id: create_fragment$i.name,
     		type: "component",
     		source: "",
     		ctx
@@ -15625,7 +14986,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$g($$self, $$props, $$invalidate) {
+    function instance$i($$self, $$props, $$invalidate) {
     	let { params = {} } = $$props;
     	let tourism = {};
     	let updatedProvince = "";
@@ -15761,13 +15122,13 @@ var app = (function () {
     class EditTourism_svelte extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$g, create_fragment$g, safe_not_equal, { params: 0 });
+    		init(this, options, instance$i, create_fragment$i, safe_not_equal, { params: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "EditTourism_svelte",
     			options,
-    			id: create_fragment$g.name
+    			id: create_fragment$i.name
     		});
     	}
 
@@ -15783,11 +15144,7 @@ var app = (function () {
     /* src\front\accidentsAPI\AccidentsTrafficsTable.svelte generated by Svelte v3.21.0 */
 
     const { console: console_1$6 } = globals;
-<<<<<<< HEAD
-    const file$e = "src\\front\\accidentsAPI\\AccidentsTrafficsTable.svelte";
-=======
-    const file$g = "src\\front\\accidentsAPI\\AccidentsTrafficsTable.svelte";
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    const file$i = "src\\front\\accidentsAPI\\AccidentsTrafficsTable.svelte";
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
@@ -15832,11 +15189,7 @@ var app = (function () {
     			p = element("p");
     			t = text(/*success*/ ctx[8]);
     			set_style(p, "color", "green");
-<<<<<<< HEAD
-    			add_location(p, file$e, 219, 8, 7662);
-=======
-    			add_location(p, file$g, 219, 8, 7662);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(p, file$i, 219, 8, 7662);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -16115,43 +15468,23 @@ var app = (function () {
     			t6 = space();
     			td2 = element("td");
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-    			add_location(label0, file$e, 278, 32, 10782);
-    			add_location(th0, file$e, 278, 28, 10778);
-    			add_location(label1, file$e, 279, 32, 10847);
-    			add_location(th1, file$e, 279, 28, 10843);
-    			add_location(th2, file$e, 280, 28, 10903);
-    			add_location(tr0, file$e, 277, 24, 10744);
-    			add_location(thead, file$e, 276, 20, 10711);
+    			add_location(label0, file$i, 278, 32, 10782);
+    			add_location(th0, file$i, 278, 28, 10778);
+    			add_location(label1, file$i, 279, 32, 10847);
+    			add_location(th1, file$i, 279, 28, 10843);
+    			add_location(th2, file$i, 280, 28, 10903);
+    			add_location(tr0, file$i, 277, 24, 10744);
+    			add_location(thead, file$i, 276, 20, 10711);
     			set_style(td0, "width", "25%");
-    			add_location(td0, file$e, 285, 28, 11062);
+    			add_location(td0, file$i, 285, 28, 11062);
     			set_style(td1, "width", "25%");
-    			add_location(td1, file$e, 295, 28, 11789);
+    			add_location(td1, file$i, 295, 28, 11789);
     			set_style(td2, "width", "25%");
-    			add_location(td2, file$e, 298, 28, 11986);
-    			add_location(tr1, file$e, 284, 24, 11028);
-    			add_location(tbody, file$e, 283, 20, 10995);
+    			add_location(td2, file$i, 298, 28, 11986);
+    			add_location(tr1, file$i, 284, 24, 11028);
+    			add_location(tbody, file$i, 283, 20, 10995);
     			set_style(table, "width", "75%");
-    			add_location(table, file$e, 275, 16, 10661);
-=======
-    			add_location(label0, file$g, 278, 32, 10782);
-    			add_location(th0, file$g, 278, 28, 10778);
-    			add_location(label1, file$g, 279, 32, 10847);
-    			add_location(th1, file$g, 279, 28, 10843);
-    			add_location(th2, file$g, 280, 28, 10903);
-    			add_location(tr0, file$g, 277, 24, 10744);
-    			add_location(thead, file$g, 276, 20, 10711);
-    			set_style(td0, "width", "25%");
-    			add_location(td0, file$g, 285, 28, 11062);
-    			set_style(td1, "width", "25%");
-    			add_location(td1, file$g, 295, 28, 11789);
-    			set_style(td2, "width", "25%");
-    			add_location(td2, file$g, 298, 28, 11986);
-    			add_location(tr1, file$g, 284, 24, 11028);
-    			add_location(tbody, file$g, 283, 20, 10995);
-    			set_style(table, "width", "75%");
-    			add_location(table, file$g, 275, 16, 10661);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(table, file$i, 275, 16, 10661);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, table, anchor);
@@ -16396,51 +15729,27 @@ var app = (function () {
     			tr2 = element("tr");
     			td4 = element("td");
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-    			add_location(label0, file$e, 232, 32, 8119);
-    			add_location(th0, file$e, 232, 28, 8115);
-    			add_location(label1, file$e, 233, 32, 8184);
-    			add_location(th1, file$e, 233, 28, 8180);
-    			add_location(label2, file$e, 234, 32, 8244);
-    			add_location(th2, file$e, 234, 28, 8240);
-    			add_location(label3, file$e, 235, 32, 8309);
-    			add_location(th3, file$e, 235, 28, 8305);
-    			add_location(tr0, file$e, 231, 24, 8081);
-    			add_location(thead, file$e, 230, 20, 8048);
-    			add_location(td0, file$e, 240, 28, 8485);
-    			add_location(td1, file$e, 250, 28, 9192);
-    			add_location(td2, file$e, 253, 28, 9369);
-    			add_location(td3, file$e, 263, 28, 10079);
-    			add_location(tr1, file$e, 239, 24, 8451);
+    			add_location(label0, file$i, 232, 32, 8119);
+    			add_location(th0, file$i, 232, 28, 8115);
+    			add_location(label1, file$i, 233, 32, 8184);
+    			add_location(th1, file$i, 233, 28, 8180);
+    			add_location(label2, file$i, 234, 32, 8244);
+    			add_location(th2, file$i, 234, 28, 8240);
+    			add_location(label3, file$i, 235, 32, 8309);
+    			add_location(th3, file$i, 235, 28, 8305);
+    			add_location(tr0, file$i, 231, 24, 8081);
+    			add_location(thead, file$i, 230, 20, 8048);
+    			add_location(td0, file$i, 240, 28, 8485);
+    			add_location(td1, file$i, 250, 28, 9192);
+    			add_location(td2, file$i, 253, 28, 9369);
+    			add_location(td3, file$i, 263, 28, 10079);
+    			add_location(tr1, file$i, 239, 24, 8451);
     			set_style(td4, "width", "25%");
-    			add_location(td4, file$e, 268, 28, 10320);
-    			add_location(tr2, file$e, 267, 24, 10286);
-    			add_location(tbody, file$e, 238, 20, 8418);
+    			add_location(td4, file$i, 268, 28, 10320);
+    			add_location(tr2, file$i, 267, 24, 10286);
+    			add_location(tbody, file$i, 238, 20, 8418);
     			set_style(table, "width", "100%");
-    			add_location(table, file$e, 229, 16, 7998);
-=======
-    			add_location(label0, file$g, 232, 32, 8119);
-    			add_location(th0, file$g, 232, 28, 8115);
-    			add_location(label1, file$g, 233, 32, 8184);
-    			add_location(th1, file$g, 233, 28, 8180);
-    			add_location(label2, file$g, 234, 32, 8244);
-    			add_location(th2, file$g, 234, 28, 8240);
-    			add_location(label3, file$g, 235, 32, 8309);
-    			add_location(th3, file$g, 235, 28, 8305);
-    			add_location(tr0, file$g, 231, 24, 8081);
-    			add_location(thead, file$g, 230, 20, 8048);
-    			add_location(td0, file$g, 240, 28, 8485);
-    			add_location(td1, file$g, 250, 28, 9192);
-    			add_location(td2, file$g, 253, 28, 9369);
-    			add_location(td3, file$g, 263, 28, 10079);
-    			add_location(tr1, file$g, 239, 24, 8451);
-    			set_style(td4, "width", "25%");
-    			add_location(td4, file$g, 268, 28, 10320);
-    			add_location(tr2, file$g, 267, 24, 10286);
-    			add_location(tbody, file$g, 238, 20, 8418);
-    			set_style(table, "width", "100%");
-    			add_location(table, file$g, 229, 16, 7998);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(table, file$i, 229, 16, 7998);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, table, anchor);
@@ -16605,41 +15914,22 @@ var app = (function () {
     			option0.selected = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-<<<<<<< HEAD
-    			add_location(option0, file$e, 287, 36, 11231);
+    			add_location(option0, file$i, 287, 36, 11231);
     			option1.__value = "province";
     			option1.value = option1.__value;
-    			add_location(option1, file$e, 288, 36, 11304);
+    			add_location(option1, file$i, 288, 36, 11304);
     			option2.__value = "year";
     			option2.value = option2.__value;
-    			add_location(option2, file$e, 289, 36, 11385);
+    			add_location(option2, file$i, 289, 36, 11385);
     			option3.__value = "trafficaccidentvictim";
     			option3.value = option3.__value;
-    			add_location(option3, file$e, 290, 36, 11456);
+    			add_location(option3, file$i, 290, 36, 11456);
     			option4.__value = "dead";
     			option4.value = option4.__value;
-    			add_location(option4, file$e, 291, 36, 11564);
+    			add_location(option4, file$i, 291, 36, 11564);
     			option5.__value = "injured";
     			option5.value = option5.__value;
-    			add_location(option5, file$e, 292, 36, 11642);
-=======
-    			add_location(option0, file$g, 287, 36, 11231);
-    			option1.__value = "province";
-    			option1.value = option1.__value;
-    			add_location(option1, file$g, 288, 36, 11304);
-    			option2.__value = "year";
-    			option2.value = option2.__value;
-    			add_location(option2, file$g, 289, 36, 11385);
-    			option3.__value = "trafficaccidentvictim";
-    			option3.value = option3.__value;
-    			add_location(option3, file$g, 290, 36, 11456);
-    			option4.__value = "dead";
-    			option4.value = option4.__value;
-    			add_location(option4, file$g, 291, 36, 11564);
-    			option5.__value = "injured";
-    			option5.value = option5.__value;
-    			add_location(option5, file$g, 292, 36, 11642);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(option5, file$i, 292, 36, 11642);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option0, anchor);
@@ -16743,41 +16033,22 @@ var app = (function () {
     			option0.selected = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-<<<<<<< HEAD
-    			add_location(option0, file$e, 242, 36, 8634);
+    			add_location(option0, file$i, 242, 36, 8634);
     			option1.__value = "province";
     			option1.value = option1.__value;
-    			add_location(option1, file$e, 243, 36, 8707);
+    			add_location(option1, file$i, 243, 36, 8707);
     			option2.__value = "year";
     			option2.value = option2.__value;
-    			add_location(option2, file$e, 244, 36, 8788);
+    			add_location(option2, file$i, 244, 36, 8788);
     			option3.__value = "trafficaccidentvictim";
     			option3.value = option3.__value;
-    			add_location(option3, file$e, 245, 36, 8859);
+    			add_location(option3, file$i, 245, 36, 8859);
     			option4.__value = "dead";
     			option4.value = option4.__value;
-    			add_location(option4, file$e, 246, 36, 8967);
+    			add_location(option4, file$i, 246, 36, 8967);
     			option5.__value = "injured";
     			option5.value = option5.__value;
-    			add_location(option5, file$e, 247, 36, 9045);
-=======
-    			add_location(option0, file$g, 242, 36, 8634);
-    			option1.__value = "province";
-    			option1.value = option1.__value;
-    			add_location(option1, file$g, 243, 36, 8707);
-    			option2.__value = "year";
-    			option2.value = option2.__value;
-    			add_location(option2, file$g, 244, 36, 8788);
-    			option3.__value = "trafficaccidentvictim";
-    			option3.value = option3.__value;
-    			add_location(option3, file$g, 245, 36, 8859);
-    			option4.__value = "dead";
-    			option4.value = option4.__value;
-    			add_location(option4, file$g, 246, 36, 8967);
-    			option5.__value = "injured";
-    			option5.value = option5.__value;
-    			add_location(option5, file$g, 247, 36, 9045);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(option5, file$i, 247, 36, 9045);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option0, anchor);
@@ -16854,41 +16125,22 @@ var app = (function () {
     			option0.selected = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-<<<<<<< HEAD
-    			add_location(option0, file$e, 255, 36, 9521);
+    			add_location(option0, file$i, 255, 36, 9521);
     			option1.__value = "province";
     			option1.value = option1.__value;
-    			add_location(option1, file$e, 256, 36, 9594);
+    			add_location(option1, file$i, 256, 36, 9594);
     			option2.__value = "year";
     			option2.value = option2.__value;
-    			add_location(option2, file$e, 257, 36, 9675);
+    			add_location(option2, file$i, 257, 36, 9675);
     			option3.__value = "trafficaccidentvictim";
     			option3.value = option3.__value;
-    			add_location(option3, file$e, 258, 36, 9746);
+    			add_location(option3, file$i, 258, 36, 9746);
     			option4.__value = "dead";
     			option4.value = option4.__value;
-    			add_location(option4, file$e, 259, 36, 9854);
+    			add_location(option4, file$i, 259, 36, 9854);
     			option5.__value = "injured";
     			option5.value = option5.__value;
-    			add_location(option5, file$e, 260, 36, 9932);
-=======
-    			add_location(option0, file$g, 255, 36, 9521);
-    			option1.__value = "province";
-    			option1.value = option1.__value;
-    			add_location(option1, file$g, 256, 36, 9594);
-    			option2.__value = "year";
-    			option2.value = option2.__value;
-    			add_location(option2, file$g, 257, 36, 9675);
-    			option3.__value = "trafficaccidentvictim";
-    			option3.value = option3.__value;
-    			add_location(option3, file$g, 258, 36, 9746);
-    			option4.__value = "dead";
-    			option4.value = option4.__value;
-    			add_location(option4, file$g, 259, 36, 9854);
-    			option5.__value = "injured";
-    			option5.value = option5.__value;
-    			add_location(option5, file$g, 260, 36, 9932);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(option5, file$i, 260, 36, 9932);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option0, anchor);
@@ -16991,19 +16243,11 @@ var app = (function () {
     			t2 = space();
     			if_block.c();
     			if_block_anchor = empty();
-<<<<<<< HEAD
-    			add_location(br0, file$e, 227, 12, 7848);
+    			add_location(br0, file$i, 227, 12, 7848);
     			attr_dev(input, "type", "checkbox");
-    			add_location(input, file$e, 227, 16, 7852);
-    			add_location(strong, file$e, 227, 63, 7899);
-    			add_location(br1, file$e, 227, 111, 7947);
-=======
-    			add_location(br0, file$g, 227, 12, 7848);
-    			attr_dev(input, "type", "checkbox");
-    			add_location(input, file$g, 227, 16, 7852);
-    			add_location(strong, file$g, 227, 63, 7899);
-    			add_location(br1, file$g, 227, 111, 7947);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(input, file$i, 227, 16, 7852);
+    			add_location(strong, file$i, 227, 63, 7899);
+    			add_location(br1, file$i, 227, 111, 7947);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, br0, anchor);
@@ -17119,11 +16363,7 @@ var app = (function () {
     			t = text(" Borrar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-<<<<<<< HEAD
-    			add_location(i, file$e, 334, 135, 13942);
-=======
-    			add_location(i, file$g, 334, 135, 13942);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(i, file$i, 334, 135, 13942);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -17212,25 +16452,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/traffic-accidents/" + /*trafficAccident*/ ctx[39].province + "/" + /*trafficAccident*/ ctx[39].year);
-<<<<<<< HEAD
-    			add_location(a, file$e, 329, 28, 13442);
-    			add_location(td0, file$e, 329, 24, 13438);
-    			add_location(td1, file$e, 330, 24, 13583);
-    			add_location(td2, file$e, 331, 24, 13640);
-    			add_location(td3, file$e, 332, 24, 13714);
-    			add_location(td4, file$e, 333, 24, 13771);
-    			add_location(td5, file$e, 334, 24, 13831);
-    			add_location(tr, file$e, 328, 20, 13408);
-=======
-    			add_location(a, file$g, 329, 28, 13442);
-    			add_location(td0, file$g, 329, 24, 13438);
-    			add_location(td1, file$g, 330, 24, 13583);
-    			add_location(td2, file$g, 331, 24, 13640);
-    			add_location(td3, file$g, 332, 24, 13714);
-    			add_location(td4, file$g, 333, 24, 13771);
-    			add_location(td5, file$g, 334, 24, 13831);
-    			add_location(tr, file$g, 328, 20, 13408);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(a, file$i, 329, 28, 13442);
+    			add_location(td0, file$i, 329, 24, 13438);
+    			add_location(td1, file$i, 330, 24, 13583);
+    			add_location(td2, file$i, 331, 24, 13640);
+    			add_location(td3, file$i, 332, 24, 13714);
+    			add_location(td4, file$i, 333, 24, 13771);
+    			add_location(td5, file$i, 334, 24, 13831);
+    			add_location(tr, file$i, 328, 20, 13408);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -17409,61 +16638,32 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-<<<<<<< HEAD
-    			add_location(th0, file$e, 310, 20, 12402);
-    			add_location(th1, file$e, 311, 20, 12442);
-    			add_location(th2, file$e, 312, 20, 12476);
-    			add_location(th3, file$e, 313, 20, 12530);
-    			add_location(th4, file$e, 314, 20, 12571);
-    			add_location(th5, file$e, 315, 20, 12609);
-    			add_location(tr0, file$e, 309, 16, 12376);
-    			add_location(thead, file$e, 308, 12, 12351);
+    			add_location(th0, file$i, 310, 20, 12402);
+    			add_location(th1, file$i, 311, 20, 12442);
+    			add_location(th2, file$i, 312, 20, 12476);
+    			add_location(th3, file$i, 313, 20, 12530);
+    			add_location(th4, file$i, 314, 20, 12571);
+    			add_location(th5, file$i, 315, 20, 12609);
+    			add_location(tr0, file$i, 309, 16, 12376);
+    			add_location(thead, file$i, 308, 12, 12351);
     			attr_dev(input0, "type", "text");
-    			add_location(input0, file$e, 320, 24, 12738);
-    			add_location(td0, file$e, 320, 20, 12734);
+    			add_location(input0, file$i, 320, 24, 12738);
+    			add_location(td0, file$i, 320, 20, 12734);
     			attr_dev(input1, "type", "number");
-    			add_location(input1, file$e, 321, 24, 12831);
-    			add_location(td1, file$e, 321, 20, 12827);
+    			add_location(input1, file$i, 321, 24, 12831);
+    			add_location(td1, file$i, 321, 20, 12827);
     			attr_dev(input2, "type", "number");
-    			add_location(input2, file$e, 322, 24, 12922);
-    			add_location(td2, file$e, 322, 20, 12918);
+    			add_location(input2, file$i, 322, 24, 12922);
+    			add_location(td2, file$i, 322, 20, 12918);
     			attr_dev(input3, "type", "number");
-    			add_location(input3, file$e, 323, 24, 13030);
-    			add_location(td3, file$e, 323, 20, 13026);
+    			add_location(input3, file$i, 323, 24, 13030);
+    			add_location(td3, file$i, 323, 20, 13026);
     			attr_dev(input4, "type", "number");
-    			add_location(input4, file$e, 324, 24, 13121);
-    			add_location(td4, file$e, 324, 20, 13117);
-    			add_location(td5, file$e, 325, 20, 13211);
-    			add_location(tr1, file$e, 319, 16, 12708);
-    			add_location(tbody, file$e, 318, 12, 12683);
-=======
-    			add_location(th0, file$g, 310, 20, 12402);
-    			add_location(th1, file$g, 311, 20, 12442);
-    			add_location(th2, file$g, 312, 20, 12476);
-    			add_location(th3, file$g, 313, 20, 12530);
-    			add_location(th4, file$g, 314, 20, 12571);
-    			add_location(th5, file$g, 315, 20, 12609);
-    			add_location(tr0, file$g, 309, 16, 12376);
-    			add_location(thead, file$g, 308, 12, 12351);
-    			attr_dev(input0, "type", "text");
-    			add_location(input0, file$g, 320, 24, 12738);
-    			add_location(td0, file$g, 320, 20, 12734);
-    			attr_dev(input1, "type", "number");
-    			add_location(input1, file$g, 321, 24, 12831);
-    			add_location(td1, file$g, 321, 20, 12827);
-    			attr_dev(input2, "type", "number");
-    			add_location(input2, file$g, 322, 24, 12922);
-    			add_location(td2, file$g, 322, 20, 12918);
-    			attr_dev(input3, "type", "number");
-    			add_location(input3, file$g, 323, 24, 13030);
-    			add_location(td3, file$g, 323, 20, 13026);
-    			attr_dev(input4, "type", "number");
-    			add_location(input4, file$g, 324, 24, 13121);
-    			add_location(td4, file$g, 324, 20, 13117);
-    			add_location(td5, file$g, 325, 20, 13211);
-    			add_location(tr1, file$g, 319, 16, 12708);
-    			add_location(tbody, file$g, 318, 12, 12683);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(input4, file$i, 324, 24, 13121);
+    			add_location(td4, file$i, 324, 20, 13117);
+    			add_location(td5, file$i, 325, 20, 13211);
+    			add_location(tr1, file$i, 319, 16, 12708);
+    			add_location(tbody, file$i, 318, 12, 12683);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -17629,11 +16829,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Inicializar");
     			attr_dev(i, "class", "fas fa-spinner");
-<<<<<<< HEAD
-    			add_location(i, file$e, 339, 89, 14192);
-=======
-    			add_location(i, file$g, 339, 89, 14192);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(i, file$i, 339, 89, 14192);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -17667,11 +16863,7 @@ var app = (function () {
     			t = text(" Borrar todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-<<<<<<< HEAD
-    			add_location(i, file$e, 340, 91, 14336);
-=======
-    			add_location(i, file$g, 340, 91, 14336);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(i, file$i, 340, 91, 14336);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -18187,7 +17379,7 @@ var app = (function () {
     }
 
     // (344:4) <Pagination ariaLabel="Cambiar de página" style="padding-left: 45%;">
-    function create_default_slot$6(ctx) {
+    function create_default_slot$8(ctx) {
     	let t0;
     	let t1;
     	let t2;
@@ -18354,7 +17546,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$6.name,
+    		id: create_default_slot$8.name,
     		type: "slot",
     		source: "(344:4) <Pagination ariaLabel=\\\"Cambiar de página\\\" style=\\\"padding-left: 45%;\\\">",
     		ctx
@@ -18363,7 +17555,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$h(ctx) {
+    function create_fragment$j(ctx) {
     	let main;
     	let h2;
     	let i;
@@ -18405,7 +17597,7 @@ var app = (function () {
     			props: {
     				ariaLabel: "Cambiar de página",
     				style: "padding-left: 45%;",
-    				$$slots: { default: [create_default_slot$6] },
+    				$$slots: { default: [create_default_slot$8] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -18426,10 +17618,10 @@ var app = (function () {
     			t4 = space();
     			create_component(pagination.$$.fragment);
     			attr_dev(i, "class", "fas fa-car");
-    			add_location(i, file$g, 215, 37, 7503);
+    			add_location(i, file$i, 215, 37, 7503);
     			set_style(h2, "text-align", "center");
-    			add_location(h2, file$g, 215, 4, 7470);
-    			add_location(main, file$g, 213, 0, 7456);
+    			add_location(h2, file$i, 215, 4, 7470);
+    			add_location(main, file$i, 213, 0, 7456);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -18521,7 +17713,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$h.name,
+    		id: create_fragment$j.name,
     		type: "component",
     		source: "",
     		ctx
@@ -18530,7 +17722,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$h($$self, $$props, $$invalidate) {
+    function instance$j($$self, $$props, $$invalidate) {
     	let trafficAccidents = [];
 
     	let newTrafficAccident = {
@@ -18900,13 +18092,13 @@ var app = (function () {
     class AccidentsTrafficsTable extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$h, create_fragment$h, safe_not_equal, {}, [-1, -1]);
+    		init(this, options, instance$j, create_fragment$j, safe_not_equal, {}, [-1, -1]);
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "AccidentsTrafficsTable",
     			options,
-    			id: create_fragment$h.name
+    			id: create_fragment$j.name
     		});
     	}
     }
@@ -18914,7 +18106,7 @@ var app = (function () {
     /* src\front\accidentsAPI\EditAccidentsTraffics.svelte generated by Svelte v3.21.0 */
 
     const { console: console_1$7 } = globals;
-    const file$h = "src\\front\\accidentsAPI\\EditAccidentsTraffics.svelte";
+    const file$j = "src\\front\\accidentsAPI\\EditAccidentsTraffics.svelte";
 
     // (83:4) {#if successMsg}
     function create_if_block$b(ctx) {
@@ -18926,7 +18118,7 @@ var app = (function () {
     			p = element("p");
     			t = text(/*success*/ ctx[6]);
     			set_style(p, "color", "green");
-    			add_location(p, file$h, 83, 8, 3019);
+    			add_location(p, file$j, 83, 8, 3019);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -19006,7 +18198,7 @@ var app = (function () {
 
     	const table = new Table({
     			props: {
-    				$$slots: { default: [create_default_slot$7] },
+    				$$slots: { default: [create_default_slot$9] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -19082,7 +18274,7 @@ var app = (function () {
     }
 
     // (94:8) <Table>
-    function create_default_slot$7(ctx) {
+    function create_default_slot$9(ctx) {
     	let thead;
     	let tr0;
     	let th0;
@@ -19171,28 +18363,28 @@ var app = (function () {
     			t18 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$h, 96, 20, 3420);
-    			add_location(th1, file$h, 97, 20, 3460);
-    			add_location(th2, file$h, 98, 20, 3494);
-    			add_location(th3, file$h, 99, 20, 3558);
-    			add_location(th4, file$h, 100, 20, 3596);
-    			add_location(th5, file$h, 101, 20, 3634);
-    			add_location(tr0, file$h, 95, 16, 3394);
-    			add_location(thead, file$h, 94, 12, 3369);
-    			add_location(td0, file$h, 106, 20, 3759);
-    			add_location(td1, file$h, 107, 20, 3806);
+    			add_location(th0, file$j, 96, 20, 3420);
+    			add_location(th1, file$j, 97, 20, 3460);
+    			add_location(th2, file$j, 98, 20, 3494);
+    			add_location(th3, file$j, 99, 20, 3558);
+    			add_location(th4, file$j, 100, 20, 3596);
+    			add_location(th5, file$j, 101, 20, 3634);
+    			add_location(tr0, file$j, 95, 16, 3394);
+    			add_location(thead, file$j, 94, 12, 3369);
+    			add_location(td0, file$j, 106, 20, 3759);
+    			add_location(td1, file$j, 107, 20, 3806);
     			attr_dev(input0, "type", "number");
-    			add_location(input0, file$h, 108, 24, 3853);
-    			add_location(td2, file$h, 108, 20, 3849);
+    			add_location(input0, file$j, 108, 24, 3853);
+    			add_location(td2, file$j, 108, 20, 3849);
     			attr_dev(input1, "type", "number");
-    			add_location(input1, file$h, 109, 24, 3948);
-    			add_location(td3, file$h, 109, 20, 3944);
+    			add_location(input1, file$j, 109, 24, 3948);
+    			add_location(td3, file$j, 109, 20, 3944);
     			attr_dev(input2, "type", "number");
-    			add_location(input2, file$h, 110, 24, 4026);
-    			add_location(td4, file$h, 110, 20, 4022);
-    			add_location(td5, file$h, 111, 20, 4103);
-    			add_location(tr1, file$h, 105, 16, 3733);
-    			add_location(tbody, file$h, 104, 12, 3708);
+    			add_location(input2, file$j, 110, 24, 4026);
+    			add_location(td4, file$j, 110, 20, 4022);
+    			add_location(td5, file$j, 111, 20, 4103);
+    			add_location(tr1, file$j, 105, 16, 3733);
+    			add_location(tbody, file$j, 104, 12, 3708);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -19284,7 +18476,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$7.name,
+    		id: create_default_slot$9.name,
     		type: "slot",
     		source: "(94:8) <Table>",
     		ctx
@@ -19323,7 +18515,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$i(ctx) {
+    function create_fragment$k(ctx) {
     	let main;
     	let t0;
     	let h3;
@@ -19380,19 +18572,9 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t6 = space();
     			info.block.c();
-<<<<<<< HEAD
-    			t4 = space();
-    			create_component(pagination.$$.fragment);
-    			attr_dev(i, "class", "fas fa-car");
-    			add_location(i, file$e, 215, 37, 7503);
-    			set_style(h2, "text-align", "center");
-    			add_location(h2, file$e, 215, 4, 7470);
-    			add_location(main, file$e, 213, 0, 7456);
-=======
-    			add_location(strong, file$h, 86, 25, 3097);
-    			add_location(h3, file$h, 86, 4, 3076);
-    			add_location(main, file$h, 81, 0, 2981);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(strong, file$j, 86, 25, 3097);
+    			add_location(h3, file$j, 86, 4, 3076);
+    			add_location(main, file$j, 81, 0, 2981);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -19476,7 +18658,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$i.name,
+    		id: create_fragment$k.name,
     		type: "component",
     		source: "",
     		ctx
@@ -19485,7 +18667,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$i($$self, $$props, $$invalidate) {
+    function instance$k($$self, $$props, $$invalidate) {
     	let { params = {} } = $$props;
     	let trafficAccident = {};
     	let updateProvince = "";
@@ -19638,82 +18820,19 @@ var app = (function () {
     class EditAccidentsTraffics extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$i, create_fragment$i, safe_not_equal, { params: 0 });
+    		init(this, options, instance$k, create_fragment$k, safe_not_equal, { params: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "EditAccidentsTraffics",
     			options,
-    			id: create_fragment$i.name
+    			id: create_fragment$k.name
     		});
     	}
-<<<<<<< HEAD
-    }
-
-    /* src\front\accidentsAPI\EditAccidentsTraffics.svelte generated by Svelte v3.21.0 */
-
-    const { console: console_1$7 } = globals;
-    const file$f = "src\\front\\accidentsAPI\\EditAccidentsTraffics.svelte";
-
-    // (83:4) {#if successMsg}
-    function create_if_block$b(ctx) {
-    	let p;
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			t = text(/*success*/ ctx[6]);
-    			set_style(p, "color", "green");
-    			add_location(p, file$f, 83, 8, 3018);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-    			append_dev(p, t);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*success*/ 64) set_data_dev(t, /*success*/ ctx[6]);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block$b.name,
-    		type: "if",
-    		source: "(83:4) {#if successMsg}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (1:0) <script>      import {          onMount      }
-    function create_catch_block$5(ctx) {
-    	const block = {
-    		c: noop,
-    		m: noop,
-    		p: noop,
-    		i: noop,
-    		o: noop,
-    		d: noop
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_catch_block$5.name,
-    		type: "catch",
-    		source: "(1:0) <script>      import {          onMount      }",
-    		ctx
-    	});
-=======
 
     	get params() {
     		throw new Error("<EditAccidentsTraffics>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     	set params(value) {
     		throw new Error("<EditAccidentsTraffics>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
@@ -19721,10 +18840,10 @@ var app = (function () {
     }
 
     /* src\front\accidentsAPI\GraphAccidents.svelte generated by Svelte v3.21.0 */
-    const file$i = "src\\front\\accidentsAPI\\GraphAccidents.svelte";
+    const file$k = "src\\front\\accidentsAPI\\GraphAccidents.svelte";
 
     // (86:4) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$8(ctx) {
+    function create_default_slot$a(ctx) {
     	let t;
 
     	const block = {
@@ -19741,7 +18860,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$8.name,
+    		id: create_default_slot$a.name,
     		type: "slot",
     		source: "(86:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
@@ -19750,7 +18869,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$j(ctx) {
+    function create_fragment$l(ctx) {
     	let script0;
     	let script0_src_value;
     	let script1;
@@ -19777,7 +18896,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "secondary",
-    				$$slots: { default: [create_default_slot$8] },
+    				$$slots: { default: [create_default_slot$a] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -19798,30 +18917,6 @@ var app = (function () {
     			t1 = text(" Estadísticas de accidentes de tráfico");
     			t2 = space();
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-    			add_location(th0, file$f, 94, 20, 3345);
-    			add_location(th1, file$f, 95, 20, 3385);
-    			add_location(th2, file$f, 96, 20, 3419);
-    			add_location(th3, file$f, 97, 20, 3483);
-    			add_location(th4, file$f, 98, 20, 3521);
-    			add_location(th5, file$f, 99, 20, 3559);
-    			add_location(tr0, file$f, 93, 16, 3319);
-    			add_location(thead, file$f, 92, 12, 3294);
-    			add_location(td0, file$f, 104, 20, 3684);
-    			add_location(td1, file$f, 105, 20, 3731);
-    			attr_dev(input0, "type", "number");
-    			add_location(input0, file$f, 106, 24, 3778);
-    			add_location(td2, file$f, 106, 20, 3774);
-    			attr_dev(input1, "type", "number");
-    			add_location(input1, file$f, 107, 24, 3873);
-    			add_location(td3, file$f, 107, 20, 3869);
-    			attr_dev(input2, "type", "number");
-    			add_location(input2, file$f, 108, 24, 3951);
-    			add_location(td4, file$f, 108, 20, 3947);
-    			add_location(td5, file$f, 109, 20, 4028);
-    			add_location(tr1, file$f, 103, 16, 3658);
-    			add_location(tbody, file$f, 102, 12, 3633);
-=======
     			t3 = space();
     			figure = element("figure");
     			div = element("div");
@@ -19829,29 +18924,28 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "En la gráfica podemos observar el número de: accidentes de tráfico con víctimas, fallecidos y heridos en accidentes de tráfico.";
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$i, 75, 4, 2258);
+    			add_location(script0, file$k, 75, 4, 2258);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$i, 76, 4, 2329);
+    			add_location(script1, file$k, 76, 4, 2329);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$i, 77, 4, 2407);
+    			add_location(script2, file$k, 77, 4, 2407);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$i, 78, 4, 2487);
+    			add_location(script3, file$k, 78, 4, 2487);
     			attr_dev(i, "class", "fas fa-car");
-    			add_location(i, file$i, 83, 37, 2652);
+    			add_location(i, file$k, 83, 37, 2652);
     			set_style(h2, "text-align", "center");
-    			add_location(h2, file$i, 83, 4, 2619);
+    			add_location(h2, file$k, 83, 4, 2619);
     			attr_dev(div, "id", "container");
     			attr_dev(div, "class", "svelte-1s35res");
-    			add_location(div, file$i, 88, 8, 2847);
+    			add_location(div, file$k, 88, 8, 2847);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$i, 89, 8, 2883);
+    			add_location(p, file$k, 89, 8, 2883);
     			attr_dev(figure, "class", "highcharts-figure svelte-1s35res");
-    			add_location(figure, file$i, 87, 4, 2803);
-    			add_location(main, file$i, 81, 0, 2605);
+    			add_location(figure, file$k, 87, 4, 2803);
+    			add_location(main, file$k, 81, 0, 2605);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     		},
     		m: function mount(target, anchor, remount) {
     			append_dev(document.head, script0);
@@ -19872,7 +18966,7 @@ var app = (function () {
     			append_dev(figure, p);
     			current = true;
     			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$1, false, false, false);
+    			dispose = listen_dev(script3, "load", loadGraph$3, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -19906,7 +19000,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$j.name,
+    		id: create_fragment$l.name,
     		type: "component",
     		source: "",
     		ctx
@@ -19915,17 +19009,11 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-    // (89:28)           Loading Traffic Accident...      {:then trafficAccident}
-    function create_pending_block$5(ctx) {
-    	let t;
-=======
-    async function loadGraph$1() {
+    async function loadGraph$3() {
     	let MyData = [];
     	let MyDataGraph = [];
     	const resData = await fetch("/api/v2/traffic-accidents");
     	MyData = await resData.json();
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
 
     	MyData.forEach(x => {
     		MyDataGraph.push({
@@ -19970,47 +19058,38 @@ var app = (function () {
     	});
     }
 
-<<<<<<< HEAD
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_pending_block$5.name,
-    		type: "pending",
-    		source: "(89:28)           Loading Traffic Accident...      {:then trafficAccident}",
-    		ctx
-=======
-    function instance$j($$self, $$props, $$invalidate) {
+    function instance$l($$self, $$props, $$invalidate) {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<GraphAccidents> was created with unknown prop '${key}'`);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("GraphAccidents", $$slots, []);
-    	$$self.$capture_state = () => ({ pop, Button, loadGraph: loadGraph$1 });
+    	$$self.$capture_state = () => ({ pop, Button, loadGraph: loadGraph$3 });
     	return [];
     }
 
     class GraphAccidents extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$j, create_fragment$j, safe_not_equal, {});
+    		init(this, options, instance$l, create_fragment$l, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "GraphAccidents",
     			options,
-    			id: create_fragment$j.name
+    			id: create_fragment$l.name
     		});
     	}
     }
 
     /* src\front\accidentsAPI\GraphAccidentsV2.svelte generated by Svelte v3.21.0 */
-    const file$j = "src\\front\\accidentsAPI\\GraphAccidentsV2.svelte";
+    const file$l = "src\\front\\accidentsAPI\\GraphAccidentsV2.svelte";
 
     // (12:4) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$9(ctx) {
+    function create_default_slot$b(ctx) {
     	let t;
 
     	const block = {
@@ -20027,7 +19106,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$9.name,
+    		id: create_default_slot$b.name,
     		type: "slot",
     		source: "(12:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
@@ -20036,7 +19115,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$k(ctx) {
+    function create_fragment$m(ctx) {
     	let main;
     	let h2;
     	let i;
@@ -20048,7 +19127,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "secondary",
-    				$$slots: { default: [create_default_slot$9] },
+    				$$slots: { default: [create_default_slot$b] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -20064,17 +19143,11 @@ var app = (function () {
     			t0 = text(" Número de accidentes de trafico con victimas por provincias en 2018");
     			t1 = space();
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-    			add_location(strong, file$f, 86, 25, 3096);
-    			add_location(h3, file$f, 86, 4, 3075);
-    			add_location(main, file$f, 81, 0, 2980);
-=======
     			attr_dev(i, "class", "fas fa-car");
-    			add_location(i, file$j, 9, 37, 187);
+    			add_location(i, file$l, 9, 37, 187);
     			set_style(h2, "text-align", "center");
-    			add_location(h2, file$j, 9, 4, 154);
-    			add_location(main, file$j, 8, 0, 142);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(h2, file$l, 9, 4, 154);
+    			add_location(main, file$l, 8, 0, 142);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20114,7 +19187,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$k.name,
+    		id: create_fragment$m.name,
     		type: "component",
     		source: "",
     		ctx
@@ -20123,7 +19196,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$k($$self, $$props, $$invalidate) {
+    function instance$m($$self, $$props, $$invalidate) {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -20139,25 +19212,21 @@ var app = (function () {
     class GraphAccidentsV2 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$k, create_fragment$k, safe_not_equal, {});
+    		init(this, options, instance$m, create_fragment$m, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "GraphAccidentsV2",
     			options,
-    			id: create_fragment$k.name
+    			id: create_fragment$m.name
     		});
     	}
     }
 
     /* src\front\App.svelte generated by Svelte v3.21.0 */
-<<<<<<< HEAD
-    const file$g = "src\\front\\App.svelte";
-=======
-    const file$k = "src\\front\\App.svelte";
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    const file$m = "src\\front\\App.svelte";
 
-    function create_fragment$l(ctx) {
+    function create_fragment$n(ctx) {
     	let main;
     	let current;
 
@@ -20170,11 +19239,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			create_component(router.$$.fragment);
-<<<<<<< HEAD
-    			add_location(main, file$g, 30, 0, 1070);
-=======
-    			add_location(main, file$k, 38, 0, 1467);
->>>>>>> 3b7e74d1b86a15cefdd4f9ca388f731a996426c2
+    			add_location(main, file$m, 43, 0, 1708);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20202,7 +19267,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$l.name,
+    		id: create_fragment$n.name,
     		type: "component",
     		source: "",
     		ctx
@@ -20211,13 +19276,15 @@ var app = (function () {
     	return block;
     }
 
-    function instance$l($$self, $$props, $$invalidate) {
+    function instance$n($$self, $$props, $$invalidate) {
     	const routes = {
     		"/": Home,
     		"/analytics": Analytics,
     		"/integrations": Integrations,
     		"/evolution-of-cycling-routes": CyclingRoutesTable,
     		"/evolution-of-cycling-routes/:province/:year": EditCyclingRoute,
+    		"/evolution-of-cycling-routes/graph": GraphRoutes,
+    		"/evolution-of-cycling-routes/graph-v2": GraphRoutesV2,
     		"/rural-tourism-stats": TourismTable_svelte,
     		"/rural-tourism-stats/:tourismProvince/:tourismYear": EditTourism_svelte,
     		"/traffic-accidents": AccidentsTrafficsTable,
@@ -20244,6 +19311,8 @@ var app = (function () {
     		Analytics,
     		CyclingRoutesTable,
     		EditCyclingRoute,
+    		GraphRoutes,
+    		GraphRoutesV2,
     		TourismTable: TourismTable_svelte,
     		EditTourism: EditTourism_svelte,
     		AccidentsTrafficsTable,
@@ -20259,13 +19328,13 @@ var app = (function () {
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$l, create_fragment$l, safe_not_equal, {});
+    		init(this, options, instance$n, create_fragment$n, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "App",
     			options,
-    			id: create_fragment$l.name
+    			id: create_fragment$n.name
     		});
     	}
     }
