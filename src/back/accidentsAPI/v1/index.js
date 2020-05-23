@@ -18,7 +18,7 @@ module.exports = function(app){
 		{"province": "cordoba", "year": 2015, "trafficaccidentvictim": 1491, "dead": 26, "injured": 2043},
 		{"province": "granada", "year": 2015, "trafficaccidentvictim": 1251, "dead": 43, "injured": 1831},
 		{"province": "huelva", "year": 2015, "trafficaccidentvictim": 721, "dead": 23, "injured": 1134},
-		{"province": "jaen", "year": 2015, "trafficaccidentvictim": 10023, "dead": 23, "injured": 1541},
+		{"province": "jaen", "year": 2015, "trafficaccidentvictim": 1023, "dead": 23, "injured": 1541},
 		{"province": "malaga", "year": 2015, "trafficaccidentvictim": 2514, "dead": 46, "injured": 3543},
 		{"province": "sevilla", "year": 2015, "trafficaccidentvictim": 5371, "dead": 43, "injured": 7963}
 	];

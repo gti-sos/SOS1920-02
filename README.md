@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/gti-sos/SOS1920-02.svg?branch=master)](https://travis-ci.org/gti-sos/SOS1920-02)
+
 ## SOS1920-02
 
 - **Team**
@@ -6,7 +8,8 @@
   - [Marta Verdugo Martinez](https://github.com/martaverdugo6)
 - **Project description**: Repositorio grupo 02
 - **Repository**: [gti-sos/SOS1920-02](https://github.com/gti-sos/SOS1920-02)
-- **URL**: [http://sos1920-02.herokuapp.com](http://sos1920-02.herokuapp.com)
+- **URL Heroku**: [http://sos1920-02.herokuapp.com](http://sos1920-02.herokuapp.com)
+- **URL Azure**: [https://sos1920-02.azurewebsites.net](https://sos1920-02.azurewebsites.net/)
 -  **APIs**:
     - [https://sos1920-02.herokuapp.com/api/v1/evolution-of-cycling-routes](https://documenter.getpostman.com/view/10637431/SzezcrsS) (developed by [Ana Fraire Gonzalez](https://github.com/anafraire))
     - [https://sos1920-02.herokuapp.com/api/v2/evolution-of-cycling-routes](https://documenter.getpostman.com/view/10637431/Szmcaz3h) (developed by [Ana Fraire Gonzalez](https://github.com/anafraire))
