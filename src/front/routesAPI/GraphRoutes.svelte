@@ -1,37 +1,34 @@
 <script>
 
-    import {
-        pop
-    } from "svelte-spa-router";
-
+    import {pop} from "svelte-spa-router";
     import Button from "sveltestrap/src/Button.svelte";
     
     async function loadGraph() {
-
         let MyData = [];
         let MyDataGraph = [];
 
-        const resData = await fetch("/api/v2/traffic-accidents");
+        const resData = await fetch("/api/v2/evolution-of-cycling-routes");
         MyData = await resData.json();
         MyData.forEach( (x) => {
-            MyDataGraph.push({name: x.province + " " + x.year, data: [parseInt(x.trafficaccidentvictim), parseInt(x.dead), parseInt(x.injured)]});
+            MyDataGraph.push({name: x.province + " " + x.year, data: [parseInt(x.metropolitan), parseInt(x.urban), parseInt(x.rest)]});
         });
 
         Highcharts.chart('container', {
             chart: {
-                type: 'column',
+                type: 'line'
             },
             title: {
-                text: 'Accidentes de Tráfico'
+                text: 'Carriles Bici'
             },
             subtitle: {
-                text: 'Estadísticas de los accidentes de tráfico 2015'
+                text: 'Estadísticas de los carriles bici'
             },
+            
             xAxis: {
                 categories: [
-                    'Accidentes con víctimas',
-                    'Fallecidos',
-                    'Heridos'
+                    'Metropolitano',
+                    'Urbanos',
+                    'Resto'
                 ],
                 crosshair: true
             },
@@ -74,6 +71,7 @@
 
 <svelte:head>
     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js" on:load="{loadGraph}"></script>
@@ -81,14 +79,14 @@
 
 <main>
 
-    <h3>Estadísticas de accidentes de tráfico</h3>
+    <h3>Estadísticas de carriles bici</h3>
 
     <Button outline color="secondary" on:click="{pop}">Volver</Button>
 
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
-            En la gráfica podemos observar el número de: accidentes de tráfico con víctimas, fallecidos y heridos en accidentes de tráfico.
+            En la gráfica podemos observar el número de: carriles bici en redes metropolitanas, urbanas y resto.
         </p>
     </figure>
 
