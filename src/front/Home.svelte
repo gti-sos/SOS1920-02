@@ -45,7 +45,7 @@
 		<button type="button" class="btn btn-warning" onclick="window.location.href='#/rural-tourism-stats/graph-v2'" style="width: 25%;"> Estadísticas Turismo Rural</button>
 		<button type="button" class="btn btn-danger" onclick="window.location.href='#/traffic-accidents/graph-v2'" style="width: 25%;">Gráfica Accidentes</button><br><br>
 		<button type="button" class="btn btn-primary" onclick="window.location.href='#/analytics'" style="margin-left: 6.75%; width: 25%;">Analysis</button>
-		<button type="button" class="btn btn-danger" onclick="window.location.href='#/integrations'" style="width: 25%;">Integraciones</button>
+		<button type="button" class="btn btn-warning" onclick="window.location.href='#/integrations'" style="width: 25%;">Integraciones</button>
 		<br>
 		</div>
 		
