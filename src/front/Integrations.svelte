@@ -1,7 +1,14 @@
 <script>
+    import {
+        pop
+    } from "svelte-spa-router";
 
+    import Button from "sveltestrap/src/Button.svelte";
 </script>
 
 <main>
-    <h3>Integracion de APIs</h3>
+    <h2 style="text-align: center;">Integracion de APIs</h2>
+
+    <Button outline color="secondary" on:click="{pop}">Volver</Button>
+
 </main>

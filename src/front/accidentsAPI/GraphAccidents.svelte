@@ -14,7 +14,7 @@
         const resData = await fetch("/api/v2/traffic-accidents");
         MyData = await resData.json();
         MyData.forEach( (x) => {
-            MyDataGraph.push({name: x.province + " " + x.year, data: [parseInt(x.trafficaccidentvictim), parseInt(x.dead), parseInt(x.injured)]});
+            MyDataGraph.push({name: x.province + " " + x.year, data: [parseInt(x.trafficaccidentvictim), parseInt(x.dead), parseInt(x.injured)], pointPlacement: 'on'});
         });
 
         Highcharts.chart('container', {
@@ -81,7 +81,7 @@
 
 <main>
 
-    <h3>Estadísticas de accidentes de tráfico</h3>
+    <h2 style="text-align: center;"> <i class="fas fa-car"></i> Estadísticas de accidentes de tráfico</h2>
 
     <Button outline color="secondary" on:click="{pop}">Volver</Button>
 

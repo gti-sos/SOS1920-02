@@ -7,13 +7,31 @@
     
     async function loadGraph() {
 
-        let MyData = [];
+        let MyDataA = [];
+        let MyDataC = [];
+        let MyDataT = [];
         let MyDataGraph = [];
 
-        const resData = await fetch("/api/v2/traffic-accidents");
-        MyData = await resData.json();
-        MyData.forEach( (x) => {
-            MyDataGraph.push({name: x.province + " " + x.year, data: [parseInt(x.trafficaccidentvictim), parseInt(x.dead), parseInt(x.injured)]});
+        const resDataA = await fetch("/api/v2/traffic-accidents");
+        MyDataA = await resDataA.json();
+        const resDataC = await fetch("/api/v2/evolution-of-cycling-routes");
+        MyDataC = await resDataC.json();
+        const resDataT = await fetch("/api/v2/rural-tourism-stats");
+        MyDataT = await resDataT.json();
+        MyDataA.forEach( (x) => {
+            MyDataC.forEach( (y) => {
+                MyDataT.forEach( (z) => {
+                    if (x.province == y.province && x.province == z.province && x.year == y.year && x.year == z.year) {
+                        MyDataGraph.push({
+                            name: x.province + " " + x.year, data: [
+                                parseInt(x.trafficaccidentvictim), parseInt(x.dead), parseInt(x.injured),
+                                parseFloat(y.metropolitan), parseFloat(y.urban), parseFloat(y.rest),
+                                parseFloat(z.traveller), parseFloat(z.overnightstay), parseFloat(z.averagestay)
+                            ], pointPlacement: 'on'});
+
+                    }
+                })
+            });
         });
 
         Highcharts.chart('container', {
@@ -22,18 +40,26 @@
                 type: 'line'
             },
             accessibility: {
-                description: 'A spiderweb chart compares the allocated budget against actual spending within an organization. The spider chart has six spokes. Each spoke represents one of the 6 departments within the organization: sales, marketing, development, customer support, information technology and administration. The chart is interactive, and each data point is displayed upon hovering. The chart clearly shows that 4 of the 6 departments have overspent their budget with Marketing responsible for the greatest overspend of $20,000. The allocated budget and actual spending data points for each department are as follows: Sales. Budget equals $43,000; spending equals $50,000. Marketing. Budget equals $19,000; spending equals $39,000. Development. Budget equals $60,000; spending equals $42,000. Customer support. Budget equals $35,000; spending equals $31,000. Information technology. Budget equals $17,000; spending equals $26,000. Administration. Budget equals $10,000; spending equals $14,000.'
+                description: ''
             },
             title: {
-                text: 'Budget vs spending',
+                text: '',
                 x: -80
             },
             pane: {
-                size: '80%'
+                size: '100%'
             },
             xAxis: {
-                categories: ['Sales', 'Marketing', 'Development', 'Customer Support',
-                    'Information Technology', 'Administration'],
+                categories: ['Accidentes con víctimas',
+                    'Fallecidos',
+                    'Heridos',
+                    'Metropolitano',
+                    'Urbano',
+                    'Resto',
+                    'Viajero',
+                    'Pernoctación',
+                    'Estancia media'
+                ],
                 tickmarkPlacement: 'on',
                 lineWidth: 0
             },
@@ -51,15 +77,7 @@
                 verticalAlign: 'middle',
                 layout: 'vertical'
             },
-            series: [{
-                name: 'Allocated Budget',
-                data: [43000, 19000, 60000, 35000, 17000, 10000, 43000],
-                pointPlacement: 'on'
-            }, {
-                name: 'Actual Spending',
-                data: [50000, 39000, 42000, 31000, 26000, 14000, 50000, 39000],
-                pointPlacement: 'on'
-            }],
+            series: MyDataGraph,
             responsive: {
                 rules: [{
                     condition: {
@@ -93,7 +111,9 @@
 </svelte:head>
 
 <main>
-    <h3>Analisis de todos los datos de los miembros de SOS1920-02</h3>
+    <h2 style="text-align: center;">Analisis de todos los datos de los miembros de SOS1920-02</h2>
+
+    <Button outline color="secondary" on:click="{pop}">Volver</Button>
 
     <figure class="highcharts-figure">
         <div id="container"></div>
@@ -106,8 +126,8 @@
 
 <style>
     .highcharts-figure, .highcharts-data-table table {
-        min-width: 320px;
-        max-width: 700px;
+        min-width: 95%;
+        max-width: 100%;
         margin: 1em auto;
     }
 
@@ -118,7 +138,8 @@
         margin: 10px auto;
         text-align: center;
         width: 100%;
-        max-width: 500px;
+        max-width: 800px;
+        min-height: 800px;
     }
     .highcharts-data-table caption {
         padding: 1em 0;
