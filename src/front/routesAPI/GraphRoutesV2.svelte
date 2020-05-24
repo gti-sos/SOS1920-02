@@ -1,20 +1,12 @@
 <script>
     import {onMount} from "svelte";
     import {pop} from "svelte-spa-router";
-
     import Button from "sveltestrap/src/Button.svelte";
-
-    function loadData() {
-        return "Ana";
-    }
 
     async function loadGraph() {
 
         let MyData = [];
-        //let MyDataGraphM = [];
-        //let MyDataGraphL = [];
         let MyDataGraph = [];
-
 
         const resData = await fetch("/api/v2/evolution-of-cycling-routes");
         MyData = await resData.json();
@@ -36,7 +28,6 @@
             // Create chart instance
             var chart = am4core.create("chartdiv", am4charts.PieChart);
             
-
             // Add data
             chart.data = MyDataGraph;
 
@@ -58,14 +49,12 @@
 
             });
     }
-
+    
+    loadGraph();
 </script>
 
 <svelte:head>    
-    <script src="https://www.amcharts.com/lib/4/core.js"></script>
-    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/dataviz.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/animated.js" on:load="{loadGraph}"></script>
+
 </svelte:head>
 
 <style>
