@@ -119,12 +119,12 @@
 
     }
 
+    loadGraph();
+
 </script>
 
 <svelte:head>
-    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
-    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/mapdata/countries/es/es-all.js" on:load="{loadGraph}"></script>
+
 </svelte:head>
 
 <main>

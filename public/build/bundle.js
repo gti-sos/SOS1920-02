@@ -3120,12 +3120,6 @@ var app = (function () {
     }
 
     function create_fragment$5(ctx) {
-    	let script0;
-    	let script0_src_value;
-    	let script1;
-    	let script1_src_value;
-    	let script2;
-    	let script2_src_value;
     	let t0;
     	let main;
     	let h2;
@@ -3133,7 +3127,6 @@ var app = (function () {
     	let t3;
     	let div;
     	let current;
-    	let dispose;
 
     	const button = new Button({
     			props: {
@@ -3149,9 +3142,6 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			script0 = element("script");
-    			script1 = element("script");
-    			script2 = element("script");
     			t0 = space();
     			main = element("main");
     			h2 = element("h2");
@@ -3160,26 +3150,17 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t3 = space();
     			div = element("div");
-    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/maps/highmaps.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$4, 124, 4, 7933);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/maps/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$4, 125, 4, 8007);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/mapdata/countries/es/es-all.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$4, 126, 4, 8090);
     			set_style(h2, "text-align", "center");
-    			add_location(h2, file$4, 130, 4, 8226);
+    			add_location(h2, file$4, 130, 4, 7972);
     			attr_dev(div, "id", "container");
     			attr_dev(div, "class", "svelte-1784zby");
-    			add_location(div, file$4, 134, 4, 8402);
-    			add_location(main, file$4, 129, 0, 8214);
+    			add_location(div, file$4, 134, 4, 8148);
+    			add_location(main, file$4, 129, 0, 7960);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-    		m: function mount(target, anchor, remount) {
-    			append_dev(document.head, script0);
-    			append_dev(document.head, script1);
-    			append_dev(document.head, script2);
+    		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, h2);
@@ -3188,8 +3169,6 @@ var app = (function () {
     			append_dev(main, t3);
     			append_dev(main, div);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script2, "load", loadGraph, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -3210,13 +3189,9 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			detach_dev(script0);
-    			detach_dev(script1);
-    			detach_dev(script2);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
     		}
     	};
 
@@ -3373,9 +3348,7 @@ var app = (function () {
 
     	Highcharts.mapChart("container", {
     		chart: { backgroundColor: null },
-    		title: {
-    			text: "Víctimas de accidentes de trafico"
-    		},
+    		title: { text: "Relacion entre los datos" },
     		mapNavigation: {
     			enabled: true,
     			buttonOptions: { verticalAlign: "bottom" }
@@ -3402,6 +3375,7 @@ var app = (function () {
     }
 
     function instance$5($$self, $$props, $$invalidate) {
+    	loadGraph();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -11831,7 +11805,6 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t3 = space();
     			div = element("div");
-<<<<<<< HEAD
     			attr_dev(i, "class", "fas fa-bicycle");
     			add_location(i, file$f, 69, 37, 1989);
     			set_style(h3, "text-align", "center");
@@ -11840,24 +11813,6 @@ var app = (function () {
     			attr_dev(div, "class", "svelte-1cy2rwj");
     			add_location(div, file$f, 73, 4, 2145);
     			add_location(main, file$f, 67, 0, 1944);
-=======
-    			if (script0.src !== (script0_src_value = "https://www.amcharts.com/lib/4/core.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$f, 64, 4, 2013);
-    			if (script1.src !== (script1_src_value = "https://www.amcharts.com/lib/4/charts.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$f, 65, 4, 2081);
-    			if (script2.src !== (script2_src_value = "https://www.amcharts.com/lib/4/themes/dataviz.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$f, 66, 4, 2151);
-    			if (script3.src !== (script3_src_value = "https://www.amcharts.com/lib/4/themes/animated.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$f, 67, 4, 2229);
-    			attr_dev(i, "class", "fas fa-bicycle");
-    			add_location(i, file$f, 80, 37, 2484);
-    			set_style(h3, "text-align", "center");
-    			add_location(h3, file$f, 80, 4, 2451);
-    			attr_dev(div, "id", "chartdiv");
-    			attr_dev(div, "class", "svelte-1nk55td");
-    			add_location(div, file$f, 84, 4, 2644);
-    			add_location(main, file$f, 78, 0, 2437);
->>>>>>> e61cb90614a04a65bb15167d44e2cea9e3b9e38d
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

@@ -18,7 +18,13 @@
 	<script src="https://www.amcharts.com/lib/4/core.js" defer></script>
     <script src="https://www.amcharts.com/lib/4/charts.js" defer></script>
     <script src="https://www.amcharts.com/lib/4/themes/dataviz.js" defer></script>
-    <script src="https://www.amcharts.com/lib/4/themes/animated.js" defer on:load="{loadGraph}"></script>
+	<script src="https://www.amcharts.com/lib/4/themes/animated.js" defer on:load="{loadGraph}"></script>
+	
+	<!-- Mapa -->
+
+	<script src="https://code.highcharts.com/maps/highmaps.js" defer></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js" defer></script>
+    <script src="https://code.highcharts.com/mapdata/countries/es/es-all.js" defer on:load="{loadGraph}"></script>
 
 	<script defer src='/build/bundle.js'></script>
 </head>
