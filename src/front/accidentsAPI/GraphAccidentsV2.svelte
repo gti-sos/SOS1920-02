@@ -35,11 +35,7 @@
         Highcharts.mapChart('container', {
 
             title: {
-                text: 'Showing only non-null areas'
-            },
-
-            subtitle: {
-                text: 'The <em>allAreas</em> option is false'
+                text: 'Víctimas de accidentes de trafico'
             },
 
             mapNavigation: {
@@ -58,7 +54,7 @@
                 mapData: Highcharts.maps['countries/es/es-all'],
                 joinBy: 'hc-key',
                 allAreas: false,
-                name: 'Random data',
+                name: 'Número de víctimas',
                 states: {
                     hover: {
                         color: '#a4edba'
