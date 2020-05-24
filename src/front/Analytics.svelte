@@ -76,6 +76,10 @@
 
         Highcharts.mapChart('container', {
 
+            chart: {
+                backgroundColor: null,
+            },
+
             title: {
                 text: 'Víctimas de accidentes de trafico'
             },
