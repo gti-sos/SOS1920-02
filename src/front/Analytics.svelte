@@ -97,6 +97,7 @@
                 joinBy: 'hc-key',
                 allAreas: false,
                 name: 'Número de víctimas',
+                //name: 'Carriles Bici',
                 dataLabels: {
                     enabled: true,
                     format: '{point.name}'
