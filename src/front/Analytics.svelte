@@ -81,7 +81,7 @@
             },
 
             title: {
-                text: 'Víctimas de accidentes de trafico'
+                text: 'Relacion entre los datos'
             },
 
             mapNavigation: {
