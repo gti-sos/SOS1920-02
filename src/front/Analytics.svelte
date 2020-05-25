@@ -101,7 +101,7 @@
                 dataLabels: {
                     enabled: true,
                     format: '{point.name}'
-                }
+                },
             }],
 
             responsive: {  
