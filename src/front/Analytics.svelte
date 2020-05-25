@@ -170,55 +170,9 @@
             });
         });
 
-<<<<<<< HEAD
-        Highcharts.mapChart('container', {
-
-            chart: {
-                backgroundColor: null,
-            },
-
-            title: {
-                text: 'Relacion entre los datos'
-            },
-
-            mapNavigation: {
-                enabled: true,
-                buttonOptions: {
-                    verticalAlign: 'bottom'
-                }
-            },
-
-            series: [{
-                data: MyDataGraph,
-                mapData: Highcharts.maps['countries/es/es-all'],
-                joinBy: 'hc-key',
-                allAreas: false,
-                name: 'Número de víctimas',
-                //name: 'Carriles Bici',
-                dataLabels: {
-                    enabled: true,
-                    format: '{point.name}'
-                },
-            }],
-
-            responsive: {  
-                rules: [{  
-                    condition: {  
-                    maxWidth: 500  
-                    },  
-                    chartOptions: {  
-                    legend: {  
-                        enabled: false  
-                    }  
-                    }  
-                }]  
-                }
-        });
-=======
         am4core.useTheme(am4themes_kelly);
         am4core.useTheme(am4themes_animated);
         // Themes end
->>>>>>> 6fb9a26e84811c6cb01db9da4eb66c2e522cefe5
 
         var chart = am4core.create("chartdiv", am4plugins_forceDirected.ForceDirectedTree);
         var networkSeries = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries())

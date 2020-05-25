@@ -3177,19 +3177,11 @@ var app = (function () {
     			if (script4.src !== (script4_src_value = "https://www.amcharts.com/lib/4/themes/animated.js")) attr_dev(script4, "src", script4_src_value);
     			add_location(script4, file$4, 227, 4, 13272);
     			set_style(h2, "text-align", "center");
-<<<<<<< HEAD
-    			add_location(h2, file$4, 131, 4, 8015);
-    			attr_dev(div, "id", "container");
-    			attr_dev(div, "class", "svelte-1784zby");
-    			add_location(div, file$4, 135, 4, 8191);
-    			add_location(main, file$4, 130, 0, 8003);
-=======
     			add_location(h2, file$4, 231, 4, 13400);
     			attr_dev(div, "id", "chartdiv");
     			attr_dev(div, "class", "svelte-rs1e41");
     			add_location(div, file$4, 235, 4, 13576);
     			add_location(main, file$4, 230, 0, 13388);
->>>>>>> 6fb9a26e84811c6cb01db9da4eb66c2e522cefe5
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -19751,29 +19743,13 @@ var app = (function () {
     			if (script2.src !== (script2_src_value = "https://www.amcharts.com/lib/4/themes/animated.js")) attr_dev(script2, "src", script2_src_value);
     			add_location(script2, file$n, 147, 4, 6744);
     			attr_dev(i, "class", "fas fa-car");
-<<<<<<< HEAD
     			add_location(i, file$n, 151, 37, 6904);
-=======
-<<<<<<< HEAD
-    			add_location(i, file$n, 14, 37, 227);
-    			set_style(h2, "text-align", "center");
-    			add_location(h2, file$n, 14, 4, 194);
-    			add_location(main, file$n, 13, 0, 182);
-=======
-    			add_location(i, file$n, 129, 37, 4793);
->>>>>>> 0c8073e5ea52ae76c64860bceb4c48d9f3477b48
     			set_style(h2, "text-align", "center");
     			add_location(h2, file$n, 151, 4, 6871);
     			attr_dev(div, "id", "chartdiv");
     			attr_dev(div, "class", "svelte-ptjbse");
-<<<<<<< HEAD
     			add_location(div, file$n, 155, 4, 7085);
     			add_location(main, file$n, 150, 0, 6859);
-=======
-    			add_location(div, file$n, 133, 4, 4974);
-    			add_location(main, file$n, 128, 0, 4748);
->>>>>>> 6fb9a26e84811c6cb01db9da4eb66c2e522cefe5
->>>>>>> 0c8073e5ea52ae76c64860bceb4c48d9f3477b48
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
