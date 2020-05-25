@@ -13,8 +13,30 @@
         const resData = await fetch("/api/v2/traffic-accidents");
         MyData = await resData.json();
         MyData.forEach( (x) => {
-            if (x.year == 2018) {
-                MyDataGraph.push({"name": x.province, "steps": parseInt(x.trafficaccidentvictim)});
+            if (x.year == 2018 && x.province == "almeria") {
+                MyDataGraph.push({"name": x.province, "steps": parseInt(x.trafficaccidentvictim),
+                "href": "https://66.media.tumblr.com/067683afc39e468b30ad5da843be5b4a/tumblr_inline_pjh5t9eId61ubzx1d_1280.jpg"});
+            } else if (x.year == 2018 && x.province == "cadiz") {
+                MyDataGraph.push({"name": x.province, "steps": parseInt(x.trafficaccidentvictim),
+                "href": "https://upload.wikimedia.org/wikipedia/commons/2/2d/La_Caleta%2C_Balneario.jpg"});
+            } else if (x.year == 2018 && x.province == "cordoba") {
+                MyDataGraph.push({"name": x.province, "steps": parseInt(x.trafficaccidentvictim),
+                "href": "https://imagenes.20minutos.es/files/image_656_370/uploads/imagenes/2013/04/13/27485.jpg"});
+            } else if (x.year == 2018 && x.province == "granada") {
+                MyDataGraph.push({"name": x.province, "steps": parseInt(x.trafficaccidentvictim),
+                "href": "https://cdn1.guias-viajar.com/wp-content/uploads/2018/05/granada-alhambra-patio-leones-003.jpg"});
+            } else if (x.year == 2018 && x.province == "huelva") {
+                MyDataGraph.push({"name": x.province, "steps": parseInt(x.trafficaccidentvictim),
+                "href": "https://media-cdn.tripadvisor.com/media/photo-s/12/cd/19/41/monumento-a-colon.jpg"});
+            } else if (x.year == 2018 && x.province == "jaen") {
+                MyDataGraph.push({"name": x.province, "steps": parseInt(x.trafficaccidentvictim),
+                "href": "https://i.blogs.es/2b1904/castillo-d-jaen/1366_2000.jpg"});
+            } else if (x.year == 2018 && x.province == "malaga") {
+                MyDataGraph.push({"name": x.province, "steps": parseInt(x.trafficaccidentvictim),
+                "href": "https://i.pinimg.com/originals/7c/db/80/7cdb80a7003f7c4af12539d35111ae42.jpg"});
+            } else if (x.year == 2018 && x.province == "sevilla") {
+                MyDataGraph.push({"name": x.province, "steps": parseInt(x.trafficaccidentvictim),
+                "href": "https://sevillando.net/wp-content/uploads/2019/04/catedral-y-giralda-Sevilla.jpeg"});                
             }
         });
 
