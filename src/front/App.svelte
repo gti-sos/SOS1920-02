@@ -12,6 +12,7 @@ import Analytics from './Analytics.svelte';
 // API MARTA
 	import TourismTable from './tourismAPI/TourismTable.svelte.html';
 	import EditTourism from './tourismAPI/EditTourism.svelte.html';
+	import GraphTourism  from './tourismAPI/GraphTourism.svelte.html';
 // API JOSE FRANCISCO
 	import AccidentsTrafficsTable from './accidentsAPI/AccidentsTrafficsTable.svelte';
 	import EditAccidentsTraffics from './accidentsAPI/EditAccidentsTraffics.svelte';
@@ -30,6 +31,7 @@ import Analytics from './Analytics.svelte';
 		
 		"/rural-tourism-stats": TourismTable,
 		"/rural-tourism-stats/:tourismProvince/:tourismYear": EditTourism,
+		"/rural-tourism-stats/graph": GraphTourism,
 
 		"/traffic-accidents": AccidentsTrafficsTable,
 		"/traffic-accidents/:accidentProcince/:accidentYear": EditAccidentsTraffics,
