@@ -198,22 +198,22 @@
         hoverState.properties.strokeOpacity = 1;
 
         networkSeries.nodes.template.events.on("over", function(event) {
-        event.target.dataItem.childLinks.each(function(link) {
-            link.isHover = true;
-        })
-        if (event.target.dataItem.parentLink) {
-            event.target.dataItem.parentLink.isHover = true;
-        }
+            event.target.dataItem.childLinks.each(function(link) {
+                link.isHover = true;
+            })
+            if (event.target.dataItem.parentLink) {
+                event.target.dataItem.parentLink.isHover = true;
+            }
 
         })
 
         networkSeries.nodes.template.events.on("out", function(event) {
-        event.target.dataItem.childLinks.each(function(link) {
-            link.isHover = false;
-        })
-        if (event.target.dataItem.parentLink) {
-            event.target.dataItem.parentLink.isHover = false;
-        }
+            event.target.dataItem.childLinks.each(function(link) {
+                link.isHover = false;
+            })
+            if (event.target.dataItem.parentLink) {
+                event.target.dataItem.parentLink.isHover = false;
+            }
         })
 
     }
