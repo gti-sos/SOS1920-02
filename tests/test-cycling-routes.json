@@ -1,0 +1,859 @@
+{
+	"info": {
+		"_postman_id": "ad26b55a-a211-484d-9757-187e4abdf790",
+		"name": "sos1920/evolution-of-cycling-routes/v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get routes load init data I 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "110a8e0f-7647-451c-8b2c-49b41c57a4b0",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/loadInitialData",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get routes 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8c810315-544a-4c8b-b7df-14ed149418f8",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"There are more than 1 contact\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf.above(1);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get routes/province/year 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6f25e1e2-9400-4111-9bae-4e4a90c44423",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"It return a route\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.property(\"province\");",
+							"});",
+							"",
+							"pm.test(\"It return a route\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.property(\"year\");",
+							"});",
+							"",
+							"pm.test(\"Payload must be valid and have a body\", function () { ",
+							"    pm.response.to.be.withBody; // body tiene que exitir",
+							"    pm.response.to.be.json; // además que sea un JSON válido",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/sevilla/2015",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes",
+						"sevilla",
+						"2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get routes /4 primeros",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "92f12378-0954-4bc1-ba64-9166e5d16c86",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes?limit=4&offset=0",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "4"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get routes /province",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c9289899-cb15-444c-b720-d4ae00fd52f4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes?province=sevilla",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes"
+					],
+					"query": [
+						{
+							"key": "province",
+							"value": "sevilla"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get routes /2 del medio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e904416e-c170-450e-9087-90f48e71d6da",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes?limit=3&offset=3",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "3"
+						},
+						{
+							"key": "offset",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get routes /4 ultimos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fea4e449-8f5c-4e30-bfa9-f68c529dbc51",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes?limit=4&offset=4",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "4"
+						},
+						{
+							"key": "offset",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post routes 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a52dd490-026f-40f1-b680-48a6dd0d2511",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([201,400]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\"province\": \"badajoz\",\r\n\t\"year\": 2015,\r\n\t\"metropolitan\": 146.2,\r\n\t\"urban\": 165.7,\r\n\t\"rest\": 3.7\t\t\t\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post routes  ERROR 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f943b273-17b1-4471-b940-7db17e8db65d",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\"province\": \"caceres\",\r\n\t\"metropolitan\": 146.2,\r\n\t\"urban\": 165.7,\r\n\t\"rest\": 3.7\t\t\t\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post routes  ERROR 409",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "833ea6b4-6f8a-4e87-adcf-dca2002466eb",
+						"exec": [
+							"pm.test(\"Status code is 409\", function () {",
+							"    pm.response.to.have.status(409);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"province\": \"cadiz\",\r\n\t\"year\": 2015,\r\n\t\"metropolitan\": 195.6,\r\n\t\"urban\": 9.6,\r\n\t\"rest\": 2.8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post routes/province/year 405",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "22f73914-13a5-474a-a122-58c6f6b4ffcc",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\"province\": \"badajoz\",\r\n\t\"year\": 2015,\r\n\t\"metropolitan\": 146.2,\r\n\t\"urban\": 165.7,\r\n\t\"rest\": 3.7\t\t\t\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/badajoz/2015",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes",
+						"badajoz",
+						"2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put routes/province/year 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f41b8d13-7dfb-4179-9308-de44c6f64ff0",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\"province\": \"badajoz\",\r\n\t\"year\": 2015,\r\n\t\"metropolitan\": 146.2,\r\n\t\"urban\": 165.7,\r\n\t\"rest\": 1000\t\t\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/badajoz/2015",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes",
+						"badajoz",
+						"2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put routes/province/year ERROR 409",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3ee892da-61fd-4346-a576-6f5f193b35d4",
+						"exec": [
+							"pm.test(\"Status code is 409\", function () {",
+							"    pm.response.to.have.status(409);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\"province\": \"badajoz\",\r\n\t\"year\": 2015,\r\n\t\"urban\": 165.7,\r\n\t\"rest\": 1000\t\t\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/badajoz/2015",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes",
+						"badajoz",
+						"2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put routes ERROR 405",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b12f8aea-e096-424c-8dca-db530a13ebb7",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\"province\": \"badajoz\",\r\n\t\"year\": 2015,\r\n\t\"metropolitan\": 146.2,\r\n\t\"urban\": 165.7,\r\n\t\"rest\": 2000\t\t\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get routes?metropolitan varios",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1fc08efb-6026-40d4-8f2f-093af5adf8cc",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes?metropolitan=146.2",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes"
+					],
+					"query": [
+						{
+							"key": "metropolitan",
+							"value": "146.2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get routes?metropolitan uno",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9936faa5-3077-45b3-b7df-dc1e933493f5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes?metropolitan=77.6",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes"
+					],
+					"query": [
+						{
+							"key": "metropolitan",
+							"value": "77.6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get routes?province&year",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "79d552fc-f7da-4b0f-991c-1ca63252fdd3",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes?province=huelva&year=2015",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes"
+					],
+					"query": [
+						{
+							"key": "province",
+							"value": "huelva"
+						},
+						{
+							"key": "year",
+							"value": "2015"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete routes/province/year",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e58af57e-a36e-49db-a60b-047735b86cf1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/sevilla/2015",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes",
+						"sevilla",
+						"2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete routes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6f799ecb-6125-4921-8b77-28dd3ab39b9c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get routes load init data II",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6591eab5-e1c1-431e-95f0-4d52691d7336",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/loadInitialData",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"evolution-of-cycling-routes",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "66a23602-353b-49bc-9fe9-0624f424933f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "34b89ef8-bfea-4cc6-ab45-8c846578f47d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

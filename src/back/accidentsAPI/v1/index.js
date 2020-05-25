@@ -27,11 +27,9 @@ module.exports = function(app){
 	
 	app.get(BASE_API_URL+"/traffic-accidents/loadInitialData", (req,res) => {
 		console.log("New GET .../loadInitialData");
-
 		db.remove({}, {multi:true});
 		db.insert(initialTrafficAccidents);
 		res.sendStatus(200);
-
 		console.log("Initial Traffic Accidents loaded; "+JSON.stringify(initialTrafficAccidents,null,2));
 	});
 
