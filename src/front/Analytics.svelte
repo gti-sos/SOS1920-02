@@ -21,111 +21,211 @@
         MyDataA.forEach( (x) => {
             MyDataC.forEach( (y) => {
                 MyDataT.forEach( (z) => {
-                    if (x.province == y.province && x.province == z.province && z.province == "almeria" && x.year == y.year && x.year == z.year) {
-                        MyDataGraph.push({'hc-key': 'es-al', value: [
-                            'Nº Accidentes con víctimas: '+parseInt(x.trafficaccidentvictim), ' Nº Fallecidos: '+parseInt(x.dead), ' Nº Heridos: '+parseInt(x.injured),
-                            ' Metropolitano: '+parseFloat(y.metropolitan)+'km', ' Urbano: '+parseFloat(y.urban)+'km', ' Resto: '+parseFloat(y.rest)+'km',
-                            ' Viajero: '+parseFloat(z.traveller), ' Pernoctación: '+parseFloat(z.overnightstay), ' Estancia media: '+parseFloat(z.averagestay)
+                    if (x.province == y.province && x.province == z.province && x.year == y.year && x.year == z.year) {
+                        MyDataGraph.push({name: x.province, children: [
+                            {name: "Accidentes", children: [
+                                {name: "Accidentes con víctimas", value: parseInt(x.trafficaccidentvictim)},
+                                {name: "Fallecidos", value: parseInt(x.dead)},
+                                {name: "Heridos", value: parseInt(x.injured)}
+                            ]},
+                            {name: "Carril bici", children: [
+                                {name: "Metropolitano", value: parseFloat(y.metropolitan)},
+                                {name: "Urbano", value: parseFloat(y.urban)},
+                                {name: "Resto", value: parseFloat(y.rest)}
+                            ]},
+                            {name: "Turismo", children: [
+                                {name: "Viajero", value: parseFloat(z.traveller)},
+                                {name: "Pernoctación", value: parseFloat(z.overnightstay)},
+                                {name: "Estancia media", value: parseFloat(z.averagestay)}
+                            ]}
                         ]});
-                    } else if (x.province == y.province && x.province == z.province && z.province == "cadiz" && x.year == y.year && x.year == z.year) {
-                        MyDataGraph.push({'hc-key': 'es-ca', value: [
-                            'Nº Accidentes con víctimas: '+parseInt(x.trafficaccidentvictim), ' Nº Fallecidos: '+parseInt(x.dead), ' Nº Heridos: '+parseInt(x.injured),
-                            ' Metropolitano: '+parseFloat(y.metropolitan)+'km', ' Urbano: '+parseFloat(y.urban)+'km', ' Resto: '+parseFloat(y.rest)+'km',
-                            ' Viajero: '+parseFloat(z.traveller), ' Pernoctación: '+parseFloat(z.overnightstay), ' Estancia media: '+parseFloat(z.averagestay)
+                    } else if (x.province == y.province && x.province == z.province && x.year == y.year && x.year == z.year) {
+                        MyDataGraph.push({name: x.province, children: [
+                            {name: "Accidentes", children: [
+                                {name: "Accidentes con víctimas", value: parseInt(x.trafficaccidentvictim)},
+                                {name: "Fallecidos", value: parseInt(x.dead)},
+                                {name: "Heridos", value: parseInt(x.injured)}
+                            ]},
+                            {name: "Carril bici", children: [
+                                {name: "Metropolitano", value: parseFloat(y.metropolitan)},
+                                {name: "Urbano", value: parseFloat(y.urban)},
+                                {name: "Resto", value: parseFloat(y.rest)}
+                            ]},
+                            {name: "Turismo", children: [
+                                {name: "Viajero", value: parseFloat(z.traveller)},
+                                {name: "Pernoctación", value: parseFloat(z.overnightstay)},
+                                {name: "Estancia media", value: parseFloat(z.averagestay)}
+                            ]}
                         ]});
-                    } else if (x.province == y.province && x.province == z.province && z.province == "cordoba" && x.year == y.year && x.year == z.year) {
-                        MyDataGraph.push({'hc-key': 'es-co', value: [
-                            'Nº Accidentes con víctimas: '+parseInt(x.trafficaccidentvictim), ' Nº Fallecidos: '+parseInt(x.dead), ' Nº Heridos: '+parseInt(x.injured),
-                            ' Metropolitano: '+parseFloat(y.metropolitan)+'km', ' Urbano: '+parseFloat(y.urban)+'km', ' Resto: '+parseFloat(y.rest)+'km',
-                            ' Viajero: '+parseFloat(z.traveller), ' Pernoctación: '+parseFloat(z.overnightstay), ' Estancia media: '+parseFloat(z.averagestay)
+                    } else if (x.province == y.province && x.province == z.province && x.year == y.year && x.year == z.year) {
+                        MyDataGraph.push({name: x.province, children: [
+                            {name: "Accidentes", children: [
+                                {name: "Accidentes con víctimas", value: parseInt(x.trafficaccidentvictim)},
+                                {name: "Fallecidos", value: parseInt(x.dead)},
+                                {name: "Heridos", value: parseInt(x.injured)}
+                            ]},
+                            {name: "Carril bici", children: [
+                                {name: "Metropolitano", value: parseFloat(y.metropolitan)},
+                                {name: "Urbano", value: parseFloat(y.urban)},
+                                {name: "Resto", value: parseFloat(y.rest)}
+                            ]},
+                            {name: "Turismo", children: [
+                                {name: "Viajero", value: parseFloat(z.traveller)},
+                                {name: "Pernoctación", value: parseFloat(z.overnightstay)},
+                                {name: "Estancia media", value: parseFloat(z.averagestay)}
+                            ]}
                         ]});
-                    } else if (x.province == y.province && x.province == z.province && z.province == "granada" && x.year == y.year && x.year == z.year) {
-                        MyDataGraph.push({'hc-key': 'es-gr', value: [
-                            'Nº Accidentes con víctimas: '+parseInt(x.trafficaccidentvictim), ' Nº Fallecidos: '+parseInt(x.dead), ' Nº Heridos: '+parseInt(x.injured),
-                            ' Metropolitano: '+parseFloat(y.metropolitan)+'km', ' Urbano: '+parseFloat(y.urban)+'km', ' Resto: '+parseFloat(y.rest)+'km',
-                            ' Viajero: '+parseFloat(z.traveller), ' Pernoctación: '+parseFloat(z.overnightstay), ' Estancia media: '+parseFloat(z.averagestay)
+                    } else if (x.province == y.province && x.province == z.province && x.year == y.year && x.year == z.year) {
+                        MyDataGraph.push({name: x.province, children: [
+                            {name: "Accidentes", children: [
+                                {name: "Accidentes con víctimas", value: parseInt(x.trafficaccidentvictim)},
+                                {name: "Fallecidos", value: parseInt(x.dead)},
+                                {name: "Heridos", value: parseInt(x.injured)}
+                            ]},
+                            {name: "Carril bici", children: [
+                                {name: "Metropolitano", value: parseFloat(y.metropolitan)},
+                                {name: "Urbano", value: parseFloat(y.urban)},
+                                {name: "Resto", value: parseFloat(y.rest)}
+                            ]},
+                            {name: "Turismo", children: [
+                                {name: "Viajero", value: parseFloat(z.traveller)},
+                                {name: "Pernoctación", value: parseFloat(z.overnightstay)},
+                                {name: "Estancia media", value: parseFloat(z.averagestay)}
+                            ]}
                         ]});
-                    } else if (x.province == y.province && x.province == z.province && z.province == "huelva" && x.year == y.year && x.year == z.year) {
-                        MyDataGraph.push({'hc-key': 'es-h', value: [
-                            'Nº Accidentes con víctimas: '+parseInt(x.trafficaccidentvictim), ' Nº Fallecidos: '+parseInt(x.dead), ' Nº Heridos: '+parseInt(x.injured),
-                            ' Metropolitano: '+parseFloat(y.metropolitan)+'km', ' Urbano: '+parseFloat(y.urban)+'km', ' Resto: '+parseFloat(y.rest)+'km',
-                            ' Viajero: '+parseFloat(z.traveller), ' Pernoctación: '+parseFloat(z.overnightstay), ' Estancia media: '+parseFloat(z.averagestay)
+                    } else if (x.province == y.province && x.province == z.province && x.year == y.year && x.year == z.year) {
+                        MyDataGraph.push({name: x.province, children: [
+                            {name: "Accidentes", children: [
+                                {name: "Accidentes con víctimas", value: parseInt(x.trafficaccidentvictim)},
+                                {name: "Fallecidos", value: parseInt(x.dead)},
+                                {name: "Heridos", value: parseInt(x.injured)}
+                            ]},
+                            {name: "Carril bici", children: [
+                                {name: "Metropolitano", value: parseFloat(y.metropolitan)},
+                                {name: "Urbano", value: parseFloat(y.urban)},
+                                {name: "Resto", value: parseFloat(y.rest)}
+                            ]},
+                            {name: "Turismo", children: [
+                                {name: "Viajero", value: parseFloat(z.traveller)},
+                                {name: "Pernoctación", value: parseFloat(z.overnightstay)},
+                                {name: "Estancia media", value: parseFloat(z.averagestay)}
+                            ]}
                         ]});
-                    } else if (x.province == y.province && x.province == z.province && z.province == "jaen" && x.year == y.year && x.year == z.year) {
-                        MyDataGraph.push({'hc-key': 'es-j', value: [
-                            'Nº Accidentes con víctimas: '+parseInt(x.trafficaccidentvictim), ' Nº Fallecidos: '+parseInt(x.dead), ' Nº Heridos: '+parseInt(x.injured),
-                            ' Metropolitano: '+parseFloat(y.metropolitan)+'km', ' Urbano: '+parseFloat(y.urban)+'km', ' Resto: '+parseFloat(y.rest)+'km',
-                            ' Viajero: '+parseFloat(z.traveller), ' Pernoctación: '+parseFloat(z.overnightstay), ' Estancia media: '+parseFloat(z.averagestay)
+                    } else if (x.province == y.province && x.province == z.province && x.year == y.year && x.year == z.year) {
+                        MyDataGraph.push({name: x.province, children: [
+                            {name: "Accidentes", children: [
+                                {name: "Accidentes con víctimas", value: parseInt(x.trafficaccidentvictim)},
+                                {name: "Fallecidos", value: parseInt(x.dead)},
+                                {name: "Heridos", value: parseInt(x.injured)}
+                            ]},
+                            {name: "Carril bici", children: [
+                                {name: "Metropolitano", value: parseFloat(y.metropolitan)},
+                                {name: "Urbano", value: parseFloat(y.urban)},
+                                {name: "Resto", value: parseFloat(y.rest)}
+                            ]},
+                            {name: "Turismo", children: [
+                                {name: "Viajero", value: parseFloat(z.traveller)},
+                                {name: "Pernoctación", value: parseFloat(z.overnightstay)},
+                                {name: "Estancia media", value: parseFloat(z.averagestay)}
+                            ]}
                         ]});
-                    } else if (x.province == y.province && x.province == z.province && z.province == "malaga" && x.year == y.year && x.year == z.year) {
-                        MyDataGraph.push({'hc-key': 'es-ma', value: [
-                            'Nº Accidentes con víctimas: '+parseInt(x.trafficaccidentvictim), ' Nº Fallecidos: '+parseInt(x.dead), ' Nº Heridos: '+parseInt(x.injured),
-                            ' Metropolitano: '+parseFloat(y.metropolitan)+'km', ' Urbano: '+parseFloat(y.urban)+'km', ' Resto: '+parseFloat(y.rest)+'km',
-                            ' Viajero: '+parseFloat(z.traveller), ' Pernoctación: '+parseFloat(z.overnightstay), ' Estancia media: '+parseFloat(z.averagestay)
+                    } else if (x.province == y.province && x.province == z.province && x.year == y.year && x.year == z.year) {
+                        MyDataGraph.push({name: x.province, children: [
+                            {name: "Accidentes", children: [
+                                {name: "Accidentes con víctimas", value: parseInt(x.trafficaccidentvictim)},
+                                {name: "Fallecidos", value: parseInt(x.dead)},
+                                {name: "Heridos", value: parseInt(x.injured)}
+                            ]},
+                            {name: "Carril bici", children: [
+                                {name: "Metropolitano", value: parseFloat(y.metropolitan)},
+                                {name: "Urbano", value: parseFloat(y.urban)},
+                                {name: "Resto", value: parseFloat(y.rest)}
+                            ]},
+                            {name: "Turismo", children: [
+                                {name: "Viajero", value: parseFloat(z.traveller)},
+                                {name: "Pernoctación", value: parseFloat(z.overnightstay)},
+                                {name: "Estancia media", value: parseFloat(z.averagestay)}
+                            ]}
                         ]});
-                    } else if (x.province == y.province && x.province == z.province && z.province == "sevilla" && x.year == y.year && x.year == z.year) {
-                        MyDataGraph.push({'hc-key': 'es-se', value: [
-                            'Nº Accidentes con víctimas: '+parseInt(x.trafficaccidentvictim), ' Nº Fallecidos: '+parseInt(x.dead), ' Nº Heridos: '+parseInt(x.injured),
-                            ' Metropolitano: '+parseFloat(y.metropolitan)+'km', ' Urbano: '+parseFloat(y.urban)+'km', ' Resto: '+parseFloat(y.rest)+'km',
-                            ' Viajero: '+parseFloat(z.traveller), ' Pernoctación: '+parseFloat(z.overnightstay), ' Estancia media: '+parseFloat(z.averagestay)
+                    } else if (x.province == y.province && x.province == z.province && x.year == y.year && x.year == z.year) {
+                        MyDataGraph.push({name: x.province, children: [
+                            {name: "Accidentes", children: [
+                                {name: "Accidentes con víctimas", value: parseInt(x.trafficaccidentvictim)},
+                                {name: "Fallecidos", value: parseInt(x.dead)},
+                                {name: "Heridos", value: parseInt(x.injured)}
+                            ]},
+                            {name: "Carril bici", children: [
+                                {name: "Metropolitano", value: parseFloat(y.metropolitan)},
+                                {name: "Urbano", value: parseFloat(y.urban)},
+                                {name: "Resto", value: parseFloat(y.rest)}
+                            ]},
+                            {name: "Turismo", children: [
+                                {name: "Viajero", value: parseFloat(z.traveller)},
+                                {name: "Pernoctación", value: parseFloat(z.overnightstay)},
+                                {name: "Estancia media", value: parseFloat(z.averagestay)}
+                            ]}
                         ]});
                     }
                 })
             });
         });
 
-        Highcharts.mapChart('container', {
+        am4core.useTheme(am4themes_kelly);
+        am4core.useTheme(am4themes_animated);
+        // Themes end
 
-            chart: {
-                backgroundColor: null,
-            },
+        var chart = am4core.create("chartdiv", am4plugins_forceDirected.ForceDirectedTree);
+        var networkSeries = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries())
 
-            title: {
-                text: 'Relacion entre los datos'
-            },
+        chart.data = [{
+            name: "Andalucia",
+            children: MyDataGraph
+        }];
 
-            mapNavigation: {
-                enabled: true,
-                buttonOptions: {
-                    verticalAlign: 'bottom'
-                }
-            },
+        networkSeries.dataFields.value = "value";
+        networkSeries.dataFields.name = "name";
+        networkSeries.dataFields.children = "children";
+        networkSeries.nodes.template.tooltipText = "{name}:{value}";
+        networkSeries.nodes.template.fillOpacity = 1;
 
-            series: [{
-                data: MyDataGraph,
-                mapData: Highcharts.maps['countries/es/es-all'],
-                joinBy: 'hc-key',
-                allAreas: false,
-                name: 'Número de víctimas',
-                //name: 'Carriles Bici',
-                dataLabels: {
-                    enabled: true,
-                    format: '{point.name}'
-                }
-            }],
+        networkSeries.nodes.template.label.text = "{name}"
+        networkSeries.fontSize = 10;
 
-            responsive: {  
-                rules: [{  
-                    condition: {  
-                    maxWidth: 500  
-                    },  
-                    chartOptions: {  
-                    legend: {  
-                        enabled: false  
-                    }  
-                    }  
-                }]  
-                }
-        });
+        networkSeries.links.template.strokeWidth = 1;
+
+        var hoverState = networkSeries.links.template.states.create("hover");
+        hoverState.properties.strokeWidth = 3;
+        hoverState.properties.strokeOpacity = 1;
+
+        networkSeries.nodes.template.events.on("over", function(event) {
+        event.target.dataItem.childLinks.each(function(link) {
+            link.isHover = true;
+        })
+        if (event.target.dataItem.parentLink) {
+            event.target.dataItem.parentLink.isHover = true;
+        }
+
+        })
+
+        networkSeries.nodes.template.events.on("out", function(event) {
+        event.target.dataItem.childLinks.each(function(link) {
+            link.isHover = false;
+        })
+        if (event.target.dataItem.parentLink) {
+            event.target.dataItem.parentLink.isHover = false;
+        }
+        })
 
     }
-
-    loadGraph();
 
 </script>
 
 <svelte:head>
-
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/kelly.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"  on:load="{loadGraph}"></script>
 </svelte:head>
 
 <main>
@@ -133,22 +233,18 @@
 
     <Button outline color="secondary" on:click="{pop}">Volver</Button>
 
-    <div id="container"></div>
+    <div id="chartdiv"></div>
 
 </main>
 
 <style>
-    
-    #container {
-        height: 500px; 
-        min-width: 310px; 
-        max-width: 800px; 
-        margin: 0 auto; 
-    }
-    .loading {
-        margin-top: 10em;
-        text-align: center;
-        color: gray;
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     }
 
+    #chartdiv {
+        width: 100%;
+        height:550px;
+        max-width:100%;
+    }
 </style>
