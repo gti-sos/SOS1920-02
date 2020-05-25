@@ -25,9 +25,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/loadInitialData",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes/loadInitialData",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -66,9 +66,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -114,9 +114,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/sevilla/2015",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes/sevilla/2015",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -150,9 +150,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes?limit=4&offset=0",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes?limit=4&offset=0",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -194,9 +194,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes?province=sevilla",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes?province=sevilla",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -234,9 +234,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes?limit=3&offset=3",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes?limit=3&offset=3",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -278,9 +278,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes?limit=4&offset=4",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes?limit=4&offset=4",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -330,9 +330,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -372,9 +372,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes/",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -415,9 +415,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes/",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -458,9 +458,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/badajoz/2015",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes/badajoz/2015",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -502,9 +502,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/badajoz/2015",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes/badajoz/2015",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -546,9 +546,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/badajoz/2015",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes/badajoz/2015",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -590,9 +590,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -625,9 +625,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes?metropolitan=146.2",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes?metropolitan=146.2",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -666,9 +666,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes?metropolitan=77.6",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes?metropolitan=77.6",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -707,9 +707,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes?province=huelva&year=2015",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes?province=huelva&year=2015",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -750,9 +750,9 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/sevilla/2015",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes/sevilla/2015",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -785,9 +785,9 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
@@ -818,9 +818,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL_API}}/api/v2/evolution-of-cycling-routes/loadInitialData",
+					"raw": "{{BASE_URL}}/api/v2/evolution-of-cycling-routes/loadInitialData",
 					"host": [
-						"{{URL_API}}"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
