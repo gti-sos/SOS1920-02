@@ -29,7 +29,7 @@
             },
             xAxis: {
                 categories: [
-                    'Accidentes con víctimas',
+                    'Víctimas de accidentes',
                     'Fallecidos',
                     'Heridos'
                 ],
