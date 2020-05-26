@@ -15594,8 +15594,8 @@ var app = (function () {
     			main = element("main");
     			div = element("div");
     			attr_dev(div, "id", "radarChart");
-    			add_location(div, file$j, 53, 4, 871);
-    			add_location(main, file$j, 51, 0, 853);
+    			add_location(div, file$j, 54, 4, 872);
+    			add_location(main, file$j, 52, 0, 854);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15630,7 +15630,7 @@ var app = (function () {
     	let Provinces = ["x"];
     	let Traveller = ["Viajero"];
 
-    	//let Overnightstay = ["Pernoctación"];
+    	//let Overnightstay = ["Pernoctaciรณn"];
     	//let Averagestay = ["Estancia media"];
     	const resData = await fetch("/api/v1/rural-tourism-stats");
 
@@ -19898,6 +19898,8 @@ var app = (function () {
 
     function create_fragment$p(ctx) {
     	let main;
+    	let body;
+    	let t;
     	let current;
 
     	const router = new Router({
@@ -19908,7 +19910,10 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			main = element("main");
+    			body = element("body");
+    			t = space();
     			create_component(router.$$.fragment);
+    			add_location(body, file$o, 48, 1, 1958);
     			add_location(main, file$o, 47, 0, 1949);
     		},
     		l: function claim(nodes) {
@@ -19916,6 +19921,8 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
+    			append_dev(main, body);
+    			append_dev(main, t);
     			mount_component(router, main, null);
     			current = true;
     		},
