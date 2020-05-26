@@ -20,6 +20,12 @@ li {
 	right: 50px;
 	width: 200px;
 }
+.logo2 {
+	position: absolute;
+	top: 25px;
+	left: 50px;
+	width: 200px;
+}
 .cuerpo {
 	padding-top: 3em;
 	margin-left: 15em;

@@ -46,5 +46,8 @@ import Analytics from './Analytics.svelte';
 </script>
 
 <main>
+	<body>
+		
+	</body>
 	<Router {routes} />
 </main>
