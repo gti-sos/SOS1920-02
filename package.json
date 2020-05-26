@@ -22,9 +22,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dockerfile-generator": "^4.0.3",
     "express": "^4.17.1",
     "nedb": "^1.8.0",
     "svelte-spa-router": "^2.1.0",
     "sveltestrap": "^3.3.3"
-  }  
+  }
 }
