@@ -1,19 +1,20 @@
 <script>
-
+    import {pop} from "svelte-spa-router";
+    import Button from "sveltestrap/src/Button.svelte";
 </script>
 
 <main>
-    <h2 style="text-align: center;"> <i class="fas fa-car"></i> Número de accidentes de trafico con victimas por provincias en 2018</h2>
+    <h2 style="text-align: center;">Integracion de APIs</h2>
+    <br><br>   
 
-    <p><a href="#/integrations/evolution-of-cycling-routes/api-04">API Grupo 04</a></p>
-    <p><a href="#/integrations/evolution-of-cycling-routes/api-05">API Grupo 05</a></p>
-    <p><a href="#/integrations/evolution-of-cycling-routes/api-06">API Grupo 06</a></p>
-    <p><a href="#/integrations/evolution-of-cycling-routes/api-07">API Grupo 07</a></p>
-    <p><a href="#/integrations/evolution-of-cycling-routes/api-08">API Grupo 08</a></p>
-    <p><a href="#/integrations/evolution-of-cycling-routes/api-09">API Grupo 09</a></p>
-    <p><a href="#/integrations/evolution-of-cycling-routes/api-12">API Grupo 12</a></p>
-    <p><a href="#/integrations/evolution-of-cycling-routes/api-27">API Grupo 27</a></p>
+    <button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/evolution-of-cycling-routes/api-04'"style="margin-left: 10%; width: 20%;"> API Grupo 04</button>
+    <button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/evolution-of-cycling-routes/api-05'"style="width: 20%;"> API Grupo 05</button>
+    <button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/evolution-of-cycling-routes/api-06'"style="width: 20%;"> API Grupo 06</button>
+    <button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/evolution-of-cycling-routes/api-07'"style="width: 20%;"> API Grupo 07</button>
+    <br><br>
+    <button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/evolution-of-cycling-routes/api-08'"style="margin-left: 10%; width: 20%;"> API Grupo 08</button>
+    <button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/evolution-of-cycling-routes/api-09'"style="width: 20%;"> API Grupo 09</button>
+    <button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/evolution-of-cycling-routes/api-12'"style="width: 20%;"> API Grupo 12</button>
+    <button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/evolution-of-cycling-routes/api-27'"style="width: 20%;"> API Grupo 27</button>
 
 </main>
-
-
