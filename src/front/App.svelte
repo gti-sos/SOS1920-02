@@ -60,7 +60,7 @@ import Analytics from './Analytics.svelte';
 				  <a class="nav-link" href="#/">Inicio <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item dropdown active">
-				  <a class="nav-link dropdown-toggle" href="#/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					API Ana
 				  </a>
 				  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -69,7 +69,7 @@ import Analytics from './Analytics.svelte';
 				  </div>
 				</li>
 				<li class="nav-item dropdown active">
-					<a class="nav-link dropdown-toggle" href="#/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  API Jose Francisco
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -78,7 +78,7 @@ import Analytics from './Analytics.svelte';
 					</div>
 				  </li>
 				  <li class="nav-item dropdown active">
-					<a class="nav-link dropdown-toggle" href="#/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  API Marta
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
