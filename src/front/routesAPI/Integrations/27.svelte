@@ -4,7 +4,7 @@
 	import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
     
-    const url = "http://sos1920-04.herokuapp.com/api/v1/roads/";
+    const url = "http://sos1920-27.herokuapp.com/api/v2/spc-stats/";
 
     let apiExterna = [];
     let MyData = [];
