@@ -21,10 +21,20 @@ import Analytics from './Analytics.svelte';
 	import GraphAccidents from './accidentsAPI/GraphAccidents.svelte';
 	import GraphAccidentsV2 from './accidentsAPI/GraphAccidentsV2.svelte';
 
+//Integraciones Ana
+	import Routes1 from './routesAPI/Integrations/Home.svelte';
+
 	const routes = {
 		"/": Home,
 		"/analytics": Analytics,
 		"/integrations": Integrations,
+
+// INTEGRACIONES ANA
+		"/integrations/cycling-routes": Routes1,
+// INTEGRACIONES MARTA
+
+// INTEGRACIONES JOSE
+
 		
 		"/evolution-of-cycling-routes": CyclingRoutesTable,
 		"/evolution-of-cycling-routes/:province/:year": EditCyclingRoute,
