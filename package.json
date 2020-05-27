@@ -7,11 +7,15 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "node index",
-    "test": "npx newman run tests/test-traffic-accidents.json --environment tests/heroku.json && npx newman run tests/test-cycling-routes.json --environment tests/heroku.json && npx newman run tests/test-rural-tourism-stats.json --environment tests/heroku.json"
+    "test": "npx newman run tests/test-traffic-accidents.json --environment tests/heroku.json && npx newman run tests/test-cycling-routes.json --environment tests/heroku.json && npx newman run tests/test-rural-tourism-stats.json --environment tests/heroku.json",
+    "test-cov": "nodeunit test",
+    "coveralls": "jscoverage lib && YOURPACKAGE_COVERAGE=1 nodeunit --reporter=lcov test | coveralls"
+    
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",
     "@rollup/plugin-node-resolve": "^7.0.0",
+    "coveralls": "^3.1.0",
     "rollup": "^1.20.0",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^5.0.3",
