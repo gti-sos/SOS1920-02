@@ -23,6 +23,14 @@ import Analytics from './Analytics.svelte';
 
 //Integraciones Ana
 	import Routes1 from './routesAPI/Integrations/Home.svelte';
+	import API_04 from './routesAPI/Integrations/04.svelte';
+	import API_05 from './routesAPI/Integrations/05.svelte';
+	import API_06 from './routesAPI/Integrations/06.svelte';
+	import API_07 from './routesAPI/Integrations/07.svelte';
+	import API_08 from './routesAPI/Integrations/08.svelte';
+	import API_09 from './routesAPI/Integrations/09.svelte';
+	import API_12 from './routesAPI/Integrations/12.svelte';
+	import API_27 from './routesAPI/Integrations/27.svelte';
 
 	const routes = {
 		"/": Home,
@@ -31,7 +39,17 @@ import Analytics from './Analytics.svelte';
 
 // INTEGRACIONES ANA
 		"/integrations/cycling-routes": Routes1,
+		"/integrations/evolution-of-cycling-routes/api-04": API_04,
+		"/integrations/evolution-of-cycling-routes/api-05": API_05,
+		"/integrations/evolution-of-cycling-routes/api-06": API_06,
+		"/integrations/evolution-of-cycling-routes/api-07": API_07,
+		"/integrations/evolution-of-cycling-routes/api-08": API_08,
+		"/integrations/evolution-of-cycling-routes/api-09": API_09,
+		"/integrations/evolution-of-cycling-routes/api-12": API_12,
+		"/integrations/evolution-of-cycling-routes/api-27": API_27,
+		
 // INTEGRACIONES MARTA
+
 
 // INTEGRACIONES JOSE
 

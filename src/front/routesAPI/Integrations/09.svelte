@@ -4,12 +4,12 @@
 	import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
     
-    const url = "http://sos1920-04.herokuapp.com/api/v1/roads/";
+    const url = "https://sos1920-09.herokuapp.com/api/v2/oil-coal-nuclear-energy-consumption-stats/";
 
     let apiExterna = [];
     let MyData = [];
 	async function loadGraph(){
-        console.log("Loading integration API 4...");	
+        console.log("Loading integration API 9...");	
 		const res = await fetch(url); 
 		if (res.ok) {
 			console.log("Ok, loaded successfully");
@@ -20,22 +20,22 @@
         }
         const resData = await fetch("/api/v2/evolution-of-cycling-routes");
         MyData = await resData.json();
-        let items = ["Metropolitano", "Urbano", "Resto", "Un carril", "Doble carril", "Autovía", "Autopista"];
+        let items = ["Metropolitano", "Urbano", "Resto", "Consumo Petroleo", "Consumo Carbon", "Consumo E. Nuclear"];
         let valores = [];
         let valor = {};
         MyData.forEach((r) => {
-            //if(r.year==2015){
+            if(r.year==2015){
             valor = {
                    name: r.province,
-                   data: [r.metropolitan, r.urban, r.rest, 0, 0, 0,0]
+                   data: [r.metropolitan, r.urban, r.rest, 0, 0, 0]
                }
             valores.push(valor);
-            //}
+            }
         });
         apiExterna.forEach( (v) => {           
                valor = {
-                   name: v.province,
-                   data: [0, 0, 0, v['Recurso1'], v['Recurso2'], v['Recurso3'],v['Recurso4']]
+                   name: v.country,
+                   data: [0, 0, 0, v['Petroleo'], v['Carbon'], v['Nuclear']]
                }
                valores.push(valor);
             
@@ -44,10 +44,10 @@
 
         Highcharts.chart('container', {
             chart: {
-                type: 'column'
+                type: 'line'
             },
             title: {
-                text: 'Integración API 04'
+                text: 'Integración API 09'
             },
             subtitle: {
                 text: ''
