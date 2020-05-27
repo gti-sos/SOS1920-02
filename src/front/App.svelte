@@ -55,49 +55,49 @@ import Analytics from './Analytics.svelte';
 
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			  <ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-				  <a class="nav-link" href="#/">Inicio <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item dropdown active">
-				  <a class="nav-link dropdown-toggle" href="#/evolution-of-cycling-routes" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					API Ana
-				  </a>
-				  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#/evolution-of-cycling-routes/graph">Gráfica HighCharts</a>
-					<a class="dropdown-item" href="#/evolution-of-cycling-routes/graph-v2">Gráfica amCharts</a>
-				  </div>
-				</li>
-				<li class="nav-item dropdown active">
-					<a class="nav-link dropdown-toggle" href="#/traffic-accidents" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  API Jose Francisco
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					  <a class="dropdown-item" href="#/traffic-accidents/graph">Gráfica HighCharts</a>
-					  <a class="dropdown-item" href="#/traffic-accidents/graph-v2">Gráfica Plotty</a>
-					</div>
-				  </li>
-				  <li class="nav-item dropdown active">
-					<a class="nav-link dropdown-toggle" href="#/rural-tourism-stats" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  API Marta
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					  <a class="dropdown-item" href="#/rural-tourism-stats/graph">Gráfica HighCharts</a>
-					  <a class="dropdown-item" href="#/rural-tourism-stats/graph-v2">Gráfica Billboards</a>
-					</div>
-				  </li>
-				<li class="nav-item">
-				  <a class="nav-link active" href="#/analytics">Analíticas</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link active" href="#/integrations">Integraciones</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link active" href="#/videos">Vídeos</a>
-				  </li>
-			  </ul>
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#/">Inicio <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="#/evolution-of-cycling-routes" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							API Ana
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#/evolution-of-cycling-routes/graph">Gráfica HighCharts</a>
+							<a class="dropdown-item" href="#/evolution-of-cycling-routes/graph-v2">Gráfica amCharts</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="#/traffic-accidents" class="nav-link dropdown-toggle" id="navbardrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						API Jose Francisco
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#/traffic-accidents/graph">Gráfica HighCharts</a>
+							<a class="dropdown-item" href="#/traffic-accidents/graph-v2">Gráfica Plotty</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="#/rural-tourism-stats" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							API Marta
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#/rural-tourism-stats/graph">Gráfica HighCharts</a>
+						<a class="dropdown-item" href="#/rural-tourism-stats/graph-v2">Gráfica Billboards</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="#/analytics">Analíticas</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="#/integrations">Integraciones</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="#/videos">Vídeos</a>
+					</li>
+				</ul>
 			</div>
-		  </nav>
+		</nav>
 	</body>
 	<br>
 	<Router {routes} />
