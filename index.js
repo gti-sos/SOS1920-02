@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = requiere ('cors');
 
 //API ANA
 const routesAPIv1 = require("./src/back/routesAPI/v1");
@@ -15,6 +16,7 @@ var app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
 
 routesAPIv1(app);   //ANA
 routesAPIv2(app);   //ANA
