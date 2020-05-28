@@ -33,14 +33,14 @@
             valores.push(valor);
             }
         });
-        apiExterna.forEach( (v) => {           
+        apiExterna.forEach( (v) => {   
+            if(v.year==2015){        
                valor = {
                    name: v.country,
                    data: [0, 0, 0, v['death_male'], v['death_female'], v['death_total'],v['mean_age']]
                }
-               valores.push(valor);
-            
-            
+               valores.push(valor);            
+            }
         });
 
         Highcharts.chart('container', {
@@ -101,19 +101,44 @@
     <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> </Button>
 </p>
 
+{#await  apiExterna}
+Loading renewable sources...
+{:then  apiExterna}
 <figure class="highcharts-figure">
-        {#await  apiExterna}
-            Loading graph...
-        {:then  apiExterna}
-            <figure class="highcharts-figure">
-                <div id="container"></div>
-                <p>   </p>
-                
+    <div id="container"></div>
+    <p>   </p>
+    <p class="highcharts-description">
+        Insertar texto
+    </p>
+    <p> <strong> Tabla con los datos proporcionados por la API 12</strong> </p>
 
-            </figure>	
-            
-        {/await}
-  </figure>
+</figure>	    
+
+<Table bordered>
+    <thead>
+        <tr>
+            <th> Provincia </th>
+            <th> Año </th>
+            <th> Muertes Masculinas</th>
+            <th> Muertes Femeninas </th>
+            <th> Muertes Totales </th>
+            <th> Edad Media </th>
+        </tr>
+    </thead>
+    <tbody>
+        {#each  apiExterna as apiExterna}
+        <tr>
+            <td> {apiExterna.province} </td>
+            <td> {apiExterna.year} </td>
+            <td> {apiExterna['death_male']} </td>
+            <td> {apiExterna['death_female']} </td>
+            <td> {apiExterna['death_total']} </td>
+            <td> {apiExterna['mean_age']} </td>
+        </tr>
+        {/each}
+    </tbody>
+</Table>
+{/await}      	
 
 
 

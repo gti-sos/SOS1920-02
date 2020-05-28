@@ -49,7 +49,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Integración API 27'
+                text: 'Integración API 09'
             },
             subtitle: {
                 text: ''
@@ -103,17 +103,47 @@
 </p>
 
 <figure class="highcharts-figure">
-        {#await  apiExterna}
-            Loading graph...
-        {:then  apiExterna}
-            <figure class="highcharts-figure">
-                <div id="container"></div>
-                <p>   </p>
-                
+                      
+    {#await  apiExterna}
+    Loading renewable sources...
+    {:then  apiExterna}
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p>   </p>
+        <p class="highcharts-description">
+            Insertar texto
+        </p>
+        <p> <strong> Tabla con los datos proporcionados por la API 09 </strong> </p>
 
-            </figure>	
+    </figure>	
+
+    
+
+    <Table bordered>
+        <thead>
+            <tr>
+                <th> País </th>
+                <th> Año </th>
+                <th> Consumo Petroleo</th>
+                <th> Consumo Carbon </th>
+                <th> Consumo E. Nuclear </th>
+            </tr>
+        </thead>
+        <tbody>
+            {#each  apiExterna as apiExterna}
+            <tr>
+                <td> {apiExterna.country} </td>
+                <td> {apiExterna.year} </td>
+                <td> {apiExterna['oil-consumption']} </td>
+                <td> {apiExterna['coal-consumption']} </td>
+                <td> {apiExterna['nuclear-energy-consumption']} </td>
+            </tr>
+            {/each}
+        </tbody>
+    </Table>
+{/await}      	
             
-        {/await}
+        
 
   </figure>
 

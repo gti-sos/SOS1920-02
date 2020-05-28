@@ -9,7 +9,7 @@
     let apiExterna = [];
     let MyData = [];
 	async function loadGraph(){
-    console.log("Loading integration API 9...");	
+    console.log("Loading integration API 8...");	
 	const res = await fetch(url); 
 	if (res.ok) {
 		console.log("Ok, loaded successfully");
@@ -102,17 +102,42 @@
 </p>
 
 <figure class="highcharts-figure">
-        {#await  apiExterna}
-            Loading graph...
-        {:then  apiExterna}
-            <figure class="highcharts-figure">
-                <div id="container"></div>
-                <p>   </p>         
-                <p class=" highcharts-description"> 
-                Para que pudieran apreciarse los datos de ambas APIS he tenido que dividir los valores de la API externa 20000 mas pequeños
-                </p>
-            </figure>	            
-        {/await}
+    {#await  apiExterna}
+    Loading renewable sources...
+    {:then  apiExterna}
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p>   </p>
+        <p class="highcharts-description">
+            Se ha tenido que disminuir el valor de la api externa ya que impedía que los datos de la api interna pudieran aparecen en la gráfica
+        </p>
+        <p> <strong> Tabla con los datos proporcionados por la API 08 </strong> </p>
+
+    </figure>	    
+
+    <Table bordered>
+        <thead>
+            <tr>
+                <th> País </th>
+                <th> Año </th>
+                <th> Hidroeléctrico</th>
+                <th> Solar </th>
+                <th> Carbon </th>
+            </tr>
+        </thead>
+        <tbody>
+            {#each  apiExterna as apiExterna}
+            <tr>
+                <td> {apiExterna.province} </td>
+                <td> {apiExterna.year} </td>
+                <td> {apiExterna['hydro']} </td>
+                <td> {apiExterna['solar']} </td>
+                <td> {apiExterna['coal']} </td>
+            </tr>
+            {/each}
+        </tbody>
+    </Table>
+{/await}      	
 
   </figure>
 

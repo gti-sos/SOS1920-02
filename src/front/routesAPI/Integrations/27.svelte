@@ -9,7 +9,7 @@
         let apiExterna = [];
     let MyData = [];
 	async function loadGraph(){
-        console.log("Loading integration API 27...");	
+        console.log("Loading integration API 7...");	
 		const res = await fetch(url); 
 		if (res.ok) {
 			console.log("Ok, loaded successfully");
@@ -48,7 +48,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Integración API 27'
+                text: 'Integración API 07'
             },
             subtitle: {
                 text: ''
@@ -102,17 +102,48 @@
 </p>
 
 <figure class="highcharts-figure">
-        {#await  apiExterna}
-            Loading graph...
-        {:then  apiExterna}
-            <figure class="highcharts-figure">
-                <div id="container"></div>
-                <p>   </p>
-                
+    {#await  apiExterna}
+    Loading renewable sources...
+    {:then  apiExterna}
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p>   </p>
+        <p class="highcharts-description">
+            Insertar texto
+        </p>
+        <p> <strong> Tabla con los datos proporcionados por la API 27 </strong> </p>
 
-            </figure>	
-            
-        {/await}
+    </figure>	    
+
+    <Table bordered>
+        <thead>
+            <tr>
+                <th> País </th>
+                <th> Ambos Sexos</th>
+                <th> Ranking Masculino </th>
+                <th> Números Masculinos </th>
+                <th> Ranking Femenino </th>
+                <th> Media </th>
+                <th> Año </th>
+                <th> Continente </th>
+            </tr>
+        </thead>
+        <tbody>
+            {#each  apiExterna as apiExterna}
+            <tr>
+                <td> {apiExterna.country} </td>                
+                <td> {apiExterna['both_sex']} </td>
+                <td> {apiExterna['male_rank']} </td>
+                <td> {apiExterna['male_number']} </td>
+                <td> {apiExterna.year} </td>
+                <td> {apiExterna['female_rank']} </td>
+                <td> {apiExterna['female_number']} </td>
+                <td> {apiExterna['continent']} </td>
+            </tr>
+            {/each}
+        </tbody>
+    </Table>
+{/await}      	
 
   </figure>
 

@@ -39,25 +39,6 @@
             });    
         });
 
-        /*MyData.forEach((r) => {
-            if(r.year==2015){
-            valor = {
-                   name: r.province,
-                   data: [r.metropolitan, r.urban, r.rest, 0, 0, 0]
-               }
-            valores.push(valor);
-            }
-        });
-        apiExterna.forEach( (v) => {   
-            if(v.year < 2000){        
-               valor = {
-                   name: v.province,
-                   data: [0, 0, 0, v['total'], v['interurban'], v['urban']]
-               }
-            valores.push(valor);
-        } 
-            
-        });*/
 
         Highcharts.chart('container', {
             chart: {
@@ -118,17 +99,42 @@
 </p>
 
 <figure class="highcharts-figure">
-        {#await  apiExterna}
-            Loading graph...
-        {:then  apiExterna}
-            <figure class="highcharts-figure">
-                <div id="container"></div>
-                <p>   </p>
-                
+    {#await  apiExterna}
+    Loading renewable sources...
+    {:then  apiExterna}
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p>   </p>
+        <p class="highcharts-description">
+            Insertar texto
+        </p>
+        <p> <strong> Tabla con los datos proporcionados por la API 06 </strong> </p>
 
-            </figure>	
-            
-        {/await}
+    </figure>	    
+
+    <Table bordered>
+        <thead>
+            <tr>
+                <th> Provincia </th>
+                <th> Año </th>
+                <th> Totales</th>
+                <th> Interurbanos </th>
+                <th> Urbanos </th>
+            </tr>
+        </thead>
+        <tbody>
+            {#each  apiExterna as apiExterna}
+            <tr>
+                <td> {apiExterna.province} </td>
+                <td> {apiExterna.year} </td>
+                <td> {apiExterna['total']} </td>
+                <td> {apiExterna['interurban']} </td>
+                <td> {apiExterna['urban']} </td>
+            </tr>
+            {/each}
+        </tbody>
+    </Table>
+{/await}      	
 
   </figure>
 

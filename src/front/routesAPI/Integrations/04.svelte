@@ -38,27 +38,7 @@
             });    
         });
 
-       /* MyData.forEach( (r) => {
-            pluginCycling.forEach( (v) => {
-                if(r.province.toLowerCase() == v.province ){
-                    valor = {
-                        name: r.province + "(" + r.year + "-" + v.year + ")",
-                        data: [r.oneway, r.multipleway, r.dualCarriagewayAndHighway, r.highwayWithToll, 
-                                v['metropolitan'], v['urban'], v['rest']]
-                        }
-                    valores.push(valor);
-                }
-                
-            });    
-        });*/
-           
- /*       apiExterna.forEach( (v) => {           
-               valor = {
-                   name: v.province,
-                   data: [0, 0, 0, v['oneway'], v['multipleway'], v['dualCarriagewayAndHighway'],v['highwayWithToll']]
-               }
-            valores.push(valor);
-  */          
+      
             
 
 
@@ -121,17 +101,46 @@
 </p>
 
 <figure class="highcharts-figure">
-        {#await  apiExterna}
-            Loading graph...
-        {:then  apiExterna}
-            <figure class="highcharts-figure">
-                <div id="container"></div>
-                <p>   </p>
-                
+    {#await  apiExterna}
+    Loading renewable sources...
+    {:then  apiExterna}
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p>   </p>
+        <p class="highcharts-description">
+            Insertar texto
+        </p>
+        <p> <strong> Tabla con los datos proporcionados por la API 04 </strong> </p>
 
-            </figure>	
-            
-        {/await}
+    </figure>	
+
+    
+
+    <Table bordered>
+        <thead>
+            <tr>
+                <th> Provincia </th>
+                <th> Año </th>
+                <th> Un carril</th>
+                <th> Doble carril </th>
+                <th> Autovía </th>
+                <th> Autopista</th>
+            </tr>
+        </thead>
+        <tbody>
+            {#each  apiExterna as apiExterna}
+            <tr>
+                <td> {apiExterna.province} </td>
+                <td> {apiExterna.year} </td>
+                <td> {apiExterna['oneway']} </td>
+                <td> {apiExterna['multipleway']} </td>
+                <td> {apiExterna['dualCarriagewayAndHighway']} </td>
+                <td> {apiExterna['highwayWithToll']} </td>
+            </tr>
+            {/each}
+        </tbody>
+    </Table>
+{/await}      	
 
   </figure>
 
