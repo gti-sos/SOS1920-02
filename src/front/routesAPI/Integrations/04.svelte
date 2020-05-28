@@ -24,18 +24,18 @@
         let valores = [];
         let valor = {};
         MyData.forEach((r) => {
-            //if(r.year==2015){
+            if(r.year==2015){
             valor = {
                    name: r.province,
                    data: [r.metropolitan, r.urban, r.rest, 0, 0, 0,0]
                }
             valores.push(valor);
-            //}
+            }
         });
         apiExterna.forEach( (v) => {           
                valor = {
                    name: v.province,
-                   data: [0, 0, 0, v['Recurso1'], v['Recurso2'], v['Recurso3'],v['Recurso4']]
+                   data: [0, 0, 0, v['oneway'], v['multipleway'], v['dualCarriagewayAndHighway'],v['highwayWithToll']]
                }
                valores.push(valor);
             
@@ -47,7 +47,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Integración API 04'
+                text: 'Integración API Grupo 04'
             },
             subtitle: {
                 text: ''
@@ -96,6 +96,10 @@
     <script src="https://code.highcharts.com/modules/accessibility.js" on:load="{loadGraph}"></script>
 </svelte:head>
 
+<p>
+    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i></Button>
+</p>
+
 <figure class="highcharts-figure">
         {#await  apiExterna}
             Loading graph...
@@ -108,9 +112,7 @@
             </figure>	
             
         {/await}
-        <p>
-            <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
-        </p>
+
   </figure>
 
 
