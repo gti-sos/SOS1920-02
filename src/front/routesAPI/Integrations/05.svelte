@@ -22,7 +22,14 @@
         MyData = await resData.json();
         let items = ["Metropolitano", "Urbano", "Resto", "Total", "Publico", "Publico_Pib"];
         let valores = [];
+        let metropolitan = [];
+        let urban = [];
+        let rest = [];
+        let sumaMetropolitan;
+        let sumaUrban;
+        let sumaRest;
         let valor = {};
+        let spain = [];
         MyData.forEach((r) => {
             if(r.year==2015){
             valor = {
@@ -34,12 +41,11 @@
         });
 
         apiExterna.forEach((v) => {           
-               valor = {
-                   name: v.country,
-                   data: [0,0,0,v['total_spending'], v['public_spending'], v['public_spending_pib']]
-               }
-               valores.push(valor);
-            
+            valor = {
+                name: v.country,
+                data: [0,0,0,v['total_spending'], v['public_spending'], v['public_spending_pib']]
+            }
+            valores.push(valor);        
             
         });
 

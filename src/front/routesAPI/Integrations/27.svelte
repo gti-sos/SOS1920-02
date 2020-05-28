@@ -9,7 +9,7 @@
         let apiExterna = [];
     let MyData = [];
 	async function loadGraph(){
-        console.log("Loading integration API 7...");	
+        console.log("Loading integration API 27...");	
 		const res = await fetch(url); 
 		if (res.ok) {
 			console.log("Ok, loaded successfully");
@@ -20,14 +20,14 @@
         }
         const resData = await fetch("/api/v2/evolution-of-cycling-routes");
         MyData = await resData.json();
-        let items = ["Metropolitano", "Urbano", "Resto", "Malta", "Cebada", "Avena", "Desperdicios","Alcohol"];
+        let items = ["Metropolitano", "Urbano", "Resto", "Rango Masculino", "Rango Femenino", "Ratio"];
         let valores = [];
         let valor = {};
         MyData.forEach((r) => {
             //if(r.year==2015){
             valor = {
                    name: r.province,
-                   data: [r.metropolitan, r.urban, r.rest, 0, 0, 0, 0, 0]
+                   data: [r.metropolitan, r.urban, r.rest, 0, 0, 0]
                }
             valores.push(valor);
             //}
@@ -35,7 +35,7 @@
         apiExterna.forEach( (v) => {           
                valor = {
                    name: v.country,
-                   data: [0, 0, 0, v['gdamalt'], v['gdabarley'], v['gdaoat'], v['gdawaste'], v['gdaethylalcohol']]
+                   data: [0, 0, 0, v['male_rank'], v['female_rank'], v['ratio']]
                }
                
                valores.push(valor);
@@ -48,7 +48,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Integración API 07'
+                text: 'Integración API 27'
             },
             subtitle: {
                 text: ''

@@ -24,23 +24,43 @@
         let valores = [];
         let valor = {};
         MyData.forEach((r) => {
-            if(r.year==2015){
-            valor = {
-                   name: r.province,
-                   data: [r.metropolitan, r.urban, r.rest, 0, 0, 0,0]
-               }
-            valores.push(valor);
-            }
+            apiExterna.forEach((v) => {
+                //if(r.year == 2018 && v.year ==2018){
+                    if(v.province.toLowerCase() == r.province){
+                        valor = {
+                            name: r.province,
+                            data: [r.metropolitan, r.urban, r.rest,
+                            v['oneway'], v['multipleway'], v['dualCarriagewayAndHighway'],v['highwayWithToll']]
+                            }
+                        valores.push(valor);
+                    }
+                //}
+            });    
         });
-        apiExterna.forEach( (v) => {           
+
+       /* MyData.forEach( (r) => {
+            pluginCycling.forEach( (v) => {
+                if(r.province.toLowerCase() == v.province ){
+                    valor = {
+                        name: r.province + "(" + r.year + "-" + v.year + ")",
+                        data: [r.oneway, r.multipleway, r.dualCarriagewayAndHighway, r.highwayWithToll, 
+                                v['metropolitan'], v['urban'], v['rest']]
+                        }
+                    valores.push(valor);
+                }
+                
+            });    
+        });*/
+           
+ /*       apiExterna.forEach( (v) => {           
                valor = {
                    name: v.province,
                    data: [0, 0, 0, v['oneway'], v['multipleway'], v['dualCarriagewayAndHighway'],v['highwayWithToll']]
                }
-               valores.push(valor);
+            valores.push(valor);
+  */          
             
-            
-        });
+
 
         Highcharts.chart('container', {
             chart: {

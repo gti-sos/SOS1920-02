@@ -32,22 +32,24 @@
             valores.push(valor);
             }
         });
-        apiExterna.forEach( (v) => {           
+        apiExterna.forEach((v) => {         
+            if(v.year==2016){  
                valor = {
                    name: v.country,
-                   data: [0, 0, 0, v['Petroleo'], v['Carbon'], v['Nuclear']]
+                   data: [0, 0, 0, v['oil-consumption'], v['coal-consumption'], v['nuclear-energy-consumption']]
                }
+               
                valores.push(valor);
-            
+            }
             
         });
 
         Highcharts.chart('container', {
             chart: {
-                type: 'line'
+                type: 'column'
             },
             title: {
-                text: 'Integración API 09'
+                text: 'Integración API 27'
             },
             subtitle: {
                 text: ''
@@ -96,6 +98,10 @@
     <script src="https://code.highcharts.com/modules/accessibility.js" on:load="{loadGraph}"></script>
 </svelte:head>
 
+<p>
+    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> </Button>
+</p>
+
 <figure class="highcharts-figure">
         {#await  apiExterna}
             Loading graph...
@@ -108,9 +114,7 @@
             </figure>	
             
         {/await}
-        <p>
-            <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
-        </p>
+
   </figure>
 
 
@@ -155,5 +159,3 @@
 }
 
 </style>
-
-

@@ -24,22 +24,22 @@
         let valores = [];
         let valor = {};
         MyData.forEach((r) => {
-            //if(r.year==2015){
+            if(r.year==2015){
             valor = {
                    name: r.province,
                    data: [r.metropolitan, r.urban, r.rest, 0, 0, 0, 0, 0]
                }
             valores.push(valor);
-            //}
+            }
         });
-        apiExterna.forEach( (v) => {           
+        apiExterna.forEach((v) => {   
+            if(v.year==2000 && v.country!="total"){        
                valor = {
                    name: v.country,
-                   data: [0, 0, 0, v['gdamalt'], v['gdabarley'], v['gdaoat'], v['gdawaste'], v['gdaethylalcohol']]
-               }
-               
+                   data: [0, 0, 0, v['gdamalt']/1000, v['gdabarley']/1000, v['gdaoat']/3000, v['gdawaste']/1000, v['gdaethylalcohol']/1000]
+               }               
                valores.push(valor);
-            
+            }
             
         });
 
@@ -108,7 +108,9 @@
             <figure class="highcharts-figure">
                 <div id="container"></div>
                 <p>   </p>
-                
+                <p class=" highcharts-description"> 
+                    Para que pudieran apreciarse los datos de ambas APIS he tenido que dividir los valores de la API externa en valores mas pequeños
+                </p>
 
             </figure>	
             

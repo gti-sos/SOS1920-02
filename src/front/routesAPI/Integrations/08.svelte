@@ -4,38 +4,38 @@
 	import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
     
-    const url = "http://sos1920-08.herokuapp.com/api/v1/electricity-produced-stats/loadInitialData";
+    const url = "http://sos1920-08.herokuapp.com/api/v2/electricity-produced-stats/";
 
-        let apiExterna = [];
+    let apiExterna = [];
     let MyData = [];
 	async function loadGraph(){
-        console.log("Loading integration API 7...");	
-		const res = await fetch(url); 
-		if (res.ok) {
-			console.log("Ok, loaded successfully");
-			const json = await res.json();
-            apiExterna = json;
-		} else {
-			console.log("ERROR!");
-        }
+    console.log("Loading integration API 9...");	
+	const res = await fetch(url); 
+	if (res.ok) {
+		console.log("Ok, loaded successfully");
+		const json = await res.json();
+        apiExterna = json;
+	} else {
+		console.log("ERROR!");
+    }
         const resData = await fetch("/api/v2/evolution-of-cycling-routes");
         MyData = await resData.json();
-        let items = ["Metropolitano", "Urbano", "Resto", "Malta", "Cebada", "Avena", "Desperdicios","Alcohol"];
+        let items = ["Metropolitano", "Urbano", "Resto", "hidroeléctrico", "solar", "carbon"];
         let valores = [];
         let valor = {};
         MyData.forEach((r) => {
-            //if(r.year==2015){
+            if(r.year==2015){
             valor = {
                    name: r.province,
-                   data: [r.metropolitan, r.urban, r.rest, 0, 0, 0, 0, 0]
+                   data: [r.metropolitan, r.urban, r.rest, 0, 0, 0]
                }
             valores.push(valor);
-            //}
+            }
         });
         apiExterna.forEach( (v) => {           
                valor = {
-                   name: v.country,
-                   data: [0, 0, 0, v['gdamalt'], v['gdabarley'], v['gdaoat'], v['gdawaste'], v['gdaethylalcohol']]
+                   name: v.state,
+                   data: [0, 0, 0, v['hydro']/20000, v['solar']/20000, v['coal']/20000]
                }
                
                valores.push(valor);
@@ -48,7 +48,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Integración API 07'
+                text: 'Integración API 08'
             },
             subtitle: {
                 text: ''
@@ -107,11 +107,11 @@
         {:then  apiExterna}
             <figure class="highcharts-figure">
                 <div id="container"></div>
-                <p>   </p>
-                
-
-            </figure>	
-            
+                <p>   </p>         
+                <p class=" highcharts-description"> 
+                Para que pudieran apreciarse los datos de ambas APIS he tenido que dividir los valores de la API externa 20000 mas pequeños
+                </p>
+            </figure>	            
         {/await}
 
   </figure>

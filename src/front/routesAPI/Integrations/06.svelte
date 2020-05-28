@@ -4,7 +4,7 @@
 	import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
     
-    const url = "https://sos1920-06.herokuapp.com/api/v1/not-hospitalized-stats";
+    const url = "https://sos1920-06.herokuapp.com/api/v2/not-hospitalized-stats";
 
     let apiExterna = [];
     let MyData = [];
@@ -23,31 +23,48 @@
         let items = ["Metropolitano", "Urbano", "Resto", "Totales", "Interurbanos", "Urbanos"];
         let valores = [];
         let valor = {};
+
         MyData.forEach((r) => {
-            //if(r.year==2015){
+            apiExterna.forEach((v) => {
+                //if(r.year == 2018 && v.year ==2018){
+                    if(v.province.toLowerCase() == r.province){
+                        valor = {
+                            name: r.province,
+                            data: [r.metropolitan, r.urban, r.rest,
+                            v['total'], v['interurban'], v['urban']]
+                            }
+                        valores.push(valor);
+                    }
+                //}
+            });    
+        });
+
+        /*MyData.forEach((r) => {
+            if(r.year==2015){
             valor = {
                    name: r.province,
                    data: [r.metropolitan, r.urban, r.rest, 0, 0, 0]
                }
             valores.push(valor);
-            //}
+            }
         });
-        apiExterna.forEach((v) => {           
+        apiExterna.forEach( (v) => {   
+            if(v.year < 2000){        
                valor = {
                    name: v.province,
                    data: [0, 0, 0, v['total'], v['interurban'], v['urban']]
                }
-               valores.push(valor);
+            valores.push(valor);
+        } 
             
-            
-        });
+        });*/
 
         Highcharts.chart('container', {
             chart: {
                 type: 'column'
             },
             title: {
-                text: 'Integración API Grupop 06'
+                text: 'Integración API Grupo 06'
             },
             subtitle: {
                 text: ''
@@ -97,7 +114,7 @@
 </svelte:head>
 
 <p>
-    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
+    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i></Button>
 </p>
 
 <figure class="highcharts-figure">
