@@ -1,9 +1,9 @@
 <script>
-import Router from 'svelte-spa-router';
-import NotFound from './NotFound.svelte';
-import Home from './Home.svelte';
-import Integrations from './Integrations.svelte';
-import Analytics from './Analytics.svelte';
+	import Router from 'svelte-spa-router';
+	import NotFound from './NotFound.svelte';
+	import Home from './Home.svelte';
+	import Integrations from './Integrations.svelte';
+	import Analytics from './Analytics.svelte';
 
 // API ANA
 	import CyclingRoutesTable from './routesAPI/CyclingRoutesTable.svelte';
@@ -32,6 +32,18 @@ import Analytics from './Analytics.svelte';
 	import API_12 from './routesAPI/Integrations/12.svelte';
 	import API_27 from './routesAPI/Integrations/27.svelte';
 
+//Integraciones Jose
+	import Accidents from './accidentsAPI/Integrations/Home.svelte';
+	import AccidentsAPI04 from './accidentsAPI/Integrations/API04.svelte';
+	import AccidentsAPI07 from './accidentsAPI/Integrations/API07.svelte';
+	import AccidentsAPI08 from './accidentsAPI/Integrations/API08.svelte';
+	import AccidentsAPI11 from './accidentsAPI/Integrations/API11.svelte';
+	import AccidentsAPI27 from './accidentsAPI/Integrations/API27.svelte';
+	import AccidentsAPI28 from './accidentsAPI/Integrations/API28.svelte';
+
+//Integraciones Marta
+
+
 	const routes = {
 		"/": Home,
 		"/analytics": Analytics,
@@ -52,8 +64,14 @@ import Analytics from './Analytics.svelte';
 
 
 // INTEGRACIONES JOSE
+		"/integrations/accidents": Accidents,
+		"/integrations/accidents/api-04": AccidentsAPI04,
+		"/integrations/accidents/api-07": AccidentsAPI07,
+		"/integrations/accidents/api-08": AccidentsAPI08,
+		"/integrations/accidents/api-11": AccidentsAPI11,
+		"/integrations/accidents/api-27": AccidentsAPI27,
+		"/integrations/accidents/api-28": AccidentsAPI28,
 
-		
 		"/evolution-of-cycling-routes": CyclingRoutesTable,
 		"/evolution-of-cycling-routes/:province/:year": EditCyclingRoute,
 		"/evolution-of-cycling-routes/graph": GraphRoutes,
@@ -87,7 +105,7 @@ import Analytics from './Analytics.svelte';
 					<li class="nav-item active">
 						<a class="nav-link" href="#/">Inicio <span class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item dropdown">
+					<li class="nav-item dropdown active">
 						<a href="#/evolution-of-cycling-routes" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							API Ana
 						</a>
@@ -96,7 +114,7 @@ import Analytics from './Analytics.svelte';
 							<a class="dropdown-item" href="#/evolution-of-cycling-routes/graph-v2">Gráfica amCharts</a>
 						</div>
 					</li>
-					<li class="nav-item dropdown">
+					<li class="nav-item dropdown active">
 						<a href="#/traffic-accidents" class="nav-link dropdown-toggle" id="navbardrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						API Jose Francisco
 						</a>
@@ -105,7 +123,7 @@ import Analytics from './Analytics.svelte';
 							<a class="dropdown-item" href="#/traffic-accidents/graph-v2">Gráfica Plotty</a>
 						</div>
 					</li>
-					<li class="nav-item dropdown">
+					<li class="nav-item dropdown active">
 						<a href="#/rural-tourism-stats" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							API Marta
 						</a>
