@@ -13,6 +13,10 @@
 	<link rel="stylesheet" href="./css/stylesheet.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 	<!-- Grafica 2 Ana -->
 	<script src="https://www.amcharts.com/lib/4/core.js" defer></script>
     <script src="https://www.amcharts.com/lib/4/charts.js" defer></script>
@@ -37,9 +41,55 @@
 
 <body style="padding: 5%;" background= "background.jpg">
 
-	<img class="logo" src="logo-etsii.png" alt="Logo US" style="position: absolute; top: 12.5%; left: 5%; width: 15%;"><br>
+	<img class="logo" src="logo-etsii.png" alt="Logo US" style="position: absolute; top: 12.5%; left: 5%; width: 15%;">
 	<h1 class="display-1 main-title" style="text-align: center;">SOS1920-02</h1>
-	<img class="logo" src="logo-us.png" alt="Logo US" style="position: absolute; top: 5%; right: 5%; width: 15%;"><br>
+	<img class="logo" src="logo-us.png" alt="Logo US" style="position: absolute; top: 5%; right: 5%; width: 15%;">
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: 5%; margin-bottom: 5%;">
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#/">Inicio <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item dropdown active">
+					<a href="#/evolution-of-cycling-routes" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						API Ana
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#/evolution-of-cycling-routes/graph">Gráfica HighCharts</a>
+						<a class="dropdown-item" href="#/evolution-of-cycling-routes/graph-v2">Gráfica amCharts</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown active">
+					<a href="#/traffic-accidents" class="nav-link dropdown-toggle" id="navbardrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					API Jose Francisco
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#/traffic-accidents/graph">Gráfica HighCharts</a>
+						<a class="dropdown-item" href="#/traffic-accidents/graph-v2">Gráfica Plotty</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown active">
+					<a href="#/rural-tourism-stats" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						API Marta
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#/rural-tourism-stats/graph">Gráfica HighCharts</a>
+					<a class="dropdown-item" href="#/rural-tourism-stats/graph-v2">Gráfica Billboards</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="#/analytics">Analíticas</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="#/integrations">Integraciones</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="#/videos">Vídeos</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
 	<div id="SvelteApp"></div>
 </body>
