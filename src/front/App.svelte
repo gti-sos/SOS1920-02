@@ -44,7 +44,20 @@
 	import AccidentsAPI28 from './accidentsAPI/Integrations/API28.svelte';
 
 //Integraciones Marta
-
+	import IntegrationsTourism from './tourismAPI/Integrations/Home.svelte.html';
+	import API01 from './tourismAPI/Integrations/API01.svelte.html';
+	import API04 from './tourismAPI/Integrations/API04.svelte.html';
+	import API05 from './tourismAPI/Integrations/API05.svelte.html';
+	import API07 from './tourismAPI/Integrations/API07.svelte.html';
+	import API08 from './tourismAPI/Integrations/API08.svelte.html';
+	import API10 from './tourismAPI/Integrations/API10.svelte.html';
+	import API12 from './tourismAPI/Integrations/API12.svelte.html';
+	import API21 from './tourismAPI/Integrations/API21.svelte.html';
+	import API22 from './tourismAPI/Integrations/API22.svelte.html';
+	import API23 from './tourismAPI/Integrations/API23.svelte.html';
+	import API30 from './tourismAPI/Integrations/API30.svelte.html';
+	import APIExtena01 from './tourismAPI/Integrations/APIExtena01.svelte.html';
+	import APIExtena02 from './tourismAPI/Integrations/APIExtena02.svelte.html';
 
 	const routes = {
 		"/": Home,
@@ -67,7 +80,20 @@
 
 		
 // INTEGRACIONES MARTA
-
+		"/integrations/rural-tourism-stats": IntegrationsTourism,
+		"/integrations/rural-tourism-stats/API01": API01,
+		"/integrations/rural-tourism-stats/API04": API04,
+		"/integrations/rural-tourism-stats/API05": API05,
+		"/integrations/rural-tourism-stats/API07": API07,
+		"/integrations/rural-tourism-stats/API08": API08,
+		"/integrations/rural-tourism-stats/API10": API10,
+		"/integrations/rural-tourism-stats/API12": API12,
+		"/integrations/rural-tourism-stats/API21": API21,
+		"/integrations/rural-tourism-stats/API22": API22,
+		"/integrations/rural-tourism-stats/API23": API23,
+		"/integrations/rural-tourism-stats/API30": API30,
+		"/integrations/rural-tourism-stats/APIExtena01": APIExtena01,
+		"/integrations/rural-tourism-stats/APIExtena02": APIExtena02,
 
 // INTEGRACIONES JOSE
 		"/integrations/accidents": Accidents,
