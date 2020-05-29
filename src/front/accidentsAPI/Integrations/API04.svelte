@@ -3,13 +3,13 @@
 	import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
 
-    let MyData = [];
-    let MyDataGraph = [];
-    let Data04 = [];
-
     async function loadGraph() {
+    
+        let MyData = [];
+        let MyDataGraph = [];
+        let Data04 = [];
 
-        console.log("Loading integration API 4...");
+        console.log("Loading integration API 04...");
         const res = await fetch("https://sos1920-04.herokuapp.com/api/v1/vehicles");
         if (res.ok) {
             console.log("Loaded correctly");
@@ -99,34 +99,6 @@
         </p>
     </figure>
 
-    {#await Data04}
-        Loading External API...
-    {:then Data04}
-        <Table bordered>
-            <thead>
-                <th>Provincia</th>
-                <th>Año</th>
-                <th>Coches</th>
-                <th>Buses</th>
-                <th>Motos</th>
-                <th>Camiones</th>
-                <th>Total</th>
-            </thead>
-            <tbody>
-                {#each Data04 as Data04}
-                    <tr>
-                        <td>{Data04.province}</td>
-                        <td>{Data04.year}</td>
-                        <td>{Data04.car}</td>
-                        <td>{Data04.bus}</td>
-                        <td>{Data04.motorcycle}</td>
-                        <td>{Data04.truck}</td>
-                        <td>{Data04.total}</td>
-                    </tr>
-                {/each}
-            </tbody>
-        </Table>
-    {/await}
 </main>
 
 <style>

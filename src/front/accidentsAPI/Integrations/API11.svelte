@@ -9,12 +9,12 @@
         let MyDataGraph = [];
         let Data11 = [];
 
-        console.log("Loading integration API 4...");
+        console.log("Loading integration API 11...");
         const res = await fetch("https://sos1920-11.herokuapp.com/api/v2/crime-rate-stats");
         if (res.ok) {
             console.log("Loaded correctly");
             const json = await res.json();
-            Data04 = json;
+            Data11 = json;
         } else {
             console.log("ERROR!");
         }
@@ -22,12 +22,18 @@
         const resData = await fetch("/api/v2/traffic-accidents");
         MyData = await resData.json();
         MyData.forEach( (x) => {
-            Data11.forEach( (y) => {
-                if (y.province.toLowerCase() == x.province && x.year != 2015) {
-                    MyDataGraph.push({name: x.province, data: [parseInt(x.trafficaccidentvictim), parseInt(x.dead), parseInt(x.injured), parseFloat(y.cr_rate), parseFloat(y.cr_saferate), parseFloat(y.cr_homicrate), parseFloat(y.cr_homicount), parseFloat(y.cr_theftrate), parseFloat(y.cr_theftcount)]});
+            if (x.year == 2018) {
+                    MyDataGraph.push({
+                        name: x.province,
+                        data: [parseInt(x.trafficaccidentvictim), parseInt(x.dead), parseInt(x.injured), 0, 0, 0, 0, 0, 0]});
                 }
-            });
         });
+        Data11.forEach( (y) => {
+                MyDataGraph.push({
+                    name: y.country,
+                    data: [0, 0, 0, y.cr_rate, y.cr_saferate, y.cr_homicrate, y.cr_homicount, y.cr_theftrate, y.cr_theftcount]
+                });
+            });
 
         Highcharts.chart('container', {
 
@@ -97,7 +103,7 @@
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
-            Integracion con la api de del Grupo SOS1920-04.
+            Integracion con la api de del Grupo SOS1920-11.
         </p>
     </figure>
 </main>

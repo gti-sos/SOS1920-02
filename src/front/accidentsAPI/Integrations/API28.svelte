@@ -7,14 +7,14 @@
 
         let MyData = [];
         let MyDataGraph = [];
-        let Data04 = [];
+        let Data28 = [];
 
-        console.log("Loading integration API 4...");
+        console.log("Loading integration API 28...");
         const res = await fetch("https://sos1920-28.herokuapp.com/api/v1/gce");
         if (res.ok) {
             console.log("Loaded correctly");
             const json = await res.json();
-            Data04 = json;
+            Data28 = json;
         } else {
             console.log("ERROR!");
         }
@@ -22,17 +22,18 @@
         const resData = await fetch("/api/v2/traffic-accidents");
         MyData = await resData.json();
         MyData.forEach( (x) => {
-            Data04.forEach( (y) => {
-                if (y.province.toLowerCase() == x.province && x.year != 2015) {
-                    MyDataGraph.push({name: x.province, data: [parseInt(x.trafficaccidentvictim), parseInt(x.dead), parseInt(x.injured), parseInt(y.car), parseInt(y.bus), parseInt(y.motorcycle), parseInt(y.truck)]});
-                }
-            });
+            if (x.year == 2015) {
+                MyDataGraph.push({name: x.province, data: [parseInt(x.trafficaccidentvictim), parseInt(x.dead), parseInt(x.injured), 0, 0, 0]});
+            }
+        });
+        Data28.forEach( (y) => {
+            MyDataGraph.push({name: y.country, data: [0, 0, 0, y.gce_country, y.gce_per_capita, y.gce_cars]});
         });
 
         Highcharts.chart('container', {
 
             title: {
-                text: 'Integración de la API SOS1920-04: Número de vehículos.'
+                text: 'Integración de la API SOS1920-28: GCE.'
             },
 
             yAxis: {
@@ -95,9 +96,10 @@
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
-            Integracion con la api de del Grupo SOS1920-04.
+            Integracion con la api de del Grupo SOS1920-28.
         </p>
     </figure>
+
 </main>
 
 <style>

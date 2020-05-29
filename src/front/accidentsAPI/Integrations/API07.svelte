@@ -9,12 +9,12 @@
         let MyDataGraph = [];
         let Data07 = [];
 
-        console.log("Loading integration API 4...");
+        console.log("Loading integration API 07...");
         const res = await fetch("https://sos1920-07.herokuapp.com/api/v1/fertilizerImportsExports");
         if (res.ok) {
             console.log("Loaded correctly");
             const json = await res.json();
-            Data04 = json;
+            Data07 = json;
         } else {
             console.log("ERROR!");
         }
@@ -22,11 +22,12 @@
         const resData = await fetch("/api/v2/traffic-accidents");
         MyData = await resData.json();
         MyData.forEach( (x) => {
-            Data07.forEach( (y) => {
-                if (x.year == 2018) {
-                    MyDataGraph.push({name: x.province, data: [parseInt(x.trafficaccidentvictim), parseInt(x.dead), parseInt(x.injured), parseInt(y.shortTonExport), parseInt(y.dollarExport), parseInt(y.shortTonImport), parseInt(y.dollarImport)]});
-                }
-            });
+            if (x.year == 2018) {
+                MyDataGraph.push({name: x.province, data: [parseInt(x.trafficaccidentvictim), parseInt(x.dead), parseInt(x.injured), 0, 0, 0, 0]});
+            }
+        });
+        Data07.forEach( (y) => {
+            MyDataGraph.push({name: y.country, data: [0, 0, 0, parseInt(y.shortTonExport), parseInt(y.dollarExport), parseInt(y.shortTonImport), parseInt(y.dollarImport)]});
         });
 
         Highcharts.chart('container', {
@@ -50,10 +51,7 @@
                     'Dólares exportados',
                     'Toneladas importadas',
                     'Dólares importados'
-                ],
-                accessibility: {
-                    rangeDescription: 'Range: 2010 to 2017'
-                }
+                ]
             },
 
             legend: {
@@ -98,7 +96,7 @@
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
-            Integracion con la api de del Grupo SOS1920-04.
+            Integracion con la api de del Grupo SOS1920-07.
         </p>
     </figure>
 </main>

@@ -9,12 +9,12 @@
         let MyDataGraph = [];
         let Data08 = [];
 
-        console.log("Loading integration API 8...");
+        console.log("Loading integration API 08...");
         const res = await fetch("http://sos1920-08.herokuapp.com/api/v1/motogp-statistics");
         if (res.ok) {
             console.log("Loaded correctly");
             const json = await res.json();
-            Data04 = json;
+            Data08 = json;
         } else {
             console.log("ERROR!");
         }
@@ -22,11 +22,12 @@
         const resData = await fetch("/api/v2/traffic-accidents");
         MyData = await resData.json();
         MyData.forEach( (x) => {
-            Data08.forEach( (y) => {
-                if (y.province.toLowerCase() == x.province && x.year != 2015) {
-                    MyDataGraph.push({name: x.province, data: [parseInt(x.trafficaccidentvictim), parseInt(x.dead), parseInt(x.injured), parseInt(y.gce_country), parseInt(y.gce_per_capita), parseInt(y.gce_cars)]});
-                }
-            });
+            if (x.year == 2015) {
+                MyDataGraph.push({name: x.province, data: [parseInt(x.trafficaccidentvictim), parseInt(x.dead), parseInt(x.injured), 0, 0, 0]});
+            }
+        });
+        Data08.forEach( (y) => {
+            MyDataGraph.push({name: y.country, data: [0, 0, 0, y.world_title, y.victory, y.podium]});
         });
 
         Highcharts.chart('container', {
@@ -46,9 +47,9 @@
                     'Víctimas de accidentes',
                     'Fallecidos',
                     'Heridos',
-                    'Media Países por producción',
-                    'Media per Capita',
-                    'Media de produccion de coches'
+                    'Titulos Mundiales',
+                    'Victorias',
+                    'Podiums'
                 ]
             },
 
@@ -96,7 +97,8 @@
         <p class="highcharts-description">
             Integracion con la api de del Grupo SOS1920-08.
         </p>
-    </figure>
+    </figure>  	
+
 </main>
 
 <style>
