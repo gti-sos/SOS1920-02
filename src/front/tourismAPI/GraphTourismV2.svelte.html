@@ -7,34 +7,41 @@ async function loadGraph() {
 	
 	let MyData = [];
 	let Provinces = ["x"];
-	let Traveller = ["Viajero"];
+	let Traveller1 = ["Viajero 2015"];
+	let Traveller2 = ["Viajero 2016"];
 	//let Overnightstay = ["Pernoctaciรณn"];
 	//let Averagestay = ["Estancia media"];
-	const resData = await fetch("/api/v1/rural-tourism-stats");
+	const resData = await fetch("/api/v2/rural-tourism-stats");
 	MyData = await resData.json();
 	
 	MyData.forEach( (x) => {
-		Provinces.push(x.province);
-		Traveller.push(x.traveller);
-		//Overnightstay.push(x.overnightstay);
-		//Averagestay.push(x.averagestay);
+		if(x.year == 2015){
+			Provinces.push(x.province);
+			Traveller1.push(x.traveller);
+			//Overnightstay.push(x.overnightstay);
+			//Averagestay.push(x.averagestay);
+		}
+		if(x.year == 2016){
+			Traveller2.push(x.traveller);
+		}	
 	});
 	var chart = bb.generate({
 	  data: {
 		x: "x",
 		columns: [
 		Provinces,
-		Traveller
+		Traveller1,
+		Traveller2	
 		],
 		type: "radar",
 		labels: true
 	  },
 	  radar: {
 		axis: {
-		  max: 60000
+		  max: 90000
 		},
 		level: {
-		  depth: 6
+		  depth: 5
 		},
 		direction: {
 		  clockwise: true
@@ -53,7 +60,7 @@ async function loadGraph() {
 </svelte:head>
 
 <main>
-    <h3 style="text-align: center;"> <i class="fas fa-suitcase"></i> Estadísticas del turismo rural de Andalucía en 2015</h3>
+    <h3 style="text-align: center;"> <i class="fas fa-suitcase"></i> Estadísticas del turismo rural de Andalucía en 2015 y 2016</h3>
 	
 	<Button outline color="secondary" on:click="{pop}">Volver</Button>
 	
