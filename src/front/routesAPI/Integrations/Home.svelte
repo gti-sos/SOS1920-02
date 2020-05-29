@@ -19,5 +19,7 @@
     <button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/evolution-of-cycling-routes/api-09'"style="width: 20%;"> API Grupo 09</button>
     <button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/evolution-of-cycling-routes/api-12'"style="width: 20%;"> API Grupo 12</button>
     <button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/evolution-of-cycling-routes/api-27'"style="width: 20%;"> API Grupo 27</button>
-
+    <br><br>
+    <button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/evolution-of-cycling-routes/apiExtena01'"style="margin-left: 30.25%; width: 20%;"> API Externa I</button>
+    <button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/evolution-of-cycling-routes/apiExtena02'"style="width: 20%;"> API Externa II</button>
 </main>

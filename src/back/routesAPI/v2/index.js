@@ -4,6 +4,16 @@ module.exports = function(app){
 	const dbFileName = path.join(__dirname,"routes.db");
 	
 	console.log("Empieza en 3, 2, 1...");
+
+	var sos1920_02 = 'https://sos1920-02.herokuapp.com';
+	var recurso01 = '/api/v2/https://api.chucknorris.io/jokes/MmJexGeVQoSFklVjEMMx8g';
+
+    app.use(recurso06_TA, function(req, res) {
+		var url = sos1920_09_TA + req.baseUrl + req.url;
+		console.log('piped: ' + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res);
+	});
+	app.use(express.static('.'));
 	
 	const db = new dataStore({
 		filename: dbFileName, 
@@ -61,7 +71,6 @@ app.get(BASE_API_URL+"/evolution-of-cycling-routes/", (req,res) =>{
 	console.log("limit= "+ limit+", offset= "+ offset);	
 	
 // BUSQUEDA
-
 	if(req.query.province) queryBD["province"]= req.query.province;
 	if(req.query.year) queryBD["year"] = parseInt(req.query.year);
 	if(req.query.metropolitan) queryBD["metropolitan"] = parseFloat(req.query.metropolitan);
