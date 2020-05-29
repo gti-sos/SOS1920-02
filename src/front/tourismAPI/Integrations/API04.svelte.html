@@ -6,6 +6,7 @@
 	let API_04 = [];
 	
 	async function loadGraph(){
+		fetch("https://sos1920-04.herokuapp.com/api/v1/traffic_accidents/loadInitialData");
 		
 		const resData = await fetch("/api/v2/rural-tourism-stats");
 		MyData = await resData.json();
