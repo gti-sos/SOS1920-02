@@ -1,5 +1,7 @@
 <script>
 
+	import {pop} from "svelte-spa-router";
+    import Button from "sveltestrap/src/Button.svelte";
 	
 async function loadGraph() {
 	
@@ -51,7 +53,18 @@ async function loadGraph() {
 </svelte:head>
 
 <main>
-    
+    <h3 style="text-align: center;"> <i class="fas fa-suitcase"></i> Estadísticas del turismo rural de Andalucía en 2015</h3>
+	
+	<Button outline color="secondary" on:click="{pop}">Volver</Button>
+	
     <div id="radarChart"></div>
-
+	
+	<p style="text-align:center;">
+		En la gráfica podemos observar el número de viajeros del turismo rural en Andalucia.
+	</p>
 </main>
+
+
+
+
+
