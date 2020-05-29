@@ -7,7 +7,7 @@
     <br><br>
     <h2 style="text-align: center;">Integración de APIs</h2>
     <br><br>
-    <p style="text-align: center;">Aqui se muestran los botones que llevan a cada integracion con las APIs de los compañeros de SOS.</p>
+    <p style="text-align: center;">Aqui se muestran los botones que llevan a cada integración con las APIs de los compañeros de SOS.</p>
     <br><br>       
 
     <button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/accidents/api-04'" style="margin-left: 20%; width: 20%;">Vehículos grupo-04</button>
