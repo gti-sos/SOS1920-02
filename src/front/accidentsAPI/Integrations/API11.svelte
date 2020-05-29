@@ -3,11 +3,11 @@
 	import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
 
-    async function loadGraph() {
+    let MyData = [];
+    let MyDataGraph = [];
+    let Data11 = [];
 
-        let MyData = [];
-        let MyDataGraph = [];
-        let Data11 = [];
+    async function loadGraph() {
 
         console.log("Loading integration API 11...");
         const res = await fetch("https://sos1920-11.herokuapp.com/api/v2/crime-rate-stats");
@@ -106,6 +106,7 @@
             Integracion con la api de del Grupo SOS1920-11.
         </p>
     </figure>
+
 </main>
 
 <style>
