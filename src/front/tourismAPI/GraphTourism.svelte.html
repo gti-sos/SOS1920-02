@@ -1,4 +1,6 @@
 <script>
+	import {pop} from "svelte-spa-router";
+    import Button from "sveltestrap/src/Button.svelte";
 	
 async function loadGraph() {
 	
@@ -63,6 +65,10 @@ async function loadGraph() {
 
 
 <main>
+	<h3 style="text-align: center;"> <i class="fas fa-suitcase"></i> Estadísticas del turismo rural</h3>
+	
+	<Button outline color="secondary" on:click="{pop}">Volver</Button>
+	
 	<figure class="highcharts-figure">
 		<div id="container"></div>
 		<p class="highcharts-description">
