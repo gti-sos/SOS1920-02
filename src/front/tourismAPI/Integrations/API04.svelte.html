@@ -3,7 +3,7 @@
     import Button from "sveltestrap/src/Button.svelte";
 
 	let MyData = [];
-	let API_01 = [];
+	let API_04 = [];
 	
 	async function loadGraph(){
 		
@@ -11,10 +11,10 @@
 		MyData = await resData.json();
 		const resData2 = await fetch("https://sos1920-04.herokuapp.com/api/v1/traffic_accidents");
 		if (resData2.ok) {
-			console.log("Ok, api 01 loaded");
+			console.log("Ok, api 04 loaded");
 			const json = await resData2.json();
-            API_01 = json;
-			console.log(API_01)
+            API_04 = json;
+			console.log(API_04)
 		} else {
 			console.log("ERROR!");
         }
@@ -29,7 +29,7 @@
 				valores.push(aux)
 			}
         });
-		API_01.forEach((x) => {
+		API_04.forEach((x) => {
             if(x.province=="Madrid"||x.province=="Pontevedra"){	
 				aux={
 					name: x.province,
@@ -46,7 +46,7 @@
 				type: 'bar'
 			},
 			title: {
-				text: 'Accidentes y turismo rural en el año 2015'
+				text: 'Accidentes y turismo rural'
 			},
 			xAxis: {
 				categories: ['Accidentes con víctimas', 'No hospitalizados', 'Viajeros', 'Pernoctaciones'],
@@ -83,11 +83,12 @@
 </svelte:head>
 
 <main>
-	<h3 style="text-align: center;"> Integración con la API natality-stats del grupo 01</h3>
+	<h3 style="text-align: center;"> Integración con la API traffic_accidents del grupo 04</h3>
+	<Button outline color="secondary" on:click="{pop}">Volver</Button>
 	<figure class="highcharts-figure">
 		<div id="container"></div>
 		<p style="text-align:center;" class="highcharts-description">
-			Nacimientos y turismo rural en el año 2015
+			Comparación entre los datos de accidentes de tráfico y turismo rural.
 		</p>
 	</figure>
 
