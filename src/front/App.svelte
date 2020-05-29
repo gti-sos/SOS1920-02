@@ -31,6 +31,8 @@ import Analytics from './Analytics.svelte';
 	import API_09 from './routesAPI/Integrations/09.svelte';
 	import API_12 from './routesAPI/Integrations/12.svelte';
 	import API_27 from './routesAPI/Integrations/27.svelte';
+	import apiExtena01 from './routesAPI/Integrations/apiExtena01.svelte';
+	import apiExtena02 from './routesAPI/Integrations/apiExtena01.svelte';
 
 	const routes = {
 		"/": Home,
@@ -47,6 +49,10 @@ import Analytics from './Analytics.svelte';
 		"/integrations/evolution-of-cycling-routes/api-09": API_09,
 		"/integrations/evolution-of-cycling-routes/api-12": API_12,
 		"/integrations/evolution-of-cycling-routes/api-27": API_27,
+		"/integrations/evolution-of-cycling-routes/apiExtena01": apiExtena01,
+		"/integrations/evolution-of-cycling-routes/apiExtena02": apiExtena02,
+		
+
 		
 // INTEGRACIONES MARTA
 
