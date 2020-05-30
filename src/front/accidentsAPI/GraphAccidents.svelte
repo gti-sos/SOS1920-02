@@ -20,6 +20,8 @@
         Highcharts.chart('container', {
             chart: {
                 type: 'column',
+                backgroundColor: null,
+                height: 500
             },
             title: {
                 text: 'Accidentes de Tráfico'

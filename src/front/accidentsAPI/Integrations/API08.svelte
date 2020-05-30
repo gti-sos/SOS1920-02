@@ -32,6 +32,11 @@
 
         Highcharts.chart('container', {
 
+            chart: {
+                backgroundColor: null,
+                height: 500
+            },
+            
             title: {
                 text: 'Integración de la API SOS1920-08: Estadísticas Moto-GP.'
             },

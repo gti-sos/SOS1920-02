@@ -7,14 +7,14 @@
 
         let MyData = [];
         let MyDataGraph = [];
-        let Data08 = [];
+        let apiExterna = [];
 
-        console.log("Loading integration API 08...");
+        console.log("Loading integration API external...");
         const res = await fetch("https://restcountries.eu/rest/v2/?fields=name;subregion;area");
         if (res.ok) {
             console.log("Loaded correctly");
             const json = await res.json();
-            Data08 = json;
+            apiExterna = json;
         } else {
             console.log("ERROR!");
         }
@@ -23,67 +23,89 @@
         MyData = await resData.json();
         MyData.forEach( (x) => {
             if (x.year == 2015) {
-                MyDataGraph.push({name: x.province, data: [parseInt(x.trafficaccidentvictim), parseInt(x.dead), parseInt(x.injured), 0]});
+                MyDataGraph.push(
+                    {name: 'Nº victimas en accidentes en '+x.province, y: x.trafficaccidentvictim},
+                    {name: 'Nº de muertes en '+x.province, y: x.dead},
+                    {name: 'Nº de Heridos en '+x.province, y: x.injured});
             }
         });
 
-        Data08.forEach((y) => {
-            if(y.area > 1000)
-            MyDataGraph.push({name: y.name, data: [0,0,0, y.area/1000]});
+        apiExterna.forEach((y) => {
+            if(y.name == "Spain")
+            MyDataGraph.push({name: y.name, y: y.area});
         });
-        
 
+        Highcharts.setOptions({
+            colors: Highcharts.map(Highcharts.getOptions().colors, function (color) {
+                return {
+                    radialGradient: {
+                        cx: 0.5,
+                        cy: 0.3,
+                        r: 0.7
+                    },
+                    stops: [
+                        [0, color],
+                        [1, Highcharts.color(color).brighten(-0.3).get('rgb')] // darken
+                    ]
+                };
+            })
+        });
+
+        // Build the chart
         Highcharts.chart('container', {
-
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie',
+                backgroundColor: null,
+                height: 500
+            },
             title: {
                 text: 'Integración API Externa.'
             },
-
-            yAxis: {
-                title: {
-                    text: 'Comparación'
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
                 }
             },
-
-            xAxis: {
-                categories: [
-                    'Victimas Accidentes',
-                    'Muertos',
-                    'Heridos',
-                    'Area'
-                ]
-            },
-
-            legend: {
-                layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'middle'
-            },
-
-            series: MyDataGraph,
-
-            responsive: {
-                rules: [{
-                    condition: {
-                        maxWidth: 500
-                    },
-                    chartOptions: {
-                        legend: {
-                            layout: 'horizontal',
-                            align: 'center',
-                            verticalAlign: 'bottom'
-                        }
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        connectorColor: 'silver'
                     }
-                }]
+                }
+            },
+            series: [{
+                name: 'Comparación',
+                data: MyDataGraph
+            }],
+            responsive: {
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
             }
-
         });
     }
+
 </script>
 
 <svelte:head>
     <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js" on:load="{loadGraph}"></script>
@@ -98,15 +120,14 @@
         <p class="highcharts-description">
             Integracion con la api de del Grupo SOS1920-08.
         </p>
-    </figure>  	
+    </figure> 	
 
 </main>
 
 <style>
     .highcharts-figure, .highcharts-data-table table {
-        min-width: 95%; 
-        max-width: 100%;
-        min-height: 50%;
+        min-width: 320px; 
+        max-width: 660px;
         margin: 1em auto;
     }
 
@@ -137,4 +158,5 @@
     .highcharts-data-table tr:hover {
         background: #f1f7ff;
     }
+
 </style>

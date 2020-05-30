@@ -32,6 +32,11 @@
 
         Highcharts.chart('container', {
 
+            chart: {
+                backgroundColor: null,
+                height: 500
+            },
+
             title: {
                 text: 'Integración de la API SOS1920-28: GCE.'
             },
@@ -59,7 +64,7 @@
                 align: 'right',
                 verticalAlign: 'middle'
             },
-
+            
             series: MyDataGraph,
 
             responsive: {
