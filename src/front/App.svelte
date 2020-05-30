@@ -31,8 +31,8 @@
 	import API_09 from './routesAPI/Integrations/09.svelte';
 	import API_12 from './routesAPI/Integrations/12.svelte';
 	import API_27 from './routesAPI/Integrations/27.svelte';
-	import apiExtena01 from './routesAPI/Integrations/apiExtena01.svelte';
-	import apiExtena02 from './routesAPI/Integrations/apiExtena01.svelte';
+	import apiExterna01 from './routesAPI/Integrations/apiExterna01.svelte';
+	import apiExterna02 from './routesAPI/Integrations/apiExterna02.svelte';
 
 //Integraciones Jose
 	import Accidents from './accidentsAPI/Integrations/Home.svelte';
@@ -42,6 +42,8 @@
 	import AccidentsAPI11 from './accidentsAPI/Integrations/API11.svelte';
 	import AccidentsAPI27 from './accidentsAPI/Integrations/API27.svelte';
 	import AccidentsAPI28 from './accidentsAPI/Integrations/API28.svelte';
+	import apiExterna01J from './accidentsAPI/Integrations/apiExterna01.svelte';
+	import apiExterna02J from './accidentsAPI/Integrations/apiExterna02.svelte';
 
 //Integraciones Marta
 	import IntegrationsTourism from './tourismAPI/Integrations/Home.svelte.html';
@@ -56,8 +58,8 @@
 	import API22 from './tourismAPI/Integrations/API22.svelte.html';
 	import API23 from './tourismAPI/Integrations/API23.svelte.html';
 	import API30 from './tourismAPI/Integrations/API30.svelte.html';
-	import APIExtena01 from './tourismAPI/Integrations/APIExtena01.svelte.html';
-	import APIExtena02 from './tourismAPI/Integrations/APIExtena02.svelte.html';
+	import APIExterna01 from './tourismAPI/Integrations/APIExterna01.svelte.html';
+	import APIExterna02 from './tourismAPI/Integrations/APIExterna02.svelte.html';
 
 	const routes = {
 		"/": Home,
@@ -74,10 +76,8 @@
 		"/integrations/evolution-of-cycling-routes/api-09": API_09,
 		"/integrations/evolution-of-cycling-routes/api-12": API_12,
 		"/integrations/evolution-of-cycling-routes/api-27": API_27,
-		"/integrations/evolution-of-cycling-routes/apiExtena01": apiExtena01,
-		"/integrations/evolution-of-cycling-routes/apiExtena02": apiExtena02,
-		
-
+		"/integrations/evolution-of-cycling-routes/apiExterna01": apiExterna01,
+		"/integrations/evolution-of-cycling-routes/apiExterna02": apiExterna02,	
 		
 // INTEGRACIONES MARTA
 		"/integrations/rural-tourism-stats": IntegrationsTourism,
@@ -92,8 +92,8 @@
 		"/integrations/rural-tourism-stats/API22": API22,
 		"/integrations/rural-tourism-stats/API23": API23,
 		"/integrations/rural-tourism-stats/API30": API30,
-		"/integrations/rural-tourism-stats/APIExtena01": APIExtena01,
-		"/integrations/rural-tourism-stats/APIExtena02": APIExtena02,
+		"/integrations/rural-tourism-stats/APIExterna01": APIExterna01,
+		"/integrations/rural-tourism-stats/APIExterna02": APIExterna02,
 
 // INTEGRACIONES JOSE
 		"/integrations/accidents": Accidents,
@@ -103,6 +103,8 @@
 		"/integrations/accidents/api-11": AccidentsAPI11,
 		"/integrations/accidents/api-27": AccidentsAPI27,
 		"/integrations/accidents/api-28": AccidentsAPI28,
+		"/integrations/accidents/apiExterna01": apiExterna01J,
+		"/integrations/accidents/apiExterna02": apiExterna02J,
 
 		"/evolution-of-cycling-routes": CyclingRoutesTable,
 		"/evolution-of-cycling-routes/:province/:year": EditCyclingRoute,

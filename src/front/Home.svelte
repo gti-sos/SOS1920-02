@@ -5,7 +5,7 @@
 
 			<button type="button" class="btn btn-secondary" onclick="window.location.href='#/evolution-of-cycling-routes'" style="margin-left: 6.75%; width: 25%; margin-bottom: 5%;"> API Evolucion Carriles Bici</button>
 			<button type="button" class="btn btn-secondary" onclick="window.location.href='#/rural-tourism-stats'" style="width: 25%; margin-bottom: 5%;"> API Turismo Rural</button>
-			<button type="button" class="btn btn-secondary" onclick="window.location.href='#/traffic-accidents'" style="width: 25%; margin-bottom: 5%;"> API Accidentes De Tráfico </button><br>
+			<button type="button" class="btn btn-secondary" onclick="window.location.href='#/traffic-accidents'" style="width: 25%; margin-bottom: 5%;"> API Accidentes De Trafico </button><br>
 
 			<ul>
 				<li><strong>Team: </strong></li>

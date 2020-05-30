@@ -10,7 +10,7 @@
 
     <button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/cycling-routes'" style="margin-left: 12.5%; width: 25%;"> Evolucion Carriles Bici</button>
 	<button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/rural-tourism-stats'" style="width: 25%;">Turismo Rural</button>
-	<button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/accidents'" style= "width: 25%;">Accidentes De Trรกfico </button><br><br>
+	<button type="button" class="btn btn-secondary" onclick="window.location.href='#/integrations/accidents'" style= "width: 25%;">Accidentes De Trafico </button><br><br>
 
     <Button outline color="secondary" on:click="{pop}">Volver</Button>
 
