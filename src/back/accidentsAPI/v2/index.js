@@ -13,9 +13,9 @@ module.exports = function(app){
 		autoload: true
 	});
 
-		//PROXY JOSE FRANCISCO
-		var proxyJoseFrancisco = "/api/v1/motogp-statistics"
-		var urlProxyJoseFrancisco = "https://sos1920-08.herokuapp.com"
+	//PROXY JOSE FRANCISCO
+	var proxyJoseFrancisco = "/api/v1/motogp-statistics"
+	var urlProxyJoseFrancisco = "https://sos1920-08.herokuapp.com"
 
 	var initialTrafficAccidents = [
 		{"province": "almeria", "year": 2015, "trafficaccidentvictim": 733, "dead": 26, "injured": 1169},
@@ -36,12 +36,12 @@ module.exports = function(app){
 		{"province": "sevilla", "year": 2018, "trafficaccidentvictim": 4454, "dead": 54, "injured": 6457}
 	];
 
-		//PROXY JOSE FRANCISCO
-		app.use(proxyJoseFrancisco, function(req, res){
-			var url = urlProxyJoseFrancisco + req.baseUrl + req.url;
-			console.log("piped: " + req.baseUrl + req.url);
-			req.pipe(request(url)).pipe(res)
-		})
+	//PROXY JOSE FRANCISCO
+	app.use(proxyJoseFrancisco, function(req, res){
+		var url = urlProxyJoseFrancisco + req.baseUrl + req.url;
+		console.log("piped: " + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res)
+	})
 
 	//LoadInitialData
 	
