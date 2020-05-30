@@ -2,6 +2,7 @@ module.exports = function(app){
 	const dataStore = require("nedb");
 	const path = require("path");
 	const dbFileName = path.join(__dirname,"routes.db");
+	const request = require("request");
 	
 	console.log("Empieza en 3, 2, 1...");
 	
@@ -11,6 +12,10 @@ module.exports = function(app){
 	});
 	
 	const BASE_API_URL = "/api/v2";
+
+	//PROXY ANA
+	var proxyAna = "/api/v1/health_public"
+	var urlProxyAna = "https://sos1920-05.herokuapp.com"
 	
 	var initialRoutes = [
 		{province: "almeria", year: 2015, metropolitan: 77.6, urban: 53.2, rest: 24.3},
@@ -31,6 +36,13 @@ module.exports = function(app){
 		{province: "malaga", year: 2017, metropolitan: 57.7, urban: 48.3, rest: 22.8},
 		{province: "sevilla", year: 2017, metropolitan: 189.2, urban: 175.7, rest: 6.7}];
 		
+
+//PROXY ANA
+app.use(proxyAna, function(req, res){
+	var url = urlProxyAna + req.baseUrl + req.url;
+	console.log("piped: " + req.baseUrl + req.url);
+	req.pipe(request(url)).pipe(res)
+})		
 
 // GET LOAD INITIAL DATA /evolution-of-cycling-routes/loadInitialData
 app.get(BASE_API_URL+"/evolution-of-cycling-routes/loadInitialData", (req,res) =>{

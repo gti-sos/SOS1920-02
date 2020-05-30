@@ -2,6 +2,7 @@ module.exports = function(app){
 	const dataStore = require("nedb");
 	const path = require("path");
 	const dbFileName = path.join(__dirname,"tourism.db");
+	const request = require("request");
 	
 	const db = new dataStore({
 					filename: dbFileName, 
@@ -10,6 +11,10 @@ module.exports = function(app){
 					autoload: true,
 					autoload: true
 			});
+
+	//PROXY MARTA
+	var proxyMarta = "/api/v1/life_expectancies"
+	var urlProxyMarta = "https://sos1920-05.herokuapp.com"		
 
 	
 	const BASE_API_URL = "/api/v2";
@@ -30,6 +35,13 @@ module.exports = function(app){
 					{"province": "jaen","year": 2016,"traveller": 26579,"overnightstay":69129,"averagestay": 2.6},
 					{"province": "malaga","year": 2016,"traveller": 89719,"overnightstay":431349,"averagestay": 4.8},
 					{"province": "sevilla","year": 2016,"traveller": 20080,"overnightstay":50222,"averagestay": 2.5},];
+
+	//PROXY MARTA
+	app.use(proxyMarta, function(req, res){
+		var url = urlProxyMarta + req.baseUrl + req.url;
+		console.log("piped: " + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res)
+	})					
 
 
 	//LOADINITIALDATA

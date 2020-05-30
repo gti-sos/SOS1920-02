@@ -10,7 +10,7 @@
         let Data08 = [];
 
         console.log("Loading integration API 08...");
-        const res = await fetch("http://sos1920-08.herokuapp.com/api/v1/motogp-statistics");
+        const res = await fetch("/api/v1/motogp-statistics");
         if (res.ok) {
             console.log("Loaded correctly");
             const json = await res.json();
