@@ -32,7 +32,7 @@
 
         apiExterna.forEach((y) => {
             if(y.name == "Spain")
-            MyDataGraph.push({name: y.name, y: y.area});
+            MyDataGraph.push({name: 'Area de: '+y.name, y: y.area});
         });
 
         Highcharts.setOptions({
