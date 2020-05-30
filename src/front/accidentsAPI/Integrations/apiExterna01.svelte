@@ -1,28 +1,140 @@
 <script>
+    import {pop} from "svelte-spa-router";
+	import Table from "sveltestrap/src/Table.svelte";
+    import Button from "sveltestrap/src/Button.svelte";
 
-var request = require("request");
+    async function loadGraph() {
 
-var options = {
-  method: 'GET',
-  url: 'https://the-cocktail-db.p.rapidapi.com/list.php',
-  qs: {a: 'list'},
-  headers: {
-    'x-rapidapi-host': 'the-cocktail-db.p.rapidapi.com',
-    'x-rapidapi-key': 'ec721b09edmsh144d3932be47d90p16116cjsn90ee16642900',
-    useQueryString: true
-  }
-};
+        let MyData = [];
+        let MyDataGraph = [];
+        let Data08 = [];
 
-request(options, function (error, response, body) {
-	if (error) throw new Error(error);
+        console.log("Loading integration API 08...");
+        const res = await fetch("https://restcountries.eu/rest/v2/?fields=name;subregion;area");
+        if (res.ok) {
+            console.log("Loaded correctly");
+            const json = await res.json();
+            Data08 = json;
+        } else {
+            console.log("ERROR!");
+        }
 
-	console.log(body);
-});
+        const resData = await fetch("/api/v2/traffic-accidents");
+        MyData = await resData.json();
+        MyData.forEach( (x) => {
+            if (x.year == 2015) {
+                MyDataGraph.push({name: x.province, data: [parseInt(x.trafficaccidentvictim), parseInt(x.dead), parseInt(x.injured), 0]});
+            }
+        });
 
+        Data08.forEach((y) => {
+            if(y.area > 1000)
+            MyDataGraph.push({name: y.name, data: [0,0,0, y.area/1000]});
+        });
+        
+
+        Highcharts.chart('container', {
+
+            title: {
+                text: 'Integración API Externa.'
+            },
+
+            yAxis: {
+                title: {
+                    text: 'Comparación'
+                }
+            },
+
+            xAxis: {
+                categories: [
+                    'Victimas Accidentes',
+                    'Muertos',
+                    'Heridos',
+                    'Area'
+                ]
+            },
+
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+
+            series: MyDataGraph,
+
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+
+        });
+    }
 </script>
+
+<svelte:head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js" on:load="{loadGraph}"></script>
+</svelte:head>
 
 <main>
 
+    <Button outline color="secondary" on:click="{pop}">Volver</Button>
 
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            Integracion con la api de del Grupo SOS1920-08.
+        </p>
+    </figure>  	
 
 </main>
+
+<style>
+    .highcharts-figure, .highcharts-data-table table {
+        min-width: 95%; 
+        max-width: 100%;
+        min-height: 50%;
+        margin: 1em auto;
+    }
+
+    .highcharts-data-table table {
+        font-family: Verdana, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid #EBEBEB;
+        margin: 10px auto;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+    }
+    .highcharts-data-table caption {
+        padding: 1em 0;
+        font-size: 1.2em;
+        color: #555;
+    }
+    .highcharts-data-table th {
+        font-weight: 600;
+        padding: 0.5em;
+    }
+    .highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+        padding: 0.5em;
+    }
+    .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+        background: #f8f8f8;
+    }
+    .highcharts-data-table tr:hover {
+        background: #f1f7ff;
+    }
+</style>

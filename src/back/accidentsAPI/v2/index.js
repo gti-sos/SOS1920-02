@@ -43,6 +43,16 @@ module.exports = function(app){
 		req.pipe(request(url)).pipe(res)
 	})
 
+		//PROXY JOSE FRANCISCO 2
+		var proxyJoseFrancisco2 = "/api/v2/apiExterna"
+		var urlProxyJoseFrancisco2 = "https://restcountries.eu/rest/v2/?fields=name;subregion;area"
+
+		app.use(proxyJoseFrancisco2, function(req, res){
+			var url = urlProxyJoseFrancisco2 + req.baseUrl + req.url;
+			console.log("piped: " + req.baseUrl + req.url);
+			req.pipe(request(url)).pipe(res)
+		})
+
 	//LoadInitialData
 	
 	app.get(BASE_API_URL+"/traffic-accidents/loadInitialData", (req,res) => {
