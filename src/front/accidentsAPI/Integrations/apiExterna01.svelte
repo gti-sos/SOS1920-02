@@ -118,7 +118,7 @@
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
-            Integracion con la api de del Grupo SOS1920-08.
+            Integracion con una API Externa.
         </p>
     </figure> 	
 
