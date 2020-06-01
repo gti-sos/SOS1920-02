@@ -1,11 +1,6 @@
 <script>
-	import  {
-		onMount
-	}
-	from "svelte";
-	import {
-        pop
-    } from "svelte-spa-router";
+	import {onMount} from "svelte";
+	import {pop} from "svelte-spa-router";
 	import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
     
@@ -33,10 +28,10 @@
 		let parsed_data = [];
 		MyData.forEach( (v) => {
             if(v.year == 2015){
-			let total = Math.round(v.total / 100) / 100
+			let metropolitan= Math.round(v.metropolitan/100)
 			let data = {
 				name: v.province + " " + v.year,
-				data: [total, null, null, null]
+				data: [metropolitan, null, null, null]
 			};
             parsed_data.push(data)
         }
@@ -72,6 +67,12 @@
 			data: [null, null, null, unconfirmed]
 		};
 		parsed_data.push(data)
+        /*data = {
+			name: "Sin confirmar",
+			data: [null, null, null, null, occurred_at]
+		};
+		parsed_data.push(data)*/
+        
 		
 		Highcharts.chart('container', {
 			chart: {
@@ -81,7 +82,7 @@
 				text: 'Total de carril metropolitano y tipos de incidentes con bicicletas'
 			},
 			xAxis: {
-				categories: ["Metropolitan", "Robos", "Peligros", "Sin confirmar"]
+				categories: ["Metropolitan", "Robos", "Peligros", "Sin confirmar", "X"]
 			},
 			yAxis: {
 				min: 0,
@@ -178,27 +179,10 @@
 		<figure class="highcharts-figure">
 			<div id="container"></div>
 			<p class="highcharts-description">
-				El gráfico compara el carril metropolitano en Andalucía y los incidentes con bicicletas en UK.
+				El gráfico compara el carril metropolitano de todas las provincias de Andalucía y los incidentes con bicicletas en UK.
 			</p>
 		</figure>	
-		<Table bordered>
-			<thead>
-				<tr>
-                    <th>Dirección</th>
-					<th>Título</th>
-					<th>Tipo</th>
-				</tr>
-			</thead>
-			<tbody>
-				{#each incidents as incident}
-				<tr>
-                    <td>{incident.address}</td>
-                    <td>{incident.title}</td>
-                    <td>{incident.type}</td>
-				</tr>
-				{/each}
-			</tbody>
-		</Table>
+	
 	{/await}
 	
 </main>
