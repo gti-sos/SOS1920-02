@@ -109,40 +109,13 @@
         <div id="container"></div>
         <p>   </p>
         <p class="highcharts-description">
-            Insertar texto
+        
         </p>
-        <p> <strong> Tabla con los datos proporcionados por la API 27 </strong> </p>
+        
 
     </figure>	    
 
-    <Table bordered>
-        <thead>
-            <tr>
-                <th> País </th>
-                <th> Ambos Sexos</th>
-                <th> Ranking Masculino </th>
-                <th> Números Masculinos </th>
-                <th> Ranking Femenino </th>
-                <th> Media </th>
-                <th> Año </th>
-                <th> Continente </th>
-            </tr>
-        </thead>
-        <tbody>
-            {#each  apiExterna as apiExterna}
-            <tr>
-                <td> {apiExterna.country} </td>                
-                <td> {apiExterna['both_sex']} </td>
-                <td> {apiExterna['male_rank']} </td>
-                <td> {apiExterna['male_number']} </td>
-                <td> {apiExterna.year} </td>
-                <td> {apiExterna['female_rank']} </td>
-                <td> {apiExterna['female_number']} </td>
-                <td> {apiExterna['continent']} </td>
-            </tr>
-            {/each}
-        </tbody>
-    </Table>
+
 {/await}      	
 
   </figure>

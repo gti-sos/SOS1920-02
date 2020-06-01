@@ -109,36 +109,11 @@
         <div id="container"></div>
         <p>   </p>
         <p class="highcharts-description">
-            Se ha tenido que disminuir el valor de la api externa ya que impedía que los datos de la api interna pudieran aparecen en la gráfica
+            
         </p>
-        <p> <strong> Tabla con los datos proporcionados por la API 07 </strong> </p>
+        
 
     </figure>	    
-
-    <Table bordered>
-        <thead>
-            <tr>
-                <th> País </th>
-                <th> Año </th>
-                <th> Totales</th>
-                <th> Interurbanos </th>
-                <th> Urbanos </th>
-            </tr>
-        </thead>
-        <tbody>
-            {#each  apiExterna as apiExterna}
-            <tr>
-                <td> {apiExterna.country} </td>
-                <td> {apiExterna.year} </td>
-                <td> {apiExterna['gdamalt']} </td>
-                <td> {apiExterna['gdabarley']} </td>
-                <td> {apiExterna['gdaoat']} </td>
-                <td> {apiExterna['gdawaste']} </td>
-                <td> {apiExterna['gdaethylalcohol']} </td>
-            </tr>
-            {/each}
-        </tbody>
-    </Table>
 {/await}      	
 
   </figure>

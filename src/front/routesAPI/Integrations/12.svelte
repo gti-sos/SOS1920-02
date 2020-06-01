@@ -108,36 +108,10 @@ Loading renewable sources...
     <div id="container"></div>
     <p>   </p>
     <p class="highcharts-description">
-        Insertar texto
+    
     </p>
-    <p> <strong> Tabla con los datos proporcionados por la API 12</strong> </p>
 
 </figure>	    
-
-<Table bordered>
-    <thead>
-        <tr>
-            <th> Provincia </th>
-            <th> Año </th>
-            <th> Muertes Masculinas</th>
-            <th> Muertes Femeninas </th>
-            <th> Muertes Totales </th>
-            <th> Edad Media </th>
-        </tr>
-    </thead>
-    <tbody>
-        {#each  apiExterna as apiExterna}
-        <tr>
-            <td> {apiExterna.province} </td>
-            <td> {apiExterna.year} </td>
-            <td> {apiExterna['death_male']} </td>
-            <td> {apiExterna['death_female']} </td>
-            <td> {apiExterna['death_total']} </td>
-            <td> {apiExterna['mean_age']} </td>
-        </tr>
-        {/each}
-    </tbody>
-</Table>
 {/await}      	
 
 

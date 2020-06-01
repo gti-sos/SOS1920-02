@@ -114,36 +114,11 @@
         <div id="container"></div>
         <p>   </p>
         <p class="highcharts-description">
-            Insertar texto
+            
         </p>
-        <p> <strong> Tabla con los datos proporcionados por la API 05 </strong> </p>
+        
 
     </figure>	
-
-    
-
-    <Table bordered>
-        <thead>
-            <tr>
-                <th> País </th>
-                <th> Año </th>
-                <th> Total</th>
-                <th> Publico </th>
-                <th> Publico_Pib </th>
-            </tr>
-        </thead>
-        <tbody>
-            {#each  apiExterna as apiExterna}
-            <tr>
-                <td> {apiExterna.country} </td>
-                <td> {apiExterna.year} </td>
-                <td> {apiExterna['total_spending']} </td>
-                <td> {apiExterna['public_spending']} </td>
-                <td> {apiExterna['public_spending_pib']} </td>
-            </tr>
-            {/each}
-        </tbody>
-    </Table>
 {/await}      	
         
   </figure>

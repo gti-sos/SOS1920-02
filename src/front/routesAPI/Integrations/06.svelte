@@ -106,34 +106,11 @@
         <div id="container"></div>
         <p>   </p>
         <p class="highcharts-description">
-            Insertar texto
+            
         </p>
-        <p> <strong> Tabla con los datos proporcionados por la API 06 </strong> </p>
+        
 
     </figure>	    
-
-    <Table bordered>
-        <thead>
-            <tr>
-                <th> Provincia </th>
-                <th> Año </th>
-                <th> Totales</th>
-                <th> Interurbanos </th>
-                <th> Urbanos </th>
-            </tr>
-        </thead>
-        <tbody>
-            {#each  apiExterna as apiExterna}
-            <tr>
-                <td> {apiExterna.province} </td>
-                <td> {apiExterna.year} </td>
-                <td> {apiExterna['total']} </td>
-                <td> {apiExterna['interurban']} </td>
-                <td> {apiExterna['urban']} </td>
-            </tr>
-            {/each}
-        </tbody>
-    </Table>
 {/await}      	
 
   </figure>

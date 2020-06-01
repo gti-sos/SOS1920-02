@@ -10,7 +10,9 @@
 <main>
 
   <h1 class="display-4" style="text-align: center;" >  </h1>
-
+      
+	<Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> </Button>
+  <p></p>
   <div class="card-deck">
         <div class="card">
             <div class="embed-responsive embed-responsive-16by9 video">
@@ -47,8 +49,7 @@
     
     
 
-    <p></p>
-	<Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> Atrás</Button>
+
 
 </main>
 

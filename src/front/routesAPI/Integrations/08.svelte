@@ -20,7 +20,7 @@
     }
         const resData = await fetch("/api/v2/evolution-of-cycling-routes");
         MyData = await resData.json();
-        let items = ["Metropolitano", "Urbano", "Resto", "hidroeléctrico", "solar", "carbon"];
+        let items = ["Metropolitano", "Urbano", "Resto", "Hidroeléctrico", "Solar", "Carbon"];
         let valores = [];
         let valor = {};
         MyData.forEach((r) => {
@@ -109,34 +109,13 @@
         <div id="container"></div>
         <p>   </p>
         <p class="highcharts-description">
-            Se ha tenido que disminuir el valor de la api externa ya que impedía que los datos de la api interna pudieran aparecen en la gráfica
+           
         </p>
-        <p> <strong> Tabla con los datos proporcionados por la API 08 </strong> </p>
+        
 
     </figure>	    
 
-    <Table bordered>
-        <thead>
-            <tr>
-                <th> País </th>
-                <th> Año </th>
-                <th> Hidroeléctrico</th>
-                <th> Solar </th>
-                <th> Carbon </th>
-            </tr>
-        </thead>
-        <tbody>
-            {#each  apiExterna as apiExterna}
-            <tr>
-                <td> {apiExterna.province} </td>
-                <td> {apiExterna.year} </td>
-                <td> {apiExterna['hydro']} </td>
-                <td> {apiExterna['solar']} </td>
-                <td> {apiExterna['coal']} </td>
-            </tr>
-            {/each}
-        </tbody>
-    </Table>
+   
 {/await}      	
 
   </figure>

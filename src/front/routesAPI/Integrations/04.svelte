@@ -4,7 +4,7 @@
 	import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
     
-    const url = "http://sos1920-04.herokuapp.com/api/v1/roads/";
+    const url = "https://sos1920-04.herokuapp.com/api/v1/roads/";
 
     let apiExterna = [];
     let MyData = [];
@@ -108,38 +108,11 @@
         <div id="container"></div>
         <p>   </p>
         <p class="highcharts-description">
-            Insertar texto
+        
         </p>
-        <p> <strong> Tabla con los datos proporcionados por la API 04 </strong> </p>
+
 
     </figure>	
-
-    
-
-    <Table bordered>
-        <thead>
-            <tr>
-                <th> Provincia </th>
-                <th> Año </th>
-                <th> Un carril</th>
-                <th> Doble carril </th>
-                <th> Autovía </th>
-                <th> Autopista</th>
-            </tr>
-        </thead>
-        <tbody>
-            {#each  apiExterna as apiExterna}
-            <tr>
-                <td> {apiExterna.province} </td>
-                <td> {apiExterna.year} </td>
-                <td> {apiExterna['oneway']} </td>
-                <td> {apiExterna['multipleway']} </td>
-                <td> {apiExterna['dualCarriagewayAndHighway']} </td>
-                <td> {apiExterna['highwayWithToll']} </td>
-            </tr>
-            {/each}
-        </tbody>
-    </Table>
 {/await}      	
 
   </figure>
