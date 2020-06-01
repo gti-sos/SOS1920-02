@@ -11,7 +11,7 @@
 		MyData = await resData.json();
 		const resData2 = await fetch("https://sos1920-30.herokuapp.com/api/v3/indice_de_masa_corporal");
 		if (resData2.ok) {
-			console.log("Ok, api 23 loaded");
+			console.log("Ok, api 30 loaded");
 			const json = await resData2.json();
             API_30 = json;
 			console.log(API_30)
@@ -47,7 +47,7 @@
 				text: 'Índice de masa corporal y turismo rural'
 			},
 			xAxis: {
-				categories: ['Por accidentes', 'Numero de zonas', 'Viajeros'],
+				categories: ['Por accidentes', 'Numero de zonas', 'Estancia Media'],
 				title: {
 					text: null
 				}
