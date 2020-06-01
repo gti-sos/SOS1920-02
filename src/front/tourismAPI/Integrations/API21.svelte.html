@@ -7,6 +7,8 @@
 	
 	async function loadGraph(){
 		
+		fetch("https://sos1920-21.herokuapp.com/api/v2/traffic-injuries/loadInitialData");
+		
 		const resData = await fetch("/api/v2/rural-tourism-stats");
 		MyData = await resData.json();
 		const resData2 = await fetch("https://sos1920-21.herokuapp.com/api/v2/traffic-injuries");
@@ -44,7 +46,7 @@
 				type: 'bar'
 			},
 			title: {
-				text: 'Lesiones de tráfico y turismo rural'
+				text: 'Lesiones de trรกfico y turismo rural'
 			},
 			xAxis: {
 				categories: ['Accidentes', 'Muertes', 'Viajeros'],
@@ -86,7 +88,7 @@
 	<figure class="highcharts-figure">
 		<div id="container"></div>
 		<p style="text-align:center;" class="highcharts-description">
-			Comparativa entre lesiones de tráfico y turismo rural
+			Comparativa entre lesiones de trรกfico y turismo rural
 		</p>
 	</figure>
 
