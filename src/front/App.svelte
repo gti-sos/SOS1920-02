@@ -4,6 +4,7 @@
 	import Home from './Home.svelte';
 	import Integrations from './Integrations.svelte';
 	import Analytics from './Analytics.svelte';
+	import About from './About.svelte';
 
 // API ANA
 	import CyclingRoutesTable from './routesAPI/CyclingRoutesTable.svelte';
@@ -120,8 +121,9 @@
 		"/traffic-accidents/:accidentProcince/:accidentYear": EditAccidentsTraffics,
 		"/traffic-accidents/graph": GraphAccidents,
 		"/traffic-accidents/graph-v2": GraphAccidentsV2,
-
+		"/about": About,
 		"*": NotFound
+		
 	};
 
 </script>
