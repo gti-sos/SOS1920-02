@@ -11,12 +11,12 @@
 		MyData = await resData.json();
 		
 		const resData2 = await fetch("https://restcountries-v1.p.rapidapi.com/all", {
-	    "method": "GET",
-	    "headers": {
-			"x-rapidapi-host": "restcountries-v1.p.rapidapi.com",
-			"x-rapidapi-key": "fbc3a26ce8mshdb989f0848b0219p134cc7jsn7c3ac5c079da"
-	    }
-    });
+			"method": "GET",
+			"headers": {
+				"x-rapidapi-host": "restcountries-v1.p.rapidapi.com",
+				"x-rapidapi-key": "fbc3a26ce8mshdb989f0848b0219p134cc7jsn7c3ac5c079da"
+			}
+    	});
 		
 		if (resData2.ok) {
 			console.log("Ok, api externa 1 loaded");
@@ -54,7 +54,7 @@
 				type: 'bar'
 			},
 			title: {
-				text: 'Población en España y turismo rural en algunas provincias'
+				text: 'Población en España y viajeros en algunas provincias de Andalucía'
 			},
 			xAxis: {
 				categories: ['Población', 'Viajeros'],
@@ -96,7 +96,7 @@
 	<figure class="highcharts-figure">
 		<div id="container"></div>
 		<p style="text-align:center;" class="highcharts-description">
-			Comparativa entre la población de España y turismo rural en algunas provincias.
+			Comparativa entre la población de España y viajeros en algunas provincias de Andalucía.
 		</p>
 	</figure>
 
