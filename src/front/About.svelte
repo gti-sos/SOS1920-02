@@ -7,7 +7,6 @@
 </script>
 
 <main>
-
   <h1 class="display-4" style="text-align: center;" >  </h1>
       
 	<Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> </Button>
