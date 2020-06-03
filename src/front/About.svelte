@@ -33,7 +33,7 @@
 
         <div class="card">
             <div class="embed-responsive embed-responsive-16by9 video">
-                <iframe width="1189" height="643" src="https://www.youtube.com/embed/iLFfYpYy3S8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="757" height="409" src="https://www.youtube.com/embed/mHwAymWwSfI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         	<div class="card-body">
             	<h5 class="card-title">Turismo rural</h5>
