@@ -10,7 +10,7 @@
         let Data27 = [];
 
         console.log("Loading integration API 27...");
-        const res = await fetch("http://sos1920-27.herokuapp.com/api/v2/poverty-stats");
+        const res = await fetch("https://sos1920-27.herokuapp.com/api/v2/poverty-stats");
         if (res.ok) {
             console.log("Loaded correctly");
             const json = await res.json();
